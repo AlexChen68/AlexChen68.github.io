@@ -1,2 +1,2 @@
 # AlexChenlc.github.io
-[AlexChen.github.id](AlexChen.github.id)
+[AlexChen.github.io](AlexChen.github.io)
