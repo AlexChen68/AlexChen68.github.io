@@ -28,17 +28,8 @@ export default hopeTheme({
     medias: {
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
       GitHub: "https://github.com/AlexChen68",
-      Gmail: "mailto:alexchen.tech@gmail.com",
-      // QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",
-      // Qzone: "https://1178522294.qzone.qq.com/",
-      // Gmail: "mailto:mister-hope@outlook.com",
-      // Zhihu: "https://www.zhihu.com/people/mister-hope",
-      // Steam: "https://steamcommunity.com/id/Mr-Hope/",
-      // Weibo: "https://weibo.com/misterhope",
-      // GitHub: "https://github.com/Mister-Hope",
-      // Gitee: "https://gitee.com/Mister-Hope",
+      // Gmail: "mailto:alexchen.tech@gmail.com"
     },
- 
   },
   // 文章加密设置
   encrypt: {
