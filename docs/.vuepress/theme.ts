@@ -26,9 +26,9 @@ export default hopeTheme({
     roundAvatar: true,
     description: "编程两年半的Java练习生",
     medias: {
-      QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218",
+      QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
       GitHub: "https://github.com/AlexChen68",
-      // Gmail: "alexchen.tech@gmail.com"
+      Gmail: "mailto:alexchen.tech@gmail.com"
     },
  
   },

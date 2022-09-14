@@ -1,13 +1,13 @@
 {
-  "name": "blog-vuepress",
+  "name": "blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --clean-cache"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "clean-dev": "vuepress dev docs --clean-cache"
   },
   "author": "",
   "license": "ISC",
