@@ -3,7 +3,7 @@ home: true
 heroImage: https://vuejs.org/images/logo.png
 actions:
   - text: Github
-    link: https://github.com/AlexChen68
+    link: https://github.com/AlexChen68/blog-vuepress
     type: primary
   - text: 开始阅读
     link: /
@@ -16,3 +16,5 @@ features:
   - title: 编程技能
     details: 数据结构、设计模式、Linux、Devops。
 ---
+
+## 

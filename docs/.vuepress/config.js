@@ -7,6 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: "AlexChen's Blog",
   description: '编程两年半的Java练习生',
+  repo: "https://github.com/AlexChen68/blog-vuepress",
   head: [['link', { rel: 'icon', href: 'images/favicon.ico' }]],
   // open: true,
   markdown: {
