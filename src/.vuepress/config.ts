@@ -3,7 +3,6 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   base: "/",
-  // dest: "./dist",
   lang: "zh-CN",
   title: "AlexChen's Blog",
   description: '编程两年半的Java练习生',

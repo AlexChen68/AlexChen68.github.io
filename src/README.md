@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: 首页
+title: 项目主页
 heroImage: /home.svg
 heroText: AlexChen's Blog
 tagline: 编程两年半的Java练习生

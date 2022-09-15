@@ -1,6 +1,6 @@
-import { sidebar } from "vuepress-theme-hope";
+import { navbar } from "vuepress-theme-hope";
 
-export default sidebar([
+export default navbar([
   {
     text: "首页",
     icon: "home",
@@ -10,5 +10,5 @@ export default sidebar([
     text: "博客",
     icon: "blog",
     link: "/blog"
-  },
+  }
 ]);

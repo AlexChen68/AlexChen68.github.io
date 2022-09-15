@@ -5,6 +5,8 @@ title: 页面配置
 icon: page
 # 这是侧边栏的顺序
 order: 1
+# 设置作者
+author: Ms.Hope
 # 设置写作时间
 date: 2020-01-01
 # 一个页面可以有多个分类
@@ -18,6 +20,10 @@ tag:
 sticky: true
 # 此页面会出现在文章收藏中
 star: true
+# 你可以自定义页脚
+footer: 这是测试显示的页脚
+# 你可以自定义版权信息
+copyright: 无版权
 ---
 
 `more` 注释之前的内容被视为文章摘要。
@@ -37,17 +43,17 @@ star: true
 
 你可以自由在这里书写你的 Markdown。
 
-::: danger
+::: tip
 
 - 你可以将图片和 Markdown 文件放置在一起，但是你需要使用**相对链接**`./` 进行引用。
 
-- 对于 `.vuepress/public` 文件夹的图片，请使用绝对链接 `/` 进行引用。 <Badge text="谨慎使用！" color="red" />
+- 对于 `.vuepress/public` 文件夹的图片，请使用绝对链接 `/` 进行引用。
 
 :::
 
 主题包含了一个自定义徽章章可以使用:
 
-> 文字结尾应该有深蓝色的 徽章文字 徽章。 <Badge text="谨慎使用！" color="red" />
+> 文字结尾应该有深蓝色的 徽章文字 徽章。 <Badge text="徽章文字" color="#242378" />
 
 ## 页面结构
 
