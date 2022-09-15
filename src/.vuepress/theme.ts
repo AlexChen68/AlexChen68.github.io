@@ -2,31 +2,47 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+const github = "https://github.com/AlexChen68"
+const repoUrl = "https://github.com/AlexChen68/blog"
+
 export default hopeTheme({
-  hostname: "https://github.com/AlexChen68",
+  hostname: "https://AlexChen68.github.com/blog",
 
   author: {
     name: "AlexChen",
-    url: "https://github.com/AlexChen68",
+    url: github,
   },
 
   iconAssets: "iconfont",
 
   logo: "/logo.svg",
 
-  repo: "https://github.com/AlexChen68/blog",
+  repo: repoUrl,
 
-  docsDir: "/src",
+  docsRepo: repoUrl,
+
+  docsBranch: 'master',
+
+  docsDir: 'src',
+
+  editLinkPattern: ':repo/edit/:branch/:path',
   // navbar
   navbar: navbar,
   // sidebar
   sidebar: sidebar,
 
-  footer: "默认页脚",
+  // footer: "备案号",
 
-  displayFooter: true,
+  displayFooter: false,
   // 支持全屏
   fullscreen: true,
+
+  themeColor: {
+    blue: "#2196f3",
+    red: "#f26d6d",
+    green: "#3eaf7c",
+    orange: "#fb9b5f",
+  },
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
@@ -35,7 +51,7 @@ export default hopeTheme({
     description: "编程两年半的Java练习生",
     medias: {
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
-      GitHub: "https://github.com/AlexChen68",
+      GitHub: github,
       Zhihu: "https://www.zhihu.com/people/alexchen68",
       Gmail: "mailto:alexchen.tech@gmail.com"
     },
@@ -48,6 +64,9 @@ export default hopeTheme({
   },
 
   plugins: {
+    //开启 git 支持，可以展示上次编辑时间和贡献者
+    git: true,
+
     blog: {
       autoExcerpt: true,
     },
