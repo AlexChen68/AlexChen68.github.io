@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 项目主页
-heroImage: /home.svg
+heroImage: /logo.svg
 heroText: AlexChen's Blog
 tagline: 编程两年半的Java练习生
 actions:
@@ -11,11 +11,11 @@ actions:
     type: primary
 
   - text: 编程资源 📚
-    link: /books/
+    link: /md/book/
     type: primary
 
   - text: 博客主页 🏠
-    link: /blog/
+    link: /home/
 
 features:
   - title: Java 核心知识

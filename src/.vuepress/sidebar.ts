@@ -9,6 +9,6 @@ export default sidebar([
   {
     text: "博客",
     icon: "blog",
-    link: "/blog"
+    link: "/home"
   }
 ]);

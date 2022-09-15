@@ -44,7 +44,7 @@ export default hopeTheme({
     orange: "#fb9b5f",
   },
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+  pageInfo: ["Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
     // intro: "/intro.html",
