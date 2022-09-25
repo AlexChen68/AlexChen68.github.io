@@ -1,9 +1,8 @@
 ---
 title: Spring全家桶
-icon: page 
+icon: java 
 order: 10
 date: 2022-09-15
-sidebar: false
 tags:
   - spring
 categories: [spring]

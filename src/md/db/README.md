@@ -1,14 +1,7 @@
 ---
 title: 数据库
 icon: page 
-order: 20
 date: 2022-09-15
-sidebar: false
-tags:
-  - 
-categories: []
-sticky: false
-star:  false
 description: 数据库
 ---
 

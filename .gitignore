@@ -2,4 +2,6 @@ node_modules
 .temp
 .cache
 dist
-*/.DS_Store
+**/.DS_Store
+.DS_Store
+.DS_Store?

@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+import { sidebarConig } from "./sidebar/index";
 
 const github = "https://github.com/AlexChen68"
 const repoUrl = "https://github.com/AlexChen68/blog"
@@ -29,7 +29,7 @@ export default hopeTheme({
   // navbar
   navbar: navbar,
   // sidebar
-  sidebar: sidebar,
+  sidebar: sidebarConig,
 
   // footer: "备案号",
 
