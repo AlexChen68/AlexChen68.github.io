@@ -2,6 +2,11 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   {
+    text: "首页",
+    icon: "home",
+    link: ""
+  },
+  {
     text: "博客主页",
     icon: "home",
     link: "/home"
@@ -19,7 +24,7 @@ export default navbar([
   {
     text: "计算机基础",
     icon: "mysql",
-    link: "/md/computer/"
+    link: "/md/advanced/"
   },
   {
     text: "数据库",

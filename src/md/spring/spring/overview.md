@@ -1,9 +1,9 @@
 ---
 title: Spring 概述
 date: 2022-09-16
-tags:
+tag:
   - Spring
-categories: [Spring]
+category: [Spring]
 isOriginal: true
 description: Spring 概述
 ---

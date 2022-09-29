@@ -1,9 +1,8 @@
 ---
 title: Java 数据类型
 date: 2022-09-16
-tags:
+tag:
   - Java
-categories: [Java]
 description: Java 数据类型
 ---
 

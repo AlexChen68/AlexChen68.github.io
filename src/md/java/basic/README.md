@@ -1,9 +1,8 @@
 ---
 title: Java 概述
 date: 2022-09-16
-tags:
+tag:
   - Java
-categories: [Java]
 isOriginal: true
 description: Java 概述
 ---

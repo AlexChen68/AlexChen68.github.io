@@ -2,9 +2,9 @@
 title: SpringBoot Starter 启动器
 icon: page 
 date: 2022-09-15
-tags:
+tag:
   - springboot
-categories: [springboot]
+category: [springboot]
 isOriginal: true
 description: SpringBoot Starter 启动器
 ---

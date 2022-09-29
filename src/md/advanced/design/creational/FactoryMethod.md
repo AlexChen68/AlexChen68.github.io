@@ -1,3 +1,17 @@
+---
+title: 工厂方法模式
+date: 2022-09-27
+tag:
+  - 设计模式
+category:
+  - 设计模式
+isOriginal: true
+description: 工厂方法模式
+---
+
+设计模式之工厂方法
+<!-- more -->
+
 ### 工厂方法(Factory Method)
 
 **定义**

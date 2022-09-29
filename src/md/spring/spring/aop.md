@@ -2,10 +2,10 @@
 title: Spring AOP 切面
 icon: page 
 date: 2022-09-15
-tags:
+tag:
   - spring
   - aop
-categories: [spring]
+category: [spring]
 isOriginal: true
 description: Spring AOP 切面
 ---

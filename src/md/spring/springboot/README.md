@@ -2,9 +2,9 @@
 title: SpringBoot
 icon: page 
 date: 2022-09-15
-tags:
+tag:
   - springboot
-categories: [springboot]
+category: [springboot]
 isOriginal: true
 description: SpringBoot
 ---

@@ -68,6 +68,7 @@ export default hopeTheme({
     git: true,
 
     blog: {
+      // 文章自动摘要
       autoExcerpt: true,
     },
 
@@ -134,7 +135,6 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      tex: true,
       vpre: true,
       vuePlayground: true,
     },

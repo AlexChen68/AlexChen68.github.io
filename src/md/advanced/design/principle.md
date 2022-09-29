@@ -1,3 +1,18 @@
+---
+title: 设计模式原则
+date: 2022-09-27
+icon: blog
+tag:
+  - 设计模式
+category:
+  - 设计模式
+isOriginal: true
+description: 设计模式原则
+---
+
+设计模式基本原则
+<!-- more -->
+
 ### 单一职责原则SRP
 
 > Single-Responsibility Principle，就一个类而言，应该仅有一个引起它变化的原因，通俗的说，就是一个类只负责一项职责。此原则的核心就是**解耦**和**增强内聚性**。

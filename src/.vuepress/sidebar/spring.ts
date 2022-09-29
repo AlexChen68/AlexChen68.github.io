@@ -14,7 +14,7 @@ export const springSidebar = arraySidebar([
     icon: "alias",
     collapsable: true,
     prefix: "springboot/",
-    children: ["", "starter"]
+    children: ["", "starter", "swagger"]
   },
   {
     text: "SpringCloud",

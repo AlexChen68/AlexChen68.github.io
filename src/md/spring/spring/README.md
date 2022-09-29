@@ -2,9 +2,9 @@
 title: Spring 概述
 icon: java 
 date: 2022-09-15
-tags:
+tag:
   - Spring
-categories: [Spring]
+category: [Spring]
 description: Spring 概述
 ---
 

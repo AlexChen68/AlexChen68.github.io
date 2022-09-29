@@ -1,3 +1,17 @@
+---
+title: Java 注解机制
+date: 2022-09-30
+tag:
+  - 注解
+category:
+  - Java 基础
+isOriginal: true
+description: Java 注解机制
+---
+
+
+<!-- more -->
+
 ## Java 注解
 
 ### 什么是注解

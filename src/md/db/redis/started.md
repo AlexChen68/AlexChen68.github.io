@@ -1,3 +1,17 @@
+---
+title: 开始使用 Redis
+date: 2022-09-29
+tag: 
+  - Redis
+category:
+  - Redis
+isOriginal: true
+description: 开始使用 Redis
+---
+
+Redis 的介绍和初步安装、卸载教程。
+<!-- more -->
+
 ## Redis 简介
 
 Redis 是完全开源的，遵守 BSD 协议，是一个高性能的 key-value 数据库。
@@ -68,7 +82,7 @@ Redis 可以通过在启动时，指定配置文件 `redis.conf` 来加载自定
   port 6379
   ```
 
-- 设置 Redis 连接密码，如果配置了连接密码，客户端在连接 Redis 时需要通过 AUTH <password> 命令提供密码，默认关闭
+- 设置 Redis 连接密码，如果配置了连接密码，客户端在连接 Redis 时需要通过 `AUTH <password>` 命令提供密码，默认关闭
 
   ```conf
   requirepass password
