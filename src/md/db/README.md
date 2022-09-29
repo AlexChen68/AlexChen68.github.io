@@ -1,6 +1,8 @@
 ---
 title: 数据库
 icon: page 
+index: false
+article: false
 date: 2022-09-15
 description: 数据库
 ---

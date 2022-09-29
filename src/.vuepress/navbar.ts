@@ -4,7 +4,7 @@ export default navbar([
   {
     text: "首页",
     icon: "home",
-    link: ""
+    link: "/"
   },
   {
     text: "博客主页",

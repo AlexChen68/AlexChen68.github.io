@@ -1,13 +1,8 @@
 ---
 icon: java
-title: Java核心
+title: Java 核心
 isOriginal: true
+index: false
+article: false
+description: Java 核心
 ---
-
-## Java 基础知识
-
-## 集合框架
-
-## 并发框架
-
-## IO 框架

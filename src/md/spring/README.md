@@ -2,13 +2,9 @@
 # article: false
 title: Spring全家桶
 icon: java 
-order: 10
 date: 2022-09-15
-tag:
-  - spring
-category: [spring]
-sticky: false
-star:  false
+index: false
+article: false
 description: Spring全家桶
 ---
 

@@ -1,9 +1,11 @@
 ---
-title: 编程资源合集
+title: 编程资源导航
 icon: page
 category:
   - 编程资源
-sidebar: structure
+index: false
+article: false
+description: 编程资源导航
 ---
 
 收录常用的编程网站、电子书、优秀博客和文章
