@@ -6,7 +6,7 @@ import { advancedSidebar } from "./advanced";
 import { dbSidebar } from "./db";
 
 export const sidebarConig = sidebar({
-  "/md/java/": "structure",
+  "/md/java/": javaSidebar,
   "/md/spring/": "structure",
   "/md/advanced/": "structure",
   "/md/db/": "structure",

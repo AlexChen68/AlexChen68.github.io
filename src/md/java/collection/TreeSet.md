@@ -1,3 +1,16 @@
+---
+title: TreeSet
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: TreeSet
+---
+
 ##  概述
 
 `TreeSet` 是基于 `TreeMap` 的 `Set` 集合实现类，利用了 `TreeMap` 的键不允许重复、无序的特点，将元素存储在 TreeMap 的键中，而值使用固定的 Object 对象填充。

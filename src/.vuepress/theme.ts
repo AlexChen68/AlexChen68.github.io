@@ -13,7 +13,10 @@ export default hopeTheme({
     url: github,
   },
 
+  darkmode: "toggle",
+
   iconAssets: "iconfont",
+  // iconAssets: "//at.alicdn.com/t/c/font_3648538_tagrvoelel.css",
 
   logo: "/logo.svg",
 
@@ -35,14 +38,14 @@ export default hopeTheme({
 
   displayFooter: false,
   // 支持全屏
-  fullscreen: true,
+  // fullscreen: true,
 
-  themeColor: {
-    blue: "#2196f3",
-    red: "#f26d6d",
-    green: "#3eaf7c",
-    orange: "#fb9b5f",
-  },
+  // themeColor: {
+  //   blue: "#2196f3",
+  //   red: "#f26d6d",
+  //   green: "#3eaf7c",
+  //   orange: "#fb9b5f",
+  // },
 
   pageInfo: ["Original", "Date", "Category", "Tag", "ReadingTime"],
 

@@ -1,3 +1,18 @@
+---
+title: Spring 核心容器
+order: 2
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - IoC
+  - DI
+category: Spring
+isOriginal: true
+description: Spring 核心容器
+---
+
+
 ## Spring 容器概述
 
 Spring 控制反转(IOC)容器也称为依赖注入 (DI)。

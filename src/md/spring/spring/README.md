@@ -1,10 +1,7 @@
 ---
 title: Spring 概述
-icon: java 
+icon: leaf 
 date: 2022-09-15
-tag:
-  - Spring
-category: [Spring]
 index: false
 article: false
 description: Spring 概述

@@ -1,8 +1,12 @@
 ---
 title: Java 数据类型
+order: 2
+icon: blog
 date: 2022-09-16
 tag:
   - Java
+category:
+  - Java 基础
 description: Java 数据类型
 ---
 

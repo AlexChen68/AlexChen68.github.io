@@ -1,3 +1,16 @@
+---
+title: TreeMap
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: TreeMap
+---
+
 ## 概述
 
 `TreeMap` 是一个可以按照 key 的顺序排序的 Map 实现类，它底层使用红黑树实现。

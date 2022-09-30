@@ -1,3 +1,16 @@
+---
+title: ArrayList
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: ArrayList
+---
+
 ##  概述
 
 ArrayList ，基于 `[]` 数组实现的，支持**自动扩容**的动态数组。

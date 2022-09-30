@@ -1,3 +1,16 @@
+---
+title: LinkedHashMap
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: LinkedHashMap
+---
+
 ## 概述
 
 `HashMap` 是哈希表的无序实现，`LinkedHashMap` 在 `HashMap` 的基础之上，提供了顺序访问的特性。而这里的顺序，包括两种：

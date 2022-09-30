@@ -1,3 +1,16 @@
+---
+title: LinkedList
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: LinkedList
+---
+
 ## 概述
 
 `LinkedList` 同时实现了 `List` 接口和 `Deque` 接口，它既可以当成顺序容器，又可以作为双端队列使用，同时还可以看作一个栈（Stack）。栈和队列还有一个更好的选择是 `ArrayDeque`，它有比 `LinkedList` 更好的性能。(本文基于 JDK1.8)

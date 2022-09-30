@@ -1,14 +1,14 @@
 ---
-title: 多线程
+title: Java 线程
 icon: blog
 article: true
 date: 2022-09-30
 tag:
   - JUC
 category:
-  - Java 基础
+  - Java 并发
 isOriginal: true
-description: 多线程
+description: Java 线程
 ---
 
 > 本文转载自 [Java全栈知识体系【Java 并发-线程基础】](https://pdai.tech/md/java/thread/java-thread-x-thread-basic.html)

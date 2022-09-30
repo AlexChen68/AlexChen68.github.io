@@ -1,18 +1,13 @@
 ---
 title: String 字符串详解
+order: 3
 icon: page 
-order: 99
 date: 2022-09-15
-sticky: false
-star:  false
+tag: String
+category: Java 基础
 isOriginal: true
 description: String 字符串详解
 ---
-
-
-<!-- more -->
-
-
 
 ## String 概述
 

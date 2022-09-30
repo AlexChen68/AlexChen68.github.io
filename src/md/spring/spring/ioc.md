@@ -1,11 +1,10 @@
 ---
 title: SpringIOC 容器
-icon: page 
+icon: leaf 
 date: 2022-09-15
-tag:
-  - spring
-  - ioc
-category: [spring]
+tag: 
+  - IOC
+category: Spring
 isOriginal: true
 description: SpringIOC 容器
 ---

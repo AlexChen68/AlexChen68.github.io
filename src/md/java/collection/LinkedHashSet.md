@@ -1,3 +1,16 @@
+---
+title: LinkedHashSet
+icon: blog
+article: true
+date: 2022-09-30
+tag:
+  - Collection
+category:
+  - Java 集合
+isOriginal: true
+description: LinkedHashSet
+---
+
 ## 概述
 
 `LinkedHashSet` 继承自 `HashSet`，不同的是内部使用的 `HashMap` 为 `LinkedHashMap`，通过`LinkedHashMap` 可以按照插入顺序排序和访问顺序排序的特性，实现集合中元素的有序访问。

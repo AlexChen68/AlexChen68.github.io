@@ -8,7 +8,7 @@ export default navbar([
   },
   {
     text: "博客主页",
-    icon: "home",
+    icon: "blog",
     link: "/home"
   },
   {
@@ -23,7 +23,7 @@ export default navbar([
   },
   {
     text: "计算机基础",
-    icon: "mysql",
+    icon: "advance",
     link: "/md/advanced/"
   },
   {
@@ -33,12 +33,12 @@ export default navbar([
   },
   {
     text: "编程资源",
-    icon: "page",
-    link: "/md/book"
+    icon: "list",
+    link: "/md/book/"
   },
   {
     text: "开发工具",
-    icon: "page",
-    link: "/md/tool",
+    icon: "tool",
+    link: "/md/tool/",
   }
 ]);

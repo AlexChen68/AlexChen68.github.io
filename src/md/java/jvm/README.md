@@ -1,5 +1,5 @@
 ---
-title: Java 虚拟机
+title: Java 虚拟机概述
 icon: blog
 article: true
 date: 2022-09-30
@@ -8,10 +8,8 @@ tag:
 category:
   - Java 进阶
 isOriginal: true
-description: Java 虚拟机
+description: Java 虚拟机概述
 ---
-
-# Java 虚拟机
 
 ## JVM 简介
 

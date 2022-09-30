@@ -4,20 +4,29 @@ export const javaSidebar = arraySidebar([
   {
     text: "Java 基础",
     icon: "java",
-    prefix: "basic",
+    prefix: "basic/",
     collapsable: true,
-    children: [
-      "datatype",
-      'string'
-    ]
+    children: "structure"
   },
   {
     text: "Java 集合框架",
     icon: "java",
-    prefix: "collection",
+    prefix: "collection/",
     collapsable: true,
-    children: [
-      "string"
-    ]
+    children: "structure"
+  },
+  {
+    text: "Java 并发框架",
+    icon: "java",
+    prefix: "juc/",
+    collapsable: true,
+    children: "structure"
+  },
+  {
+    text: "Java 虚拟机",
+    icon: "java",
+    prefix: "jvm/",
+    collapsable: true,
+    children: "structure"
   },
 ]);
