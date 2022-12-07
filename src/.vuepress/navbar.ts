@@ -9,7 +9,7 @@ export default navbar([
   {
     text: "博客主页",
     icon: "blog",
-    link: "/home"
+    link: "/home/"
   },
   {
     text: "Java核心",

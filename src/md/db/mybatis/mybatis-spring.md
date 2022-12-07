@@ -1,6 +1,14 @@
-# 在 Spring 中使用 Mybatis
+---
+title: Mybatis-Spring
+article: true
+date: 2022-10-21
+tag: [Mybatis,Spring]
+category: [Mybatis]
+isOriginal: true
+description: 在 Spring 中使用 Mybatis
+---
 
-## 安装
+## 引入依赖
 
 ```xml
 <dependency>

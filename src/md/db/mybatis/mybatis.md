@@ -1,3 +1,13 @@
+---
+title: Mybatis
+article: true
+date: 2022-10-21
+tag: [Mybatis]
+category: [Mybatis]
+isOriginal: true
+description: Mybatis
+---
+
 ## Mybatis 概述
 
 > 本章节基于 [Mybatis3 官方文档](https://mybatis.org/mybatis-3/zh/index.html) 编写，介绍普通 Java 项目使用 Mybatis 的方式，以及 Mybatis 的基本配置和功能。

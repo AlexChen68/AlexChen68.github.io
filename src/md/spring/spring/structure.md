@@ -1,11 +1,9 @@
 ---
-title: Spring 组成
+title: Spring 模块
 order: 1
-icon: leaf
 date: 2022-09-16
-tag:
-  - Spring
-category: Spring
+tag: [Spring]
+category: [Spring]
 isOriginal: true
 description: Spring 组成
 ---
@@ -26,15 +24,15 @@ Spring 框架的**特性**：
 - 组件化：Spring 实现了使用简单的组件配置组合成一个复杂的应用。在 Spring 中可以使用XML和Java注解组合这些对象。
 - 一站式：在 IOC 和 AOP 的基础上可以整合各种企业应用的开源框架和优秀的第三方类库（实际上 Spring 自身也提供了表现层的 SpringMVC 和持久层的 Spring JDBC）。
 
-## Spring的组成
+## Spring 模块
 
 Spring 总共大约20个模块，这些模块被整合在核心容器、AOP和设备支持、数据访问与集成、Web组件、通信报文和集成测试、集成兼容等模块中。
 
-![Spring模块](../../../public/images/spring/springframework-modules.png)
+![Spring模块](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/springframework-modules.png)
 
 各个模块之间存在一些依赖关系如下：
 
-![Spring模块依赖关系](../../../public/images/spring/springframework-modules-relation.png)
+![Spring模块依赖关系](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/springframework-modules-relation.png)
 
 
 

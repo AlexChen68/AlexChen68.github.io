@@ -47,7 +47,7 @@ export default hopeTheme({
   //   orange: "#fb9b5f",
   // },
 
-  pageInfo: ["Original", "Date", "Category", "Tag", "ReadingTime"],
+  pageInfo: ["Author","Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
     // intro: "/intro.html",
@@ -116,6 +116,7 @@ export default hopeTheme({
       lazyLoad: true,
       mark: true,
       mermaid: true,
+      footnote: true,
       playground: {
         presets: ["ts", "vue"],
       },

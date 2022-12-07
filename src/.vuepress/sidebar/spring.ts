@@ -1,13 +1,29 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
 export const springSidebar = arraySidebar([
-  "",
   {
-    text: "Spring 核心",
+    text: "Spring Framework",
     icon: "alias",
     collapsable: true,
     prefix: "spring/",
-    children: ["", "ioc", "aop"]
+    children: [
+      {
+        text: "1. Core",
+        prefix: "core/",
+        collapsable: true,
+        children: ["ioc", "aop", "resources", "annotation"]
+      },
+      {
+        text: "2. Web",
+        collapsable: true,
+        children: ["web-servlet-mvc"]
+      },
+      {
+        text: "3. DataAccess",
+        collapsable: true,
+        children: ["data-access-transaction"]
+      },
+    ]
   },
   {
     text: "SpringBoot",
@@ -20,7 +36,19 @@ export const springSidebar = arraySidebar([
     text: "SpringCloud",
     icon: "alias",
     collapsable: true,
-    prefix: "springboot/",
-    children: ["", "starter"]
+    prefix: "springcloud/",
+    children: ["", "nacos"]
+  },
+  {
+    text: "Spring 中文文档",
+    icon: "alias",
+    collapsable: true,
+    link: "http://docs.jcohy.com/docs/spring-framework/5.3.21/html5/zh-cn/index.html"
+  },
+  {
+    text: "Spring Boot 中文文档",
+    icon: "alias",
+    collapsable: true,
+    link: "http://docs.jcohy.com/docs/spring-boot/2.7.1/html5/zh-cn/index.html"
   },
 ]);
