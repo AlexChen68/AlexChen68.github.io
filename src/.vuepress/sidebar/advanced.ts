@@ -14,19 +14,20 @@ export const advancedSidebar = arraySidebar([
     icon: "function",
     collapsable: true,
     prefix: "algo/",
-    children: [
-      "sort",
-      "search",
-      "other",
-      // {
-      //   text: "Leetcode",
-      //   icon: "book",
-      //   collapsable: true,
-      //   prefix: "leetcode/",
-      //   link: "leetcode/",
-      //   children: "structure"
-      // }
-    ]
+    children: "structure"
+    // children: [
+    //   "sort",
+    //   "search",
+    //   "other",
+    //   // {
+    //   //   text: "Leetcode",
+    //   //   icon: "book",
+    //   //   collapsable: true,
+    //   //   prefix: "leetcode/",
+    //   //   link: "leetcode/",
+    //   //   children: "structure"
+    //   // }
+    // ]
   },
   {
     text: "设计模式",

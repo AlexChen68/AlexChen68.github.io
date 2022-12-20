@@ -1,7 +1,8 @@
 ---
-title: 算法概述
+title: 算法
+index: false
+icon: blog
 date: 2022-09-27
-isOriginal: true
 article: false
 description: 算法概述
 ---
