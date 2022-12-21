@@ -1,5 +1,4 @@
-
-name: 部署文档
+name: blog
 
 on:
   push:
