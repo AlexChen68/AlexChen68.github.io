@@ -768,7 +768,7 @@ Spring提供了一个用于简化JMS配置的XML命名空间。要使用JMS命�
 
 上面的示例等效于创建两个不同的监听器容器bean和两个不同的`MessageListenerAdapter` bean定义。，如[使用 `MessageListenerAdapter`](#jms-receiving-async-message-listener-adapter)中所示。 除了前面示例中显示的属性之外，`listener`元素还可以包含几个可选的属性。 下表描述了所有可用属性：
 
-Table 3. Attributes of the JMS <listener> element  
+Table 3. Attributes of the JMS `<listener>` element 
 
 |   属性   | 描述     |
 | ---- | ---- |
@@ -802,7 +802,7 @@ Table 3. Attributes of the JMS <listener> element
 
 下表描述了所有可用属性。有关各个属性的详细信息， 请参阅[`AbstractMessageListenerContainer`](https://docs.spring.io/spring-framework/docs/5.1.3.RELEASE/javadoc-api/org/springframework/jms/listener/AbstractMessageListenerContainer.html)及其具体子类的 javadocs。javadocs还提供了有关事务选择和消息重整方案的讨论。
 
-Table 4. Attributes of the JMS <listener-container> element  
+Table 4. Attributes of the JMS `<listener-container>` element  
 
 |  属性    | 描述     |
 | ---- | ---- |

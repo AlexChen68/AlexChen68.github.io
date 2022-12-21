@@ -39,10 +39,10 @@ Spring提供了`Validator`接口用来进行对象的数据验证。`Validator`�
 考虑以下小数据对象的示例：:
 
     public class Person {
-
+    
         private String name;
         private int age;
-
+    
         // the usual getters and setters...
     }
 
@@ -56,14 +56,14 @@ Spring提供了`Validator`接口用来进行对象的数据验证。`Validator`�
 实现一个`Validator`相当简单，尤其是使用Spring提供的`ValidationUtils`工具类时。以下示例为Person实例实现Validator：
 
     public class PersonValidator implements Validator {
-
+    
         /**
          * This Validator validates *only* Person instances
          */
         public boolean supports(Class clazz) {
             return Person.class.equals(clazz);
         }
-
+    
         public void validate(Object obj, Errors e) {
             ValidationUtils.rejectIfEmpty(e, "name", "name.empty");
             Person p = (Person) obj;
@@ -80,9 +80,9 @@ ValidationUtils中的静态方法`rejectIfEmpty(..)`方法用于拒绝 `name`属
 虽然可以实现一个`Validator`类来验证富对象中的每个嵌套对象，但最好将每个嵌套对象类的验证逻辑封装在自己的`Validator`实现中。 例如，有一个名为`Customer`的复杂对象，它有两个`String`类型的属性（first name和second name），另外还有一个`Address`对象。它与`Customer`毫无关系， 它还实现了名为`AddressValidator`的验证器。如果考虑在`Customer`验证器类中重用`Address`验证器的功能（这种重用不是通过简单的代码拷贝）， 那么可以将`Address`验证器的实例通过依赖注入的方式注入到`Customer`验证器中。如以下示例所示：
 
     public class CustomerValidator implements Validator {
-
+    
         private final Validator addressValidator;
-
+    
         public CustomerValidator(Validator addressValidator) {
             if (addressValidator == null) {
                 throw new IllegalArgumentException("The supplied [Validator] is " +
@@ -94,14 +94,14 @@ ValidationUtils中的静态方法`rejectIfEmpty(..)`方法用于拒绝 `name`属
             }
             this.addressValidator = addressValidator;
         }
-
+    
         /**
          * This Validator validates Customer instances, and any subclasses of Customer too
          */
         public boolean supports(Class clazz) {
             return Customer.class.isAssignableFrom(clazz);
         }
-
+    
         public void validate(Object target, Errors errors) {
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "firstName", "field.required");
             ValidationUtils.rejectIfEmptyOrWhitespace(errors, "surname", "field.required");
@@ -155,45 +155,45 @@ Table 11. Examples of properties
 以下两个示例类使用`BeanWrapper`来获取和设置属性：
 
     public class Company {
-
+    
         private String name;
         private Employee managingDirector;
-
+    
         public String getName() {
             return this.name;
         }
-
+    
         public void setName(String name) {
             this.name = name;
         }
-
+    
         public Employee getManagingDirector() {
             return this.managingDirector;
         }
-
+    
         public void setManagingDirector(Employee managingDirector) {
             this.managingDirector = managingDirector;
         }
     }
-
+    
     public class Employee {
-
+    
         private String name;
-
+    
         private float salary;
-
+    
         public String getName() {
             return this.name;
         }
-
+    
         public void setName(String name) {
             this.name = name;
         }
-
+    
         public float getSalary() {
             return salary;
         }
-
+    
         public void setSalary(float salary) {
             this.salary = salary;
         }
@@ -207,12 +207,12 @@ Table 11. Examples of properties
     // ... can also be done like this:
     PropertyValue value = new PropertyValue("name", "Some Company Inc.");
     company.setPropertyValue(value);
-
+    
     // ok, let's create the director and tie it to the company:
     BeanWrapper jim = new BeanWrapperImpl(new Employee());
     jim.setPropertyValue("name", "Jim Stravinsky");
     company.setPropertyValue("managingDirector", jim.getWrappedInstance());
-
+    
     // retrieving the salary of the managingDirector through the company
     Float salary = (Float) company.getPropertyValue("managingDirector.salary");
 
@@ -270,7 +270,7 @@ com
 以下引用的`SomethingBeanInfo`类的Java源代码将`CustomNumberEditor`与`Something`类的`age`属性相关联：
 
     public class SomethingBeanInfo extends SimpleBeanInfo {
-
+    
         public PropertyDescriptor[] getPropertyDescriptors() {
             try {
                 final PropertyEditor numberPE = new CustomNumberEditor(Integer.class, true);
@@ -302,20 +302,20 @@ com
 请考虑以下示例，该示例定义名为`ExoticType`的用户类和另一个名为`DependsOnExoticType`的类，该类需要将`ExoticType`设置为属性：
 
     package example;
-
+    
     public class ExoticType {
-
+    
         private String name;
-
+    
         public ExoticType(String name) {
             this.name = name;
         }
     }
-
+    
     public class DependsOnExoticType {
-
+    
         private ExoticType type;
-
+    
         public void setType(ExoticType type) {
             this.type = type;
         }
@@ -331,9 +331,9 @@ com
 
     // converts string representation to ExoticType object
     package example;
-
+    
     public class ExoticTypeEditor extends PropertyEditorSupport {
-
+    
         public void setAsText(String text) {
             setValue(new ExoticType(text.toUpperCase()));
         }
@@ -358,14 +358,14 @@ com
 以下示例显示如何创建自己的`PropertyEditorRegistrar`实现:
 
     package com.foo.editors.spring;
-
+    
     public final class CustomPropertyEditorRegistrar implements PropertyEditorRegistrar {
-
+    
         public void registerCustomEditors(PropertyEditorRegistry registry) {
-
+    
             // it is expected that new PropertyEditor instances are created
             registry.registerCustomEditor(ExoticType.class, new ExoticTypeEditor());
-
+    
             // you could register as many custom property editors as are required here...
         }
     }
@@ -381,25 +381,25 @@ com
             </list>
         </property>
     </bean>
-
+    
     <bean id="customPropertyEditorRegistrar"
         class="com.foo.editors.spring.CustomPropertyEditorRegistrar"/>
 
 最后（与本章的重点有所不同，对于那些使用[Spring的MVC Web框架](web.html#mvc)的人来说），使用`PropertyEditorRegistrars`和数据绑定控制器（`SimpleFormController`）可以非常方便。 以下示例在 `initBinder(..)`方法的实现中使用 `PropertyEditorRegistrar`:
 
     public final class RegisterUserController extends SimpleFormController {
-
+    
         private final PropertyEditorRegistrar customPropertyEditorRegistrar;
-
+    
         public RegisterUserController(PropertyEditorRegistrar propertyEditorRegistrar) {
             this.customPropertyEditorRegistrar = propertyEditorRegistrar;
         }
-
+    
         protected void initBinder(HttpServletRequest request,
                 ServletRequestDataBinder binder) throws Exception {
             this.customPropertyEditorRegistrar.registerCustomEditors(binder);
         }
-
+    
         // other methods to do with registering a User
     }
 
@@ -418,9 +418,9 @@ Spring 3引入了一个`core.convert`包，它提供了一个通用的类型转�
 实现类型转换逻辑的SPI是简易的，而且是强类型的。如以下接口定义所示：
 
     package org.springframework.core.convert.converter;
-
+    
     public interface Converter<S, T> {
-
+    
         T convert(S source);
     }
 
@@ -430,14 +430,16 @@ Spring 3引入了一个`core.convert`包，它提供了一个通用的类型转�
 
 为方便起见，`core.convert.support`包中提供了几个转换器实现。 这些包括从字符串到数字和其他常见类型的转换器。 以下清单显示了`StringToInteger` 类，它是典型的`Converter` 实现：
 
-    package org.springframework.core.convert.support;
+```java
+package org.springframework.core.convert.support;
 
-    final class StringToInteger implements Converter<String, Integer> {
+final class StringToInteger implements Converter<String, Integer> {
 
-        public Integer convert(String source) {
-            return Integer.valueOf(source);
-        }
+    public Integer convert(String source) {
+        return Integer.valueOf(source);
     }
+}
+```
 
 <a id="core-convert-ConverterFactory-SPI)"></a>
 
@@ -445,33 +447,35 @@ Spring 3引入了一个`core.convert`包，它提供了一个通用的类型转�
 
 当需要集中整个类层次结构的转换逻辑时（例如，从String转换为java.lang.Enum对象时），您可以实现`ConverterFactory`，如以下示例所示：
 
-    package org.springframework.core.convert.converter;
+```java
+package org.springframework.core.convert.converter;
 
-    public interface ConverterFactory<S, R> {
+public interface ConverterFactory<S, R> {
 
-        <T extends R> Converter<S, T> getConverter(Class<T> targetType);
-    }
+    <T extends R> Converter<S, T> getConverter(Class<T> targetType);
+}
+```
 
-参数化S为您要转换的类型，R是需要转换后的类型的基类。 然后实现getConverter(Class<T>)，其中T是R的子类。
+参数化S为您要转换的类型，R是需要转换后的类型的基类。 然后实现`getConverter(Class<T>)`，其中T是R的子类。
 
 以`StringToEnum` `ConverterFactory`为例：
 
     package org.springframework.core.convert.support;
-
+    
     final class StringToEnumConverterFactory implements ConverterFactory<String, Enum> {
-
+    
         public <T extends Enum> Converter<String, T> getConverter(Class<T> targetType) {
             return new StringToEnumConverter(targetType);
         }
-
+    
         private final class StringToEnumConverter<T extends Enum> implements Converter<String, T> {
-
+    
             private Class<T> enumType;
-
+    
             public StringToEnumConverter(Class<T> enumType) {
                 this.enumType = enumType;
             }
-
+    
             public T convert(String source) {
                 return (T) Enum.valueOf(this.enumType, source.trim());
             }
@@ -485,11 +489,11 @@ Spring 3引入了一个`core.convert`包，它提供了一个通用的类型转�
 当您需要复杂的`Converter`实现时，请考虑使用`GenericConverter`接口。`GenericConverter`具有比`Converter`更灵活但不太强类型的签名，支持在多种源和目标类型之间进行转换。 此外，`GenericConverter`可以在实现转换逻辑时使用可用的源和目标字段上下文。 此上下文类允许通过字段注解或在字段签名上声明的一般信息来驱动类型转换。 以下清单显示了`GenericConverter`的接口定义：
 
     package org.springframework.core.convert.converter;
-
+    
     public interface GenericConverter {
-
+    
         public Set<ConvertiblePair> getConvertibleTypes();
-
+    
         Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType);
     }
 
@@ -506,10 +510,10 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 有时可能只想在特定条件为真时才执行`Converter`，例如，在特定注解的目标上使用`Converter`，或者，在一个特定的目标类方法（例如`static valueOf`方法）中执行`Converter`。 `ConditionalGenericConverter`是`GenericConverter` 和`ConditionalConverter`接口的组合。允许自定义匹配条件
 
     public interface ConditionalConverter {
-
+    
         boolean matches(TypeDescriptor sourceType, TypeDescriptor targetType);
     }
-
+    
     public interface ConditionalGenericConverter extends GenericConverter, ConditionalConverter {
     }
 
@@ -522,17 +526,17 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 `ConversionService`定义了一个统一的API，用于在运行时执行类型转换逻辑。 转换器通常在以下Facade接口后面执行：
 
     package org.springframework.core.convert;
-
+    
     public interface ConversionService {
-
+    
         boolean canConvert(Class<?> sourceType, Class<?> targetType);
-
+    
         <T> T convert(Object source, Class<T> targetType);
-
+    
         boolean canConvert(TypeDescriptor sourceType, TypeDescriptor targetType);
-
+    
         Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType);
-
+    
     }
 
 大多数 `ConversionService`实现还实现了`ConverterRegistry`，它提供了一个用于注册转换器的SPI。 在内部，`ConversionService`实现委托其注册的转换器执行类型转换逻辑。
@@ -575,12 +579,12 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 
     @Service
     public class MyService {
-
+    
         @Autowired
         public MyService(ConversionService conversionService) {
             this.conversionService = conversionService;
         }
-
+    
         public void doIt() {
             this.conversionService.convert(...)
         }
@@ -591,7 +595,7 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 幸运的是，`TypeDescriptor`提供了各种选项，使得这样做非常简单，如下例所示：
 
     DefaultConversionService cs = new DefaultConversionService();
-
+    
     List<Integer> input = ....
     cs.convert(input,
         TypeDescriptor.forObject(input), // List<Integer> type descriptor
@@ -618,21 +622,21 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 `Formatter` SPI实现字段格式化逻辑是简单的，强类型的。 以下清单显示了Formatter接口定义：
 
     package org.springframework.format;
-
+    
     public interface Formatter<T> extends Printer<T>, Parser<T> {
     }
 
 `Formatter`继承了 `Printer`和`Parser`内置的接口。以下清单显示了这两个接口的定义：
 
     public interface Printer<T> {
-
+    
         String print(T fieldValue, Locale locale);
     }
-
+    
     import java.text.ParseException;
-
+    
     public interface Parser<T> {
-
+    
         T parse(String clientValue, Locale locale) throws ParseException;
     }
 
@@ -643,29 +647,29 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 以下`DateFormatter`是`Formatter`实现的示例：
 
     package org.springframework.format.datetime;
-
+    
     public final class DateFormatter implements Formatter<Date> {
-
+    
         private String pattern;
-
+    
         public DateFormatter(String pattern) {
             this.pattern = pattern;
         }
-
+    
         public String print(Date date, Locale locale) {
             if (date == null) {
                 return "";
             }
             return getDateFormat(locale).format(date);
         }
-
+    
         public Date parse(String formatted, Locale locale) throws ParseException {
             if (formatted.length() == 0) {
                 return null;
             }
             return getDateFormat(locale).parse(formatted);
         }
-
+    
         protected DateFormat getDateFormat(Locale locale) {
             DateFormat dateFormat = new SimpleDateFormat(this.pattern, locale);
             dateFormat.setLenient(false);
@@ -682,13 +686,13 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 字段格式也可以通过字段类型或注解进行配置。如果要将注解绑定到`Formatter`，请实现`AnnotationFormatterFactory`。以下清单显示了 `AnnotationFormatterFactory` 接口的定义：
 
     package org.springframework.format;
-
+    
     public interface AnnotationFormatterFactory<A extends Annotation> {
-
+    
         Set<Class<?>> getFieldTypes();
-
+    
         Printer<?> getPrinter(A annotation, Class<?> fieldType);
-
+    
         Parser<?> getParser(A annotation, Class<?> fieldType);
     }
 
@@ -698,21 +702,21 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 
     public final class NumberFormatAnnotationFormatterFactory
             implements AnnotationFormatterFactory<NumberFormat> {
-
+    
         public Set<Class<?>> getFieldTypes() {
             return new HashSet<Class<?>>(asList(new Class<?>[] {
                 Short.class, Integer.class, Long.class, Float.class,
                 Double.class, BigDecimal.class, BigInteger.class }));
         }
-
+    
         public Printer<Number> getPrinter(NumberFormat annotation, Class<?> fieldType) {
             return configureFormatterFrom(annotation, fieldType);
         }
-
+    
         public Parser<Number> getParser(NumberFormat annotation, Class<?> fieldType) {
             return configureFormatterFrom(annotation, fieldType);
         }
-
+    
         private Formatter<Number> configureFormatterFrom(NumberFormat annotation, Class<?> fieldType) {
             if (!annotation.pattern().isEmpty()) {
                 return new NumberStyleFormatter(annotation.pattern());
@@ -732,7 +736,7 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 想要触发格式化，只需在在字段上添加`@NumberFormat`注解即可。
 
     public class MyModel {
-
+    
         @NumberFormat(style=Style.CURRENCY)
         private BigDecimal decimal;
     }
@@ -746,7 +750,7 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 下面的示例使用`@DateTimeFormat`将`java.util.Date` 化为ISO Date（yyyy-MM-dd）：
 
     public class MyModel {
-
+    
         @DateTimeFormat(iso=ISO.DATE)
         private Date date;
     }
@@ -760,15 +764,15 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 以下清单显示了`FormatterRegistry`:
 
     package org.springframework.format;
-
+    
     public interface FormatterRegistry extends ConverterRegistry {
-
+    
         void addFormatterForFieldType(Class<?> fieldType, Printer<?> printer, Parser<?> parser);
-
+    
         void addFormatterForFieldType(Class<?> fieldType, Formatter<?> formatter);
-
+    
         void addFormatterForFieldType(Formatter<?> formatter);
-
+    
         void addFormatterForAnnotation(AnnotationFormatterFactory<?, ?> factory);
     }
 
@@ -783,9 +787,9 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 `FormatterRegistrar` 是用于注册格式化器和通过FormatterRegistry转换的SPI:
 
     package org.springframework.format;
-
+    
     public interface FormatterRegistrar {
-
+    
         void registerFormatters(FormatterRegistry registry);
     }
 
@@ -809,21 +813,21 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
 
     @Configuration
     public class AppConfig {
-
+    
         @Bean
         public FormattingConversionService conversionService() {
-
+    
             // Use the DefaultFormattingConversionService but do not register defaults
             DefaultFormattingConversionService conversionService = new DefaultFormattingConversionService(false);
-
+    
             // Ensure @NumberFormat is still supported
             conversionService.addFormatterForFieldAnnotation(new NumberFormatAnnotationFormatterFactory());
-
+    
             // Register date conversion with a specific global format
             DateFormatterRegistrar registrar = new DateFormatterRegistrar();
             registrar.setFormatter(new DateFormatter("yyyyMMdd"));
             registrar.registerFormatters(conversionService);
-
+    
             return conversionService;
         }
     }
@@ -836,7 +840,7 @@ Java数组和集合之间转换的转换器是`GenericConverter`应用的例子�
         xsi:schemaLocation="
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd>
-
+    
         <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
             <property name="registerDefaultFormatters" value="false" />
             <property name="formatters">
@@ -884,11 +888,11 @@ JSR-303是Java平台标准化验证约束声明和元数据的标准API，使用
 JSR-303允许您为这些属性定义声明性验证约束，如以下示例所示:
 
     public class PersonForm {
-
+    
         @NotNull
         @Size(max=64)
         private String name;
-
+    
         @Min(0)
         private int age;
     }
@@ -919,20 +923,20 @@ Spring提供了对Bean Validation API的完全支持，包括对以 JSR-303 或 
 如果您希望直接使用Bean Validation API，则可以注入对`javax.validation.Validator`的引用，如以下示例所示：
 
     import javax.validation.Validator;
-
+    
     @Service
     public class MyService {
-
+    
         @Autowired
         private Validator validator;
 
 如果您的bean需要Spring Validation API，则可以注入对`org.springframework.validation.Validator`的引用，如以下示例所示：
 
     import org.springframework.validation.Validator;
-
+    
     @Service
     public class MyService {
-
+    
         @Autowired
         private Validator validator;
     }
@@ -954,14 +958,14 @@ Spring提供了对Bean Validation API的完全支持，包括对以 JSR-303 或 
     @Constraint(validatedBy=MyConstraintValidator.class)
     public @interface MyConstraint {
     }
-
+    
     import javax.validation.ConstraintValidator;
-
+    
     public class MyConstraintValidator implements ConstraintValidator {
-
+    
         @Autowired;
         private Foo aDependency;
-
+    
         ...
     }
 
@@ -994,13 +998,13 @@ Bean Validation 1.1支持的方法验证，Hibernate Validator 4.3支持的自�
     Foo target = new Foo();
     DataBinder binder = new DataBinder(target);
     binder.setValidator(new FooValidator());
-
+    
     // bind to the target object
     binder.bind(propertyValues);
-
+    
     // validate the target object
     binder.validate();
-
+    
     // get BindingResult that includes any validation errors
     BindingResult results = binder.getBindingResult();
 

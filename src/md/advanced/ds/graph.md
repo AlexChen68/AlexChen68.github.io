@@ -75,7 +75,7 @@ description: 图
 
 **邻接表（链表存储）**
 
-![邻接表](D:\Documents\坚果云\学习\博客\编程能力\images\邻接表.png)
+<!-- ![邻接表](D:\Documents\坚果云\学习\博客\编程能力\images\邻接表.png) -->
 
 #### **图的遍历**
 
@@ -88,7 +88,3 @@ description: 图
 ##### 广度优先搜索（BFS）
 
 > 广度优先搜索（Breadth First Search）
-
-
-
-## 

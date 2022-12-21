@@ -94,7 +94,7 @@ SpEL支持广泛的功能，例如调用方法，访问属性和调用构造函�
 以下调用JavaBean属性的示例调用`String`属性`Bytes`property :
 
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     // invokes 'getBytes()'
     Expression exp = parser.parseExpression("'Hello World'.bytes"); (1)
     byte[] bytes = (byte[]) exp.getValue();
@@ -104,7 +104,7 @@ SpEL支持广泛的功能，例如调用方法，访问属性和调用构造函�
 SpEL还支持嵌套属性，使用标准的点符号。即`prop1.prop2.prop3`链式写法和设置属性值。也可以访问公共字段。 以下示例显示如何使用点表示法来获取文字的长度：
 
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     // invokes 'getBytes().length'
     Expression exp = parser.parseExpression("'Hello World'.bytes.length"); (1)
     int length = (Integer) exp.getValue();
@@ -126,16 +126,16 @@ SpEL的更常见用法是提供针对特定对象实例（称为根对象）计�
     // Create and set a calendar
     GregorianCalendar c = new GregorianCalendar();
     c.set(1856, 7, 9);
-
+    
     // The constructor arguments are name, birthday, and nationality.
     Inventor tesla = new Inventor("Nikola Tesla", c.getTime(), "Serbian");
-
+    
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     Expression exp = parser.parseExpression("name"); (1)
     String name = (String) exp.getValue(tesla);
     // name == "Nikola Tesla"
-
+    
     exp = parser.parseExpression("name == 'Nikola Tesla'");
     boolean result = exp.getValue(tesla, Boolean.class);
     // result == true
@@ -173,16 +173,16 @@ SpEL的更常见用法是提供针对特定对象实例（称为根对象）计�
     class Simple {
         public List<Boolean> booleanList = new ArrayList<Boolean>();
     }
-
+    
     Simple simple = new Simple();
     simple.booleanList.add(true);
-
+    
     EvaluationContext context = SimpleEvaluationContext().forReadOnlyDataBinding().build();
-
+    
     // false is passed in here as a string. SpEL and the conversion service
     // correctly recognize that it needs to be a Boolean and convert it
     parser.parseExpression("booleanList[0]").setValue(context, simple, "false");
-
+    
     // b is false
     Boolean b = simple.booleanList.get(0);
 
@@ -195,20 +195,20 @@ SpEL的更常见用法是提供针对特定对象实例（称为根对象）计�
     class Demo {
         public List<String> list;
     }
-
+    
     // Turn on:
     // - auto null reference initialization
     // - auto collection growing
     SpelParserConfiguration config = new SpelParserConfiguration(true,true);
-
+    
     ExpressionParser parser = new SpelExpressionParser(config);
-
+    
     Expression expression = parser.parseExpression("list[3]");
-
+    
     Demo demo = new Demo();
-
+    
     Object o = expression.getValue(demo);
-
+    
     // demo.list will now be a real collection of 4 entries
     // Each entry is a new empty String
 
@@ -247,13 +247,13 @@ someArray\[0\].someProperty.someOtherProperty < 0.1
 
     SpelParserConfiguration config = new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE,
         this.getClass().getClassLoader());
-
+    
     SpelExpressionParser parser = new SpelExpressionParser(config);
-
+    
     Expression expr = parser.parseExpression("payload");
-
+    
     MyMessage message = new MyMessage();
-
+    
     Object payload = expr.getValue(message);
 
 指定编译器模式时，还可以指定类加载器（允许传递null）。编译表达式将在任何提供的子类加载器中被定义。重要的是确保是否指定了类加载器，它可以看到表达式运算操作过程中涉及的所有类型。 如果没有指定，那么将使用默认的类加载器（通常是在表达式计算期间运行的线程的上下文类加载器）。
@@ -291,7 +291,7 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 
     <bean id="numberGuess" class="org.spring.samples.NumberGuess">
         <property name="randomNumber" value="#{ T(java.lang.Math).random() * 100.0 }"/>
-
+    
         <!-- other properties -->
     </bean>
 
@@ -299,7 +299,7 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 
     <bean id="taxCalculator" class="org.spring.samples.TaxCalculator">
         <property name="defaultLocale" value="#{ systemProperties['user.region'] }"/>
-
+    
         <!-- other properties -->
     </bean>
 
@@ -309,13 +309,13 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 
     <bean id="numberGuess" class="org.spring.samples.NumberGuess">
         <property name="randomNumber" value="#{ T(java.lang.Math).random() * 100.0 }"/>
-
+    
         <!-- other properties -->
     </bean>
-
+    
     <bean id="shapeGuess" class="org.spring.samples.ShapeGuess">
         <property name="initialShapeSeed" value="#{ numberGuess.randomNumber }"/>
-
+    
         <!-- other properties -->
     </bean>
 
@@ -328,67 +328,67 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 以下示例设置字段变量的默认值:
 
     public static class FieldValueTestBean
-
+    
         @Value("#{ systemProperties['user.region'] }")
         private String defaultLocale;
-
+    
         public void setDefaultLocale(String defaultLocale) {
             this.defaultLocale = defaultLocale;
         }
-
+    
         public String getDefaultLocale() {
             return this.defaultLocale;
         }
-
+    
     }
 
 下面显示了属性setter方法的相同配置:
 
     public static class PropertyValueTestBean
-
+    
         private String defaultLocale;
-
+    
         @Value("#{ systemProperties['user.region'] }")
         public void setDefaultLocale(String defaultLocale) {
             this.defaultLocale = defaultLocale;
         }
-
+    
         public String getDefaultLocale() {
             return this.defaultLocale;
         }
-
+    
     }
 
 使用`@Autowired`方法注解的构造方法也可以使用`@Value`注解:
 
     public class SimpleMovieLister {
-
+    
         private MovieFinder movieFinder;
         private String defaultLocale;
-
+    
         @Autowired
         public void configure(MovieFinder movieFinder,
                 @Value("#{ systemProperties['user.region'] }") String defaultLocale) {
             this.movieFinder = movieFinder;
             this.defaultLocale = defaultLocale;
         }
-
+    
         // ...
     }
-
+    
     public class MovieRecommender {
-
+    
         private String defaultLocale;
-
+    
         private CustomerPreferenceDao customerPreferenceDao;
-
+    
         @Autowired
         public MovieRecommender(CustomerPreferenceDao customerPreferenceDao,
                 @Value("#{systemProperties['user.country']}") String defaultLocale) {
             this.customerPreferenceDao = customerPreferenceDao;
             this.defaultLocale = defaultLocale;
         }
-
+    
         // ...
     }
 
@@ -438,17 +438,17 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 以下清单显示了文字的简单用法。 通常，它们不是像这样单独使用，而是作为更复杂表达式的一部分使用 \- 例如，在逻辑比较运算符的一侧使用文字。
 
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     // evals to "Hello World"
     String helloWorld = (String) parser.parseExpression("'Hello World'").getValue();
-
+    
     double avogadrosNumber = (Double) parser.parseExpression("6.0221415E+23").getValue();
-
+    
     // evals to 2147483647
     int maxValue = (Integer) parser.parseExpression("0x7FFFFFFF").getValue();
-
+    
     boolean trueValue = (Boolean) parser.parseExpression("true").getValue();
-
+    
     Object nullValue = parser.parseExpression("null").getValue();
 
 数字支持使用负号，指数表示法和小数点。 默认情况下，使用`Double.parseDouble()`解析实数。.
@@ -461,26 +461,26 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 
     // evals to 1856
     int year = (Integer) parser.parseExpression("Birthdate.Year + 1900").getValue(context);
-
+    
     String city = (String) parser.parseExpression("placeOfBirth.City").getValue(context);
 
 属性名称的第一个字母允许不区分大小写。 数组和列表的内容是使用方括号表示法获得的，如下例所示：:
 
     ExpressionParser parser = new SpelExpressionParser();
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
-
+    
     // Inventions Array
-
+    
     // evaluates to "Induction motor"
     String invention = parser.parseExpression("inventions[3]").getValue(
             context, tesla, String.class);
-
+    
     // Members List
-
+    
     // evaluates to "Nikola Tesla"
     String name = parser.parseExpression("Members[0].Name").getValue(
             context, ieee, String.class);
-
+    
     // List and Array navigation
     // evaluates to "Wireless communication"
     String invention = parser.parseExpression("Members[0].Inventions[6]").getValue(
@@ -489,14 +489,14 @@ SpEL表达式可以通过XML或基于注解的配置用于定义`BeanDefinition`
 maps的内容通过方括号包着文字的键/值定义。在这种情况下， 由于 `Officers`的keys是字符串，则可以定义字符字面值：
 
     // Officer's Dictionary
-
+    
     Inventor pupin = parser.parseExpression("Officers['president']").getValue(
             societyContext, Inventor.class);
-
+    
     // evaluates to "Idvor"
     String city = parser.parseExpression("Officers['president'].PlaceOfBirth.City").getValue(
             societyContext, String.class);
-
+    
     // setting values
     parser.parseExpression("Officers['advisors'][0].PlaceOfBirth.Country").setValue(
             societyContext, "Croatia");
@@ -507,10 +507,12 @@ maps的内容通过方括号包着文字的键/值定义。在这种情况下，
 
 您可以使用`{}`表示法直接在表达式中表达列表。
 
-    // evaluates to a Java list containing the four numbers
-    List numbers = (List) parser.parseExpression("{1,2,3,4}").getValue(context);
-
-    List listOfLists = (List) parser.parseExpression("{{'a','b'},{'x','y'}}").getValue(context);
+```java
+// evaluates to a Java list containing the four numbers
+List numbers = (List) parser.parseExpression("{1,2,3,4}").getValue(context);
+    
+List listOfLists = (List) parser.parseExpression("{{'a','b'},{'x','y'}}").getValue(context);
+```
 
 `{}`本身就是一个空列表。 出于性能原因，如果列表本身完全由固定文字组成，则会创建一个常量列表来表示表达式（而不是在每个计算上构建新列表）。
 
@@ -522,7 +524,7 @@ maps的内容通过方括号包着文字的键/值定义。在这种情况下，
 
     // evaluates to a Java map containing the two entries
     Map inventorInfo = (Map) parser.parseExpression("{name:'Nikola',dob:'10-July-1856'}").getValue(context);
-
+    
     Map mapOfMaps = (Map) parser.parseExpression("{name:{first:'Nikola',last:'Tesla'},dob:{day:10,month:'July',year:1856}}").getValue(context);
 
 `{:}` {：}本身就是一张空map。 出于性能原因，如果map本身由固定文字或其他嵌套常量结构（列表或map）组成， 则会创建一个常量来表示表达式（而不是在每次计算时构建新map）。 map的双引号是可选的。 上面的示例没有使用双引号的key。
@@ -534,10 +536,10 @@ maps的内容通过方括号包着文字的键/值定义。在这种情况下，
 您可以使用熟悉的Java语法构建数组，可选择提供初始化程序以在构造时填充数组。 以下示例显示了如何执行此操作：:
 
     int[] numbers1 = (int[]) parser.parseExpression("new int[4]").getValue(context);
-
+    
     // Array with initializer
     int[] numbers2 = (int[]) parser.parseExpression("new int[]{1,2,3}").getValue(context);
-
+    
     // Multi dimensional array
     int[][] numbers3 = (int[][]) parser.parseExpression("new int[4][5]").getValue(context);
 
@@ -551,7 +553,7 @@ maps的内容通过方括号包着文字的键/值定义。在这种情况下，
 
     // string literal, evaluates to "bc"
     String bc = parser.parseExpression("'abc'.substring(1, 3)").getValue(String.class);
-
+    
     // evaluates to true
     boolean isMember = parser.parseExpression("isMember('Mihajlo Pupin')").getValue(
             societyContext, Boolean.class);
@@ -579,10 +581,10 @@ Spring Expression Language支持以下类型的运算符：
 
     // evaluates to true
     boolean trueValue = parser.parseExpression("2 == 2").getValue(Boolean.class);
-
+    
     // evaluates to false
     boolean falseValue = parser.parseExpression("2 < -5.0").getValue(Boolean.class);
-
+    
     // evaluates to true
     boolean trueValue = parser.parseExpression("'black' < 'block'").getValue(Boolean.class);
 
@@ -595,11 +597,11 @@ Spring Expression Language支持以下类型的运算符：
     // evaluates to false
     boolean falseValue = parser.parseExpression(
             "'xyz' instanceof T(Integer)").getValue(Boolean.class);
-
+    
     // evaluates to true
     boolean trueValue = parser.parseExpression(
             "'5.00' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean.class);
-
+    
     //evaluates to false
     boolean falseValue = parser.parseExpression(
             "'5.0067' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean.class);
@@ -645,28 +647,28 @@ SpEL支持以下逻辑运算符：
 以下示例显示如何使用逻辑运算符
 
     // -- AND --
-
+    
     // evaluates to false
     boolean falseValue = parser.parseExpression("true and false").getValue(Boolean.class);
-
+    
     // evaluates to true
     String expression = "isMember('Nikola Tesla') and isMember('Mihajlo Pupin')";
     boolean trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);
-
+    
     // -- OR --
-
+    
     // evaluates to true
     boolean trueValue = parser.parseExpression("true or false").getValue(Boolean.class);
-
+    
     // evaluates to true
     String expression = "isMember('Nikola Tesla') or isMember('Albert Einstein')";
     boolean trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);
-
+    
     // -- NOT --
-
+    
     // evaluates to false
     boolean falseValue = parser.parseExpression("!true").getValue(Boolean.class);
-
+    
     // -- AND and NOT --
     String expression = "isMember('Nikola Tesla') and !isMember('Mihajlo Pupin')";
     boolean falseValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);
@@ -679,30 +681,30 @@ SpEL支持以下逻辑运算符：
 
     // Addition
     int two = parser.parseExpression("1 + 1").getValue(Integer.class);  // 2
-
+    
     String testString = parser.parseExpression(
             "'test' + ' ' + 'string'").getValue(String.class);  // 'test string'
-
+    
     // Subtraction
     int four = parser.parseExpression("1 - -3").getValue(Integer.class);  // 4
-
+    
     double d = parser.parseExpression("1000.00 - 1e4").getValue(Double.class);  // -9000
-
+    
     // Multiplication
     int six = parser.parseExpression("-2 * -3").getValue(Integer.class);  // 6
-
+    
     double twentyFour = parser.parseExpression("2.0 * 3e0 * 4").getValue(Double.class);  // 24.0
-
+    
     // Division
     int minusTwo = parser.parseExpression("6 / -3").getValue(Integer.class);  // -2
-
+    
     double one = parser.parseExpression("8.0 / 4e0 / 2").getValue(Double.class);  // 1.0
-
+    
     // Modulus
     int three = parser.parseExpression("7 % 4").getValue(Integer.class);  // 3
-
+    
     int one = parser.parseExpression("8 / 5 % 2").getValue(Integer.class);  // 1
-
+    
     // Operator precedence
     int minusTwentyOne = parser.parseExpression("1+2-3*8").getValue(Integer.class);  // -21
 
@@ -714,9 +716,9 @@ SpEL支持以下逻辑运算符：
 
     Inventor inventor = new Inventor();
     EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
-
+    
     parser.parseExpression("Name").setValue(context, inventor, "Aleksandar Seovic");
-
+    
     // alternatively
     String aleks = parser.parseExpression(
             "Name = 'Aleksandar Seovic'").getValue(context, inventor, String.class);
@@ -728,9 +730,9 @@ SpEL支持以下逻辑运算符：
 特殊`T`运算符可用于指定`java.lang.Class`的实例(类型)。也可以使用此运算符调用静态方法。`StandardEvaluationContext`使用`TypeLocator`来查找类型， 而`StandardTypeLocator`(可以替换)是通过对`java.lang`包的解释而生成的。这意味着 `T()`对`java.lang`中的类型的引用不需要完全限定，但所有其他类型引用都是必须的。 以下示例显示如何使用`T`运算符:
 
     Class dateClass = parser.parseExpression("T(java.util.Date)").getValue(Class.class);
-
+    
     Class stringClass = parser.parseExpression("T(String)").getValue(Class.class);
-
+    
     boolean trueValue = parser.parseExpression(
             "T(java.math.RoundingMode).CEILING < T(java.math.RoundingMode).FLOOR")
             .getValue(Boolean.class);
@@ -744,7 +746,7 @@ SpEL支持以下逻辑运算符：
     Inventor einstein = p.parseExpression(
             "new org.spring.samples.spel.inventor.Inventor('Albert Einstein', 'German')")
             .getValue(Inventor.class);
-
+    
     //create new inventor instance within add method of List
     p.parseExpression(
             "Members.add(new org.spring.samples.spel.inventor.Inventor(
@@ -757,10 +759,10 @@ SpEL支持以下逻辑运算符：
 在表达式中，变量通过`#variableName` 模式来表示。变量的设置用到`EvaluationContext`的`setVariable`方法。`setVariable`
 
     Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
-
+    
     EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
     context.setVariable("newName", "Mike Tesla");
-
+    
     parser.parseExpression("Name = #newName").getValue(context, tesla);
     System.out.println(tesla.getName())  // "Mike Tesla"
 
@@ -773,12 +775,12 @@ SpEL支持以下逻辑运算符：
     // create an array of integers
     List<Integer> primes = new ArrayList<Integer>();
     primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
-
+    
     // create parser and set variable 'primes' as the array of integers
     ExpressionParser parser = new SpelExpressionParser();
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataAccess();
     context.setVariable("primes", primes);
-
+    
     // all prime numbers > 10 from the list (using selection ?{...})
     // evaluates to [11, 13, 17]
     List<Integer> primesGreaterThanTen = (List<Integer>) parser.parseExpression(
@@ -791,14 +793,14 @@ SpEL支持以下逻辑运算符：
 可以通过用户自定义函数来扩展SpEL，它可以在表达式字符串中使用，函数使用`EvaluationContext`的方法来注册：
 
     Method method = ...;
-
+    
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
     context.setVariable("myFunction", method);
 
 例如，请考虑以下实用程序方法来反转字符串:
 
     public abstract class StringUtils {
-
+    
         public static String reverseString(String input) {
             StringBuilder backwards = new StringBuilder(input.length());
             for (int i = 0; i < input.length(); i++)
@@ -811,11 +813,11 @@ SpEL支持以下逻辑运算符：
 然后，您可以注册并使用上述方法，如以下示例所示：
 
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
     context.setVariable("reverseString",
             StringUtils.class.getDeclaredMethod("reverseString", String.class));
-
+    
     String helloWorldReversed = parser.parseExpression(
             "#reverseString('hello')").getValue(context, String.class);
 
@@ -828,7 +830,7 @@ SpEL支持以下逻辑运算符：
     ExpressionParser parser = new SpelExpressionParser();
     StandardEvaluationContext context = new StandardEvaluationContext();
     context.setBeanResolver(new MyBeanResolver());
-
+    
     // This will end up calling resolve(context,"something") on MyBeanResolver during evaluation
     Object bean = parser.parseExpression("@something").getValue(context);
 
@@ -837,7 +839,7 @@ SpEL支持以下逻辑运算符：
     ExpressionParser parser = new SpelExpressionParser();
     StandardEvaluationContext context = new StandardEvaluationContext();
     context.setBeanResolver(new MyBeanResolver());
-
+    
     // This will end up calling resolve(context,"&foo") on MyBeanResolver during evaluation
     Object bean = parser.parseExpression("&foo").getValue(context);
 
@@ -854,10 +856,10 @@ SpEL支持以下逻辑运算符：
 
     parser.parseExpression("Name").setValue(societyContext, "IEEE");
     societyContext.setVariable("queryName", "Nikola Tesla");
-
+    
     expression = "isMember(#queryName)? #queryName + ' is a member of the ' " +
             "+ Name + ' Society' : #queryName + ' is not a member of the ' + Name + ' Society'";
-
+    
     String queryResultString = parser.parseExpression(expression)
             .getValue(societyContext, String.class);
     // queryResultString = "Nikola Tesla is a member of the IEEE Society"
@@ -876,7 +878,7 @@ Elvis运算符是三元运算符语法的缩写，用于[Groovy](http://www.groo
 可以使用Elvis运算符来实现，上面例子的也可以使用如下的形式展现：
 
     ExpressionParser parser = new SpelExpressionParser();
-
+    
     String name = parser.parseExpression("name?:'Unknown'").getValue(String.class);
     System.out.println(name);  // 'Unknown'
 
@@ -884,11 +886,11 @@ Elvis运算符是三元运算符语法的缩写，用于[Groovy](http://www.groo
 
     ExpressionParser parser = new SpelExpressionParser();
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
-
+    
     Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
     String name = parser.parseExpression("Name?:'Elvis Presley'").getValue(context, tesla, String.class);
     System.out.println(name);  // Nikola Tesla
-
+    
     tesla.setName(null);
     name = parser.parseExpression("Name?:'Elvis Presley'").getValue(context, tesla, String.class);
     System.out.println(name);  // Elvis Presley
@@ -907,13 +909,13 @@ Elvis运算符是三元运算符语法的缩写，用于[Groovy](http://www.groo
 
     ExpressionParser parser = new SpelExpressionParser();
     EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
-
+    
     Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
     tesla.setPlaceOfBirth(new PlaceOfBirth("Smiljan"));
-
+    
     String city = parser.parseExpression("PlaceOfBirth?.City").getValue(context, tesla, String.class);
     System.out.println(city);  // Smiljan
-
+    
     tesla.setPlaceOfBirth(null);
     city = parser.parseExpression("PlaceOfBirth?.City").getValue(context, tesla, String.class);
     System.out.println(city);  // null - does not throw NullPointerException!!!
@@ -957,21 +959,21 @@ map可以用于处理投影，在这种情况下投影表达式可以对map中�
     String randomPhrase = parser.parseExpression(
             "random number is #{T(java.lang.Math).random()}",
             new TemplateParserContext()).getValue(String.class);
-
+    
     // evaluates to "random number is 0.7038186818312008"
 
 字符串包含文本`'random number is '` 和在`#{ }` 中的表达式的处理结果。这个例子的结果调用了`random()`方法。第二个参数对于`parseExpression()`方法是`ParserContext`的类型。 `ParserContext`接口可以控制表达式的解释，用于支持表达式模板功能。`TemplateParserContext` 的定义如下：
 
     public class TemplateParserContext implements ParserContext {
-
+    
         public String getExpressionPrefix() {
             return "#{";
         }
-
+    
         public String getExpressionSuffix() {
             return "}";
         }
-
+    
         public boolean isTemplate() {
             return true;
         }
@@ -986,70 +988,70 @@ map可以用于处理投影，在这种情况下投影表达式可以对map中�
 Example 1. Inventor.java
 
     package org.spring.samples.spel.inventor;
-
+    
     import java.util.Date;
     import java.util.GregorianCalendar;
-
+    
     public class Inventor {
-
+    
         private String name;
         private String nationality;
         private String[] inventions;
         private Date birthdate;
         private PlaceOfBirth placeOfBirth;
-
+    
         public Inventor(String name, String nationality) {
             GregorianCalendar c= new GregorianCalendar();
             this.name = name;
             this.nationality = nationality;
             this.birthdate = c.getTime();
         }
-
+    
         public Inventor(String name, Date birthdate, String nationality) {
             this.name = name;
             this.nationality = nationality;
             this.birthdate = birthdate;
         }
-
+    
         public Inventor() {
         }
-
+    
         public String getName() {
             return name;
         }
-
+    
         public void setName(String name) {
             this.name = name;
         }
-
+    
         public String getNationality() {
             return nationality;
         }
-
+    
         public void setNationality(String nationality) {
             this.nationality = nationality;
         }
-
+    
         public Date getBirthdate() {
             return birthdate;
         }
-
+    
         public void setBirthdate(Date birthdate) {
             this.birthdate = birthdate;
         }
-
+    
         public PlaceOfBirth getPlaceOfBirth() {
             return placeOfBirth;
         }
-
+    
         public void setPlaceOfBirth(PlaceOfBirth placeOfBirth) {
             this.placeOfBirth = placeOfBirth;
         }
-
+    
         public void setInventions(String[] inventions) {
             this.inventions = inventions;
         }
-
+    
         public String[] getInventions() {
             return inventions;
         }
@@ -1058,71 +1060,71 @@ Example 1. Inventor.java
 Example 2. PlaceOfBirth.java
 
     package org.spring.samples.spel.inventor;
-
+    
     public class PlaceOfBirth {
-
+    
         private String city;
         private String country;
-
+    
         public PlaceOfBirth(String city) {
             this.city=city;
         }
-
+    
         public PlaceOfBirth(String city, String country) {
             this(city);
             this.country = country;
         }
-
+    
         public String getCity() {
             return city;
         }
-
+    
         public void setCity(String s) {
             this.city = s;
         }
-
+    
         public String getCountry() {
             return country;
         }
-
+    
         public void setCountry(String country) {
             this.country = country;
         }
-
+    
     }
 
 Example 3. Society.java
 
     package org.spring.samples.spel.inventor;
-
+    
     import java.util.*;
-
+    
     public class Society {
-
+    
         private String name;
-
+    
         public static String Advisors = "advisors";
         public static String President = "president";
-
+    
         private List<Inventor> members = new ArrayList<Inventor>();
         private Map officers = new HashMap();
-
+    
         public List getMembers() {
             return members;
         }
-
+    
         public Map getOfficers() {
             return officers;
         }
-
+    
         public String getName() {
             return name;
         }
-
+    
         public void setName(String name) {
             this.name = name;
         }
-
+    
         public boolean isMember(String name) {
             for (Inventor inventor : members) {
                 if (inventor.getName().equals(name)) {
@@ -1131,5 +1133,5 @@ Example 3. Society.java
             }
             return false;
         }
-
+    
     }
