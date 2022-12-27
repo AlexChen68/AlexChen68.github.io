@@ -1,6 +1,7 @@
 ---
 title: 算法
 index: false
+order: 99
 icon: blog
 date: 2022-09-27
 article: false

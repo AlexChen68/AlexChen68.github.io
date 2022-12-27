@@ -4,23 +4,19 @@ export const springSidebar = arraySidebar([
   {
     text: "Spring Framework",
     icon: "alias",
-    collapsable: true,
     prefix: "spring/",
     children: [
       {
         text: "1. Core",
         prefix: "core/",
-        collapsable: true,
         children: ["ioc", "aop", "resources", "annotation"]
       },
       {
         text: "2. Web",
-        collapsable: true,
         children: ["web-servlet-mvc"]
       },
       {
         text: "3. DataAccess",
-        collapsable: true,
         children: ["data-access-transaction"]
       },
     ]

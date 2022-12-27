@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
-import { sidebarConig } from "./sidebar/index";
+import { sidebarConig } from "./sidebar";
 
 const github = "https://github.com/AlexChen68"
 const repoUrl = "https://github.com/AlexChen68/blog"

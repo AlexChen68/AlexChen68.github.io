@@ -1,18 +1,20 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const javaSidebar = arraySidebar([
+export const java = arraySidebar([
   {
     text: "Java 基础",
     icon: "java",
     prefix: "basic/",
-    collapsable: true,
-    children: "structure"
+    children: [
+      "01-feature",
+      "02-datatype",
+      "03-string"
+    ]
   },
   {
     text: "Java 集合框架",
     icon: "java",
     prefix: "collection/",
-    collapsable: true,
     children: "structure"
   },
   {
@@ -22,11 +24,5 @@ export const javaSidebar = arraySidebar([
     collapsable: true,
     children: "structure"
   },
-  {
-    text: "Java 虚拟机",
-    icon: "java",
-    prefix: "jvm/",
-    collapsable: true,
-    children: "structure"
-  },
 ]);
+
