@@ -29,7 +29,7 @@ Mybatis 的特点：
 
 ## Mybatis 运行原理
 
-![Mybatis运行原理](../../../public/images/database/mybatis-process.png)
+![Mybatis运行原理](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/db/mybatis-process.png)
 
 ## 引入 Mybatis
 
