@@ -1,11 +1,10 @@
 ---
-title: README
+title: 创建型设计模式
+order: 2
 index: false
 icon: blog
 date: 2022-09-30
 isOriginal: true
 article: false
-description: README
+description: 创建型设计模式
 ---
-
-# README

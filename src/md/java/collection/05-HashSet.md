@@ -19,7 +19,7 @@ description: HashSet
 
 ## 类图
 
-![HashSet类图](../../../public/images/java/collection/HashSet-class.png)
+![HashSet类图](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/hashset_class.png)
 
 `HashSet` 实现了三个接口：
 

@@ -24,7 +24,7 @@ export default navbar([
   {
     text: "计算机基础",
     icon: "advance",
-    link: "/md/advanced/"
+    link: "/md/advance/"
   },
   {
     text: "数据库",

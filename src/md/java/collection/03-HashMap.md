@@ -28,7 +28,7 @@ description: HashMap
 
 ## 类图
 
-![HashMap 类图](../../../public/images/java/collection/HashMap-class.png ':size=60%')
+![HashMap 类图](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/hashmap_class.png ':size=60%')
 
 `HashMap` 实现了三个接口：
 * `java.io.Serializable` 序列化接口

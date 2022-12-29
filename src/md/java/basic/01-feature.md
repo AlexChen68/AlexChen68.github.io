@@ -1,14 +1,14 @@
 ---
-title: Java 面向对象
-author: pdai
+title: Java 三大特性
 order: 1
 icon: blog
-date: 2022-09-30
 tag:
   - Java
 category:
   - Java 基础
-description: Java 面向对象
+author: pdai
+date: 2022-09-30
+description: Java 三大特性
 ---
 
 Java 具有三大特性，分别是**封装**、**继承**和**多态**。

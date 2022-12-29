@@ -1,13 +1,14 @@
 ---
-title: Java 集合框架概述
+title: Java 集合框架
+order: 0
 icon: blog
 date: 2022-09-30
 category: Java 基础
 isOriginal: true
-description: Java 集合框架概述
+description: Java 集合框架
 ---
 
-# Java集合框架概览
+# Java集合框架
 
 容器，就是可以容纳其他Java对象的对象。*Java Collections Framework(JCF)* 为Java开发者提供了通用的容器，其始于JDK 1.2，优点是:
 
@@ -35,7 +36,7 @@ Java容器主要包括 Collection 和 Map 两种，Collection 存储着对象的
     - Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列 PriorityQue。
 2. Map：代表键值对的集合，典型代表就是 HashMap。
 
-![Java集合框架](../../../public/images/java/collection/overview-framework.png ':size=80%')
+![Java集合框架](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/collection_framework.png ':size=80%')
 
 ## Collection 接口
 

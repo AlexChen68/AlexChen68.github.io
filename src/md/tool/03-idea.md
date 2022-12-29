@@ -1,6 +1,7 @@
 ---
 title: Intellij IDEA 技巧
 icon: tool
+# index: false
 date: 2022-09-30
 tag:
   - Intellij IDEA
@@ -9,4 +10,3 @@ category:
 isOriginal: true
 description: Intellij IDEA 技巧
 ---
-

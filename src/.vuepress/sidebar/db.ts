@@ -1,22 +1,22 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const dbSidebar = ([
+export const db = arraySidebar([
   {
     text: "Mysql 数据库",
     icon: "mysql",
-    prefix: "mysql",
-    collapsable: true,
-    children: [
-      "",
-    ]
+    prefix: "mysql/",
+    children: "structure"
   },
   {
     text: "Redis 数据库",
     icon: "java",
-    prefix: "redis",
-    collapsable: true,
-    children: [
-      "started"
-    ]
+    prefix: "redis/",
+    children: "structure"
+  },
+  {
+    text: "ORM 框架",
+    icon: "mysql",
+    prefix: "mybatis/",
+    children: "structure"
   },
 ])

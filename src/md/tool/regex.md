@@ -1,6 +1,7 @@
 ---
 title: 正则表达式
 icon: regexp
+index: false
 date: 2022-09-30
 tag:
   - 正则
