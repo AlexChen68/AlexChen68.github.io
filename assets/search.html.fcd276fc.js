@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c,a as r,b as e}from"./app.b62ae7a7.js";const s={},n=e("p",null,"\u641C\u7D22\u7B97\u6CD5",-1),a=e("blockquote",null,[e("p",null,"TODO")],-1);function l(_,m){return t(),c("div",null,[n,r(" more "),a])}const f=o(s,[["render",l],["__file","search.html.vue"]]);export{f as default};
