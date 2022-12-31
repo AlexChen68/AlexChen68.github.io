@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o,c as t,a,b as c}from"./app.fdaad276.js";const r={},n=c("p",null,"\u8BBE\u8BA1\u6A21\u5F0F\u4E4B\u5916\u89C2\u6A21\u5F0F",-1);function s(_,l){return o(),t("div",null,[n,a(" more ")])}const f=e(r,[["render",s],["__file","Facade.html.vue"]]);export{f as default};

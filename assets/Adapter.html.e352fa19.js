@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c as o,a as r,b as a}from"./app.fdaad276.js";const c={},n=a("p",null,"\u8BBE\u8BA1\u6A21\u5F0F\u4E4B\u9002\u914D\u5668\u6A21\u5F0F",-1);function s(_,l){return t(),o("div",null,[n,r(" more ")])}const f=e(c,[["render",s],["__file","Adapter.html.vue"]]);export{f as default};
