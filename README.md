@@ -1,1 +1,1 @@
-## 一个基于 vuepress 的博客
+## 一个基于 vuepress-theme-hope 的博客
