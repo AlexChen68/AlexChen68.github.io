@@ -1,17 +1,16 @@
 ---
-title: 线性表
+
+title: 链表
 date: 2022-09-27
 icon: blog
 tag:
   - 数据结构
+  - 链表
 category:
   - 数据结构
 isOriginal: true
-description: 线性表
+description: 链表
 ---
-
-数据结构之线性表
-<!-- more -->
 
 ## 数组概述
 > 数组是一种连续存储线性结构，元素类型相同，大小相等，数组是多维的，通过使用整型索引值来访问他们的元素，数组尺寸不能改变。

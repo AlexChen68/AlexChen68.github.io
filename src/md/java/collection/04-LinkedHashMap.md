@@ -1,5 +1,5 @@
 ---
-title: LinkedHashMap
+title: LinkedHashMap 源码分析
 icon: blog
 article: true
 date: 2022-09-30
@@ -8,7 +8,7 @@ tag:
 category:
   - Java 集合
 isOriginal: true
-description: LinkedHashMap
+description: LinkedHashMap 源码分析
 ---
 
 ## 概述

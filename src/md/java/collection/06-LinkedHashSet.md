@@ -1,5 +1,5 @@
 ---
-title: LinkedHashSet
+title: LinkedHashSet 源码分析
 icon: blog
 article: true
 date: 2022-09-30
@@ -8,7 +8,7 @@ tag:
 category:
   - Java 集合
 isOriginal: true
-description: LinkedHashSet
+description: LinkedHashSet 源码分析
 ---
 
 ## 概述

@@ -1,5 +1,5 @@
 ---
-title: LinkedList
+title: LinkedList 源码分析
 icon: blog
 article: true
 date: 2022-09-30
@@ -8,7 +8,7 @@ tag:
 category:
   - Java 集合
 isOriginal: true
-description: LinkedList
+description: LinkedList 源码分析
 ---
 
 ## 概述
