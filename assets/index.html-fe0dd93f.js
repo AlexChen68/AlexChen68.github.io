@@ -1,0 +1,1 @@
+import{_ as a,V as t,W as r,X as e,Y as c}from"./framework-82df2182.js";const n={},s=e("h1",{id:"readme",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#readme","aria-hidden":"true"},"#"),c(" README")],-1),d=[s];function o(_,i){return t(),r("div",null,d)}const l=a(n,[["render",o],["__file","index.html.vue"]]);export{l as default};

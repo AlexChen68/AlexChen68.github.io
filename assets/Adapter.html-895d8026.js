@@ -1,0 +1,1 @@
+import{_ as e,V as t,W as o,$ as r,X as a}from"./framework-82df2182.js";const c={},n=a("p",null,"设计模式之适配器模式",-1);function s(_,l){return t(),o("div",null,[n,r(" more ")])}const m=e(c,[["render",s],["__file","Adapter.html.vue"]]);export{m as default};

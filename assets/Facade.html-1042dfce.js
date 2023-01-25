@@ -1,1 +1,0 @@
-import{_ as e,V as t,W as a,X as c,Y as o}from"./framework-e50407a6.js";const n={},r=o("p",null,"设计模式之外观模式",-1);function s(_,l){return t(),a("div",null,[r,c(" more ")])}const m=e(n,[["render",s],["__file","Facade.html.vue"]]);export{m as default};

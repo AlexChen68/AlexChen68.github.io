@@ -1,0 +1,1 @@
+import{_ as t,V as a,W as r,$ as o,X as e,Y as c}from"./framework-82df2182.js";const s={},n=e("p",null,"设计模式之建造者模式",-1),d=e("h3",{id:"建造者模式",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#建造者模式","aria-hidden":"true"},"#"),c(" 建造者模式")],-1);function _(l,i){return a(),r("div",null,[n,o(" more "),d])}const m=t(s,[["render",_],["__file","Builder.html.vue"]]);export{m as default};
