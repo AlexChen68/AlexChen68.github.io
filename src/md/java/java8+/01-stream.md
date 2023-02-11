@@ -1,6 +1,5 @@
 ---
 title: Java 8 新特性之 Stream
-icon: blog
 article: true
 isOriginal: true
 tag: [Stream]

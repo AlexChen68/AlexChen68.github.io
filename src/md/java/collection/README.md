@@ -1,7 +1,6 @@
 ---
-title: Java 集合框架
+title: Java 集合框架概述
 order: 0
-icon: blog
 date: 2022-09-30
 category: Java 基础
 isOriginal: true
@@ -23,8 +22,6 @@ description: Java 集合框架
 - 降低设计和实现相关API的难度
 
 - 增加程序的重用性
-
-
 
 Java容器里只能放对象，对于基本类型(int, long, float, double等)，需要将其包装成对象类型后(Integer, Long, Float, Double 等)才能放到容器里。很多时候拆包装和解包装能够自动完成。这虽然会导致额外的性能和空间开销，但简化了设计和编程。
 

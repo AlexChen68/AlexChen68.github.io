@@ -1,6 +1,5 @@
 ---
 title: Java 线程
-icon: blog
 article: true
 date: 2022-09-30
 tag:

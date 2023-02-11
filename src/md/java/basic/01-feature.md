@@ -1,7 +1,6 @@
 ---
 title: Java 三大特性
 order: 1
-icon: blog
 tag:
   - Java
 category:

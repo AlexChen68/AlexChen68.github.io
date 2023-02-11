@@ -1,6 +1,5 @@
 ---
 title: Java 虚拟机概述
-icon: blog
 article: true
 date: 2022-09-30
 tag:

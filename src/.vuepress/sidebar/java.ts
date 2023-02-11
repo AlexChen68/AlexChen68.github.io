@@ -19,4 +19,16 @@ export const java = arraySidebar([
     prefix: "juc/",
     children: "structure"
   },
+  {
+    text: "Java 虚拟机",
+    icon: "java",
+    prefix: "jvm/",
+    children: "structure"
+  },
+  {
+    text: "Java 新特性",
+    icon: "java",
+    prefix: "java8+/",
+    children: "structure"
+  },
 ]);

@@ -8,10 +8,10 @@ import { db } from "./sidebar/db";
 export const sidebarConig = sidebar({
   // java
   "/md/java/": java,
-  "/md/java/basic/": "structure",
-  "/md/java/collection/": "structure",
-  "/md/java/juc/": "structure",
-  "/md/java/jvm/": "structure",
+  // "/md/java/basic/": "structure",
+  // "/md/java/collection/": "structure",
+  // "/md/java/juc/": "structure",
+  // "/md/java/jvm/": "structure",
   // spring
   "/md/spring/": spring,
   "/md/spring/spring/": "structure",

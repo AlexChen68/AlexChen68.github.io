@@ -22,23 +22,23 @@ export default navbar([
     link: "/md/spring/"
   },
   {
+    text: "数据库",
+    icon: "mysql",
+    link: "/md/db/"
+  },
+  {
     text: "计算机基础",
     icon: "advance",
     link: "/md/advance/"
   },
   {
-    text: "数据库",
-    icon: "mysql",
-    link: "/md/db/"
+    text: "开发工具",
+    icon: "tool",
+    link: "/md/tool/",
   },
   {
     text: "编程资源",
     icon: "list",
     link: "/md/book/"
   },
-  {
-    text: "开发工具",
-    icon: "tool",
-    link: "/md/tool/",
-  }
 ]);
