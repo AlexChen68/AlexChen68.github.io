@@ -1,0 +1,1 @@
+import{_ as t,V as o,W as n,X as e}from"./framework-82df2182.js";const _={},c=e("blockquote",null,[e("p",null,"TODO")],-1),l=[c];function s(a,r){return o(),n("div",null,l)}const u=t(_,[["render",s],["__file","02-optional.html.vue"]]);export{u as default};
