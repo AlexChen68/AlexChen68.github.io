@@ -1,6 +1,5 @@
 ---
 title: Mysql DDL
-icon: blog
 article: true
 date: 2022-12-26
 tag: [Mysql]

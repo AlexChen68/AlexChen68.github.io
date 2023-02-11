@@ -1,6 +1,5 @@
 ---
 title: Spring MVC
-icon: blog
 article: true
 isOriginal: true
 tag: [Spring]

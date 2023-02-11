@@ -1,6 +1,5 @@
 ---
 title: 使用 SpringBoot
-icon: blog
 article: true
 isOriginal: true
 tag: [SpringBoot]

@@ -1,7 +1,6 @@
 ---
 title: SpringBoot 使用 Swagger
 date: 2022-09-29
-icon: blog
 tag:
   - SpringBoot
   - Swagger

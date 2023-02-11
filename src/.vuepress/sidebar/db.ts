@@ -9,7 +9,7 @@ export const db = arraySidebar([
   },
   {
     text: "Redis 数据库",
-    icon: "java",
+    icon: "redis",
     prefix: "redis/",
     children: "structure"
   },
