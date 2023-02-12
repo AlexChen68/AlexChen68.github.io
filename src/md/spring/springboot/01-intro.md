@@ -1,5 +1,5 @@
 ---
-title: 使用 SpringBoot
+title: SpringBoot 简介
 article: true
 isOriginal: true
 tag: [SpringBoot]

@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const db = arraySidebar([
+export const database = arraySidebar([
   {
     text: "Mysql 数据库",
     icon: "mysql",

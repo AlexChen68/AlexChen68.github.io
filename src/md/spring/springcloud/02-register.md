@@ -1,13 +1,21 @@
 ---
-title: Nacos 部署
-category: [Nacos]
-date: 2023-02-05
-description: Nacos 部署
+title: 微服务注册中心
+category: [SpringCloud]
+date: 2023-02-12
+description: 注册中心
 ---
 
-## 单机部署（使用内部的数据库）
+## 什么是注册中心
 
-## Docker 安装 Nacos
+## Alibaba Nacos 组件
+
+### Nacos 是什么？
+
+Nacos 是 Dynamic Naming and Configuration Service 的缩写，动态命名和配置服务。Nacos 是阿里开源的注册中心 + 配置中心服务。
+
+Nacos 官网地址：[https://nacos.io/zh-cn/](https://nacos.io/zh-cn/)
+
+### Docker 安装 Nacos（使用 Mysql 数据库）
 
 1. 下载 Nacos 镜像
 
@@ -27,7 +35,11 @@ docker run nacos/nacos-server:v2.2.0-slim
 
 方式三：从容器的 `/usr/local/nacos/config` 路径下，获取 `mysql-schema.sql` 文件。
 
-3. 启动容器，通过配置 mysql 参数，使用外部的 Mysql 数据库存储配置
+3. 数据库初始化
+
+使用第 2 步获取的 Mysql 文件初始化数据库。
+
+4. 启动容器，通过配置 mysql 参数，使用外部的 Mysql 数据库存储配置
 
 ```bash
 docker run -d --name nacos \
@@ -47,7 +59,7 @@ docker run -d --name nacos \
 nacos/nacos-server:v2.2.0-slim
 ```
 
-4. 如果使用内置数据库启动
+5. 如果使用内置数据库启动
 
 ```bash
 docker run -d --name nacos --restart=always -p 8848:8848  nacos/nacos-server:v2.2.0-slim

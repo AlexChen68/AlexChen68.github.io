@@ -1,5 +1,5 @@
 ---
-title: 1.2 AOP 面向切面
+title: Spring AOP 面向切面编程
 date: 2022-09-15
 tag: [AOP]
 category: Spring

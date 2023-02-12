@@ -1,5 +1,5 @@
 ---
-title: 1.3 资源(Resources)
+title: Spring 资源(Resources)
 article: true
 date: 2022-10-09
 tag: [Spring]

@@ -24,7 +24,7 @@ export default navbar([
   {
     text: "数据库",
     icon: "mysql",
-    link: "/md/db/"
+    link: "/md/database/"
   },
   {
     text: "计算机基础",

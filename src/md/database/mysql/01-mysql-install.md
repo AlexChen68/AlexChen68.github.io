@@ -32,7 +32,7 @@ docker run -it --name mysql8\
 -v ~/docker/mysql/conf:/etc/mysql/conf.d\ 
 -v ~/docker/mysql/data:/var/lib/mysql\ 
 -v ~/docker/mysql/log:/var/log/mysql\ 
--e MYSQL_ROOT_PASSWORD=my-secret-pw\ 
+-e MYSQL_ROOT_PASSWORD=PASSWORD\ 
 -d mysql:tag
 ```
 
@@ -44,10 +44,16 @@ docker run -it --name mysql8\
 
 `-e` 为启动参数，`MYSQL_ROOT_PASSWORD` 是配置的 Mysql 的 root 用户密码；
 
-`-d` 是启动的镜像及版本。
+`-d` 后台运行容器。
 
 示例：
 
+不换行的完整命令
+```bash
+docker run -it --name mysql8 -p 3306:3306 -v ~/docker/mysql/conf:/etc/mysql/conf.d -v ~/docker/mysql/data:/var/lib/mysql -v ~/docker/mysql/log:/var/log/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
+```
+
+换行命令
 ```bash
 docker run -it --name mysql8\
  -p 3306:3306\
@@ -57,7 +63,5 @@ docker run -it --name mysql8\
  -e MYSQL_ROOT_PASSWORD=root\
  -d mysql
 ```
-
-
 
 
