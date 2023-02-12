@@ -29,7 +29,7 @@ Gradle 提供了什么:
 
 1. 从 Gralde [官方网站](https://gradle.org/releases/)下载 Gradle 的最新发行包。
 
-![下载 Gradle](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/tool/gradle_download.png)
+![下载 Gradle](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/tool/gradle_download.png)
 
 2. 解压缩
 

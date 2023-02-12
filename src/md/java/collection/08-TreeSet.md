@@ -16,7 +16,7 @@ description: TreeSet 源码分析
 
 ## 类图
 
-![TreeSet类图](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/treeset_class.png ':size=60%')
+![TreeSet类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/treeset_class.png ':size=60%')
 
 `TreeSet` 实现了三个接口：
 

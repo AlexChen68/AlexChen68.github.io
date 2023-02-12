@@ -27,7 +27,7 @@ description: HashMap 源码分析
 
 ## 类图
 
-![HashMap 类图](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/hashmap_class.png ':size=60%')
+![HashMap 类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/hashmap_class.png ':size=60%')
 
 `HashMap` 实现了三个接口：
 * `java.io.Serializable` 序列化接口
@@ -281,7 +281,7 @@ static final int hash(Object key) {
 2. key 不为 null 时，调用 key 的 hashCode 函数，并赋值给 h；
 3. h 和 h 的无符号右移16位的值进行异或运算，得到最终的哈希值。
 
-![HashMap 的 hash 函数](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/java/hashmap_hash.png)
+![HashMap 的 hash 函数](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/java/hashmap_hash.png)
 
 ## 数组扩容
 

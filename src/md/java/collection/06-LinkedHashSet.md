@@ -16,7 +16,7 @@ description: LinkedHashSet 源码分析
 
 ## 类图
 
-![LinkedHashSet 类图](https://cdn.jsdelivr.net/gh/alexchen68/images@master/blog/java/linkedhashset_class.png ':size=60%')
+![LinkedHashSet 类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/linkedhashset_class.png ':size=60%')
 
 ## 构造方法
 

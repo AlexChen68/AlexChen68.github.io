@@ -20,7 +20,7 @@ description: 单例模式
 
 **六种实现方式**
 
-![单例模式比较](https://cdn.jsdelivr.net/gh/AlexChen68/images@master/blog/advanced/compare_singleton.png)
+![单例模式比较](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advanced/compare_singleton.png)
 
 #### 懒汉式-线程不安全
 
