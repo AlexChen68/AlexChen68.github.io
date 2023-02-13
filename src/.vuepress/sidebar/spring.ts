@@ -18,5 +18,11 @@ export const spring = arraySidebar([
     icon: "alias",
     prefix: "springcloud/",
     children: "structure"
+  },
+  {
+    text: "分布式系统",
+    icon: "alias",
+    prefix: "distributed/",
+    children: "structure"
   }
 ]);

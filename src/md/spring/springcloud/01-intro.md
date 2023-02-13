@@ -1,14 +1,10 @@
 ---
-title: SpringCloud 简介
+title: 分布式理论和 SpringCloud 简介
 category: [SpringCloud]
 auther: 站长严长生
 date: 2023-02-12
 description: SpringCloud 简介
 ---
-
-:::info 转载自
-[站长严长生 -   Spring Cloud是什么](http://c.biancheng.net/springcloud/what-is-cloud.html)
-:::
 
 ## SpringCloud 是什么
 
@@ -68,3 +64,7 @@ Spring Cloud 是一系列微服务框架技术的集合体，它的每个组件�
 Spring Boot 不需要 Spring Cloud，就能直接创建可独立运行的工程或模块。
 
 Spring Cloud 是基于 Spring Boot 实现的，它不能独立创建工程或模块，更不能脱离 Spring Boot 独立运行。
+
+## 参考资料
+
+- [站长严长生 - Spring Cloud是什么](http://c.biancheng.net/springcloud/what-is-cloud.html)

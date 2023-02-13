@@ -62,11 +62,11 @@ export default hopeTheme({
     },
   },
 
-  encrypt: {
-    config: {
-      "/guide/encrypt.html": ["1234"],
-    },
-  },
+  // encrypt: {
+  //   config: {
+  //     "/guide/encrypt.html": ["1234"],
+  //   },
+  // },
 
   plugins: {
     //开启 git 支持，可以展示上次编辑时间和贡献者
@@ -82,9 +82,9 @@ export default hopeTheme({
       echarts: true,
       flowchart: true,
       gfm: true,
-      imageSize: true,
+      // imageSize: true,
       include: true,
-      lazyLoad: true,
+      // lazyLoad: true,
       mark: true,
       mermaid: true,
       footnote: true,
@@ -110,7 +110,7 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      vpre: true,
+      // vpre: true,
       vuePlayground: true,
     },
   },

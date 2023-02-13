@@ -20,7 +20,7 @@ export const sidebarConig = sidebar({
   "/md/advance/design/": "structure",
   // database
   "/md/database/": database,
-  "/md/book/": "structure",
+  "/md/book/": "structure", 
   // tool
   "/md/tool/": "structure",
 })
