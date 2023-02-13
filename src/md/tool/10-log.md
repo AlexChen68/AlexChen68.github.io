@@ -91,7 +91,7 @@ logback 当前分成三个模块：logback-core、logback-classic 和 logback-ac
 
 官网地址: [http://logback.qos.ch/  (opens new window)](http://logback.qos.ch/)
 
-### Log4j
+### Log4j2
 
 维护 Log4j 的人为了性能又搞出了 Log4j2。
 
@@ -328,7 +328,7 @@ appender 通过 `<appender>` 元素进行配置，需要两个强制的属性 *n
 
 `<appender>` 元素可以包含 0 或一个 `<layout>` 元素，0 或多个 `<encoder>` 元素，0 或多个 `<filter>` 元素。除了这些公共的元素之外，`<appender>` 元素可以包含任意与 appender 类的 JavaBean 属性相一致的元素。
 
-![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/logbackappenderSyntax.png)
+![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/dev/logbackappenderSyntax.png)
 
 `<layout>` 元素强制一个 class 属性去指定一个类的全限定名，用于实例化。与 `<appender>` 元素一样，`<layout>` 元素也可以包含与 layout 实例相关的属性。如果 layout 的 class 是 `PatternLayout`，那么 class 属性可以被隐藏掉（参考：[默认类映射](https://github.com/YLongo/logback-chinese-manual/blob/master/03第三章：logback 的配置.md#默认类映射)），因为这个很常见。.
 

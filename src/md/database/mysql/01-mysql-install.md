@@ -48,20 +48,11 @@ docker run -it --name mysql8\
 
 示例：
 
-不换行的完整命令
 ```bash
+# mac
 docker run -it --name mysql8 -p 3306:3306 -v ~/docker/mysql/conf:/etc/mysql/conf.d -v ~/docker/mysql/data:/var/lib/mysql -v ~/docker/mysql/log:/var/log/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
-```
-
-换行命令
-```bash
-docker run -it --name mysql8\
- -p 3306:3306\
- -v ~/docker/mysql/conf:/etc/mysql/conf.d\
- -v ~/docker/mysql/data:/var/lib/mysql\
- -v ~/docker/mysql/log:/var/log/mysql\
- -e MYSQL_ROOT_PASSWORD=root\
- -d mysql
+# windows
+docker run -it --name mysql8 -p 3306:3306 -v D:/Docker/mysql/conf:/etc/mysql/conf.d -v D:/Docker/mysql/data:/var/lib/mysql -v D:/Docker/mysql/logs:/var/log/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
 ```
 
 
