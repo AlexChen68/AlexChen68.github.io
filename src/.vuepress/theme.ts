@@ -8,52 +8,36 @@ const repoUrl = "https://github.com/AlexChen68/blog"
 
 export default hopeTheme({
   hostname: "https://AlexChen68.github.com/blog",
-
   author: {
     name: "AlexChen",
     url: github,
   },
-
   darkmode: "toggle",
-
   iconAssets: "iconfont",
   // iconAssets: "//at.alicdn.com/t/c/font_3648538_tagrvoelel.css",
-
   logo: "/logo.svg",
-
   repo: repoUrl,
-
   docsRepo: repoUrl,
-
   docsBranch: 'master',
-
   docsDir: 'src',
-
   editLinkPattern: ':repo/edit/:branch/:path',
-  // navbar
   navbar: navbar,
-  // sidebar
   sidebar: sidebarConig,
+  sidebarIcon: false,
   sidebarSorter: ["readme", "order", "filename", "title"],
-
   // footer: "备案号",
-
   displayFooter: false,
-  // 支持全屏
-  // fullscreen: true,
-
-  // themeColor: {
-  //   blue: "#2196f3",
-  //   red: "#f26d6d",
-  //   green: "#3eaf7c",
-  //   orange: "#fb9b5f",
-  // },
-
-  pageInfo: ["Author","Original", "Date", "Category", "Tag", "ReadingTime"],
-
+  fullscreen: true,
+  themeColor: {
+    blue: "#2196f3",
+    red: "#f26d6d",
+    green: "#3eaf7c",
+    orange: "#fb9b5f",
+  },
+  pageInfo: ["Author","Original", "Date", "Tag", "ReadingTime"],
   blog: {
     // intro: "/intro.html",
-    description: "编程两年半的Java练习生",
+    description: "编程两年半的 Java 练习生",
     medias: {
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
       GitHub: github,
@@ -61,13 +45,6 @@ export default hopeTheme({
       Gmail: "mailto:alexchen.tech@gmail.com"
     },
   },
-
-  // encrypt: {
-  //   config: {
-  //     "/guide/encrypt.html": ["1234"],
-  //   },
-  // },
-
   plugins: {
     //开启 git 支持，可以展示上次编辑时间和贡献者
     git: true,
@@ -82,9 +59,9 @@ export default hopeTheme({
       echarts: true,
       flowchart: true,
       gfm: true,
-      // imageSize: true,
+      imgSize: true,
       include: true,
-      // lazyLoad: true,
+      imgLazyload: true,
       mark: true,
       mermaid: true,
       footnote: true,
@@ -110,7 +87,7 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      // vpre: true,
+      vPre: true,
       vuePlayground: true,
     },
   },

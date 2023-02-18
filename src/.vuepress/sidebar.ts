@@ -1,26 +1,16 @@
 
 import { sidebar } from "vuepress-theme-hope";
-import { java} from "./sidebar/java";
-import { spring} from "./sidebar/spring";
-import { advance} from "./sidebar/advance";
-import { database } from "./sidebar/database";
+import { javaSidebar} from "./sidebar/java";
+import { springSidebar} from "./sidebar/spring";
+import { advanceSidebar, desginSidebar } from "./sidebar/advance";
+import { databaseSidebar } from "./sidebar/database";
 
 export const sidebarConig = sidebar({
-  // java
-  "/md/java/": java,
-  // spring
-  "/md/spring/": spring,
-  "/md/spring/spring/": "structure",
-  "/md/spring/springboot/": "structure",
-  "/md/spring/springcloud/": "structure",
-  // advance
-  "/md/advance/": advance,
-  "/md/advance/ds/": "structure",
-  "/md/advance/algo/": "structure",
-  "/md/advance/design/": "structure",
-  // database
-  "/md/database/": database,
-  "/md/book/": "structure", 
-  // tool
+  "/md/java/": javaSidebar,
+  "/md/spring/": springSidebar,
+  "/md/database/": databaseSidebar,
+  "/md/advance/": advanceSidebar,
+  "/md/advance/design/": desginSidebar,
   "/md/tool/": "structure",
+  "/md/book/": "structure", 
 })

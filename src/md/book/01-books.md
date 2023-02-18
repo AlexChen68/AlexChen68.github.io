@@ -17,8 +17,8 @@ description: 编程书籍
 
 ## Java
 
-- [《Effective Java 中文版（第2版）》](https://awesome-programming-books.github.io/java/Effective%20Java%20%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf)
 - [Java编程思想（第4版）](https://awesome-programming-books.github.io/java/Java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89.pdf)
+- [《Effective Java 中文版（第2版）》](https://awesome-programming-books.github.io/java/Effective%20Java%20%E4%B8%AD%E6%96%87%E7%89%88%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf)
 
 ## JavaScript
 

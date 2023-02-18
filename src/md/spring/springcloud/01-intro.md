@@ -1,5 +1,5 @@
 ---
-title: 分布式理论和 SpringCloud 简介
+title: SpringCloud 简介
 category: [SpringCloud]
 auther: 站长严长生
 date: 2023-02-12

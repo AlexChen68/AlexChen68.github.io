@@ -34,11 +34,11 @@ export default navbar([
   {
     text: "开发工具",
     icon: "tool",
-    link: "/md/tool/",
+    link: "/md/tool/01-jdk",
   },
   {
     text: "编程资源",
     icon: "list",
-    link: "/md/book/"
+    link: "/md/book/01-books"
   },
 ]);
