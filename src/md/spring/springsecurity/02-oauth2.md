@@ -324,7 +324,7 @@ Pragma: no-cache
 
 A步骤中，客户端发出的HTTP请求，包含以下参数：
 
-- granttype：表示授权类型，此处的值固定为"clientcredentials"，必选项。
+- grant_type：表示授权类型，此处的值固定为"client_credentials"，必选项。
 - scope：表示权限范围，可选项。
 
 ```http
@@ -362,7 +362,7 @@ Pragma: no-cache
 
 客户端发出更新令牌的HTTP请求，包含以下参数：
 
-- granttype：表示使用的授权模式，此处的值固定为"refreshtoken"，必选项。
+- grant_type：表示使用的授权模式，此处的值固定为"refreshtoken"，必选项。
 - refresh_token：表示早前收到的更新令牌，必选项。
 - scope：表示申请的授权范围，不可以超出上一次申请的范围，如果省略该参数，则表示与上一次一致。
 
