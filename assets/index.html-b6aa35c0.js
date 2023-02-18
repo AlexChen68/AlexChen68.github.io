@@ -1,1 +1,0 @@
-import{_ as e,V as t,W as o,$ as n,X as c}from"./framework-82df2182.js";const r={},s=c("p",null,"SpringBoot",-1);function _(a,l){return t(),o("div",null,[s,n(" more ")])}const i=e(r,[["render",_],["__file","index.html.vue"]]);export{i as default};
