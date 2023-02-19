@@ -1,1 +1,0 @@
-import{_ as e,W as t,X as a,a0 as o,Y as r}from"./framework-d9a58575.js";const c={},n=r("p",null,"设计模式之适配器模式",-1);function s(_,l){return t(),a("div",null,[n,o(" more ")])}const m=e(c,[["render",s],["__file","Adapter.html.vue"]]);export{m as default};
