@@ -1,11 +1,8 @@
 ---
 title: 责任链模式
-date: 2022-09-27
-tag:
-  - 设计模式
 category:
   - 设计模式
-isOriginal: true
+date: 2022-09-27
 description: 责任链模式
 ---
 

@@ -18,25 +18,25 @@ export const advanceSidebar = arraySidebar([
     icon: "blog",
     prefix: "design/",
     children: [
-      "principle",
+      "00-principle",
       {
         text: "创建型模式",
         icon: "stack",
-        prefix: "creational/",
+        prefix: "01-creational/",
         collapsible: true,
         children: "structure"
       },
       {
         text: "结构型模式",
         icon: "stack",
-        prefix: "structural/",
+        prefix: "02-structural/",
         collapsible: true,
         children: "structure"
       },
       {
         text: "行为型模式",
         icon: "stack",
-        prefix: "behavioural/",
+        prefix: "03-behavioural/",
         collapsible: true,
         children: "structure"
       }
@@ -51,23 +51,23 @@ export const advanceSidebar = arraySidebar([
 ]);
 
 export const desginSidebar = arraySidebar([
-  "principle",
+  "00-principle",
   {
     text: "创建型模式",
     icon: "stack",
-    prefix: "creational/",
+    prefix: "01-creational/",
     children: "structure"
   },
   {
     text: "结构型模式",
     icon: "stack",
-    prefix: "structural/",
-    children: ["Facade", "Adapter"]
+    prefix: "02-structural/",
+    children: "structure"
   },
   {
     text: "行为型模式",
     icon: "stack",
-    prefix: "behavioural/",
-    children: ["chain"]
+    prefix: "03-behavioural/",
+    children: "structure"
   }
 ]);

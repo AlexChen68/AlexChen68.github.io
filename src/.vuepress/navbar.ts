@@ -32,13 +32,13 @@ export default navbar([
     link: "/md/advance/"
   },
   {
-    text: "开发工具",
+    text: "DevOps",
     icon: "tool",
-    link: "/md/tool/01-jdk",
+    link: "/md/devops/",
   },
   {
     text: "编程资源",
     icon: "list",
-    link: "/md/book/01-books"
+    link: "/md/resource/01-books"
   },
 ]);

@@ -11,7 +11,7 @@ actions:
     type: primary
 
   - text: 编程资源 📚
-    link: /md/book/
+    link: /md/resource/
     type: primary
 
   - text: 博客主页 🏠

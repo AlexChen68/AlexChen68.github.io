@@ -1,4 +1,18 @@
-### 外观(Facade)
+---
+title: 外观模式
+date: 2022-09-27
+tag:
+  - 设计模式
+category:
+  - 设计模式
+isOriginal: true
+description: 外观模式
+---
+
+设计模式之外观模式
+<!-- more -->
+
+## 外观(Facade)模式
 
 > 它提供了一个统一的接口，用来访问子系统中的一群接口，从而让子系统更容易使用。
 >
@@ -69,7 +83,3 @@ public class FacadePattern {
    }
 }
 ```
-
-### 适配器(Adapter)
-
-> 适配器模式(Adapter pattern): 将一个类的接口, 转换成客户期望的另一个接口。 适配器让原本接口不兼容的类可以合作无间。 对象适配器使用组合, 类适配器使用多重继承。例如typec转usb转接口。
