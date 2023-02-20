@@ -1,11 +1,14 @@
 ---
 title: Java 集合框架概述
-order: 0
 date: 2022-09-30
-category: Java 基础
-isOriginal: true
-description: Java 集合框架
+category: Java Collection
+star: true
+sticky: true
 ---
+
+介绍 Java 集合框架的主要接口及其实现类。
+
+<!-- more -->
 
 # Java集合框架
 

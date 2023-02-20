@@ -1,9 +1,7 @@
 ---
 title: 设计模式原则
-category:
-  - 设计模式
+category: 设计模式
 date: 2022-09-27
-description: a设计模式原则
 ---
 
 设计模式基本原则

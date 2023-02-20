@@ -1,12 +1,8 @@
 ---
 title: Gradle 教程
-icon: blog
-article: true
-isOriginal: true
 tag: [Gradle]
-category: [开发工具]
+category: 开发工具
 date: 2022-12-29
-description: Gradle 教程
 ---
 
 ## Gradle 简介

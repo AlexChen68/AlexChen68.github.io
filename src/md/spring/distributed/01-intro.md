@@ -1,6 +1,6 @@
 ---
 title: 分布式理论
-category: [分布式]
+category: 分布式
 date: 2023-02-13
 description: 分布式理论
 ---

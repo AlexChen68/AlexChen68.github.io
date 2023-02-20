@@ -1,13 +1,7 @@
 ---
-title: 树
+title: 逻辑结构 - 树
 date: 2022-09-27
-icon: blog
-tag:
-  - 数据结构
-category:
-  - 数据结构
-isOriginal: true
-description: 数据结构之树
+category: 数据结构
 ---
 
 数据结构之树

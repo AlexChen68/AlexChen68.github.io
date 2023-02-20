@@ -1,13 +1,8 @@
 ---
 title: Java 日志框架
-icon: file
 date: 2022-09-30
-tag:
-  - 日志
-category:
-  - 开发工具
-isOriginal: true
-description: Java 日志框架
+tag: 日志
+category: Java 工具类
 ---
 
 # 日志框架

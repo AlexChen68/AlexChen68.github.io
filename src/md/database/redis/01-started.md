@@ -1,11 +1,7 @@
 ---
 title: 开始使用 Redis
 date: 2022-09-29
-tag: 
-  - Redis
-category:
-  - Redis
-isOriginal: true
+category: Redis
 description: 开始使用 Redis
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: Java 三大特性
 order: 1
-tag:
-  - Java
-category:
-  - Java 基础
+category: Java
 author: pdai
 date: 2022-09-30
 description: Java 三大特性

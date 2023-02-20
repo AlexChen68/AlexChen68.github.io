@@ -23,7 +23,7 @@ features:
     details: JVM、String、集合框架、并发框架、IO框架、JDK新特性、JDK部分源码等等。
 
   - title: Spring 全家桶
-    icon: slides
+    icon: layout
     details: Spring、Servlet、SpringMVC、SpringBoot、SpringCloud等等。
 
   - title: 数据库

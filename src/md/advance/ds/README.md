@@ -1,11 +1,8 @@
 ---
 title: 数据结构
-icon: blog
 index: false
 article: false
-isOriginal: true
-tag: [DS]
-category: [DS]
+category: 数据结构
 date: 2022-12-26
 description: 数据结构
 ---

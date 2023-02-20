@@ -1,9 +1,7 @@
 ---
 title: 编程资源导航
-icon: page
 index: false
 article: false
-description: 编程资源导航
 ---
 
 :::info

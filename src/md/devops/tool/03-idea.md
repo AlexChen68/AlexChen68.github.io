@@ -1,12 +1,7 @@
 ---
-title: Intellij IDEA 技巧
-icon: tool
-# index: false
+title: 玩转 IDEA
 date: 2022-09-30
-tag:
-  - Intellij IDEA
-category:
-  - 开发工具
+tag: [Intellij IDEA]
+category: 开发工具
 isOriginal: true
-description: Intellij IDEA 技巧
 ---

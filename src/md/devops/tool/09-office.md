@@ -1,15 +1,9 @@
 ---
-title: Office 官方下载链接
-icon: windows
-article: true
+title: Office CDN
 date: 2022-09-30
-tag:
-  - Office
-category:
-  - Windows 工具
-isOriginal: true
-description: 
----
+tag: [Office]
+category: 开发工具
+--- 
 
 Office2021 各版本官方 CDN 下载链接。
 <!-- more -->

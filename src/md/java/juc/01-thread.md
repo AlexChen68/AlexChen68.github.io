@@ -2,10 +2,8 @@
 title: Java 线程
 article: true
 date: 2022-09-30
-tag:
-  - JUC
-category:
-  - Java 并发
+tag: JUC
+category: Java 并发
 isOriginal: true
 description: Java 线程
 ---

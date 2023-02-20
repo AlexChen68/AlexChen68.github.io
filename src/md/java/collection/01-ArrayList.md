@@ -1,17 +1,14 @@
 ---
 title: ArrayList 源码分析
-article: true
 date: 2022-09-30
-tag:
-  - Collection
-category:
-  - Java 集合
-isOriginal: true
-description: ArrayList 源码分析
+tag: Collection
+category: Java Collection
 ---
 
-##  概述
+> 本文主要对 Collection - ArrayList 进行源码解析
+<!-- more -->
 
+## 简介
 ArrayList ，基于 `[]` 数组实现的，支持**自动扩容**的动态数组。
 
 ## 类图

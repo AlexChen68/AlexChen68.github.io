@@ -1,6 +1,6 @@
 ---
 title: Redis 数据类型
-category: [Redis]
+category: Redis
 date: 2023-02-12
 description: Redis 数据类型
 ---

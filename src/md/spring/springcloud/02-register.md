@@ -1,6 +1,6 @@
 ---
 title: 微服务注册中心
-category: [SpringCloud]
+category: SpringCloud
 date: 2023-02-12
 description: 注册中心
 ---

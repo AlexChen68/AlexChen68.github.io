@@ -1,9 +1,8 @@
 ---
 title: 理解 OAuth 2.0
-category: []
+category: Spring Security
 date: 2023-02-18
 author: 阮一峰
-description: 理解 OAuth 2.0
 ---
 
 :::info 转载

@@ -1,10 +1,8 @@
 ---
 title: Spring 概述
-icon: alias 
 date: 2022-09-15
 index: false
 article: false
-description: Spring 概述
 ---
 
 ## Spring 介绍

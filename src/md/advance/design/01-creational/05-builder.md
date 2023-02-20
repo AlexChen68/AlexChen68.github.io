@@ -1,11 +1,7 @@
 ---
 title: 建造者模式
 date: 2022-09-27
-tag:
-  - 设计模式
-category:
-  - 设计模式
-isOriginal: true
+category: 设计模式
 description: 建造者模式
 ---
 

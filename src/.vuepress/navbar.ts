@@ -8,8 +8,8 @@ export default navbar([
   },
   {
     text: "博客主页",
-    icon: "blog",
-    link: "/home/"
+    icon: "blog-home",
+    link: "/BlogHome/"
   },
   {
     text: "Java核心",
@@ -18,7 +18,7 @@ export default navbar([
   },
   {
     text: "Spring系列",
-    icon: "alias",
+    icon: "spring",
     link: "/md/spring/"
   },
   {
@@ -27,18 +27,23 @@ export default navbar([
     link: "/md/database/"
   },
   {
-    text: "计算机基础",
-    icon: "advance",
-    link: "/md/advance/"
+    text: "中间件",
+    icon: "middleware",
+    link: "/md/middleware/",
   },
   {
     text: "DevOps",
-    icon: "tool",
+    icon: "devops",
     link: "/md/devops/",
   },
   {
+    text: "编程进阶",
+    icon: "programming",
+    link: "/md/advance/"
+  },
+  {
     text: "编程资源",
-    icon: "list",
+    icon: "resource",
     link: "/md/resource/01-books"
   },
 ]);

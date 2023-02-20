@@ -1,12 +1,8 @@
 ---
 title: Markdown
-icon: blog
-article: true
-isOriginal: true
 tag: [Markdown]
-category: [开发工具]
+category: 开发工具
 date: 2022-12-29
-description: Markdown
 ---
 
 ## 简介

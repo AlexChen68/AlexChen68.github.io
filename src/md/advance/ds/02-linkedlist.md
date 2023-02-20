@@ -1,15 +1,7 @@
 ---
-
-title: 链表
+title: 线性表 - 链表
 date: 2022-09-27
-icon: blog
-tag:
-  - 数据结构
-  - 链表
-category:
-  - 数据结构
-isOriginal: true
-description: 链表
+category: 数据结构
 ---
 
 ## 数组概述

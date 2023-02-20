@@ -3,8 +3,7 @@ title: Mysql DDL
 article: true
 date: 2022-12-26
 tag: [Mysql]
-category: [Mysql]
-isOriginal: true
+category: Mysql
 description: Mysql DDL
 ---
 

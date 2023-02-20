@@ -1,13 +1,8 @@
 ---
 title: Maven 教程
-icon: Apache
 date: 2022-09-30
-tag:
-  - Maven
-category:
-  - 开发工具
-isOriginal: true
-description: Maven 教程
+tag: [Maven]
+category: 开发工具
 ---
 
 > 转载自廖雪峰老师的教程：https://www.liaoxuefeng.com/wiki/1252599548343744/1309301146648610

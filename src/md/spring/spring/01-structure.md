@@ -1,7 +1,7 @@
 ---
 title: Spring 模块组成
 tag: [Spring]
-category: [Spring]
+category: Spring
 isOriginal: true
 date: 2022-09-16
 description: Spring 模块组成

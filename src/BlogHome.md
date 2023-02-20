@@ -9,7 +9,7 @@ heroText: AlexChen's Blog
 heroFullScreen: true
 tagline: 学无止境
 projects:
-  - icon: blog
+  - icon: article
     name: 全部文章
     link: /article
   - icon: like
@@ -18,7 +18,7 @@ projects:
   - icon: slides
     name: 幻灯片
     link: /slide
-  - icon: lock
+  - icon: encrypted
     name: 加密文章
     link: /encrypted
 

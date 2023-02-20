@@ -1,12 +1,10 @@
 ---
 title: SpringBoot 使用 Swagger
 date: 2022-09-29
-tag:
-  - SpringBoot
+tag: SpringBoot
   - Swagger
   - Knife4j
-category:
-  - SpringBoot
+category: SpringBoot
 isOriginal: true
 description: SpringBoot 使用 Swagger
 ---

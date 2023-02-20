@@ -3,7 +3,7 @@ title: Spring SpEl 表达式语言
 article: true
 date: 2022-10-21
 tag: [Spring,SpEl]
-category: [Spring]
+category: Spring
 isOriginal: true
 description: SpEl 表达式语言
 ---

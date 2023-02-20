@@ -1,14 +1,7 @@
 ---
-title: 数组
+title: 线性表 - 数组
 date: 2022-09-27
-icon: blog
-tag:
-  - 数据结构
-  - 数组
-category:
-  - 数据结构
-isOriginal: true
-description: 数组
+category: 数据结构
 ---
 
 ## 数组概述
@@ -28,7 +21,7 @@ description: 数组
 
 ## Java中的数组实现
 
-[ArrayList 源码分析](md/java/collection/01-ArrayList.md)
+[ArrayList 源码分析](/md/java/collection/01-ArrayList.md)
 
 ## 相关算法题
 

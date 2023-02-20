@@ -2,8 +2,8 @@
 title: String 字符串详解
 order: 3
 date: 2022-09-15
-tag: String
-category: Java 基础
+tag: [String]
+category: Java
 isOriginal: true
 description: String 字符串详解
 ---

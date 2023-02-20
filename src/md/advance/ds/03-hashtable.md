@@ -1,11 +1,6 @@
 ---
-title: 哈希表
-icon: blog
-article: true
-isOriginal: true
-tag: [数据结构, 哈希表]
-category: [数据结构]
+title: 线性表 - 哈希表
 date: 2023-01-08
-description: 哈希表
+category: 数据结构
 ---
 

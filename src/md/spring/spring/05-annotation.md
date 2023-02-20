@@ -3,7 +3,7 @@ title: Spring 核心注解
 article: true
 date: 2022-10-12
 tag: [spring,Annotation]
-category: [Spring]
+category: Spring
 isOriginal: true
 description: Spring 核心注解
 ---

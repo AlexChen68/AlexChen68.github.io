@@ -2,10 +2,8 @@
 title: Java 数据类型
 order: 2
 date: 2022-09-16
-tag:
-  - Java
-category:
-  - Java 基础
+tag: Java
+category: Java
 description: Java 数据类型
 ---
 

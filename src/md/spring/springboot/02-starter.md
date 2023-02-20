@@ -2,7 +2,7 @@
 title: SpringBoot Starter 启动器
 date: 2022-09-15
 tag: [Springboot-Starter]
-category: [Springboot]
+category: Springboot
 isOriginal: true
 description: SpringBoot Starter 启动器
 ---

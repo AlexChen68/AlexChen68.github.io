@@ -1,14 +1,8 @@
 ---
 title: 编程书籍
-icon: note
-article: true
+icon: book-fill
 date: 2022-09-30
-tag:
-  - 编程书籍
-category:
-  - 编程资源
-isOriginal: true
-description: 编程书籍
+category: 编程资源
 ---
 
 :::info 转载自

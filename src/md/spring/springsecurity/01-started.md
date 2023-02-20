@@ -1,6 +1,6 @@
 ---
 title: Spring Security 入门
-category: [Spring Security]
+category: Spring Security
 date: 2023-02-14
 description: Spring Security 入门
 ---

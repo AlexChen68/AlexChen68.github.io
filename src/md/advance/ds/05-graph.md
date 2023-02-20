@@ -1,13 +1,7 @@
 ---
-title: 图
+title: 逻辑结构 - 图
+category: 数据结构
 date: 2022-09-27
-icon: blog
-tag:
-  - 数据结构
-category:
-  - 数据结构
-isOriginal: true
-description: 图
 ---
 
 数据结构之图

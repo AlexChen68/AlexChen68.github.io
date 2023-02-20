@@ -1,13 +1,9 @@
 ---
-title: Visual Studio Code 技巧
-icon: vscode
-tag:
-  - Visual Studio Code
-category:
-  - 开发工具
+title: 玩转 VS Code
+tag: [Visual Studio Code]
+category: 开发工具
 isOriginal: true
 date: 2022-09-30
-description: Visual Studio Code 技巧
 ---
 
 ## 配置代码模版
@@ -31,7 +27,7 @@ VsCode 可以通过 Snippets 配置代码模版，官方文档：[Snippets in Vi
 			"icon: blog",
 			"index: false",
 			"article: false",
-			"data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+			"date${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
 			"description: $1",
 			"---"
 		],

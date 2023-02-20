@@ -1,10 +1,8 @@
 ---
 title: Spring Security 框架简介
-icon: blog
 index: true
 article: false
-data: 2023-02-14
-description: Spring Security 框架简介
+date: 2023-02-14
 ---
 
 ## 什么是 Spring Security

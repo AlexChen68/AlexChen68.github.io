@@ -1,6 +1,6 @@
 ---
 title: SpringCloud 简介
-category: [SpringCloud]
+category: SpringCloud
 auther: 站长严长生
 date: 2023-02-12
 description: SpringCloud 简介

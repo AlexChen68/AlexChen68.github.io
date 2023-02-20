@@ -1,10 +1,8 @@
 ---
 title: ECMAScript 6 简介
-icon: blog
 index: false
 article: false
-data: 2023-01-03
-description: ECMAScript 6
+date: 2023-01-03
 ---
 
 ## ES 6 简介

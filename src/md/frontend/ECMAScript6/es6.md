@@ -1,12 +1,8 @@
 ---
 title: ECMAScript 6.0
-icon: blog
-article: true
-isOriginal: true
 tag: [ES6]
-category: [前端开发, ES6]
+category: 前端开发, ES6
 date: 2023-01-03
-description: ECMAScript 6.0
 ---
 
 ## let 和 const

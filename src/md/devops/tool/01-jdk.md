@@ -1,12 +1,9 @@
 ---
 title: JDK 安装
-icon: blog
-article: true
 isOriginal: true
 tag: [JDK]
-category: [开发工具]
+category: 开发工具
 date: 2022-12-29
-description: JDK 安装
 ---
 
 ## windows 安装 JDK8

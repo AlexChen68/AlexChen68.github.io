@@ -1,6 +1,5 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { autoCatalogPlugin } from "vuepress-plugin-auto-catalog";
 
 export default defineUserConfig({
   base: "/blog/",
@@ -17,15 +16,5 @@ export default defineUserConfig({
       lineNumbers: 4
     }
   },
-  plugins: [
-    // autoCatalogPlugin()
-    // autoCatalogPlugin({
-    //   level: 3,
-    //   frontmatter: (path) => {
-    //     return {
-    //       // frontmatter you want
-    //     };
-    //   },
-    // }),
-  ],
+  plugins: [],
 });

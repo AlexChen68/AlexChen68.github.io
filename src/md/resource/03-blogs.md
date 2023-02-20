@@ -2,9 +2,7 @@
 title: 优质博客
 icon: blog
 article: false
-isOriginal: true
 date: 2022-12-29
-description: 优质博客
 ---
 
 ## Java 博客

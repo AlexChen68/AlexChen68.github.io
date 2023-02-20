@@ -1,11 +1,8 @@
 ---
 title: Java 注解机制
-order: 04
 date: 2022-09-30
-tag: 注解
-category: Java 基础
-isOriginal: true
-description: Java 注解机制
+category: Java
+tag: annotaion
 ---
 
 
