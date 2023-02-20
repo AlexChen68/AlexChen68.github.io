@@ -1,0 +1,1 @@
+import{_ as a,W as t,X as s,Z as e,a0 as c}from"./framework-3160f2a1.js";const n={},r=e("h2",{id:"spring-事务管理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#spring-事务管理","aria-hidden":"true"},"#"),c(" Spring 事务管理")],-1),o=[r];function _(i,d){return t(),s("div",null,o)}const l=a(n,[["render",_],["__file","41-data-access-transaction.html.vue"]]);export{l as default};
