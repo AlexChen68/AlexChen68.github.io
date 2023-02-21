@@ -2,7 +2,7 @@
 title: Mybatis-Spring
 article: true
 date: 2022-10-21
-tag: [Mybatis, Spring]
+tag: Mybatis
 category: Mybatis
 description: 在 Spring 中使用 Mybatis
 ---

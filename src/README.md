@@ -15,7 +15,7 @@ actions:
     type: primary
 
   - text: 博客主页 🏠
-    link: /home/
+    link: /BlogHome/
 
 features:
   - title: Java 核心知识
@@ -50,5 +50,5 @@ features:
     icon: layout
     details: 建造型、结构型、行为型设计模式概念以及代码示例。
 
-copyright: MIT Licensed | Copyright © 2022-present AlexChen
+footer: true
 ---

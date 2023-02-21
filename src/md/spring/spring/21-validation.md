@@ -2,7 +2,7 @@
 title: Spring 验证, 数据绑定和类型转换
 article: true
 date: 2022-10-16
-tag: [Spring,Validation]
+tag: Validation
 category: Spring
 isOriginal: true
 description: 验证, 数据绑定和类型转换

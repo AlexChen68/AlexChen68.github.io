@@ -2,7 +2,7 @@
 title: Spring 资源(Resources)
 article: true
 date: 2022-10-09
-tag: [Spring]
+tag: Spring
 category: Spring
 isOriginal: true
 description: Spring 资源(Resources)

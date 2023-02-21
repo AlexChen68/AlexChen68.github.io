@@ -2,7 +2,7 @@
 title: Spring MVC
 article: true
 isOriginal: true
-tag: [Spring]
+tag: Spring
 category: Spring
 date: 2022-12-29
 description: Spring MVC

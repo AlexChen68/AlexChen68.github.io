@@ -1,6 +1,6 @@
 ---
 title: Markdown
-tag: [Markdown]
+tag: Markdown
 category: 开发工具
 date: 2022-12-29
 ---

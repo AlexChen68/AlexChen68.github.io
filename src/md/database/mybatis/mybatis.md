@@ -2,7 +2,7 @@
 title: Mybatis
 article: true
 date: 2022-10-21
-tag: [Mybatis]
+tag: Mybatis
 category: Mybatis
 description: Mybatis
 ---

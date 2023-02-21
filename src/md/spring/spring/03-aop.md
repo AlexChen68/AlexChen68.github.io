@@ -1,7 +1,7 @@
 ---
 title: Spring AOP 面向切面编程
 date: 2022-09-15
-tag: [AOP]
+tag: AOP
 category: Spring
 isOriginal: true
 description: Spring AOP 切面

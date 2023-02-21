@@ -2,7 +2,7 @@
 title: Git 教程
 index: false
 isOriginal: true
-tag: [Git]
+tag: Git
 category: 开发工具
 date: 2022-12-29
 ---

@@ -2,7 +2,7 @@
 title: String 字符串详解
 order: 3
 date: 2022-09-15
-tag: [String]
+tag: String
 category: Java
 isOriginal: true
 description: String 字符串详解

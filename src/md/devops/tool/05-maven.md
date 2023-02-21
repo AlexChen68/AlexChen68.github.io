@@ -1,7 +1,7 @@
 ---
 title: Maven 教程
 date: 2022-09-30
-tag: [Maven]
+tag: Maven
 category: 开发工具
 ---
 

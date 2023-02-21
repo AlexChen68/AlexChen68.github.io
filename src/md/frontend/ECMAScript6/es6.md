@@ -1,6 +1,6 @@
 ---
 title: ECMAScript 6.0
-tag: [ES6]
+tag: ES6
 category: 前端开发, ES6
 date: 2023-01-03
 ---

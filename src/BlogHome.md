@@ -9,18 +9,21 @@ heroText: AlexChen's Blog
 heroFullScreen: true
 tagline: 学无止境
 projects:
-  - icon: article
-    name: 全部文章
+  - name: 全部文章
+    icon: article
     link: /article
-  - icon: like
-    name: 收藏
-    link: /star
-  - icon: slides
-    name: 幻灯片
-    link: /slide
-  - icon: encrypted
-    name: 加密文章
-    link: /encrypted
 
-footer: 天道酬勤
+  - name: 收藏
+    icon: like
+    link: /star
+  
+  - name: Mr.Hope
+    icon: https://mrhope.site/logo.svg
+    link: https://mrhope.site/
+
+  - name: Java 全栈知识体系
+    icon: https://pdai.tech/images/index-read.gif
+    link: https://pdai.tech/
+
+footer: true
 ---

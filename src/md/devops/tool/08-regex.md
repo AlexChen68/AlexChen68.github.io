@@ -2,7 +2,7 @@
 title: 正则表达式
 index: false
 date: 2022-09-30
-tag: [Regex]
+tag: Regex
 category: 开发工具
 ---
 

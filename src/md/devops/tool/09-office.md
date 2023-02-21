@@ -1,7 +1,7 @@
 ---
 title: Office CDN
 date: 2022-09-30
-tag: [Office]
+tag: Office
 category: 开发工具
 --- 
 

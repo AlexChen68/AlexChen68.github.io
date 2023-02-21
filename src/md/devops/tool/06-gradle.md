@@ -1,6 +1,6 @@
 ---
 title: Gradle 教程
-tag: [Gradle]
+tag: Gradle
 category: 开发工具
 date: 2022-12-29
 ---

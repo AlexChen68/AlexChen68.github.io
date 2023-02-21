@@ -2,7 +2,7 @@
 title: Mysql 的安装和卸载
 article: true
 date: 2022-12-06
-tag: [Mysql]
+tag: Mysql
 category: Mysql
 description: Mysql 的安装和卸载
 ---

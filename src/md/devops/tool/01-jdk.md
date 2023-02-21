@@ -1,7 +1,7 @@
 ---
 title: JDK 安装
 isOriginal: true
-tag: [JDK]
+tag: JDK
 category: 开发工具
 date: 2022-12-29
 ---
