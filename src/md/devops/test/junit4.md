@@ -1,11 +1,12 @@
 ---
-title: 单元测试 - Junit4
+title: 单元测试 - JUnit4
 date: 2023-02-21
 category: 单元测试
 ---
 
-> JUint 是 Java 编程语言的单元测试框架，用于编写和运行可重复的自动化测试。
-> 本文主要介绍 JUnit4。
+JUint 是 Java 编程语言的单元测试框架，用于编写和运行可重复的自动化测试。
+
+本文主要介绍 JUnit4 的注解及其使用案例。
 
 <!-- more -->
 
@@ -18,21 +19,6 @@ JUint是Java编程语言的单元测试框架，用于编写和运行可重复�
 JUnit 是一个开放的资源框架，用于编写和运行测试。
 
 提供注解来识别测试方法。提供断言来测试预期结果。JUnit 测试允许你编写代码更快，并能提高质量。JUnit 优雅简洁。没那么复杂，花费时间较少。JUnit测试可以自动运行并且检查自身结果并提供即时反馈。所以也没有必要人工梳理测试结果的报告。JUnit测试可以被组织为测试套件，包含测试用例，甚至其他的测试套件。JUnit在一个条中显示进度。如果运行良好则是绿色；如果运行失败，则变成红色。
-
-## 如何使用
-
-JUint 主要通过注解的形式，指定需要测试类运行环境、测试的方法，并提供断言工具来判断是否符合预期。
-
-其 Maven 依赖：
-
-```xml
-<dependency>
-    <groupId>junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.13.2</version>
-    <scope>test</scope>
-</dependency>
-```
 
 ## 常用注解介绍
 
@@ -129,7 +115,22 @@ public static Collection primeNumbers() {
 
 完整代码: [Click Here](https://github.com/AlexChen68/daydayup/blob/main/junit4/src/test/java/PrimeNumberCheckerTest.java)
 
-## 单元测试用法
+## 编写单元测试
+
+### Maven 依赖
+
+JUint 主要通过注解的形式，指定需要测试类运行环境、测试的方法，并提供断言工具来判断是否符合预期。
+
+其 Maven 依赖：
+
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+```
 
 ### 生命周期
 
