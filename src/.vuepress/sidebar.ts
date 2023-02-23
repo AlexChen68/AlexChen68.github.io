@@ -6,6 +6,7 @@ import { advanceSidebar, desginSidebar } from "./sidebar/advance";
 import { databaseSidebar } from "./sidebar/database";
 import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
+import { frontendSidebar } from "./sidebar/frontend";
 
 export const sidebarConig = sidebar({
   "/md/java/": javaSidebar,
@@ -15,5 +16,6 @@ export const sidebarConig = sidebar({
   "/md/advance/": advanceSidebar,
   "/md/advance/design/": desginSidebar,
   "/md/devops/": devopsSidebar,
+  "/md/frontend/": frontendSidebar,
   "/md/resource/": "structure", 
 })

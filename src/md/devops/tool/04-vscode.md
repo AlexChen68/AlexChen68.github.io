@@ -1,5 +1,6 @@
 ---
 title: 玩转 VS Code
+icon: vscode
 tag: Visual Studio Code
 category: 开发工具
 isOriginal: true

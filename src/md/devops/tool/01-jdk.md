@@ -1,11 +1,14 @@
 ---
 title: JDK 安装
+icon: java
 isOriginal: true
 tag: JDK
 category: 开发工具
 date: 2022-12-29
 ---
 
+介绍各种 JDK 的安装和配置。
+<!-- more -->
 ## windows 安装 JDK8
 
 ### 下载 JDK8
