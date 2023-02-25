@@ -25,7 +25,7 @@ export default hopeTheme({
   sidebar: sidebarConig,
   sidebarSorter: ["readme", "order", "filename", "title"],
   displayFooter: false,
-  pageInfo: ["Author","Original", "Date", "Tag", "ReadingTime"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
     description: "编程两年半的 Java 练习生",
     medias: {

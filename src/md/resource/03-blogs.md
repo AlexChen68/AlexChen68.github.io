@@ -9,3 +9,4 @@ date: 2022-12-29
 
 - [Java 全栈知识体系](https://pdai.tech/)
 - [Java 程序员进阶之路](https://tobebetterjavaer.com)
+- [字节飞扬](https://bytesfly.github.io/blog/#/README)

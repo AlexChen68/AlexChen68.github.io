@@ -6,7 +6,9 @@ date: 2023-02-12
 description: Spring Boot 缓存 Cache 入门
 ---
 
-> 摘要: 原创出处 http://www.iocoder.cn/Spring-Boot/Cache/
+本文介绍了 Spring Cache 框架的缓存注解以及使用中会遇到的问题
+
+<!-- more -->
 
 ## 什么是 Spring Cache？
 
@@ -201,3 +203,26 @@ Redis Maven 依赖如下，Spring Boot 默认使用 lettuce 作为 Redis 客户�
 ```
 
 目前，Spring Data Redis 暂时只支持 Jedis、Lettuce 的内部封装，而 Redisson 是由 `redisson-spring-data` 来提供。
+
+## Cache 注解失效场景 <Badge text="重要" type="warning" />
+
+Cache 本质上是基于面向**切面**的思想做的，实际上就是使用Java动态代理，创建实例的时候注入的是代理对象，在代理对象里调用实际的对象，这样就可以在实际的方法执行前，处理一下缓存的逻辑：没有找到缓存就往下执行，执行完把结果加入到缓存中；找到缓存则直接返回缓存的结果，不调用执行实际的方法。
+
+因此会有两种失效场景：
+
+1. Cache 注解添加在接口中的方法上
+
+由于 Cache 基于 AOP，也就是 Java 动态代理，是通过继承类去代理，而代理类无法继承一个接口，因此会失效。
+
+2. 一个方法 A 调同一个类里的另一个有缓存注解的方法 B，这样是不走缓存的
+
+原因就是上面说的，使用 Cache 注解添加缓存实际上就是使用动态代理做的，在代理的方法前后做缓存的相应处理。这样一来，单独的去调方法 B 是有缓存的，但是如果调方法 A，A 里面再去调 B 方法，哪怕 B 方法配置了缓存，也是不会生效的。
+
+解决方法：
+1. 不使用注解的方式，直接取 Ehcache 的 `CacheManger` 对象，把需要缓存的数据放到里面，类似于使用 Map，缓存的逻辑自己控制;
+2. 把方法 A 和方法 B 放到两个不同的类里面，例如：如果两个方法都在 service 接口里，把方法 B 放到另一个 service 里面，这样 A 方法里调 B 方法，就可以使用 B 方法的缓存。
+
+## 参考资料
+
+- [芋道 Spring Boot 缓存 Cache 入门](http://www.iocoder.cn/Spring-Boot/Cache/)
+- [Spring @Cacheable 缓存不生效的问题](https://www.cnblogs.com/zhaoyue1215/p/9267584.html)

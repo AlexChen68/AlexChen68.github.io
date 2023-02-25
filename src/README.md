@@ -15,7 +15,7 @@ actions:
     type: primary
 
   - text: 博客主页 🏠
-    link: /BlogHome/
+    link: /home/
 
 features:
   - title: Java 核心知识
