@@ -39,7 +39,7 @@ Java容器主要包括 Collection 和 Map 两种，Collection 存储着对象的
 
 ![Java集合框架](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/collection_framework.png ':size=80%')
 
-## Collection 接口
+## `Collection` 接口
 
 `Collection` 是所有序列集合共有的根接口。集合表示一组对象，称为其元素。一些集合允许重复元素，而另一些则不允许。有些是有序的，有些是无序的。 JDK 不提供此接口的任何直接实现：它提供更具体的子接口（如 Set 和 List）的实现。此接口通常用于传递集合并在需要最大通用性的地方操作它们。
 
@@ -49,15 +49,15 @@ Java容器主要包括 Collection 和 Map 两种，Collection 存储着对象的
 
 Java访问集合总是通过统一的方式——迭代器（Iterator）来实现，它最明显的好处在于无需知道集合内部元素是按什么方式存储的。
 
-### List 接口
+### `List` 接口
 
-> java.util.List接口继承自Collection接口，是单列集合的一个重要分支，习惯性地会将实现了List接口的对象称为List集合。
->
-> 在List集合中允许出现重复的元素，所有的元素是以一种线性方式进行存储的，在程序中可以通过索引来访问集合中的指定元素。
->
-> 另外，List集合还有一个特点就是元素有序，即元素的存入顺序和取出顺序一致。
+`java.util.List` 接口继承自 `Collection` 接口，是单列集合的一个重要分支，习惯性地会将实现了List接口的对象称为List集合。
 
-#### ArrayList
+在List集合中允许出现重复的元素，所有的元素是以一种线性方式进行存储的，在程序中可以通过索引来访问集合中的指定元素。
+
+另外，List集合还有一个特点就是元素有序，即元素的存入顺序和取出顺序一致。
+
+1. `ArrayList`
 
 `ArrayList` 底层是由数组实现的，支持随机存取，也就是可以通过下标直接存取元素；
 
@@ -65,7 +65,7 @@ Java访问集合总是通过统一的方式——迭代器（Iterator）来实�
 
 所以 ArrayList 的特点是元素增删慢，查找快。
 
-#### LinkedList
+2. `LinkedList`
 
 `LinkedList` 是由双向链表实现的，不支持随机存取，只能从一端开始遍历，直到找到需要的元素后返回；
 
@@ -73,45 +73,45 @@ Java访问集合总是通过统一的方式——迭代器（Iterator）来实�
 
 因为每个元素都存储了前一个和后一个节点的引用，所以相对来说，占用的内存空间会比 ArrayList 多一些。
 
-#### Vector
+3. `Vector`
 
 和 ArrayList 类似，但它是线程安全的，一些方法都加了 `synchronized`关键字，执行效率会比较低，很少使用。
 
-#### Stack
+4. `Stack`
 
 `Stack` 继承了 `Vector`，在其基础上实现了栈先进先出的功能（push、pop、peek等方法），方法上同样添加了 `synchronized` 关键字，官方推荐使用双端队列 `ArrayDeque`。
 
 ### Queue 接口
 
-> Queue 接口继承了Collection，被设计用于处理之前临时保存在某处的元素。
->
-> 除了基本的Collection操作之外，队列还提供了额外的插入、提取和检查操作。每一种操作都有两种形式：如果操作失败，则抛出一个异常；如果操作失败，则返回一个特殊值（null或false，取决于是什么操作）。
+Queue 接口继承了 `Collection`，被设计用于处理之前临时保存在某处的元素。
 
-#### ArrayDeque
+除了基本的 `Collection` 操作之外，队列还提供了额外的插入、提取和检查操作。每一种操作都有两种形式：如果操作失败，则抛出一个异常；如果操作失败，则返回一个特殊值（null或false，取决于是什么操作）。
+
+1. `ArrayDeque`
 
 `ArrayDeque` 是一个基于数组实现的双端队列，它使用一个头指针 `head` 指向队首的第一个有效的元素和一个尾指针 `tail `指向队尾第一个可以插入元素的空位构成一个循环数组。
 
-#### LinkedList
+2. `LinkedList`
 
 LinkedList 也实现了 Deque 接口，由于其内部双向链表的特性，也可以作为链表实现的双向队列使用。
 
-#### PriorityQueue
+3. `PriorityQueue`
 
-PriorityQueue 是一种优先级队列，它的出队顺序与元素的优先级有关，执行 remove 或者 poll 方法，返回的总是优先级最高的元素。
+`PriorityQueue` 是一种优先级队列，它的出队顺序与元素的优先级有关，执行 remove 或者 poll 方法，返回的总是优先级最高的元素。
 
-要想有优先级，元素就需要实现 Comparable 接口或者 Comparator 接口
+要想有优先级，元素就需要实现 `Comparable` 接口或者 `Comparator` 接口
 
 ### Set 接口
 
-> Set 的特点是存取无序，不可以存放重复的元素，不可以用下标对元素进行操作，和 List 有很多不同。
->
-> Set 的子类大多使用 Map 的子类的 key 存储数据，利用了 Map 键不允许重复、无序的特性。
+Set 的特点是存取无序，不可以存放重复的元素，不可以用下标对元素进行操作，和 List 有很多不同。
 
-#### HashSet
+Set 的子类大多使用 Map 的子类的 key 存储数据，利用了 Map 键不允许重复、无序的特性。
+
+1. `HashSet`
 
 HashSet 内部是由 HashMap 实现的，只不过值由一个固定的 Object 对象填充，而键用于操作。
 
-#### LinkedHashSet
+2. `LinkedHashSet`
 
 LinkedHashSet 继承自 HashSet，其实是由 LinkedHashMap 实现的，LinkedHashSet 的构造方法调用了 HashSet 的一个特殊的构造方法：
 
@@ -121,7 +121,7 @@ HashSet(int initialCapacity, float loadFactor, boolean dummy) {
 }
 ```
 
-#### TreeSet
+3. `TreeSet`
 
 TreeSet 内部使用 TreeMap 实现，同样值由固定的 Object 对象填充，键用于操作。
 
@@ -129,21 +129,21 @@ TreeSet 内部使用 TreeMap 实现，同样值由固定的 Object 对象填充�
 
 > Map 保存的是键值对，键要求保持唯一性，值可以重复。
 
-### HashMap
+1. `HashMap`
 
-HashMap 实现了 Map 接口，根据键的 HashCode 值来存储数据，具有很快的访问速度，最多允许一个 null 键。
+HashMap 实现了 Map 接口，根据键的 **HashCode** 值来存储数据，具有很快的访问速度，最多允许一个 null 键。
 
-HashMap 不论是在学习还是工作当中，使用频率都是相当高的。随着 JDK 版本的不断更新，HashMap 的底层也优化了很多次，JDK 8 的时候引入了红黑树。
+HashMap 不论是在学习还是工作当中，使用频率都是相当高的。随着 JDK 版本的不断更新，HashMap 的底层也优化了很多次，JDK 8 的时候引入了**红黑树**。
 
 一旦 HashMap 发生哈希冲突，就把相同键位的地方改成链表，如果链表的长度超过 8，就该用红黑树。
 
-### LinkedHashMap
+2. `LinkedHashMap`
 
 LinkedHashMap 是 HashMap 的子类，内部使用链表来记录插入/访问元素的顺序。
 
 LinkedHashMap 可以看作是 HashMap + LinkedList 的合体，它使用了 哈希表来存储数据，又用了双向链表来维持顺序。
 
-### TreeMap
+3. `TreeMap`
 
 HashMap 是无序的，所以遍历的时候元素的顺序也是不可测的。TreeMap 是有序的，它在内部会对键进行排序，所以遍历的时候就可以得到预期的顺序。
 

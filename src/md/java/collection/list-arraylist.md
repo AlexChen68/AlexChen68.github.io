@@ -1,8 +1,9 @@
 ---
-title: ArrayList 源码分析
+title: List - ArrayList 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
+order: 1
 ---
 
 > 本文主要对 Collection - ArrayList 进行源码解析

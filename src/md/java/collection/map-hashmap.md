@@ -1,11 +1,9 @@
 ---
-title: HashMap 源码分析
-article: true
+title: Map - HashMap 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
-description: HashMap 源码分析
+order: 6
 ---
 
 ## 概述

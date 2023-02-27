@@ -1,11 +1,9 @@
 ---
-title: LinkedList 源码分析
-article: true
+title: List - LinkedList 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
-description: LinkedList 源码分析
+order: 2
 ---
 
 ## 概述

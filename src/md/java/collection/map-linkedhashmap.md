@@ -1,11 +1,9 @@
 ---
-title: LinkedHashMap 源码分析
-article: true
+title: Map - LinkedHashMap 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
-description: LinkedHashMap 源码分析
+order: 7
 ---
 
 ## 概述

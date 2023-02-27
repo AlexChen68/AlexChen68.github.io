@@ -8,6 +8,7 @@ description: Java 数据类型
 ---
 
 Java 的数据类型分类：8 种基本数据类型和 3 种引用数据类型。
+
 <!-- more -->
 
 ## 数据类型分类
@@ -80,6 +81,27 @@ Java中的类、接口和数组都是引用数据类型。
   - 数值型数据的转换：byte→short→int→long→float→double。  
   - 字符型转换为整型：char→int。
 
+### 强制类型转换
+
+所以当两种数据类型不兼容，或目标类型的取值范围小于源类型时，自动转换将无法进行，这时就需要进行强制类型转换。
+
+其语法格式如下：
+
+```
+(type)variableName
+```
+
+例如：
+
+```java
+int a = 3;
+double b = 5.0;
+a = (int)b;
+```
+
+上述代码中首先将 double 类型变量 b 的值强制转换成 int 类型，然后将值赋给 a，但是变量 b 本身的值是没有发生变化的。
+
+在强制类型转换中，如果是将浮点类型的值转换为整数，直接去掉小数点后边的所有数字；而如果是整数类型强制转换为浮点类型时，将在小数点后面补零。
 
 ### int 和 char 类型互转
 
@@ -98,10 +120,12 @@ System.out.println((char)a); // A
 int a = 'A'; // 65
 ```
 
-> 转载自 [Java 程序员进阶之路](https://tobebetterjavaer.com/basic-grammar/basic-data-type.html)
-> 
-> 链接：https://tobebetterjavaer.com/basic-grammar/basic-data-type.html
+<!-- ### 数组和 List 转换 -->
 
+
+## 参考资料
+
+- [Java 程序员进阶之路]([https://](https://tobebetterjavaer.com/basic-grammar/type-cast.html))
 
 
 

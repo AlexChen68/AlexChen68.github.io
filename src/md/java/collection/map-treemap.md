@@ -1,11 +1,9 @@
 ---
-title: TreeMap 源码分析
-article: true
+title: Map - TreeMap 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
-description: TreeMap 源码分析
+order: 8
 ---
 
 ## 概述

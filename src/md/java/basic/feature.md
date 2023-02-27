@@ -4,11 +4,9 @@ order: 1
 category: Java
 author: pdai
 date: 2022-09-30
-description: Java 三大特性
 ---
 
 Java 具有三大特性，分别是**封装**、**继承**和**多态**。
----
 <!-- more -->
 
 ## Java 三大特性
@@ -42,10 +40,6 @@ Java 具有三大特性，分别是**封装**、**继承**和**多态**。
 - 重写：子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。
 - 向上转型：在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。
 
+## 参考资料
 
-## 关系类图
-
-### 泛化关系 (Generalization)
-
-用来描述继承关系，在 Java 中使用 extends 关键字。
-
+[Java 基础 - Java 全栈知识体系](https://pdai.tech/md/java/basic/java-basic-oop.html)

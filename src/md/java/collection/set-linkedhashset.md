@@ -1,11 +1,10 @@
 ---
-title: LinkedHashSet 源码分析
-article: true
+title: Set - LinkedHashSet 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
 description: LinkedHashSet 源码分析
+order: 4
 ---
 
 ## 概述

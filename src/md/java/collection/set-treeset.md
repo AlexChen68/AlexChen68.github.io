@@ -1,11 +1,9 @@
 ---
-title: TreeSet 源码分析
-article: true
+title: Set - TreeSet 源码分析
 date: 2022-09-30
 tag: Collection
 category: Java Collection
-isOriginal: true
-description: TreeSet 源码分析
+order: 5
 ---
 
 ##  概述

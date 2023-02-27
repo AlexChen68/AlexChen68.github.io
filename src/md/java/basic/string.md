@@ -1,22 +1,23 @@
 ---
-title: String 字符串详解
+title: Java String 详解
 order: 3
 date: 2022-09-15
-tag: String
 category: Java
-isOriginal: true
-description: String 字符串详解
+tag: String
 ---
 
+介绍 String 家族及其用法
+<!-- more -->
 ## String 概述
 
-> String 内部使用字符数组实现，且 String 被声明为 final，不可以被继承，这意味着 value 数组初始化之后就不能再引用其它数组。并且 String 内部没有改变 value 数组的方法，因此可以保证 String 不可变。
->
-> 当我们调用 String 类的任何方法（比如说 `trim()`、`substring()`、`toLowerCase()`）时，总会返回一个新的对象，而不影响之前的值。
->
-> Java 9 以前，String 是用 char 型数组实现的，之后改成了 byte 型数组实现，并增加了 coder 来表示编码。
+String 内部使用字符数组实现，且 String 被声明为 final，不可以被继承，这意味着 value 数组初始化之后就不能再引用其它数组。并且 String 内部没有改变 value 数组的方法，因此可以保证 String 不可变。
 
-**String不可变的优点**
+当我们调用 String 类的任何方法（比如说 `trim()`、`substring()`、`toLowerCase()`）时，总会返回一个新的对象，而不影响之前的值。
+
+Java 9 以前，String 是用 char 型数组实现的，之后改成了 byte 型数组实现，并增加了 coder 来表示编码。
+
+:::tip
+**String 不可变的优点**<Badge text="重要" type="warning" />
 
 1. **可以缓存 hash 值**
 
@@ -33,11 +34,15 @@ String 经常作为参数，String 不可变性可以保证参数不可变。例
 4. **线程安全**
 
 String 不可变性天生具备线程安全，可以在多个线程中安全地使用。
+:::
 
-**String家族对比**
+## String 家族对比
 
 | 类型          | 可变   | 线程安全                     |
-| ------------- | ------ | ---------------------------- |
+| ------------- | ------ | ----------------------------|
 | String        | 不可变 | 安全                         |
 | StringBuilder | 可变   | 不安全                       |
 | StringBuffer  | 可变   | 安全，使用 synchronized 同步 |
+
+## StringBuilder
+
