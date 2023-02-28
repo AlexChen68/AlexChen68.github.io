@@ -13,7 +13,7 @@ order: 4
 
 ## 类图
 
-![LinkedHashSet 类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/linkedhashset_class.png ':size=60%')
+![LinkedHashSet 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/linkedhashset_class.png ':size=60%')
 
 ## 构造方法
 

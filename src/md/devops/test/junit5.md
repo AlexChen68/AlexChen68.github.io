@@ -277,7 +277,7 @@ public class NestedTest {
 
 执行结果：
 
-![嵌套测试执行结果](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/devops/junit5_nested.png)
+![嵌套测试执行结果](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/junit5_nested.png)
 
 ### 重复测试
 
@@ -306,7 +306,7 @@ void customDisplayName(TestInfo testInfo, RepetitionInfo repetitionInfo) {
 ```
 
 执行结果：
-![重复测试执行结果](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/devops/junit5_repeat.png)
+![重复测试执行结果](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/junit5_repeat.png)
 
 ### 参数化测试
 

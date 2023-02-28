@@ -28,4 +28,4 @@ Java 虚拟机有自己完善的[硬体](https://zh.wikipedia.org/wiki/硬體)�
 
 ### JVM 结构
 
-![jvm 结构](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/java/jvm.png)
+![jvm 结构](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/jvm.png)

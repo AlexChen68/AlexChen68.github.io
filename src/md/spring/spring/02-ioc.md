@@ -416,7 +416,7 @@ Spring 中的 Bean 有六种作用域：
 
 换句话说，当您定义一个 bean 并且它的作用域是一个单例时，Spring IoC 容器只会根据 bean 的定义来创建该 bean 的唯一实例。这些唯一的实例会缓存到容器中，后续针对单例 bean 的请求和引用，都会从这个缓存中拿到这个唯一实例。 下图显示了单例作用域的工作原理：
 
-![Singleton 作用域](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/spring-core-ioc-singleton.png)
+![Singleton 作用域](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/spring-core-ioc-singleton.png)
 
 Spring 的单例 bean 概念不同于设计模式(GoF) 之中所定义的单例模式. 设计模式中的单例模式是将一个对象的作用域硬编码的，一个 ClassLoader 只能有唯一的一个实例. 而 Spring 的单例作用域是以容器为前提的，每个容器每个 bean 只能有一个实例. 这意味着，如果在单个 Spring 容器中为特定类定义一个 bean，则 Spring 容器会根据 bean 定义创建唯一的 bean 实例. 单例作用域是 Spring 的默认作用域. 下面的例子是在 XML 中配置单例模式 Bean 的例子:
 
@@ -433,7 +433,7 @@ Spring 的单例 bean 概念不同于设计模式(GoF) 之中所定义的单例�
 
 下图显示了原型作用域的工作原理:
 
-![Prototype 作用域](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/spring-core-ioc-prototype.png)
+![Prototype 作用域](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/spring-core-ioc-prototype.png)
 
 (数据访问对象(DAO) 通常不配置为原型，因为典型的 DAO 不具有任何会话状态。 我们可以更容易重用单例图的核心。 )
 

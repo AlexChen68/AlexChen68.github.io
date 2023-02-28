@@ -14,7 +14,7 @@ order: 7
 
 ## 类图
 
-![LinkedHashMap 类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/linkedhashmap_class.png ':size=60%')
+![LinkedHashMap 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/linkedhashmap_class.png ':size=60%')
 
 `LinkedHashMap` 实现 `java.util.Map` 接口，继承了 `java.util.HashMap` 类。
 

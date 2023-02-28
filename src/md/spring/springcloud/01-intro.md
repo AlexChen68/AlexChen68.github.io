@@ -38,7 +38,7 @@ Spring Cloud 包括 Spring Cloud Gateway、Spring Cloud Config、Spring Cloud Bu
 
 常见组件：
 
-![SpringCloud组件](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/spring/springcloud_modules.png)
+![SpringCloud组件](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/spring/springcloud_modules.png)
 
 ## Spring Boot 和 Spring Cloud 的区别与联系
 

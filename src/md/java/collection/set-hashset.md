@@ -14,7 +14,7 @@ order: 3
 
 ## 类图
 
-![HashSet类图](https://cdn.staticaly.com/gh/alexchen68/images@master/blog/java/hashset_class.png)
+![HashSet类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/hashset_class.png)
 
 `HashSet` 实现了三个接口：
 

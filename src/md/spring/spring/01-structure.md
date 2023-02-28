@@ -27,11 +27,11 @@ Spring 框架的**特性**：
 
 Spring 总共大约20个模块，这些模块被整合在核心容器、AOP和设备支持、数据访问与集成、Web组件、通信报文和集成测试、集成兼容等模块中。
 
-![Spring模块](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/spring/springframework_modules.png)
+![Spring模块](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/spring/springframework_modules.png)
 
 各个模块之间存在一些依赖关系如下：
 
-![Spring模块依赖关系](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/spring/springframework_modules_relation.png)
+![Spring模块依赖关系](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/spring/springframework_modules_relation.png)
 
 
 

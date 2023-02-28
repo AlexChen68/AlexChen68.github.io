@@ -21,7 +21,7 @@ category: 数据结构
 
 ## Java中的数组实现
 
-[ArrayList 源码分析](/md/java/collection/01-ArrayList.md)
+[ArrayList 源码分析](/md/java/collection/list-arraylist.md)
 
 ## 相关算法题
 
