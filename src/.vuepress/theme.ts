@@ -35,6 +35,7 @@ export default hopeTheme({
       Gmail: "mailto:alexchen.tech@gmail.com"
     },
   },
+  hotReload: true,
   plugins: {
     //开启 git 支持，可以展示上次编辑时间和贡献者
     git: true,

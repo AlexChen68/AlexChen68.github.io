@@ -86,3 +86,7 @@ SpringMVC 中Entity,DAO,Service,Controller, Util等的分离。
 ## 24 大设计模式
 
 ![](https://pdai.tech/images/design-pattern.png)
+
+## 参考资料
+
+- [设计模式知识体系详解-pdai](https://pdai.tech/md/dev-spec/pattern/1_overview.html)

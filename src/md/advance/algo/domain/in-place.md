@@ -1,5 +1,5 @@
 ---
-title: 原地算法（In-Place Algorithm）
+title: 原地算法
 date: 2023-02-21
 category: 算法
 ---
@@ -10,4 +10,4 @@ category: 算法
 
 通俗的说法：就是一个算法，除了可以运用输入数据本身已开辟的空间外，就只可以用极小的辅助空间来进行运算了，一般 额外空间复杂度为 O (1)，也就是一个变量。(特殊情况除外)
 
-例如：[LeetCode 26题](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
+示例：LeetCode 26题 https://leetcode.cn/problems/remove-duplicates-from-sorted-array/

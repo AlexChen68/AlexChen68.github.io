@@ -57,11 +57,11 @@ date: 2022-09-27
 
 邻接矩阵G\[N\]\[N\]——N个顶点从 0 到N-1编号，若结点 V~i~ 和 结点 V~j~ 是 G中的边，这 G\[i\]\[j\] = 1，否则等于0，由此得出的 N * N 的矩阵为邻接矩阵。
 
-![邻接矩阵](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advanced/邻接矩阵.png)
+![邻接矩阵](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接矩阵.png)
 
 表示无向图时：
 
-![邻接矩阵](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advanced/邻接矩阵-无向图.png)
+![邻接矩阵](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接矩阵-无向图.png)
 
 对于无向图来说，V~i~ 和 V~j~ 的结果和 V~j~ 和 V~i~ 的结果是对称的。
 
@@ -69,7 +69,7 @@ date: 2022-09-27
 
 **邻接表（链表存储）**
 
-![邻接表](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advanced/邻接表.png)
+![邻接表](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接表.png)
 
 #### **图的遍历**
 

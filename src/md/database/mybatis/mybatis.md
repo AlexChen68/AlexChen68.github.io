@@ -28,7 +28,7 @@ Mybatis 的特点：
 
 ## Mybatis 运行原理
 
-![Mybatis运行原理](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/db/mybatis-process.png)
+![Mybatis运行原理](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/database/mybatis_process.png)
 
 ## 引入 Mybatis
 

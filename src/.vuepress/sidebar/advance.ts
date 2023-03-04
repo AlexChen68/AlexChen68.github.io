@@ -1,6 +1,7 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
 export const advanceSidebar = arraySidebar([
+  "",
   {
     text: "数据结构",
     icon: "data-structure",
@@ -32,28 +33,7 @@ export const advanceSidebar = arraySidebar([
   {
     text: "设计模式",
     icon: "design",
-    prefix: "design/",
-    children: [
-      "",
-      {
-        text: "创建型模式",
-        prefix: "01-creational/",
-        collapsible: true,
-        children: "structure"
-      },
-      {
-        text: "结构型模式",
-        prefix: "02-structural/",
-        collapsible: true,
-        children: "structure"
-      },
-      {
-        text: "行为型模式",
-        prefix: "03-behavioural/",
-        collapsible: true,
-        children: "structure"
-      }
-    ],
+    link: "design/"
   },
   {
     text: "LeetCode 题解",
@@ -68,19 +48,25 @@ export const desginSidebar = arraySidebar([
   {
     text: "创建型模式",
     icon: "design",
-    prefix: "01-creational/",
+    prefix: "creational/",
     children: "structure"
   },
   {
     text: "结构型模式",
     icon: "design",
-    prefix: "02-structural/",
+    prefix: "structural/",
     children: "structure"
   },
   {
     text: "行为型模式",
     icon: "design",
-    prefix: "03-behavioural/",
+    prefix: "behavioural/",
+    children: "structure"
+  },
+  {
+    text: "设计模式的应用",
+    icon: "design",
+    prefix: "apply/",
     children: "structure"
   }
 ]);
