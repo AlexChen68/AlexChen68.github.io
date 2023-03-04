@@ -1,0 +1,1 @@
+import{_ as e,W as r,X as t,$ as a,Y as c}from"./framework-c6508e04.js";const n={},o=c("p",null,"搜索算法之顺序查找",-1);function s(_,l){return r(),t("div",null,[o,a(" more ")])}const i=e(n,[["render",s],["__file","01-linear-search.html.vue"]]);export{i as default};
