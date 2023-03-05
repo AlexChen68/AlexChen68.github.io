@@ -12,13 +12,13 @@ description: 建造者模式
 
 将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。建造者模式是一种对象创建型模式。
 
-## 结构图
+## 类图
 
-建造者模式结构图如下所示：
+建造者模式类图如下所示：
 
-![建造者模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/builder_pattern.png)
+![建造者模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/builder_pattern.png)
 
-建造者模式结构图中包含如下几个角色：
+建造者模式类图中包含如下几个角色：
 
 - **Builder（抽象建造者）**：它为创建一个产品 Product 对象的各个部件指定抽象接口，在该接口中一般声明两类方法，一类方法是 buildPartX()，它们用于创建复杂对象的各个部件；另一类方法是 getResult()，它们用于返回复杂对象。Builder 既可以是抽象类，也可以是接口。
 

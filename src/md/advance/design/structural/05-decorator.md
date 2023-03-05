@@ -16,11 +16,11 @@ description: 装饰模式
 
 > `装饰模式(Decorator Pattern)`：动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。
 
-## 结构图
+## 类图
 
-![装饰模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/decorator_pattern.png)
+![装饰模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/decorator_pattern.png)
 
-在装饰模式结构图中包含如下几个角色：
+在装饰模式类图中包含如下几个角色：
 
 - `Component`（抽象构件）：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务方法，它的引入可以使客户端以一致的方式处理未被装饰的对象以及装饰之后的对象，实现客户端的透明操作。
 - `ConcreteComponent`（具体构件）：它是抽象构件类的子类，用于定义具体的构件对象，实现了在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。

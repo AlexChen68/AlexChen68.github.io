@@ -23,11 +23,11 @@ description: 享元模式
 
 > 享元模式 (`Flyweight Pattern`)：运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。
 
-## 结构图
+## 类图
 
-![享元模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/flyweight_pattern.png)
+![享元模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/flyweight_pattern.png)
 
-在享元模式结构图中包含如下几个角色：
+在享元模式类图中包含如下几个角色：
 
 Flyweight（抽象享元类）：通常是一个接口或抽象类，在抽象享元类中声明了具体享元类公共的方法，这些方法可以向外界提供享元对象的内部数据（内部状态），同时也可以通过这些方法来设置外部数据（外部状态）。
 

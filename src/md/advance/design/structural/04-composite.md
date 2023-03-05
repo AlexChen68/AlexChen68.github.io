@@ -12,11 +12,11 @@ description: 组合模式
 
 `组合模式(Composite Pattern)`：组合多个对象形成树形结构以表示具有“整体—部分”关系的层次结构。组合模式对单个对象（即叶子对象）和组合对象（即容器对象）的使用具有一致性，组合模式又可以称为“整体—部分”(Part-Whole) 模式，它是一种对象结构型模式。
 
-## 结构图
+## 类图
 
-![组合模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/compostie_pattern.png)
+![组合模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/compostie_pattern.png)
 
-在组合模式结构图中包含如下几个角色：
+在组合模式类图中包含如下几个角色：
 
 - `Component`（抽象构件）：它可以是接口或抽象类，为叶子构件和容器构件对象声明接口，在该角色中可以包含所有子类共有行为的声明和实现。在抽象构件中定义了访问及管理它的子构件的方法，如增加子构件、删除子构件、获取子构件等。
 - `Leaf`（叶子构件）：它在组合结构中表示叶子节点对象，叶子节点没有子节点，它实现了在抽象构件中定义的行为。对于那些访问及管理子构件的方法，可以通过异常等方式进行处理。
@@ -163,7 +163,7 @@ public abstract class Component {
 
 `Java SE`中的`AWT`和`Swing`包的设计就基于组合模式，在这些界面包中为用户提供了大量的容器构件（如`Container`）和成员构件（如`Checkbox`、`Button`和`TextComponent`等），其结构如下图所示：
 
-![Swing](https://img2020.cnblogs.com/blog/1546632/202006/1546632-20200620111836722-1427412672.png)
+![Swing](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/compostie_pattern_1.png)
 
 `Component`类是抽象构件，`Checkbox`、`Button`和`TextComponent`是叶子构件，而`Container`是容器构件，在`AWT`中包含的叶子构件还有很多。在一个容器构件中可以包含叶子构件，也可以继续包含容器构件，这些叶子构件和容器构件一起组成了复杂的`GUI`界面。除此以外，在`XML解析`、`组织结构树处理`、`文件系统设计`等领域，组合模式都得到了广泛应用。
 

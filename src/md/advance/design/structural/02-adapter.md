@@ -16,17 +16,17 @@ description: 适配器模式
 
 *注意：在适配器模式定义中所提及的接口是指广义的接口，它可以表示一个方法或者方法的集合。*
 
-## 结构图
+## 类图
 
-把一个类接口转换成另一个用户需要的接口
+把一个类接口转换成另一个用户需要的接口，示意图
 
-![适配器模式结构图 1](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_1.png)
+![适配器模式示意图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_1.png)
 
 类图
 
-![适配器模式结构图 2](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_2.png)
+![适配器模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_2.png)
 
-在对象适配器模式结构图中包含如下几个角色：
+在对象适配器模式类图中包含如下几个角色：
 
 - `Target（目标抽象类）`：目标抽象类定义客户所需接口，可以是一个抽象类或接口，也可以是具体类。
 - `Adapter（适配器类）`：适配器可以调用另一个接口，作为一个转换器，对`Adaptee`和`Target`进行适配，适配器类是适配器模式的核心，在对象适配器中，它通过继承 (或者实现)`Target`并关联一个`Adaptee`对象使二者产生联系。

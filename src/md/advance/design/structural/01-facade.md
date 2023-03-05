@@ -16,9 +16,9 @@ description: 外观模式
 
 外观模式又称为门面模式，它是一种对象结构型模式。外观模式是`迪米特法则`的一种具体实现，通过引入一个新的外观角色可以降低原有系统的复杂度，同时降低客户类与子系统的耦合度。
 
-## 结构图
+## 类图
 
-![外观模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/facade_pattern.png)
+![外观模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/facade_pattern.png)
 
 外观模式包含如下两个角色：
 

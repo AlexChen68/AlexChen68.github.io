@@ -16,13 +16,13 @@ description: 原型模式
 
 需要注意的是通过克隆方法所创建的对象是全新的对象，它们在内存中拥有新的地址，通常对克隆所产生的对象进行修改对原型对象不会造成任何影响，每一个克隆对象都是相互独立的。通过不同的方式修改可以得到一系列相似但不完全相同的对象。
 
-## 结构图
+## 类图
 
-原型模式结构图如下所示：
+原型模式类图如下所示：
 
-![原型模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/prototype_pattern.png)
+![原型模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/prototype_pattern.png)
 
-原型模式结构图中包含如下几个角色：
+原型模式类图中包含如下几个角色：
 
 - `Prototype（抽象原型类）`：它是声明克隆方法的接口，是所有具体原型类的公共父类，可以是抽象类也可以是接口，甚至还可以是具体实现类。
 - `ConcretePrototype（具体原型类）`：它实现在抽象原型类中声明的克隆方法，在克隆方法中返回自己的一个克隆对象。

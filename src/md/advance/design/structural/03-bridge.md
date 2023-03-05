@@ -14,9 +14,9 @@ description: 桥接模式
 
 > 桥接模式 (Bridge Pattern)：将抽象部分与它的实现部分分离，使它们都可以独立地变化。它是一种对象结构型模式。
 
-## 结构图
+## 类图
 
-![桥接模式结构图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/bridge_pattern.png)
+![桥接模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/bridge_pattern.png)
 
 - Abstraction: 定义抽象类的接口
 - Implementor: 定义实现类接口
