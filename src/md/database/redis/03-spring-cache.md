@@ -52,11 +52,11 @@ Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL（Sp
 
 - values 属性：和 cacheNames 属性相同，是它的别名。
 
-- key 属性：缓存的 key 。允许空。如果为空，则默认方法的所有参数进行组合。如果非空，则需要按照 SpEL(Spring Expression Language) 来配置。例如说，@Cacheable(value = "users", key = "#id") ，使用方法参数 id 的值作为缓存的 key 。
+- key 属性：缓存的 key。允许空。如果为空，则默认方法的所有参数进行组合。如果非空，则需要按照 SpEL(Spring Expression Language) 来配置。例如说，@Cacheable(value = "users", key = "#id") ，使用方法参数 id 的值作为缓存的 key。
 
 - condition 属性：基于方法入参，判断要缓存的条件。允许空。如果为空，则不进行入参的判断。如果非空，则需要按照 SpEL(Spring Expression Language) 来配置。例如说，@Cacheable(condition="#id > 0") ，需要传入的 id 大于零。
 
-- unless 属性：基于方法返回，判断不缓存的条件。允许空。如果为空，则不进行入参的判断。如果非空，则需要按照 SpEL(Spring Expression Language) 来配置。例如说，@Cacheable(unless="#result == null") ，如果返回结果为 null ，则不进行缓存。
+- unless 属性：基于方法返回，判断不缓存的条件。允许空。如果为空，则不进行入参的判断。如果非空，则需要按照 SpEL(Spring Expression Language) 来配置。例如说，@Cacheable(unless="#result == null") ，如果返回结果为 null，则不进行缓存。
 要注意，condition 和 unless 都是条件属性，差别在于前者针对入参，后者针对结果。
 
 @Cacheable 注解的不常用属性，如下：
@@ -67,7 +67,7 @@ Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL（Sp
 
 - cacheResolver 属性：自定义缓存解析器 CacheResolver Bean 的名字。允许空。
 
-- sync 属性，在获得不到缓存的情况下，是否同步执行方法。默认为 false ，表示无需同步。如果设置为 true ，则执行方法时，会进行加锁，保证同一时刻，有且仅有一个方法在执行，其它线程阻塞等待。通过这样的方式，避免重复执行方法。注意，该功能的实现，需要参考第三方缓存的具体实现。
+- sync 属性，在获得不到缓存的情况下，是否同步执行方法。默认为 false，表示无需同步。如果设置为 true，则执行方法时，会进行加锁，保证同一时刻，有且仅有一个方法在执行，其它线程阻塞等待。通过这样的方式，避免重复执行方法。注意，该功能的实现，需要参考第三方缓存的具体实现。
 
 ### @CachePut
 
@@ -88,9 +88,9 @@ Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL（Sp
 
 相比 @CachePut 注解，它额外多了两个属性：
 
-- allEntries 属性，是否删除缓存名( cacheNames )下，所有 key 对应的缓存。默认为 false ，只删除指定 key 的缓存。
+- allEntries 属性，是否删除缓存名 ( cacheNames ) 下，所有 key 对应的缓存。默认为 false，只删除指定 key 的缓存。
 
-- beforeInvocation 属性，是否在方法执行前删除缓存。默认为 false ，在方法执行后删除缓存。
+- beforeInvocation 属性，是否在方法执行前删除缓存。默认为 false，在方法执行后删除缓存。
 
 ### @CacheConfig
 
@@ -136,11 +136,11 @@ Spring Cache Maven 依赖如下：
 
 在 Java 后端开发中，常见的缓存工具和框架列举如下：
 
-- 本地缓存：Guava LocalCache、Ehcache、Caffeine 。
+- 本地缓存：Guava LocalCache、Ehcache、Caffeine。
 
   Ehcache 的功能更加丰富，Caffeine 的性能要比 Guava LocalCache 好。
 
-- 分布式缓存：Redis、Memcached、Tair 。
+- 分布式缓存：Redis、Memcached、Tair。
 
   Redis 最为主流和常用。
 
@@ -181,7 +181,7 @@ Ehcache Maven 依赖：
 </dependency>
 ```
 
-Redis Maven 依赖如下，Spring Boot 默认使用 lettuce 作为 Redis 客户端, 如果你想使用 Jedis，可以像下面这样替换：
+Redis Maven 依赖如下，Spring Boot 默认使用 lettuce 作为 Redis 客户端，如果你想使用 Jedis，可以像下面这样替换：
 
 ```xml
 <dependency>
@@ -206,7 +206,7 @@ Redis Maven 依赖如下，Spring Boot 默认使用 lettuce 作为 Redis 客户�
 
 ## Cache 注解失效场景 <Badge text="重要" type="warning" />
 
-Cache 本质上是基于面向**切面**的思想做的，实际上就是使用Java动态代理，创建实例的时候注入的是代理对象，在代理对象里调用实际的对象，这样就可以在实际的方法执行前，处理一下缓存的逻辑：没有找到缓存就往下执行，执行完把结果加入到缓存中；找到缓存则直接返回缓存的结果，不调用执行实际的方法。
+Cache 本质上是基于面向**切面**的思想做的，实际上就是使用 Java 动态代理，创建实例的时候注入的是代理对象，在代理对象里调用实际的对象，这样就可以在实际的方法执行前，处理一下缓存的逻辑：没有找到缓存就往下执行，执行完把结果加入到缓存中；找到缓存则直接返回缓存的结果，不调用执行实际的方法。
 
 因此会有两种失效场景：
 

@@ -20,11 +20,11 @@ description: 适配器模式
 
 把一个类接口转换成另一个用户需要的接口，示意图
 
-![适配器模式示意图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_1.png)
+![适配器模式示意图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/adapter_pattern_1.png)
 
 类图
 
-![适配器模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_2.png)
+![适配器模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/adapter_pattern_2.png)
 
 在对象适配器模式类图中包含如下几个角色：
 
@@ -60,7 +60,7 @@ public class Adapter implements Target {
 
 类适配器`模式和`对象适配器`模式最大的区别在于适配器和适配者之间的关系不同，对象适配器模式中适配器和适配者之间是`关联关系`，而类适配器模式中适配器和适配者是`继承关系
 
-![类适配器](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_class.png)
+![类适配器](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/adapter_pattern_class.png)
 
 适配器类实现了抽象目标类接口`Target`，并继承了适配者类，在适配器类的`request()`方法中调用所继承的适配者类的`specificRequest()`方法，实现了适配。
 典型代码实现如下：
@@ -80,7 +80,7 @@ public class Adapter extends Adaptee implements Target {
 
 `双向适配器`: 在`对象适配器`的使用过程中，如果在适配器中同时包含对目标类和适配者类的引用，适配者可以通过它调用目标类中的方法，目标类也可以通过它调用适配者类中的方法，那么该适配器就是一个双向适配器。
 
-![双向适配器](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_double.png)
+![双向适配器](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/adapter_pattern_double.png)
 
 典型代码实现如下：
 
@@ -117,7 +117,7 @@ public class Adapter implements Target, Adaptee {
 
 > `缺省适配器模式(Default Adapter Pattern)`：当不需要实现一个接口所提供的所有方法时，可先设计一个抽象类实现该接口，并为接口中每个方法提供一个默认实现（空方法），那么该抽象类的子类可以选择性地覆盖父类的某些方法来实现需求，它适用于不想使用一个接口中的所有方法的情况，又称为`单接口适配器模式`。
 
-![缺省适配器](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/adapter_pattern_default.png)
+![缺省适配器](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/adapter_pattern_default.png)
 
 典型代码实现如下：
 

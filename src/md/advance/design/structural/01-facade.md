@@ -18,7 +18,7 @@ description: 外观模式
 
 ## 类图
 
-![外观模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/facade_pattern.png)
+![外观模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/facade_pattern.png)
 
 外观模式包含如下两个角色：
 

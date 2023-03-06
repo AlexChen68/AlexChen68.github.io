@@ -20,7 +20,7 @@ description: 观察者模式
 
 ## 类图
 
-![观察者模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/observer_pattern.png)
+![观察者模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/observer_pattern.png)
 
 在观察者模式类图中包含如下几个角色：
 

@@ -13,7 +13,7 @@ description: 解释器模式
 > 解释器模式 (Interpreter Pattern)：定义一个语言的文法，并且建立一个解释器来解释该语言中的句子，这里的“语言”是指使用规定格式和语法的代码。解释器模式是一种类行为型模式。
 ## 类图
 
-![解释器模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/interpreter_pattern.png)
+![解释器模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/interpreter_pattern.png)
 
 在解释器模式类图中包含如下几个角色：
 

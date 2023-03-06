@@ -1,5 +1,5 @@
 ---
-title: 设计模式基本原则
+title: 设计模式概述
 date: 2022-09-27
 article: false
 ---

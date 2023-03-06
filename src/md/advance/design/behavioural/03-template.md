@@ -16,7 +16,7 @@ description: 模板方法
 
 ## 类图
 
-![模板方法类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/template_pattern.png)
+![模板方法类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/template_pattern.png)
 
 模板方法模式包含如下两个角色：
 

@@ -14,7 +14,7 @@ description: 组合模式
 
 ## 类图
 
-![组合模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/compostie_pattern.png)
+![组合模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/compostie_pattern.png)
 
 在组合模式类图中包含如下几个角色：
 
@@ -163,7 +163,7 @@ public abstract class Component {
 
 `Java SE`中的`AWT`和`Swing`包的设计就基于组合模式，在这些界面包中为用户提供了大量的容器构件（如`Container`）和成员构件（如`Checkbox`、`Button`和`TextComponent`等），其结构如下图所示：
 
-![Swing](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/compostie_pattern_1.png)
+![Swing](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/compostie_pattern_1.png)
 
 `Component`类是抽象构件，`Checkbox`、`Button`和`TextComponent`是叶子构件，而`Container`是容器构件，在`AWT`中包含的叶子构件还有很多。在一个容器构件中可以包含叶子构件，也可以继续包含容器构件，这些叶子构件和容器构件一起组成了复杂的`GUI`界面。除此以外，在`XML解析`、`组织结构树处理`、`文件系统设计`等领域，组合模式都得到了广泛应用。
 

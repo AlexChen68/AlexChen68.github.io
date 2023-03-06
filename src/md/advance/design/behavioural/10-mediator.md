@@ -18,7 +18,7 @@ description: 中介模式
 
 ## 类图
 
-![中介模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/mediator_pattern.png)
+![中介模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/mediator_pattern.png)
 
 在中介者模式类图中包含如下几个角色：
 

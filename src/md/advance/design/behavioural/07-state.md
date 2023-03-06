@@ -22,7 +22,7 @@ description: 状态模式
 
 ## 类图
 
-![状态模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/state_pattern.png)
+![状态模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/state_pattern.png)
 
 ## 伪代码
 

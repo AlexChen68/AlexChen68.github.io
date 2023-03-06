@@ -10,11 +10,11 @@ order: 1
 <!-- more -->
 
 ## 简介
-ArrayList ，基于 `[]` 数组实现的，支持**自动扩容**的动态数组。
+ArrayList，基于 `[]` 数组实现的，支持**自动扩容**的动态数组。
 
 ## 类图
 
-![ArrayList类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/arraylist_class.png)
+![ArrayList 类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/arraylist_class.png)
 
 `ArrayList` **实现**了 4 个接口，分别是：
 
@@ -46,7 +46,7 @@ private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 实例属性
 
 ```java
-// 存储 ArrayList 元素的数组缓冲区。 ArrayList 的容量就是这个数组缓冲区的长度。当添加第一个元素时，任何具有 elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA 的空 ArrayList 都将扩展为 DEFAULT_CAPACITY。
+// 存储 ArrayList 元素的数组缓冲区。ArrayList 的容量就是这个数组缓冲区的长度。当添加第一个元素时，任何具有 elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA 的空 ArrayList 都将扩展为 DEFAULT_CAPACITY。
 transient Object[] elementData;
 
 // ArrayList 的大小（它包含的元素数量）
@@ -83,7 +83,7 @@ public ArrayList(int initialCapacity) {
 
 ```java
 public ArrayList(Collection<? extends E> c) {
-    // 先将指定集合转换为 Object 数组（实际上在 JDK9之前，数组 a 的实际类型为原集合的类型）
+    // 先将指定集合转换为 Object 数组（实际上在 JDK9 之前，数组 a 的实际类型为原集合的类型）
     Object[] a = c.toArray();
     if ((size = a.length) != 0) {
         // 由于 a 的类型不一致，需要先判断；不一致时需要先转为 Object 数组再赋值
@@ -199,7 +199,7 @@ private static int hugeCapacity(int minCapacity) {
 public boolean addAll(Collection<? extends E> c) {
   	// 转成 a 数组
     Object[] a = c.toArray();
-		// 如果 a 数组大小为 0 ，返回 ArrayList 数组无变化
+		// 如果 a 数组大小为 0，返回 ArrayList 数组无变化
     int numNew = a.length;
     // 扩容至确保可以容纳添加后的元素
     ensureCapacityInternal(size + numNew);  // Increments modCount
@@ -300,12 +300,12 @@ private void fastRemove(int index) {
 
 > 注意其中的 `complement` 参数，当需要删除元素时，`complement` 为 false，表示在集合 c 中，就不执行后续代码（保留元素）；当需要保留元素时，`complement` 为 true，表示在集合 c 中，就执行后续代码（保留元素）。
 > 
-> 在 `finally` 块中， 如果 contains 方法发生异常，则将 es 从 r 位置的数据写入到 es 从 w 开始的位置。这样，保证我们剩余未遍历到的元素，能够挪到从从 w 开始的位置，避免多出来一些元素。最后对移动后空出位置的值设为 null，帮助 GC
+> 在 `finally` 块中，如果 contains 方法发生异常，则将 es 从 r 位置的数据写入到 es 从 w 开始的位置。这样，保证我们剩余未遍历到的元素，能够挪到从从 w 开始的位置，避免多出来一些元素。最后对移动后空出位置的值设为 null，帮助 GC
 
 ```java
 // 从此列表中删除包含在指定集合中的所有元素
 public boolean removeAll(Collection<?> c) {
-    // 断言指定集合不为null
+    // 断言指定集合不为 null
     Objects.requireNonNull(c);
     return batchRemove(c, false);
 }
@@ -335,7 +335,7 @@ private boolean batchRemove(Collection<?> c, boolean complement) {
         }
         // 如果有元素被删除了
         if (w != size) {
-            // 将数组 [w, size-1) 位置赋值为 null,帮助 GC
+            // 将数组 [w, size-1) 位置赋值为 null，帮助 GC
             for (int i = w; i < size; i++)
                 elementData[i] = null;
             modCount += size - w;
@@ -351,7 +351,7 @@ private boolean batchRemove(Collection<?> c, boolean complement) {
 4. 删除一定范围的元素 `removeRange(int fromIndex, int toIndex)`
 
 ```java
-// 从此列表中删除索引在fromIndex （包括）和toIndex （不包括）之间的所有元素。将任何后续元素向左移动
+// 从此列表中删除索引在 fromIndex（包括）和 toIndex（不包括）之间的所有元素。将任何后续元素向左移动
 protected void removeRange(int fromIndex, int toIndex) {
     modCount++;
     // 计算需要移动的元素个数
@@ -411,7 +411,7 @@ public int indexOf(Object o) {
 3. 判断集合是否包含指定元素 `contains(Object o)`
 
 ```java
-// 如果此列表包含指定元素，则返回true
+// 如果此列表包含指定元素，则返回 true
 public boolean contains(Object o) {
     // 调用 indexOf 方法，如果存在，则 indexOf 的结果应该大于等于 0
     return indexOf(o) >= 0;
@@ -497,7 +497,7 @@ public <T> T[] toArray(T[] a) {
     // 长度足够时，直接拷贝进 a 数组中
     System.arraycopy(elementData, 0, a, 0, size);
     if (a.length > size)
-        // 如果 a 数组未全部填充，剩余部分补充 null， 帮助 GC
+        // 如果 a 数组未全部填充，剩余部分补充 null，帮助 GC
         a[size] = null;
     return a;
 }
@@ -542,10 +542,10 @@ private void writeObject(java.io.ObjectOutputStream s) throws java.io.IOExceptio
     // 写入非静态属性、非 transient 属性
     s.defaultWriteObject();
 
-    // 写入 size ，主要为了与 clone 方法的兼容
+    // 写入 size，主要为了与 clone 方法的兼容
     s.writeInt(size);
 
-    // 逐个写入 elementData 数组的元素，只写入[0, size-1]的元素，因为其扩容后，有一定预留空间
+    // 逐个写入 elementData 数组的元素，只写入 [0, size-1] 的元素，因为其扩容后，有一定预留空间
     for (int i=0; i<size; i++) {
         s.writeObject(elementData[i]);
     }
@@ -669,7 +669,7 @@ private class Itr implements Iterator<E> {
 
     // 判断是否还可以迭代
     public boolean hasNext() {
-        // cursor 如果等于 size ，说明已经到数组末尾，无法继续迭代了
+        // cursor 如果等于 size，说明已经到数组末尾，无法继续迭代了
         return cursor != size;
     }
 
@@ -835,7 +835,7 @@ private class ListItr extends Itr implements ListIterator<E> {
             ArrayList.this.add(i, e);
             // cursor 指向下一个位置，因为当前位置添加了新的元素，所以需要后挪
             cursor = i + 1;
-            // lastRet 标记为 -1 ，因为当前元素并未访问
+            // lastRet 标记为 -1，因为当前元素并未访问
             lastRet = -1;
             expectedModCount = modCount;
         } catch (IndexOutOfBoundsException ex) {
@@ -849,4 +849,4 @@ private class ListItr extends Itr implements ListIterator<E> {
 
 * [芋道源码](https://www.iocoder.cn/)
 * [Java 程序员进阶之路](https://tobebetterjavaer.com/collection/gailan.html)
-* [Java全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)
+* [Java 全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)
