@@ -1,13 +1,12 @@
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme } from "vuepress-theme-hope/perf";
 import navbar from "./navbar.js";
 import { sidebarConig } from "./sidebar";
-import {  } from "module";
 
 const github = "https://github.com/AlexChen68"
-const repoUrl = "https://github.com/AlexChen68/blog"
+const repoUrl = "https://github.com/AlexChen68/AlexChen68.github.io"
 
 export default hopeTheme({
-  hostname: "https://AlexChen68.github.com/blog",
+  hostname: "https://github.com/AlexChen68/AlexChen68.github.io",
   author: {
     name: "AlexChen",
     url: github,
@@ -27,7 +26,7 @@ export default hopeTheme({
   displayFooter: false,
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
-    description: "编程两年半的 Java 练习生",
+    description: "编程时长两年半的 Java 练习生",
     medias: {
       QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
       GitHub: github,

@@ -20,7 +20,7 @@ description: 访问者模式
 
 ![访问者模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/visitor_pattern.png)
 
-在访问者模式结构图中包含如下几个角色：
+在访问者模式类图中包含如下几个角色：
 
 - Vistor（抽象访问者）：抽象访问者为对象结构中每一个具体元素类 `ConcreteElement` 声明一个访问操作，从这个操作的名称或参数类型可以清楚知道需要访问的具体元素的类型，具体访问者需要实现这些操作方法，定义对这些元素的访问操作。
 - ConcreteVisitor（具体访问者）：具体访问者实现了每个由抽象访问者声明的操作，每一个操作用于访问对象结构中一种类型的元素。

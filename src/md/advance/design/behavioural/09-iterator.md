@@ -18,7 +18,7 @@ description: 迭代器模式
 
 ![迭代器模式类图](https://cdn.staticaly.com/gh/AlexChen68/images@master/blog/advance/iterator_pattern.png)
 
-在迭代器模式结构图中包含如下几个角色：
+在迭代器模式类图中包含如下几个角色：
 
 - Iterator（抽象迭代器）：它定义了访问和遍历元素的接口，声明了用于遍历数据元素的方法，例如：用于获取第一个元素的 first() 方法，用于访问下一个元素的 next() 方法，用于判断是否还有下一个元素的 hasNext() 方法，用于获取当前元素的 currentItem() 方法等，在具体迭代器中将实现这些方法。
 - ConcreteIterator（具体迭代器）：它实现了抽象迭代器接口，完成对聚合对象的遍历，同时在具体迭代器中通过游标来记录在聚合对象中所处的当前位置，在具体实现时，游标通常是一个表示位置的非负整数。
