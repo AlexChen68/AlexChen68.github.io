@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://AlexChen68.github.com/blog/sitemap.xml
+Sitemap: https://github.com/AlexChen68/AlexChen68.github.io/sitemap.xml
