@@ -1,0 +1,1 @@
+import{_ as t,W as o,X as r,Y as e,Z as n}from"./framework-a443708f.js";const a={},s=e("h2",{id:"使用-springboot",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#使用-springboot","aria-hidden":"true"},"#"),n(" 使用 SpringBoot")],-1),c=[s];function _(i,d){return o(),r("div",null,c)}const l=t(a,[["render",_],["__file","01-intro.html.vue"]]);export{l as default};
