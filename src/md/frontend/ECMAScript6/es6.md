@@ -1,7 +1,7 @@
 ---
 title: ECMAScript 6.0
 tag: ES6
-category: 前端开发, ES6
+category: 前端开发，ES6
 date: 2023-01-03
 ---
 
@@ -25,15 +25,15 @@ b // 1
 
 `var` 命令会发生“变量提升”现象，即变量可以在声明之前使用，值为 `undefined`;
 
-为了纠正这种现象，let命令改变了语法行为，它所声明的变量一定要在声明后使用，否则报错。
+为了纠正这种现象，let 命令改变了语法行为，它所声明的变量一定要在声明后使用，否则报错。
 
 ```javascript
 // var 的情况
-console.log(foo); // 输出undefined
+console.log(foo); // 输出 undefined
 var foo = 2;
 
 // let 的情况
-console.log(bar); // 报错ReferenceError
+console.log(bar); // 报错 ReferenceError
 let bar = 2;
 ```
 

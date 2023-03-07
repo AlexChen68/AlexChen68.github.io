@@ -1,6 +1,6 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
+  "name": "alexchen68.github.io",
+  "version": "2.0.0",
   "description": "基于 vue-press 的博客系统",
   "license": "MIT",
   "type": "module",
@@ -11,9 +11,9 @@
     "docs:update-package": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/client": "2.0.0-beta.61",
     "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "2.0.0-beta.174"
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.190"
   }
 }

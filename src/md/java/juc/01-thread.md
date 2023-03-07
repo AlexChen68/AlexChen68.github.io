@@ -1,10 +1,8 @@
 ---
-title: Java 线程详解
-article: true
+title: Thread 详解
 date: 2022-09-30
 tag: JUC
 category: Java 并发
-isOriginal: true
 description: Java 线程
 ---
 
@@ -347,9 +345,9 @@ public interface RunnableFuture<V> extends Runnable, Future<V> {
 }
 ```
 
-### Thread 常用方法
+## Thread 常用方法
 
-#### `sleep()`
+### `sleep()`
 
 使当前正在执行的线程暂停指定的毫秒数，也就是进入休眠的状态。需要注意的是，sleep 的时候要对异常进行处理。
 
@@ -361,7 +359,7 @@ try {
 }
 ```
 
-#### `join()`
+### `join()`
 
 等待这个线程执行完才会轮到后续线程得到 cpu 的执行权，使用这个也要抛出异常。
 
@@ -413,10 +411,9 @@ void joinTest() throws InterruptedException {
 3. 使用 `java.util.concurrent.CountDownLatch` 统计线程数，每个线程执行完后进行 `countDown()` 操作，主线程使用 `await()` 等待计数变为 0 再往下执行；
 4. 使用 `java.util.concurrent.CyclicBarrier` 同步多个线程的操作；
 5. 使用线程池的 `isTerminated()` 方法，判断所有子线程是否都执行完，注意需要先执行 `shutdown()`，否则永不为 true。
-
 :::
 
-#### `setDaemon()`
+### `setDaemon()`
 
 > 将此线程标记为守护线程，准确来说，就是服务其他的线程，像 Java 中的垃圾回收线程，就是典型的守护线程。
 
@@ -450,16 +447,7 @@ void daemonTest() throws InterruptedException {
     Thread.sleep(2000L);
 }
 ```
-
 如果其他线程都执行完毕，main 方法（主线程）也执行完毕，JVM 就会退出，也就是停止运行。如果 JVM 都停止运行了，守护线程自然也就停止了。
-
-<!-- ## 基础线程机制
-
-## 线程中断
-
-## 线程互斥同步
-
-## 线程间的协作 -->
 
 ## 参考资料
 

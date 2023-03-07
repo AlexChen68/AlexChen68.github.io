@@ -1,19 +1,19 @@
 ---
 title: Node.js 的安装
-category: 
+category: Node
 date: 2023-02-22
 ---
 
 介绍 Node.js 的安装方法
 <!-- more -->
 
-## Node.js简介
+## Node.js 简介
 
-Node.js 是一个开源和跨平台的 JavaScript 运行时环境。 它几乎是任何类型项目的流行工具！
+Node.js 是一个开源和跨平台的 JavaScript 运行时环境。它几乎是任何类型项目的流行工具！
 
-Node.js 在浏览器之外运行 V8 JavaScript 引擎（Google Chrome 的内核）。 这使得 Node.js 的性能非常好。
+Node.js 在浏览器之外运行 V8 JavaScript 引擎（Google Chrome 的内核）。这使得 Node.js 的性能非常好。
 
-Node.js 应用程序在单个进程中运行，无需为每个请求创建新的线程。 Node.js 在其标准库中提供了一组异步的 I/O 原语，以防止 JavaScript 代码阻塞，通常，Node.js 中的库是使用非阻塞范式编写的，使得阻塞行为成为异常而不是常态。
+Node.js 应用程序在单个进程中运行，无需为每个请求创建新的线程。Node.js 在其标准库中提供了一组异步的 I/O 原语，以防止 JavaScript 代码阻塞，通常，Node.js 中的库是使用非阻塞范式编写的，使得阻塞行为成为异常而不是常态。
 
 当 Node.js 执行 I/O 操作时（比如从网络读取、访问数据库或文件系统），Node.js 将在响应返回时恢复操作（而不是阻塞线程和浪费 CPU 周期等待）。
 
@@ -27,7 +27,7 @@ Node.js 具有独特的优势，因为数百万为浏览器编写 JavaScript 的
 
 Node.js 可以通过多种方式安装，所有主流平台的官方软件包都可以在 [http://nodejs.cn/download/](http://nodejs.cn/download/) 获得。
 
-安装 Node.js 的一种非常方便的方式是通过包管理器。 对于这种情况，每种操作系统都有其自身的包管理器。
+安装 Node.js 的一种非常方便的方式是通过包管理器。对于这种情况，每种操作系统都有其自身的包管理器。
 
 其他适用于 MacOS、Linux 和 Windows 的包管理器列出在 [http://nodejs.cn/download/package-manager/](http://nodejs.cn/download/package-manager/)。
 
@@ -40,7 +40,7 @@ Node.js 可以通过多种方式安装，所有主流平台的官方软件包都
 #### 使用 NVM 安装
 
 **什么是 NVM**
-nvm 是node.js的版本管理器，旨在按用户安装，并按 shell 调用。nvm适用于任何符合 POSIX 的 shell（sh、dash、ksh、zsh、bash），特别是在以下平台上：unix、macOS 和windows WSL。
+nvm 是 node.js 的版本管理器，旨在按用户安装，并按 shell 调用。nvm 适用于任何符合 POSIX 的 shell（sh、dash、ksh、zsh、bash），特别是在以下平台上：unix、macOS 和 windows WSL。
 
 1. 安装 NVM
 ```bash
@@ -94,4 +94,4 @@ npm -v
 
 ## 参考资料
 
-[Node.js官网](https://nodejs.org/zh-cn/)
+[Node.js 官网](https://nodejs.org/zh-cn/)

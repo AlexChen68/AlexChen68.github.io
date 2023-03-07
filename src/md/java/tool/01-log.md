@@ -30,11 +30,11 @@ category: Java 工具类
 
 ### common-logging
 
-> common-logging 是 apache 的一个开源项目。也称Jakarta Commons Logging，缩写 JCL。
+> common-logging 是 apache 的一个开源项目。也称 Jakarta Commons Logging，缩写 JCL。
 
 common-logging 的功能是提供日志功能的 API 接口，本身并不提供日志的具体实现（当然，common-logging 内部有一个 Simple logger 的简单实现，但是功能很弱，直接忽略），而是在运行时动态的绑定日志实现组件来工作（如 log4j、java.util.loggin）。
 
-官网地址: [http://commons.apache.org/proper/commons-logging/  (opens new window)](http://commons.apache.org/proper/commons-logging/)
+官网地址：[http://commons.apache.org/proper/commons-logging/  (opens new window)](http://commons.apache.org/proper/commons-logging/)
 
 ### slf4j
 
@@ -42,7 +42,7 @@ common-logging 的功能是提供日志功能的 API 接口，本身并不提供
 
 类似于 Common-Logging，slf4j 是对不同日志框架提供的一个 API 封装，可以在部署的时候不修改任何配置即可接入一种日志实现方案。但是，slf4j 在编译时静态绑定真正的 Log 库。使用 SLF4J 时，如果你需要使用某一种日志实现，那么你必须选择正确的 SLF4J 的 jar 包的集合（各种桥接包）。
 
-![](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/log.png)
+![slf4j](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/slf4j_dependcies.png)
 
 ### 比较
 
@@ -54,10 +54,10 @@ slf4j 库类似于 Apache Common-Logging。但是，他在编译时静态绑定�
 
 ### java.util.logging (JUL)
 
-JDK1.4 开始，通过 java.util.logging 提供日志功能。虽然是官方自带的log lib，JUL的使用确不广泛。主要原因:
+JDK1.4 开始，通过 java.util.logging 提供日志功能。虽然是官方自带的 log lib，JUL 的使用确不广泛。主要原因：
 
-- JUL从JDK1.4 才开始加入(2002年)，当时各种第三方log lib已经被广泛使用了
-- JUL早期存在性能问题，到JDK1.5上才有了不错的进步，但现在和Logback/Log4j2相比还是有所不如
+- JUL 从 JDK1.4 才开始加入 (2002 年)，当时各种第三方 log lib 已经被广泛使用了
+- JUL 早期存在性能问题，到 JDK1.5 上才有了不错的进步，但现在和 Logback/Log4j2 相比还是有所不如
 - JUL的功能不如Logback/Log4j2等完善，比如Output Handler就没有Logback/Log4j2的丰富，有时候需要自己来继承定制，又比如默认没有从ClassPath里加载配置文件的功能
 
 ### Log4j
@@ -72,11 +72,11 @@ Log4j 中有三个主要组成部分：
 
 官网地址：[http://logging.apache.org/log4j/2.x/  (opens new window)](http://logging.apache.org/log4j/2.x/)
 
-Log4j 的短板在于性能，在Logback 和 Log4j2 出来之后，Log4j的使用也减少了。
+Log4j 的短板在于性能，在 Logback 和 Log4j2 出来之后，Log4j 的使用也减少了。
 
 ### Logback
 
-Logback 是由 log4j 创始人 Ceki Gulcu 设计的又一个开源日志组件，是作为 Log4j 的继承者来开发的，提供了性能更好的实现，异步 logger，Filter等更多的特性。
+Logback 是由 log4j 创始人 Ceki Gulcu 设计的又一个开源日志组件，是作为 Log4j 的继承者来开发的，提供了性能更好的实现，异步 logger，Filter 等更多的特性。
 
 logback 当前分成三个模块：logback-core、logback-classic 和 logback-access。
 
@@ -84,7 +84,7 @@ logback 当前分成三个模块：logback-core、logback-classic 和 logback-ac
 - logback-classic - 是 log4j 的一个 改良版本。此外 logback-classic 完整实现 SLF4J API 使你可以很方便地更换成其它日志系统如 log4j 或 JDK14 Logging。
 - logback-access - 访问模块与 Servlet 容器集成提供通过 Http 来访问日志的功能。
 
-官网地址: [http://logback.qos.ch/  (opens new window)](http://logback.qos.ch/)
+官网地址：[http://logback.qos.ch/  (opens new window)](http://logback.qos.ch/)
 
 ### Log4j2
 
@@ -94,7 +94,7 @@ Log4j2 和 Log4j1.x 并不兼容，设计上很大程度上模仿了 SLF4J/Logba
 
 Log4j2 也做了 Facade/Implementation 分离的设计，分成了 log4j-api 和 log4j-core。
 
-官网地址: [http://logging.apache.org/log4j/2.x/  (opens new window)](http://logging.apache.org/log4j/2.x/)
+官网地址：[http://logging.apache.org/log4j/2.x/  (opens new window)](http://logging.apache.org/log4j/2.x/)
 
 ### 比较
 
@@ -200,23 +200,23 @@ public class App {
 
 ## Logback 配置详解
 
-### Logback的配置介绍
+### Logback 的配置介绍
 
-**Logger、appender及layout**
+**Logger、appender 及 layout**
 
-- Logger作为日志的记录器，把它关联到应用的对应的context上后，主要用于存放日志对象，也可以定义日志类型、级别。
+- Logger 作为日志的记录器，把它关联到应用的对应的 context 上后，主要用于存放日志对象，也可以定义日志类型、级别。
 
-- Appender主要用于指定日志输出的目的地，目的地可以是控制台、文件、远程套接字服务器、 MySQL、PostreSQL、 Oracle和其他数据库、 JMS和远程UNIX Syslog守护进程等。
+- Appender 主要用于指定日志输出的目的地，目的地可以是控制台、文件、远程套接字服务器、MySQL、PostreSQL、Oracle 和其他数据库、JMS 和远程 UNIX Syslog 守护进程等。
 
 - Layout 负责把事件转换成字符串，格式化的日志信息的输出。
 
 **Logger context**
 
-各个 logger 都被关联到一个 **LoggerContext**，LoggerContext 负责制造 logger，也负责以树结构排列各 logger。其他所有 logger 也通过 `org.slf4j.LoggerFactory` 类的静态方法 `getLogger()` 取得。getLogger 方法以 logger 名称为参数。用同一名字调用`LoggerFactory.getLogger` 方法所得到的永远都是同一个logger 对象的引用。
+各个 logger 都被关联到一个 **LoggerContext**，LoggerContext 负责制造 logger，也负责以树结构排列各 logger。其他所有 logger 也通过 `org.slf4j.LoggerFactory` 类的静态方法 `getLogger()` 取得。getLogger 方法以 logger 名称为参数。用同一名字调用`LoggerFactory.getLogger` 方法所得到的永远都是同一个 logger 对象的引用。
 
 **有效级别及级别的继承**
 
-Logger 可以被分配级别。级别包括：TRACE、DEBUG、INFO、WARN 和 ERROR，定义于ch.qos.logback.classic.Level类。
+Logger 可以被分配级别。级别包括：TRACE、DEBUG、INFO、WARN 和 ERROR，定义于 ch.qos.logback.classic.Level 类。
 
 如果 logger 没有被分配级别，那么它将从有被分配级别的最近的祖先那里继承级别。
 
@@ -224,7 +224,7 @@ Logger 可以被分配级别。级别包括：TRACE、DEBUG、INFO、WARN 和 ER
 
 **打印方法与基本的选择规则**
 
-打印方法决定记录请求的级别。例如，如果 L 是一个 logger 实例，那么，语句 L.info("..")是一条级别为 INFO的记录语句。记录请求的级别在高于或等于其 logger 的有效级别时被称为被启用，否则，称为被禁用。记录请求级别为 p，其 logger 的有效级别为 q，只有则当 p>=q时，该请求才会被执行。
+打印方法决定记录请求的级别。例如，如果 L 是一个 logger 实例，那么，语句 L.info("..") 是一条级别为 INFO 的记录语句。记录请求的级别在高于或等于其 logger 的有效级别时被称为被启用，否则，称为被禁用。记录请求级别为 p，其 logger 的有效级别为 q，只有则当 p>=q 时，该请求才会被执行。
 
 该规则是 logback 的核心。级别排序为： **TRACE < DEBUG < INFO < WARN < ERROR**
 
@@ -246,19 +246,19 @@ Logger 可以被分配级别。级别包括：TRACE、DEBUG、INFO、WARN 和 ER
 
 ### Logback 的默认配置
 
-如果配置文件 logback-test.xml 和 logback.xml 都不存在，那么 logback 默认地会调用BasicConfigurator ，创建一个最小化配置。最小化配置由一个关联到根 logger 的ConsoleAppender 组成。输出用模式为%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n 的 PatternLayoutEncoder 进行格式化。root logger 默认级别是 DEBUG。
+如果配置文件 logback-test.xml 和 logback.xml 都不存在，那么 logback 默认地会调用 BasicConfigurator，创建一个最小化配置。最小化配置由一个关联到根 logger 的 ConsoleAppender 组成。输出用模式为%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n 的 PatternLayoutEncoder 进行格式化。root logger 默认级别是 DEBUG。
 
-- Logback的配置文件
+- Logback 的配置文件
 
-　　Logback 配置文件的语法非常灵活。正因为灵活，所以无法用 DTD 或 XML schema 进行定义。尽管如此，可以这样描述配置文件的基本结构：以`<configuration>` 开头，后面有零个或多个 `<appender>` 元素，有零个或多个 `<logger>` 元素，有最多一个 `<root>` 元素。
+  Logback 配置文件的语法非常灵活。正因为灵活，所以无法用 DTD 或 XML schema 进行定义。尽管如此，可以这样描述配置文件的基本结构：以`<configuration>` 开头，后面有零个或多个 `<appender>` 元素，有零个或多个 `<logger>` 元素，有最多一个 `<root>` 元素。
 
-- Logback默认配置的步骤
+- Logback 默认配置的步骤
 
-1. 尝试在 classpath下查找文件 logback-test.xml；
-2. 如果文件不存在，则查找文件logback.xml；
-3. 如果两个文件都不存在，logback用BasicConfigurator自动对自己进行配置，这会导致记录输出到控制台。
+1. 尝试在 classpath 下查找文件 logback-test.xml；
+2. 如果文件不存在，则查找文件 logback.xml；
+3. 如果两个文件都不存在，logback 用 BasicConfigurator 自动对自己进行配置，这会导致记录输出到控制台。
 
-### logback.xml常用配置详解
+### logback.xml 常用配置详解
 
 #### 根标签
 
@@ -323,7 +323,7 @@ appender 通过 `<appender>` 元素进行配置，需要两个强制的属性 *n
 
 `<appender>` 元素可以包含 0 或一个 `<layout>` 元素，0 或多个 `<encoder>` 元素，0 或多个 `<filter>` 元素。除了这些公共的元素之外，`<appender>` 元素可以包含任意与 appender 类的 JavaBean 属性相一致的元素。
 
-![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/logbackappenderSyntax.png)
+![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/logback_appender_syntax.png)
 
 `<layout>` 元素强制一个 class 属性去指定一个类的全限定名，用于实例化。与 `<appender>` 元素一样，`<layout>` 元素也可以包含与 layout 实例相关的属性。如果 layout 的 class 是 `PatternLayout`，那么 class 属性可以被隐藏掉（参考：[默认类映射](https://github.com/YLongo/logback-chinese-manual/blob/master/03第三章：logback 的配置.md#默认类映射)），因为这个很常见。.
 
@@ -335,7 +335,7 @@ Logback 有多种不同的 Appender，常用的如下：
 
 把日志输出到控制台，有以下子节点：
 
-- `<encoder>`：对日志进行格式化。（具体参数稍后讲解 ）
+- `<encoder>`：对日志进行格式化。（具体参数稍后讲解）
 - `<target>`：字符串 System.out (默认) 或者 System.err（区别不多说了）
 
 ```xml
@@ -358,7 +358,7 @@ Logback 有多种不同的 Appender，常用的如下：
 
 - `<file>`：被写入的文件名，可以是相对目录，也可以是绝对目录，如果上级目录不存在会自动创建，没有默认值。
 - `<append>`：如果是 true，日志被追加到文件结尾，如果是 false，清空现存文件，默认是 true。
-- `<encoder>`：对记录事件进行格式化。（具体参数稍后讲解 ）。
+- `<encoder>`：对记录事件进行格式化。（具体参数稍后讲解）。
 - `<prudent>`：如果是 true，日志会被安全的写入文件，即使其他的 FileAppender 也在向此文件做写入操作，效率低，默认是 false。
 
 ```xml
