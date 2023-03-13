@@ -16,8 +16,7 @@ export const javaSidebar = arraySidebar([
   {
     text: "Java 并发框架",
     icon: "java",
-    prefix: "juc/",
-    children: "structure"
+    link: "concurrency/"
   },
   {
     text: "Java 虚拟机",
@@ -38,3 +37,27 @@ export const javaSidebar = arraySidebar([
     children: "structure"
   },
 ]);
+
+export const concurrencySidebar = arraySidebar([
+  {
+    text: "基础篇",
+    icon: "java",
+    prefix: "basic/",
+    collapsible: false,
+    children: "structure"
+  },
+  {
+    text: "原理篇",
+    icon: "java",
+    prefix: "principle/",
+    collapsible: false,
+    children: "structure"
+  },
+  {
+    text: "JDK 工具篇",
+    icon: "java",
+    prefix: "juc/",
+    collapsible: false,
+    children: "structure"
+  },
+])

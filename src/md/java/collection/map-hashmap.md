@@ -766,6 +766,8 @@ void reinitialize() {
 - 条件二，槽位链表长度大于等于 8 时。选择 8 作为阀值的原因是，参考 [泊松概率函数(Poisson distribution)](http://en.wikipedia.org/wiki/Poisson_distribution) ，概率不足千万分之一。
 - 在槽位的红黑树的节点数量小于等于 6 时，会退化回链表。
 
+---
+
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)

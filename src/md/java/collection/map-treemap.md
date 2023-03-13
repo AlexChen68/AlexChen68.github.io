@@ -767,6 +767,8 @@ public Map.Entry<K,V> pollLastEntry() {
 - TreeMap 的查找、添加、删除 key-value 键值对的**平均**时间复杂度为 `O(logN)` 。原因是，TreeMap 采用红黑树，操作都需要经过二分查找，而二分查找的时间复杂度是 `O(logN)` 。
 - 相比 HashMap 来说，TreeMap 不仅仅支持指定 key 的查找，也支持 key **范围**的查找。当然，这也得益于 TreeMap 数据结构能够提供的有序特性。
 
+---
+
 ## 参考资料
 
 [芋道源码](https://www.iocoder.cn/)

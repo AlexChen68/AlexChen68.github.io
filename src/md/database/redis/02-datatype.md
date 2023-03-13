@@ -39,6 +39,8 @@ Redis 字符串存储字节序列，包括文本、序列化对象和二进制�
 
 要对字符串执行按位运算，请参阅[位图数据类型](https://redis.io/docs/data-types/bitmaps)文档。
 
+---
+
 ## 参考资料
 
 [Redis官方文档](https://redis.io/docs/)

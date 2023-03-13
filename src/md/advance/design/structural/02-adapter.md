@@ -228,6 +228,8 @@ public class StringReader extends Reader {
 
 - 系统需要使用 (复用) 一些现有的类，而这些类的接口（如方法名）不符合系统的需要，甚至没有这些类的源代码等等，可使用适配器模式协调诸多不兼容结构的场景。
 
+---
+
 ## 参考资料
 
 - [适配器模式 (Adapter Pattern)——不兼容结构的协调](https://bytesfly.github.io/blog/#/DesignPattern/facade-pattern)

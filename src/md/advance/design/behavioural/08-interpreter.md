@@ -155,6 +155,8 @@ JDK 的 `java.util.Pattern` 类
 - 一个语言的文法较为简单。
 - 执行效率不是关键问题。【注：高效的解释器通常不是通过直接解释抽象语法树来实现的，而是需要将它们转换成其他形式，使用解释器模式的执行效率并不高。】
 
+---
+
 ## 参考资料
 
 - [行为型 - 解释器 (Interpreter)-pdai](https://pdai.tech/md/dev-spec/pattern/22_interpreter.html)

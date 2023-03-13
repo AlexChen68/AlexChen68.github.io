@@ -845,6 +845,8 @@ private class ListItr extends Itr implements ListIterator<E> {
 }
 ```
 
+---
+
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)

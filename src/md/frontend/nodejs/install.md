@@ -92,6 +92,8 @@ node -v
 npm -v
 ```
 
+---
+
 ## 参考资料
 
 [Node.js 官网](https://nodejs.org/zh-cn/)

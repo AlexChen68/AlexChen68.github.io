@@ -123,6 +123,8 @@ int a = 'A'; // 65
 <!-- ### 数组和 List 转换 -->
 
 
+---
+
 ## 参考资料
 
 - [Java 程序员进阶之路]([https://](https://tobebetterjavaer.com/basic-grammar/type-cast.html))

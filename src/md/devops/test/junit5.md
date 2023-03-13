@@ -496,6 +496,8 @@ public class DynamicsTest {
 }
 ```
 
+---
+
 ## 参考资料
 
 - [JUnit5 官方文档](https://junit.org/junit5/docs/current/user-guide/#overview)

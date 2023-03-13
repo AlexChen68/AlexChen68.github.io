@@ -235,6 +235,8 @@ After URLFilter
 - 在不明确指定接收者的情况下，向多个对象中的一个提交一个请求。
 - 可动态指定一组对象处理请求，客户端可以动态创建责任链来处理请求，还可以改变链中处理者之间的先后次序。
 
+---
+
 ## 参考资料
 
 - [字节飞扬](https://bytesfly.github.io/blog/#/DesignPattern/chain-of-responsibility-pattern)

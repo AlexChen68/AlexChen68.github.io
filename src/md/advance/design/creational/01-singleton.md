@@ -165,6 +165,8 @@ Joshua Bloch 在《Effective Java》一书中写道：
 - 不能显式继承
 - 无法延迟加载
 
+---
+
 ## 参考资料
 
 - [单例模式 (Singleton pattern) - Java 全栈知识体系](https://pdai.tech/md/dev-spec/pattern/2_singleton.html)

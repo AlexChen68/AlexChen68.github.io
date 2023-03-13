@@ -1,4 +1,4 @@
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme } from "vuepress-theme-hope/perf";
 import navbar from "./navbar.js";
 import { sidebarConig } from "./sidebar";
 
@@ -12,7 +12,7 @@ export default hopeTheme({
     url: github,
   },
   darkmode: "toggle",
-  iconAssets: "//at.alicdn.com/t/c/font_3648538_nzvcpilizgo.css",
+  iconAssets: "//at.alicdn.com/t/c/font_3648538_zpbf9wb0nh.css",
   logo: "/logo.svg",
   repo: repoUrl,
   docsRepo: repoUrl,

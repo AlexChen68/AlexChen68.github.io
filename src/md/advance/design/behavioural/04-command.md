@@ -113,6 +113,8 @@ java JUC 包中的 `Runable` 接口
 - 系统需要支持命令的撤销 (Undo) 操作和恢复 (Redo) 操作。
 - 系统需要将一组操作组合在一起形成宏命令。
 
+---
+
 ## 参考资料
 
 - [请求发送者与接收者解耦——命令模式](https://blog.csdn.net/lovelion/article/details/8806677)

@@ -159,6 +159,8 @@ docker iamges
 docker image rm [redis-image-id]
 ```
 
+---
+
 ## 参考资料
 
 [Redis官方文档](https://redis.io/docs/)

@@ -271,6 +271,8 @@ public class OpenApiConfig {
 
 [http://localhost:8080/doc.html](http://localhost:8080/doc.html)
 
+---
+
 ## 参考资料
 
 - [Springfox](https://github.com/springfox/springfox)

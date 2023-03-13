@@ -222,6 +222,8 @@ Cache 本质上是基于面向**切面**的思想做的，实际上就是使用 
 1. 不使用注解的方式，直接取 Ehcache 的 `CacheManger` 对象，把需要缓存的数据放到里面，类似于使用 Map，缓存的逻辑自己控制;
 2. 把方法 A 和方法 B 放到两个不同的类里面，例如：如果两个方法都在 service 接口里，把方法 B 放到另一个 service 里面，这样 A 方法里调 B 方法，就可以使用 B 方法的缓存。
 
+---
+
 ## 参考资料
 
 - [芋道 Spring Boot 缓存 Cache 入门](http://www.iocoder.cn/Spring-Boot/Cache/)

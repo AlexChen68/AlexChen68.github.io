@@ -103,6 +103,8 @@ Spring 框架中大量使用了 `xxxTemplate` 的类，用于实现某类业务�
 - 需要通过子类来决定父类算法中某个步骤是否执行，实现子类对父类的反向控制。
 
 
+---
+
 ## 参考资料
 
 - [模板方法模式深度解析](https://blog.csdn.net/lovelion/article/details/8299927)

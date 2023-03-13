@@ -172,6 +172,8 @@ private static class IntegerCache {
 - 对象的大部分状态都可以外部化，可以将这些外部状态传入对象中。
 - 在使用享元模式时需要维护一个存储享元对象的享元池，而这需要耗费一定的系统资源，因此，应当在需要多次重复使用享元对象时才值得使用享元模式。
 
+---
+
 ## 参考资料
 
 - [字节飞扬](https://bytesfly.github.io/blog/#/DesignPattern/flyweight-pattern)

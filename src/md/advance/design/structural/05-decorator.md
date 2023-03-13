@@ -170,6 +170,8 @@ public class FilterInputStream extends InputStream {
 - 在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。
 - 当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式。不能采用继承的情况主要有两类：第一类是系统中存在大量独立的扩展，为支持每一种扩展或者扩展之间的组合将产生大量的子类，使得子类数目呈爆炸性增长；第二类是因为类已定义为不能被继承（如`Java`语言中的`final`类）。
 
+---
+
 ## 参考资料
 
 - [字节飞扬](https://bytesfly.github.io/blog/#/DesignPattern/decorator-pattern)

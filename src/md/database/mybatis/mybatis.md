@@ -1007,6 +1007,8 @@ MyBatis 有一个简单且适合大多数场景的解决办法。而在其他场
 
 ## Java API
 
+---
+
 ## 参考资料
 
 [Mybatis3 官方文档](https://mybatis.org/mybatis-3/zh/index.html)

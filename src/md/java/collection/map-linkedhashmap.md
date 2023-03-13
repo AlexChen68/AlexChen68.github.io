@@ -241,6 +241,8 @@ void afterNodeRemoval(Node<K,V> e) {
 
 `LinkedHashMap` 在 `HashMap` 的基础上，在内部增加了一个双向链表，用于保存插入元素的顺序，解决了 `HashMap` 不能随时保持遍历顺序和插入顺序一致的问题；同时通过 `accessOrder` 参数和回调函数，支持通过访问顺序排序。
 
+---
+
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)

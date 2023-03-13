@@ -101,6 +101,8 @@ SpringMVC 中 Entity,DAO,Service,Controller, Util 等的分离。
 
 链接：https://bytesfly.github.io/blog/#/DesignPattern/overview
 
+---
+
 ## 参考资料
 
 - [设计模式知识体系详解-pdai](https://pdai.tech/md/dev-spec/pattern/1_overview.html)

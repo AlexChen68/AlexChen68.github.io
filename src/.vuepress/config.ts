@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
   title: "AlexChen's Blog",
-  description: '编程两年半的Java练习生',
+  description: '才疏学浅的 Java 练习生',
   theme,
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }]

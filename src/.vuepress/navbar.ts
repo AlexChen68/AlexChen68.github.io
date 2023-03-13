@@ -12,12 +12,12 @@ export default navbar([
     link: "/home/"
   },
   {
-    text: "Java核心",
+    text: "Java 核心",
     icon: "java",
     link: "/md/java/"
   },
   {
-    text: "Spring系列",
+    text: "Spring 系列",
     icon: "spring",
     link: "/md/spring/"
   },
