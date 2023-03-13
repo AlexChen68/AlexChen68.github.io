@@ -1,0 +1,1 @@
+import{_ as e,W as t,X as c,$ as s,Y as a}from"./framework-07dc8c78.js";const n={},o=a("p",null,"常见的关系型数据库 mysql、key-value 数据库 Redis、搜索数据库 ElasticSearch",-1);function r(l,_){return t(),c("div",null,[o,s(" more ")])}const i=e(n,[["render",r],["__file","index.html.vue"]]);export{i as default};
