@@ -234,12 +234,23 @@ TIMED_WAITING 与 WAITING 状态类似，只是 TIMED_WAITING 状态等待的时
 
 ### 线程中断
 
+> 在某些情况下，我们在线程启动后发现并不需要它继续执行下去时，需要中断线程。目前在 Java 里还没有安全直接的方法来停止线程，但是 Java 提供了线程中断机制来处理需要中断线程的情况。
+>
+> 线程中断机制是一种协作机制。需要注意，通过中断操作并不能直接终止一个线程，而是通知需要被中断的线程自行处理。
 
+简单介绍下 Thread 类里提供的关于线程中断的几个方法：
+
+- Thread.interrupt()：中断线程。这里的中断线程并不会立即停止线程，而是设置线程的中断状态为 true（默认是 flase）；
+- Thread.currentThread().isInterrupted()：测试当前线程是否被中断。线程的中断状态受这个方法的影响，意思是调用一次使线程中断状态设置为 true，连续调用两次会使得这个线程的中断状态重新转为 false；
+- Thread.isInterrupted()：测试当前线程是否被中断。与上面方法不同的是调用这个方法并不会影响线程的中断状态。
+
+> 在线程中断机制里，当其他线程通知需要被中断的线程后，线程中断的状态被设置为 true，但是具体被要求中断的线程要怎么处理，完全由被中断线程自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去。
 
 ---
 
 ## 参考资料
 
+- [Java 线程的状态及主要转化方法](http://concurrent.redspider.group/article/01/4.html)
 - [Java 全栈知识体系【Java 并发 - 线程基础】](https://pdai.tech/md/java/thread/java-thread-x-thread-basic.html)
 - [Java 线程的 6 种状态及切换 (透彻讲解)](https://tobebetterjavaer.com/thread/thread-state-and-method.html)
 - [java 主线程等待所有子线程执行完毕再执行](https://blog.csdn.net/qq_36908872/article/details/127074466)
