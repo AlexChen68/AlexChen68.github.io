@@ -1,11 +1,9 @@
 ---
 title: 编程进阶
-index: false
+icon: programming
 article: false
 date: 2022-09-16
 description: 编程进阶
 ---
 
-## 目录
-
-- [数据结构](/md/advance/ds/01-array)
+> 本部分介绍常用的数据结构、排序和搜索算法，23 种设计模式及 LeetCode 精选题目。

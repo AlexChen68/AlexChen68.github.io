@@ -1,7 +1,8 @@
 ---
 title: Leetcode 题解
-index: false
+icon: leetcode
 article: false
 date: 2022-09-30
-description: Leetcode 题解
 ---
+
+> 包含基础数据结构与常见算法的 leetcode 题目

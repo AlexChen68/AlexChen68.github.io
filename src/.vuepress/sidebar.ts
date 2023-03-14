@@ -2,7 +2,7 @@
 import { sidebar } from "vuepress-theme-hope";
 import { javaSidebar, concurrencySidebar } from "./sidebar/java";
 import { springSidebar} from "./sidebar/spring";
-import { advanceSidebar, desginSidebar } from "./sidebar/advance";
+import { advanceSidebar, desginSidebar, leetcodeSidebar } from "./sidebar/advance";
 import { databaseSidebar } from "./sidebar/database";
 import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
@@ -16,6 +16,7 @@ export const sidebarConig = sidebar({
   "/md/middleware/": middlewareSidebar,
   "/md/advance/": advanceSidebar,
   "/md/advance/design/": desginSidebar,
+  "/md/advance/leetcode/": leetcodeSidebar,
   "/md/devops/": devopsSidebar,
   "/md/frontend/": frontendSidebar,
   "/md/resource/": "structure", 

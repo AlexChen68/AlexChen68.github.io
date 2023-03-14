@@ -31,15 +31,14 @@ export const advanceSidebar = arraySidebar([
     ]
   },
   {
-    text: "设计模式",
+    text: "设计模式 >>>",
     icon: "design",
     link: "design/"
   },
   {
-    text: "LeetCode 题解",
+    text: "LeetCode >>>",
     icon: "leetcode",
-    prefix: "leetcode/",
-    children: "structure"
+    link: "leetcode/"
   },
 ]);
 
@@ -69,4 +68,20 @@ export const desginSidebar = arraySidebar([
     prefix: "apply/",
     children: "structure"
   }
+]);
+
+export const leetcodeSidebar = arraySidebar([
+  "",
+  {
+    text: "数组",
+    icon: "leetcode",
+    prefix: "array/",
+    children: "structure"
+  },
+  {
+    text: "链表",
+    icon: "leetcode",
+    prefix: "linkedlist/",
+    children: "structure"
+  },
 ]);
