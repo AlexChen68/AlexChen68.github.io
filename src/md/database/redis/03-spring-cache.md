@@ -1,9 +1,8 @@
 ---
-title: Spring Boot 缓存 Cache 入门
+title: Spring Cache 缓存框架
 category: Redis
 author: 芋道源码
 date: 2023-02-12
-description: Spring Boot 缓存 Cache 入门
 ---
 
 本文介绍了 Spring Cache 框架的缓存注解以及使用中会遇到的问题

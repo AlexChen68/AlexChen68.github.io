@@ -14,7 +14,7 @@ export const javaSidebar = arraySidebar([
     children: "structure"
   },
   {
-    text: "Java 并发框架",
+    text: "Java 并发框架 >>>",
     icon: "java",
     link: "concurrency/"
   },

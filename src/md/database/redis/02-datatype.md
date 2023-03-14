@@ -7,11 +7,11 @@ description: Redis 数据类型
 
 ## Redis 数据类型
 
-Redis所有的key（键）都是字符串。我们在谈基础数据结构时，讨论的是存储值的数据类型，主要包括常见的5种数据类型，分别是：**String**、**List**、**Set**、**Zset**、**Hash**。
+Redis 所有的 key（键）都是字符串。我们在谈基础数据结构时，讨论的是存储值的数据类型，主要包括常见的 5 种数据类型，分别是：**String**、**List**、**Set**、**Zset**、**Hash**。
 
 此外，还有三种特殊的数据类型，分别是 **HyperLogLogs**（基数统计）， **Bitmaps** (位图) 和 **geospatial** （地理位置）。
 
-Redis5.0 中还增加了一个数据类型Stream，它借鉴了Kafka的设计，是一个新的强大的支持多播的可持久化的消息队列
+Redis5.0 中还增加了一个数据类型 Stream，它借鉴了 Kafka 的设计，是一个新的强大的支持多播的可持久化的消息队列
 
 ### 字符串
 
@@ -43,5 +43,5 @@ Redis 字符串存储字节序列，包括文本、序列化对象和二进制�
 
 ## 参考资料
 
-[Redis官方文档](https://redis.io/docs/)
-[Redis教程｜菜鸟教程](https://www.runoob.com/redis/redis-tutorial.html)
+- [Redis 官方文档](https://redis.io/docs/)
+- [Redis 教程｜菜鸟教程](https://www.runoob.com/redis/redis-tutorial.html)

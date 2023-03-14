@@ -19,13 +19,13 @@ projects:
     icon: https://pdai.tech/favicon.ico
     link: https://pdai.tech/
 
-  - name: 程序猿DD
+  - name: 程序猿 DD
     desc: Spring 系列教程
     icon: https://www.didispace.com/logo.png
     link: https://blog.didispace.com/spring-boot-learning-2x/
 
   - name: 沉默王二
-    desc: Java程序员进阶之路
+    desc: Java 程序员进阶之路
     icon: https://tobebetterjavaer.com/favicon.ico
     link: https://tobebetterjavaer.com/
 

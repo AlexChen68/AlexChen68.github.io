@@ -14,9 +14,9 @@ Redis 是完全开源的，遵守 BSD 协议，是一个高性能的 key-value �
 
 Redis 与其他 key - value 缓存产品有以下三个特点：
 
-Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
-Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。
-Redis支持数据的备份，即master-slave模式的数据备份。
+Redis 支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
+Redis 不仅仅支持简单的 key-value 类型的数据，同时还提供 list，set，zset，hash 等数据结构的存储。
+Redis 支持数据的备份，即 master-slave 模式的数据备份。
 
 ## 安装和卸载
 
@@ -84,7 +84,7 @@ Redis 可以通过在启动时，指定配置文件 `redis.conf` 来加载自定
   requirepass password
   ```
   
-- 绑定主机地址；如果指定了bind，则说明只允许来自指定网卡的Redis请求。如果没有指定，就说明可以接受来自任意一个网卡的Redis请求，需要远程连接时，可以注释掉该配置
+- 绑定主机地址；如果指定了 bind，则说明只允许来自指定网卡的 Redis 请求。如果没有指定，就说明可以接受来自任意一个网卡的 Redis 请求，需要远程连接时，可以注释掉该配置
 
   ```conf
   bind 127.0.0.1
@@ -96,13 +96,13 @@ Redis 可以通过在启动时，指定配置文件 `redis.conf` 来加载自定
   pidfile /var/run/redis.pid
   ```
 
-- 当客户端闲置多长秒后关闭连接，如果指定为 0 ，表示关闭该功能
+- 当客户端闲置多长秒后关闭连接，如果指定为 0，表示关闭该功能
 
   ```conf
   timeout 300
   ```
 
-- 设置数据库的数量，默认数据库为0，可以使用SELECT 命令在连接上指定数据库id
+- 设置数据库的数量，默认数据库为 0，可以使用 SELECT 命令在连接上指定数据库 id
 
   ```conf
   databases 16
@@ -163,5 +163,5 @@ docker image rm [redis-image-id]
 
 ## 参考资料
 
-[Redis官方文档](https://redis.io/docs/)
-[Redis教程｜菜鸟教程](https://www.runoob.com/redis/redis-tutorial.html)
+- [Redis 官方文档](https://redis.io/docs/)
+- [Redis 教程｜菜鸟教程](https://www.runoob.com/redis/redis-tutorial.html)

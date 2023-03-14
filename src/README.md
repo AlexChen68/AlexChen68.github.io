@@ -4,7 +4,7 @@ icon: home
 title: 项目主页
 heroImage: /logo.svg
 heroText: AlexChen's Blog
-tagline: 编程两年半的Java练习生
+tagline: 才疏学浅的 Java 练习生
 actions:
   - text: Github 🚀
     link: https://github.com/AlexChen68/blog
@@ -19,36 +19,44 @@ actions:
 
 features:
   - title: Java 核心知识
-    icon: layout
-    details: JVM、String、集合框架、并发框架、IO框架、JDK新特性、JDK部分源码等等。
+    icon: java
+    details: JVM、String、集合框架、并发框架、IO 框架、JDK 新特性、JDK 部分源码等等。
+    link: /md/java/
 
   - title: Spring 全家桶
-    icon: layout
-    details: Spring、Servlet、SpringMVC、SpringBoot、SpringCloud等等。
+    icon: spring
+    details: Spring、Servlet、SpringMVC、SpringBoot、SpringCloud 等等。
+    link: /md/spring/
 
   - title: 数据库
-    icon: layout
-    details: Mysql、Redis、ElasticSearch、InfluxDB等等。
+    icon: mysql
+    details: Mysql、Redis、ElasticSearch、InfluxDB 等等。
+    link: /md/database/
 
   - title: 中间件
-    icon: layout
-    details: Tomcat、Kafka、RabbitMQ等等。
+    icon: middleware
+    details: Tomcat、Kafka、RabbitMQ 等等。
+    link: "/md/middleware/"
 
-  - title: 开发工具
-    icon: layout
-    details: Git、Maven、Maven私服、IDEA等等。
+  - title: 开发运维
+    icon: devops
+    details: Java 常用开发工具、单元测试工具、部署运维工具等等。
+    link: "/md/devops/"
 
-  - title: 部署运维
-    icon: layout
-    details: Linux、Docker、Nginx、Jenkins、K8s等等。
+  - title: 前端技术
+    icon: frontend
+    details: Html、Css、ES6、Vue、ElementPlus、Vite 等等
+    link: "/md/frontend/"
 
-  - title: 数据结构和算法
-    icon: layout
-    details: 线性表、树、图以及排序算法和搜索算法。
+  - title: 编程进阶
+    icon: programming
+    details: 数据结构、排序和搜索算法、领域算法和设计模式。
+    link: "/md/advance/"
   
-  - title: 设计模式
-    icon: layout
-    details: 建造型、结构型、行为型设计模式概念以及代码示例。
+  - title: 编程资源
+    icon: resource
+    details: 优秀博客、文章、书籍和官方文档。
+    link: "/md/resource/01-books"
 
 footer: true
 ---

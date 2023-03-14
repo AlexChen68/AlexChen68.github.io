@@ -26,7 +26,7 @@ export default hopeTheme({
   displayFooter: false,
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
-    description: "编程时长两年半的 Java 练习生",
+    description: "才疏学浅的 Java 练习生",
     medias: {
       QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
       GitHub: github,
