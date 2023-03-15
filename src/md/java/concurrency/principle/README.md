@@ -1,6 +1,5 @@
 ---
-title: 原理篇
-index: false
+title:  并发理论基础
 article: false
 date: 2023-03-13
 ---
@@ -35,6 +34,6 @@ CPU、内存、I/O 设备的速度是有极大差异的，为了合理利用 CPU
 
 ## 参考资料
 
-- [Java 并发理论基础](https://pdai.tech/md/java/thread/java-thread-x-theorty.html) <Badge text="强烈推荐" type="warning" />
-- [ORACLE 官方并发文档]([Lesson: Concurrency (The Java™ Tutorials > Essential Java Classes) (oracle.com)](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html))
+- [Java 并发理论基础](https://pdai.tech/md/java/thread/java-thread-x-theorty.html) <Badge text="推荐" type="tip" />
+- [Lesson: Concurrency (The Java™ Tutorials > Essential Java Classes) (oracle.com)](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html)
 - [Java 并发编程之可见性分析 volatile](https://blog.csdn.net/m0_73311735/article/details/127919267)
