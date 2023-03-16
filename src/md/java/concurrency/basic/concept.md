@@ -1,5 +1,5 @@
 ---
-title: 进程与线程的基本概念
+title: 进程与线程的概念
 date: 2022-09-30
 category: Concurrency
 ---

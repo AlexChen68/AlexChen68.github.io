@@ -1,5 +1,5 @@
 ---
-title: 线程状态及转换
+title: Java 线程状态转换
 category: Concurrency
 date: 2023-03-13
 ---

@@ -43,21 +43,34 @@ export const concurrencySidebar = arraySidebar([
     text: "基础篇",
     icon: "java",
     prefix: "basic/",
+    link: "basic/",
     collapsible: false,
-    children: "structure"
+    children: [
+      "concept",
+      "thread",
+      "thread-state",
+      "communication"
+    ]
   },
   {
     text: "原理篇",
     icon: "java",
     prefix: "principle/",
+    link: "principle/",
     collapsible: false,
-    children: "structure"
+    children: [
+      "memory-model"
+    ]
   },
   {
     text: "JDK 工具篇",
     icon: "java",
     prefix: "juc/",
+    link: "juc/",
     collapsible: false,
-    children: "structure"
+    children: [
+      "executor",
+      "collection"
+    ]
   },
 ])

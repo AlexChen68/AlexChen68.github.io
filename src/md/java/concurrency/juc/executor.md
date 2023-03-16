@@ -1,5 +1,5 @@
 ---
-title: JUC - Executor 框架
+title: Executor 框架
 category: Concurrency
 date: 2023-03-07
 ---
