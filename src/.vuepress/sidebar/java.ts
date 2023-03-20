@@ -59,7 +59,10 @@ export const concurrencySidebar = arraySidebar([
     link: "principle/",
     collapsible: false,
     children: [
-      "memory-model"
+      "memory-model",
+      "volatile",
+      "synchronized",
+      "cas"
     ]
   },
   {
