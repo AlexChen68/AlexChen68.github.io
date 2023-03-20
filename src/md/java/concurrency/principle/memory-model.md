@@ -154,13 +154,13 @@ Java 内存模型（JMM）对于正确同步多线程程序的内存一致性做
 
 假设**正确使用了同步**，A 线程的 3 个操作执行后释放锁，B 线程获取同一个锁。那么在**顺序一致性模型**中的执行效果如下所示：
 
-![正确同步图](./imgs/正确同步.png)
+![正确同步图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/concurrency_sync.png)
 
 操作的执行整体上有序，并且两个线程都只能看到这个执行顺序。
 
 假设**没有使用同步**，那么在**顺序一致性模型**中的执行效果如下所示：
 
-![没有正确同步图](./imgs/没有正确同步.png)
+![没有正确同步图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/concurrency_incorrect_sync.png)
 
 操作的执行整体上无序，但是两个线程都只能看到这个执行顺序。之所以可以得到这个保证，是因为顺序一致性模型中的**每个操作必须立即对任意线程可见**。
 
