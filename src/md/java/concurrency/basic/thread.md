@@ -168,6 +168,43 @@ public class FutureTask<V> implements RunnableFuture<V> {
 }
 ```
 
+### CompletableFuture 类
+
+在 Java 8 中，新增加了一个包含 50 个方法左右的类：`CompletableFuture`，结合了 Future 的优点，提供了非常强大的 Future 的扩展功能，可以帮助我们简化异步编程的复杂性，提供了函数式编程的能力，可以通过回调的方式处理计算结果，并且提供了转换和组合 CompletableFuture 的方法。
+
+`CompletableFuture` 被设计在 Java 中进行异步编程。异步编程意味着在主线程之外创建一个独立的线程，与主线程分隔开，并在上面运行一个非阻塞的任务，然后通知主线程进展，成功或者失败。
+
+通过这种方式，你的主线程不用为了任务的完成而阻塞/等待，你可以用主线程去并行执行其他的任务。使用这种并行方式，极大地提升了程序的表现。
+
+```java
+public class CompletableFuture<T> implements Future<T>, CompletionStage<T> {
+
+}
+```
+
+**四种静态实例化方法：**
+
+```java
+public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier);
+public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier, Executor executor);
+
+public static CompletableFuture<Void> runAsync(Runnable runnable);
+public static CompletableFuture<Void> runAsync(Runnable runnable, Executor executor);
+```
+
+有两种格式，一种是 supply 开头的方法，一种是 run 开头的方法
+
+- supply 开头：这种方法，可以返回异步线程执行之后的结果
+- run 开头：这种不会返回结果，就只是执行线程任务
+
+如果不指定线程池，默认使用 ForkJoinPool 的公共线程池 `ForkJoinPool.commonPool()`。
+
+**使用 CompletableFuture 场景**
+
+- 执行比较耗时的操作时，尤其是那些依赖一个或多个远程服务的操作，使用异步任务可以改善程序的性能，加快程序的响应速度。
+- 使用 CompletableFuture 类，它提供了异常管理的机制，让你有机会抛出、管理异步任务执行种发生的异常。
+- 如果这些异步任务之间相互独立，或者他们之间的的某一些的结果是另一些的输入，你可以讲这些异步任务构造或合并成一个。
+
 ## Thread 常用方法
 
 - currentThread()：静态方法，返回对当前正在执行的线程对象的引用；
@@ -298,3 +335,4 @@ void daemonTest() throws InterruptedException {
 - [Java 全栈知识体系【Java 并发 - 线程基础】](https://pdai.tech/md/java/thread/java-thread-x-thread-basic.html)
 - [Java 线程的 6 种状态及切换 (透彻讲解)](https://tobebetterjavaer.com/thread/thread-state-and-method.html)
 - [java 主线程等待所有子线程执行完毕再执行](https://blog.csdn.net/qq_36908872/article/details/127074466)
+- [CompletableFuture 用法详解](https://zhuanlan.zhihu.com/p/344431341)
