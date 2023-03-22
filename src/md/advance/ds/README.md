@@ -1,5 +1,6 @@
 ---
 title: 数据结构简介
+index: false
 article: false
 category: 数据结构
 date: 2022-12-26

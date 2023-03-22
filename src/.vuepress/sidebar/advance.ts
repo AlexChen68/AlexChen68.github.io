@@ -5,6 +5,7 @@ export const advanceSidebar = arraySidebar([
   {
     text: "数据结构",
     icon: "data-structure",
+    link: "ds/",
     prefix: "ds/",
     children: "structure"
   },

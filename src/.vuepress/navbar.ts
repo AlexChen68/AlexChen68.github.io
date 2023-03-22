@@ -36,11 +36,11 @@ export default navbar([
     icon: "devops",
     link: "/md/devops/",
   },
-  {
-    text: "前端技术",
-    icon: "frontend",
-    link: "/md/frontend/",
-  },
+  // {
+  //   text: "前端技术",
+  //   icon: "frontend",
+  //   link: "/md/frontend/",
+  // },
   {
     text: "编程进阶",
     icon: "programming",
