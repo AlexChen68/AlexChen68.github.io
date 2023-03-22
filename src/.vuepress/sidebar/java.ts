@@ -62,7 +62,8 @@ export const concurrencySidebar = arraySidebar([
       "memory-model",
       "volatile",
       "synchronized",
-      "cas"
+      "cas",
+      "aqs"
     ]
   },
   {
@@ -73,6 +74,8 @@ export const concurrencySidebar = arraySidebar([
     collapsible: false,
     children: [
       "executor",
+      "blockingqueue",
+      "lock",
       "collection"
     ]
   },

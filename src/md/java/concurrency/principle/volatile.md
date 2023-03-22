@@ -1,5 +1,5 @@
 ---
-title: Java volatile 关键字
+title: volatile 关键字
 category: Concurrency
 date: 2023-03-17
 ---
@@ -94,7 +94,7 @@ public class VolatileExample {
 
 大概示意图是这个样子：
 
-![内存屏障](https: //cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/concurrency_memory_barrier.png)
+![内存屏障](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/concurrency_memory_barrier.png)
 
 > 再逐个解释一下这几个屏障。注：下述 Load 代表读操作，Store 代表写操作
 >
