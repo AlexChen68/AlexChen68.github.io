@@ -5,7 +5,7 @@ date: 2023-02-12
 description: 注册中心
 ---
 
-## 什么是注册中心?
+## 什么是注册中心？
 
 ### 定义
 
@@ -21,7 +21,7 @@ description: 注册中心
 
 ## 常见的注册中心组件
 
-常见的注册中心组件有Eureka、Consul、Nacos、Zookeeper，前三者属于 springcloud 体系，最后一个属于 Dubbo 类体系，两种体系代表两种注册中心实现方案，虽然是不同的方案，但是最终实现的效果相同。
+常见的注册中心组件有 Eureka、Consul、Nacos、Zookeeper，前三者属于 springcloud 体系，最后一个属于 Dubbo 类体系，两种体系代表两种注册中心实现方案，虽然是不同的方案，但是最终实现的效果相同。
 
 本文仅介绍 Nacos 的使用。
 
@@ -49,7 +49,7 @@ docker run nacos/nacos-server:v2.2.0-slim
 
 2. 获取 Nacos 数据库初始化 SQL 文件
 
-方式一：从 github 中下载: https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql[https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql]；
+方式一：从 github 中下载：[链接](https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql)
 
 方式二：从 Nacos 的 [Release](https://github.com/alibaba/nacos/releases/tag/2.2.0) 版本中下载压缩包版本，`conf` 文件夹下的 `mysql-schema.sql` 文件即为 Mysql 数据库初始化脚本；
 
@@ -129,3 +129,7 @@ Nacos 本地的地址默认为 [http://localhost:8848/nacos/index.html](http://l
 :::info
 如果想将 Nacos 单独拎出来，放入自己的工程中，会出现从无法找到 Nacos 其他基础组件的问题，可以使用第三方 Mavne 库 `io.spring.nacos`，具体可以参考这篇文章 [若依 + nacos 源码启动](https://www.cnblogs.com/huilangyizu/articles/16665305.html)。
 :::
+
+## Nacos 配置中心
+
+Nacos 启动后，打开其自带的管理界面登录进入，左侧的【配置管理】-【配置列表】为所管理的配置信息，可以通过新建
