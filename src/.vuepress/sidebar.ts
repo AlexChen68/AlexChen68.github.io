@@ -7,6 +7,7 @@ import { databaseSidebar } from "./sidebar/database";
 import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
 import { frontendSidebar } from "./sidebar/frontend";
+import { resourceSidebar } from "./sidebar/resource";
 
 export const sidebarConig = sidebar({
   "/md/java/": javaSidebar,
@@ -19,5 +20,5 @@ export const sidebarConig = sidebar({
   "/md/advance/leetcode/": leetcodeSidebar,
   "/md/devops/": devopsSidebar,
   "/md/frontend/": frontendSidebar,
-  "/md/resource/": "structure", 
+  "/md/resource/": resourceSidebar, 
 })

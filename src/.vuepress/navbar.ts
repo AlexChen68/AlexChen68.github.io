@@ -49,6 +49,6 @@ export default navbar([
   {
     text: "编程资源",
     icon: "resource",
-    link: "/md/resource/01-books"
+    link: "/md/resource/docs"
   },
 ]);

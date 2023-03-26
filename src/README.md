@@ -56,7 +56,7 @@ features:
   - title: 编程资源
     icon: resource
     details: 优秀博客、文章、书籍和官方文档。
-    link: "/md/resource/01-books"
+    link: "/md/resource/docs"
 
 footer: true
 ---
