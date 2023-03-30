@@ -1,17 +1,23 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
 export const advanceSidebar = arraySidebar([
-  "",
   {
     text: "数据结构",
     icon: "data-structure",
     link: "ds/",
     prefix: "ds/",
-    children: "structure"
+    children: [
+      "array",
+      "linkedlist",
+      "hashtable",
+      "tree",
+      "graph",
+    ]
   },
   {
     text: "算法基础",
     icon: "algorithm",
+    link: "algo/",
     prefix: "algo/",
     children: [
       {
@@ -72,17 +78,25 @@ export const desginSidebar = arraySidebar([
 ]);
 
 export const leetcodeSidebar = arraySidebar([
-  "",
   {
     text: "数组",
     icon: "leetcode",
-    prefix: "array/",
-    children: "structure"
+    children: [
+      "001-两数之和"
+    ]
   },
   {
     text: "链表",
     icon: "leetcode",
-    prefix: "linkedlist/",
-    children: "structure"
+    children: [
+      "160-相交链表"
+    ]
+  },
+  {
+    text: "滑动窗口",
+    icon: "leetcode",
+    children: [
+      "160-相交链表"
+    ]
   },
 ]);

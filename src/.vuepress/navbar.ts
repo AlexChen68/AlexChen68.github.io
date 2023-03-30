@@ -44,7 +44,7 @@ export default navbar([
   {
     text: "编程进阶",
     icon: "programming",
-    link: "/md/advance/"
+    link: "/md/advance/ds/"
   },
   {
     text: "编程资源",

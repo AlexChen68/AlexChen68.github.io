@@ -1,6 +1,7 @@
 ---
 title: Leetcode 题解
 icon: leetcode
+index: false
 article: false
 date: 2022-09-30
 ---
