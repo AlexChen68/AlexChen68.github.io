@@ -45,7 +45,7 @@ export const advanceSidebar = arraySidebar([
   {
     text: "LeetCode >>>",
     icon: "leetcode",
-    link: "leetcode/"
+    link: "leetcode/001-两数之和"
   },
 ]);
 
