@@ -1,0 +1,1 @@
+import{_ as e,W as a,X as r,a2 as t,Y as c}from"./framework-d3200c61.js";const n={},o=c("p",null,"搜索算法之顺序查找",-1);function s(_,l){return a(),r("div",null,[o,t(" more ")])}const i=e(n,[["render",s],["__file","01-linear-search.html.vue"]]);export{i as default};
