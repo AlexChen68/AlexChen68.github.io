@@ -1,62 +1,34 @@
 ---
 home: true
+layout: BlogHome 
 icon: home
-title: 项目主页
+title: 博客
+hero: true
 heroImage: /logo.svg
+bgImage: https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/background.jpeg
 heroText: AlexChen's Blog
-tagline: 才疏学浅的 Java 练习生
-actions:
-  - text: Github 🚀
-    link: https://github.com/AlexChen68/blog
-    type: primary
+heroFullScreen: true
+tagline: 学无止境
+projects:
+  - name: Mr.Hope
+    desc: Vuepress-theme-hope 作者
+    icon: https://mrhope.site/logo.svg
+    link: https://mrhope.site/
 
-  - text: 编程资源 📚
-    link: /resource/
-    type: primary
+  - name: Pdai
+    desc: Java 全栈知识体系
+    icon: https://pdai.tech/favicon.ico
+    link: https://pdai.tech/
 
-  - text: 博客主页 🏠
-    link: /home/
+  - name: 程序猿 DD
+    desc: Spring 系列教程
+    icon: https://www.didispace.com/logo.png
+    link: https://blog.didispace.com/spring-boot-learning-2x/
 
-features:
-  - title: Java 核心知识
-    icon: java
-    details: JVM、String、集合框架、并发框架、IO 框架、JDK 新特性、JDK 部分源码等等。
-    link: /java/
-
-  - title: Spring 全家桶
-    icon: spring
-    details: Spring、Servlet、SpringMVC、SpringBoot、SpringCloud 等等。
-    link: /spring/
-
-  - title: 数据库
-    icon: mysql
-    details: Mysql、Redis、ElasticSearch、InfluxDB 等等。
-    link: /database/
-
-  - title: 中间件
-    icon: middleware
-    details: Tomcat、Kafka、RabbitMQ 等等。
-    link: "/middleware/"
-
-  - title: 开发运维
-    icon: devops
-    details: Java 常用开发工具、单元测试工具、部署运维工具等等。
-    link: "/devops/"
-
-  - title: 前端技术
-    icon: frontend
-    details: Html、Css、ES6、Vue、ElementPlus、Vite 等等
-    link: "/frontend/"
-
-  - title: 编程进阶
-    icon: programming
-    details: 数据结构、排序和搜索算法、领域算法和设计模式。
-    link: "/advance/"
-  
-  - title: 编程资源
-    icon: resource
-    details: 优秀博客、文章、书籍和官方文档。
-    link: "/resource/docs"
+  - name: 沉默王二
+    desc: Java 程序员进阶之路
+    icon: https://tobebetterjavaer.com/favicon.ico
+    link: https://tobebetterjavaer.com/
 
 footer: true
 ---
