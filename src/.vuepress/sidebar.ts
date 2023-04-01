@@ -10,16 +10,16 @@ import { frontendSidebar } from "./sidebar/frontend";
 import { resourceSidebar } from "./sidebar/resource";
 
 export const sidebarConig = sidebar({
-  "/md/java/": javaSidebar,
-  "/md/java/concurrency/": concurrencySidebar,
-  "/md/spring/": springSidebar,
-  "/md/database/": databaseSidebar,
-  "/md/middleware/": middlewareSidebar,
-  "/md/advance/": advanceSidebar,
-  "/md/advance/design/": desginSidebar,
-  // "/md/advance/leetcode/": leetcodeSidebar,
-  "/md/advance/leetcode/": "structure",
-  "/md/devops/": devopsSidebar,
-  "/md/frontend/": frontendSidebar,
-  "/md/resource/": resourceSidebar, 
+  "/java/": javaSidebar,
+  "/java/concurrency/": concurrencySidebar,
+  "/spring/": springSidebar,
+  "/database/": databaseSidebar,
+  "/middleware/": middlewareSidebar,
+  "/advance/": advanceSidebar,
+  "/advance/design/": desginSidebar,
+  // "/advance/leetcode/": leetcodeSidebar,
+  "/advance/leetcode/": "structure",
+  "/devops/": devopsSidebar,
+  "/frontend/": frontendSidebar,
+  "/resource/": resourceSidebar, 
 })

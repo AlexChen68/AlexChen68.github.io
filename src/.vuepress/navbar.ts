@@ -14,41 +14,41 @@ export default navbar([
   {
     text: "Java 核心",
     icon: "java",
-    link: "/md/java/"
+    link: "/java/"
   },
   {
     text: "Spring 系列",
     icon: "spring",
-    link: "/md/spring/"
+    link: "/spring/"
   },
   {
     text: "数据库",
     icon: "mysql",
-    link: "/md/database/"
+    link: "/database/"
   },
   {
     text: "中间件",
     icon: "middleware",
-    link: "/md/middleware/",
+    link: "/middleware/",
   },
   {
     text: "开发运维",
     icon: "devops",
-    link: "/md/devops/",
+    link: "/devops/",
   },
   // {
   //   text: "前端技术",
   //   icon: "frontend",
-  //   link: "/md/frontend/",
+  //   link: "/frontend/",
   // },
   {
     text: "编程进阶",
     icon: "programming",
-    link: "/md/advance/ds/"
+    link: "/advance/ds/"
   },
   {
     text: "编程资源",
     icon: "resource",
-    link: "/md/resource/docs"
+    link: "/resource/docs"
   },
 ]);
