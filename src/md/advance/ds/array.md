@@ -29,9 +29,10 @@ category: 数据结构
 
 ## 相关算法题
 
-1. 数组中查询符合条件的元素个数或长度等
+1. 数组中查询符合条件的元素或子数组
   - [001. 两数之和](https://leetcode.cn/problems/two-sum/)
-  - [209-长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/)
+  - [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/)
+  - [053. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
 
 2. 删除元素，通过覆盖元素的值实现
   - [27. 移除元素](https://leetcode.cn/problems/remove-element/)
