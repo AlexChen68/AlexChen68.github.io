@@ -1,0 +1,1 @@
+import{_ as r,W as c,X as t,Y as e,a0 as a}from"./framework-7c4b0f0a.js";const n={},s=e("h2",{id:"spring-mvc-简介",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#spring-mvc-简介","aria-hidden":"true"},"#"),a(" Spring MVC 简介")],-1),o=[s];function _(i,d){return c(),t("div",null,o)}const l=r(n,[["render",_],["__file","04-springmvc.html.vue"]]);export{l as default};
