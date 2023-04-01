@@ -89,11 +89,16 @@ public class ListNode {
 
 ## 相关算法题
 
-1. 删除链表元素
-  - [019. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+- [019. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+- [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
+- [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+- [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists)
 
-2. 判断链表
-  - [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
+**常用解法：**
+
+1. 虚拟头结点
+2. 双指针
+3. 递归
 
 ## 参考资料
 

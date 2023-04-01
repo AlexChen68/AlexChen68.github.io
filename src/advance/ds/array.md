@@ -29,25 +29,19 @@ category: 数据结构
 
 ## 相关算法题
 
-1. 数组中查询符合条件的元素或子数组
-  - [001. 两数之和](https://leetcode.cn/problems/two-sum/)
-  - [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/)
-  - [053. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
-
-2. 删除元素，通过覆盖元素的值实现
-  - [27. 移除元素](https://leetcode.cn/problems/remove-element/)
-  - [083. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
-  - [080. 删除有序数组中的重复项 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/)
-
-3. 计算得到新数组
-  - [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array)
-
+- [001. 两数之和](https://leetcode.cn/problems/two-sum/)
+- [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/)
+- [053. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+- [27. 移除元素](https://leetcode.cn/problems/remove-element/)
+- [083. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
+- [080. 删除有序数组中的重复项 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/)
+- [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array)
 
 **常用解法：**
 
 1. 二分法查询
 2. 双指针法
-3. 哈希表统计
+3. 哈希表
 4. 滑动窗口
 
 所谓滑动窗口，就是不断的调节子序列的起始位置和终止位置，从而得出我们要想的结果。

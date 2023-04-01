@@ -4,10 +4,7 @@ category: 数据结构
 date: 2022-09-27
 ---
 
-数据结构之图
-<!-- more -->
-
-#### 图的概述
+## 图的概述
 
 **图的定义**
 
@@ -51,7 +48,7 @@ date: 2022-09-27
 
 - 连通图：图中任意两顶点均连通
 
-#### 图的表示
+## 图的表示
 
 **邻接矩阵（数组存储）**
 
@@ -71,12 +68,12 @@ date: 2022-09-27
 
 ![邻接表](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接表.png)
 
-#### **图的遍历**
+## **图的遍历**
 
-##### 深度优先搜索 (DFS)
+### 深度优先搜索 (DFS)
 
 > 深度优先搜索 (Depth First Search)
 
-##### 广度优先搜索（BFS）
+### 广度优先搜索（BFS）
 
 > 广度优先搜索（Breadth First Search）
