@@ -75,6 +75,11 @@ O(n^2)
 
 * 平方阶 O(n²)
 
+:::tip 推荐
+一个动画演示算法的网站：https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+:::
+
+---
 
 ## 参考资料
 

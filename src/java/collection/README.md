@@ -11,25 +11,25 @@ sticky: true
 
 <!-- more -->
 
-# Java集合框架
+# Java 集合框架
 
-容器，就是可以容纳其他Java对象的对象。*Java Collections Framework(JCF)* 为Java开发者提供了通用的容器，其始于JDK 1.2，优点是:
+容器，就是可以容纳其他 Java 对象的对象。*Java Collections Framework(JCF)* 为 Java 开发者提供了通用的容器，其始于 JDK 1.2，优点是：
 
 - 降低编程难度
 
 - 提高程序性能
 
-- 提高API间的互操作性
+- 提高 API 间的互操作性
 
 - 降低学习难度
 
-- 降低设计和实现相关API的难度
+- 降低设计和实现相关 API 的难度
 
 - 增加程序的重用性
 
-Java容器里只能放对象，对于基本类型(int, long, float, double等)，需要将其包装成对象类型后(Integer, Long, Float, Double 等)才能放到容器里。很多时候拆包装和解包装能够自动完成。这虽然会导致额外的性能和空间开销，但简化了设计和编程。
+Java 容器里只能放对象，对于基本类型 (int, long, float, double 等)，需要将其包装成对象类型后 (Integer, Long, Float, Double 等) 才能放到容器里。很多时候拆包装和解包装能够自动完成。这虽然会导致额外的性能和空间开销，但简化了设计和编程。
 
-Java容器主要包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对(两个对象)的映射表：
+Java 容器主要包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对 (两个对象) 的映射表：
 
 1. Collection：主要由 List、Set、Queue 组成。
     - List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList 和封装了链表的 LinkedList；
@@ -37,25 +37,25 @@ Java容器主要包括 Collection 和 Map 两种，Collection 存储着对象的
     - Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列 PriorityQue。
 2. Map：代表键值对的集合，典型代表就是 HashMap。
 
-![Java集合框架](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/collection_framework.png ':size=80%')
+![Java 集合框架](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/collection_framework.png ':size=80%')
 
 ## `Collection` 接口
 
-`Collection` 是所有序列集合共有的根接口。集合表示一组对象，称为其元素。一些集合允许重复元素，而另一些则不允许。有些是有序的，有些是无序的。 JDK 不提供此接口的任何直接实现：它提供更具体的子接口（如 Set 和 List）的实现。此接口通常用于传递集合并在需要最大通用性的地方操作它们。
+`Collection` 是所有序列集合共有的根接口。集合表示一组对象，称为其元素。一些集合允许重复元素，而另一些则不允许。有些是有序的，有些是无序的。JDK 不提供此接口的任何直接实现：它提供更具体的子接口（如 Set 和 List）的实现。此接口通常用于传递集合并在需要最大通用性的地方操作它们。
 
 `Collection`接口继承了 `Iterable`接口，实现 `Collection` 就意味着需要提供 `iterator()` 方法
 
 `java.util.AbstractCollection` 类提供了 `Collection` 类的默认实现，使得你可以创建 `AbstractCollection` 的子类型，而其中没有不必要的代码重复。
 
-Java访问集合总是通过统一的方式——迭代器（Iterator）来实现，它最明显的好处在于无需知道集合内部元素是按什么方式存储的。
+Java 访问集合总是通过统一的方式——迭代器（Iterator）来实现，它最明显的好处在于无需知道集合内部元素是按什么方式存储的。
 
 ### `List` 接口
 
-`java.util.List` 接口继承自 `Collection` 接口，是单列集合的一个重要分支，习惯性地会将实现了List接口的对象称为List集合。
+`java.util.List` 接口继承自 `Collection` 接口，是单列集合的一个重要分支，习惯性地会将实现了 List 接口的对象称为 List 集合。
 
-在List集合中允许出现重复的元素，所有的元素是以一种线性方式进行存储的，在程序中可以通过索引来访问集合中的指定元素。
+在 List 集合中允许出现重复的元素，所有的元素是以一种线性方式进行存储的，在程序中可以通过索引来访问集合中的指定元素。
 
-另外，List集合还有一个特点就是元素有序，即元素的存入顺序和取出顺序一致。
+另外，List 集合还有一个特点就是元素有序，即元素的存入顺序和取出顺序一致。
 
 1. `ArrayList`
 
@@ -79,13 +79,13 @@ Java访问集合总是通过统一的方式——迭代器（Iterator）来实�
 
 4. `Stack`
 
-`Stack` 继承了 `Vector`，在其基础上实现了栈先进先出的功能（push、pop、peek等方法），方法上同样添加了 `synchronized` 关键字，官方推荐使用双端队列 `ArrayDeque`。
+`Stack` 继承了 `Vector`，在其基础上实现了栈先进先出的功能（push、pop、peek 等方法），方法上同样添加了 `synchronized` 关键字，官方推荐使用双端队列 `ArrayDeque`。
 
 ### Queue 接口
 
 Queue 接口继承了 `Collection`，被设计用于处理之前临时保存在某处的元素。
 
-除了基本的 `Collection` 操作之外，队列还提供了额外的插入、提取和检查操作。每一种操作都有两种形式：如果操作失败，则抛出一个异常；如果操作失败，则返回一个特殊值（null或false，取决于是什么操作）。
+除了基本的 `Collection` 操作之外，队列还提供了额外的插入、提取和检查操作。每一种操作都有两种形式：如果操作失败，则抛出一个异常；如果操作失败，则返回一个特殊值（null 或 false，取决于是什么操作）。
 
 1. `ArrayDeque`
 
@@ -155,4 +155,4 @@ HashMap 是无序的，所以遍历的时候元素的顺序也是不可测的。
 ## 参考资料
 
 * [Java 程序员进阶之路](https://tobebetterjavaer.com/collection/gailan.html)
-* [Java全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)
+* [Java 全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)

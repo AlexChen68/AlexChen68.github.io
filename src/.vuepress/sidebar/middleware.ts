@@ -7,4 +7,10 @@ export const middlewareSidebar = arraySidebar([
     prefix: "web/",
     children: "structure"
   },
+  {
+    text: "消息队列",
+    icon: "mq",
+    prefix: "mq/",
+    children: "structure"
+  },
 ])
