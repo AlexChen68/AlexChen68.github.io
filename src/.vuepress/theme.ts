@@ -26,10 +26,10 @@ export default hopeTheme({
   displayFooter: false,
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
-    description: "才疏学浅的 Java 练习生",
+    description: "你对我的百般注解和识读，并不构成万分之一的我，却是一览无遗的你。",
     medias: {
-      QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
       GitHub: github,
+      QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
       Zhihu: "https://www.zhihu.com/people/alexchen68",
       Gmail: "mailto:alexchen.tech@gmail.com"
     },

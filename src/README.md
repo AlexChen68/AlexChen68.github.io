@@ -8,7 +8,7 @@ heroImage: /logo.svg
 bgImage: https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/background.jpeg
 heroText: AlexChen's Blog
 heroFullScreen: true
-tagline: 你对我的百般注解和识读，并不构成万分之一的我，却是一览无遗的你。
+tagline: 纵有思绪万千，奈何才疏学浅，欲诉只无言。
 projects:
   - name: Mr.Hope
     desc: Vuepress-theme-hope 作者
