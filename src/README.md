@@ -8,7 +8,7 @@ heroImage: /logo.svg
 bgImage: https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/background.jpeg
 heroText: AlexChen's Blog
 heroFullScreen: true
-tagline: 学无止境
+tagline: 你对我的百般注解和识读，并不构成万分之一的我，却是一览无遗的你。
 projects:
   - name: Mr.Hope
     desc: Vuepress-theme-hope 作者
