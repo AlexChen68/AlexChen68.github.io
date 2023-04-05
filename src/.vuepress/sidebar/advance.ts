@@ -24,17 +24,7 @@ export const advanceSidebar = arraySidebar([
         text: "排序算法",
         prefix: "sort/",
         link: "sort/",
-        children: [
-          "bubble",
-          "quick",
-          "insertion",
-          "shell",
-          "selection",
-          "heap",
-          "merge",
-          "bucket",
-          "radix"
-        ]
+        children: "structure"
       },
       {
         text: "查找算法",

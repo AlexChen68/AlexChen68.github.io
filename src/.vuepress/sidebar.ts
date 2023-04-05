@@ -17,7 +17,6 @@ export const sidebarConig = sidebar({
   "/middleware/": middlewareSidebar,
   "/advance/": advanceSidebar,
   "/advance/design/": desginSidebar,
-  // "/advance/leetcode/": leetcodeSidebar,
   "/advance/leetcode/": "structure",
   "/devops/": devopsSidebar,
   "/frontend/": frontendSidebar,
