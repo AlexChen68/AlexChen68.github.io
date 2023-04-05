@@ -12,7 +12,12 @@ export default navbar([
     link: "/java/"
   },
   {
-    text: "Spring 系列",
+    text: "编程内功",
+    icon: "programming",
+    link: "/advance/ds/"
+  },
+  {
+    text: "Spring 框架",
     icon: "spring",
     link: "/spring/"
   },
@@ -36,11 +41,6 @@ export default navbar([
   //   icon: "frontend",
   //   link: "/frontend/",
   // },
-  {
-    text: "编程进阶",
-    icon: "programming",
-    link: "/advance/ds/"
-  },
   {
     text: "编程资源",
     icon: "resource",
