@@ -41,6 +41,7 @@ date: 2022-12-29
   - [Docisfy](https://docsify.js.org/#/)
   - [Vuepress](https://vuepress.vuejs.org/zh/)
   - [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/)
+  - [Docusaurus](https://www.docusaurus.io/zh-CN/)
 - 管理后台模板
   - [Soybean-admin](https://docs.soybean.pro/)
   - [vue-element-plus-admin](https://element-plus-admin-doc.cn/)

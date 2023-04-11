@@ -100,6 +100,10 @@ public class ListNode {
 2. 双指针
 3. 递归
 
+链表中的技巧：
+
+1. 获取链表中点：快慢指针
+
 ## 参考资料
 
 - [链表理论基础](https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html)

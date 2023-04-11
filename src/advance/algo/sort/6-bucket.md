@@ -1,15 +1,18 @@
 ---
-title: 桶排序
+title: 6. 桶排序
 category: 算法
 tag:
   - 排序算法
 date: 2023-04-03
 ---
 
-## 原理
+## 简介
 
+## 排序步骤
 
 ## 演示动画
+
+![桶排序动画](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/桶排序.gif)
 
 ## 代码实现
 
