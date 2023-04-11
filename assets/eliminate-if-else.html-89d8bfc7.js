@@ -1,1 +1,0 @@
-import{_ as t,W as l,X as o,a2 as n,Y as e}from"./framework-7c4b0f0a.js";const s={},c=e("p",null,"本文介绍通过设计模式消除 if-else 的多种方式。",-1),a=e("blockquote",null,[e("p",null,"TODO")],-1);function _(r,i){return l(),o("div",null,[c,n(" more "),a])}const f=t(s,[["render",_],["__file","eliminate-if-else.html.vue"]]);export{f as default};
