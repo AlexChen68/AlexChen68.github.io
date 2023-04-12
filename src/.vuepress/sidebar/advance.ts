@@ -11,6 +11,7 @@ export const advanceSidebar = arraySidebar([
       "linkedlist",
       "hashtable",
       "string",
+      "stack-queue",
       "tree",
       "graph",
     ]

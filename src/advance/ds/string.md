@@ -1,5 +1,5 @@
 ---
-title: 字符串
+title: 线性表 - 字符串
 category: 数据结构
 date: 2023-04-07
 ---
