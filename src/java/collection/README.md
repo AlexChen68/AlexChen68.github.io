@@ -7,11 +7,7 @@ star: true
 sticky: true
 ---
 
-介绍 Java 集合框架的主要接口及其实现类。
-
-<!-- more -->
-
-# Java 集合框架
+## Java 集合框架
 
 容器，就是可以容纳其他 Java 对象的对象。*Java Collections Framework(JCF)* 为 Java 开发者提供了通用的容器，其始于 JDK 1.2，优点是：
 

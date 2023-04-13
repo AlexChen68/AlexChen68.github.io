@@ -3,15 +3,12 @@ title: Java 注解机制
 date: 2022-09-30
 category: Java
 tag: annotaion
-order: 5
+order: 7
 ---
-
-
-<!-- more -->
 
 ## 简介
 
-注解是JDK1.5版本开始引入的一个特性，用于对代码进行说明，可以对包、类、接口、字段、方法参数、局部变量等进行注解。
+注解是 JDK1.5 版本开始引入的一个特性，用于对代码进行说明，可以对包、类、接口、字段、方法参数、局部变量等进行注解。
 
 **注解的优点**：
 
@@ -30,8 +27,8 @@ order: 5
 
 此外，在 `java.lang.annotaion` 包下还有几种**元注解**用于创造新的注解：
 
-- `@Target` 定义你的注解可以应用在哪里(例如是方法还是字段)。
-- `@Retention` 定义了注解在哪里可用，在源代码中(SOURCE)，class 文件(CLASS)中或者是在运行时(RUNTIME)。
+- `@Target` 定义你的注解可以应用在哪里 (例如是方法还是字段)。
+- `@Retention` 定义了注解在哪里可用，在源代码中 (SOURCE)，class 文件 (CLASS) 中或者是在运行时 (RUNTIME)。
 - `@Inherited` 用于标明注解可继承。
 - `@Documented` 用于标明是否生成 javadoc 文档。
 
@@ -74,7 +71,7 @@ public enum ElementType {
 
 2. `@Retention`
 
-`@Retention` 的作用: 描述注解保留的时间范围，即被描述的注解在它所修饰的类中可以被保留到何时，共有三种策略，定义在 `RetentionPolicy` 枚举中:
+`@Retention` 的作用：描述注解保留的时间范围，即被描述的注解在它所修饰的类中可以被保留到何时，共有三种策略，定义在 `RetentionPolicy` 枚举中：
 
 ```java
 public enum RetentionPolicy {
@@ -98,7 +95,7 @@ public enum RetentionPolicy {
 
 5. `@Repeatable` (Java8)
 
-允许在同一申明类型(类，属性，或方法)的多次使用同一个注解。
+允许在同一申明类型 (类，属性，或方法) 的多次使用同一个注解。
 
 例如：
 

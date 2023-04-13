@@ -11,7 +11,10 @@ import { resourceSidebar } from "./sidebar/resource";
 
 export const sidebarConig = sidebar({
   "/java/": javaSidebar,
-  "/java/concurrency/": concurrencySidebar,
+  // "/java/basic/": "structure",
+  // "/java/collection/": "structure",
+  // "/java/concurrency/": concurrencySidebar,
+  // "/java/jvm/": "structure",
   "/spring/": springSidebar,
   "/database/": databaseSidebar,
   "/middleware/": middlewareSidebar,
@@ -20,5 +23,5 @@ export const sidebarConig = sidebar({
   "/advance/leetcode/": "structure",
   "/devops/": devopsSidebar,
   "/frontend/": frontendSidebar,
-  "/resource/": resourceSidebar, 
+  "/resource/": resourceSidebar
 })

@@ -1,10 +1,8 @@
 ---
-title: Mysql 的安装和卸载
-article: true
+title: Mysql 安装
 date: 2022-12-06
 tag: Mysql
 category: Mysql
-description: Mysql 的安装和卸载
 ---
 
 ## Docker 安装 Mysql

@@ -6,6 +6,7 @@ export const advanceSidebar = arraySidebar([
     icon: "data-structure",
     link: "ds/",
     prefix: "ds/",
+    collapsible: true,
     children: [
       "array",
       "linkedlist",
@@ -21,6 +22,7 @@ export const advanceSidebar = arraySidebar([
     icon: "algorithm",
     link: "algo/",
     prefix: "algo/",
+    collapsible: true,
     children: [
       {
         text: "排序算法",
@@ -43,12 +45,12 @@ export const advanceSidebar = arraySidebar([
     ]
   },
   {
-    text: "设计模式 >>>",
+    text: "设计模式",
     icon: "design",
     link: "design/"
   },
   {
-    text: "LeetCode >>>",
+    text: "LeetCode",
     icon: "leetcode",
     link: "leetcode/001-两数之和"
   },

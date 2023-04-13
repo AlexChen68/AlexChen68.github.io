@@ -1,12 +1,9 @@
 ---
 title: Java 流程控制
 category: Java
-order: 6
+order: 4
 date: 2023-02-25
 ---
-
-介绍 Java 常用的流程控制语句。
-<!-- more -->
 
 ## if-else 语句
 
@@ -14,12 +11,12 @@ date: 2023-02-25
 
 ```java
 if(条件1){  
-  // 条件1 为 true 时执行的代码
+  // 条件 1 为 true 时执行的代码
 }else if(条件2){  
-  // 条件2 为 true 时执行的代码
+  // 条件 2 为 true 时执行的代码
 }  
 else if(条件3){  
-  // 条件3 为 true 时执行的代码
+  // 条件 3 为 true 时执行的代码
 }  
 ...  
 else{  
@@ -38,10 +35,10 @@ switch 语句的格式：
 ```java
 switch(变量) {    
   case 可选值1:    
-    // 可选值1匹配后执行的代码;    
+    // 可选值 1 匹配后执行的代码;    
     break;  // 该关键字是可选项
   case 可选值2:    
-    // 可选值2匹配后执行的代码;    
+    // 可选值 2 匹配后执行的代码;    
     break;  // 该关键字是可选项
   ......    
 default: // 该关键字是可选项     
@@ -50,7 +47,7 @@ default: // 该关键字是可选项
 ```
 
 switch 语句变量支持的类型：
-1. byte、short、int、char以及对应的包装器类型 Byte、Short、Integer、Character；
+1. byte、short、int、char 以及对应的包装器类型 Byte、Short、Integer、Character；
 2. String 字符串（JDK 7+ 开始支持）
 3. Enum 枚举类（JDK 5+开始支持）
    
@@ -120,7 +117,7 @@ break 关键字通常用于中断循环或 switch 语句，它在指定条件下
 
 ## continue
 
-当我们需要在 for 循环或者 （do）while 循环中立即跳转到下一个循环时，就可以使用 continue 关键字，通常用于跳过指定条件下的循环体，如果循环是嵌套的，仅跳过当前循环。
+当我们需要在 for 循环或者（do）while 循环中立即跳转到下一个循环时，就可以使用 continue 关键字，通常用于跳过指定条件下的循环体，如果循环是嵌套的，仅跳过当前循环。
 
 ---
 

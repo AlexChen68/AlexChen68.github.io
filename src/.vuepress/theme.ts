@@ -26,7 +26,7 @@ export default hopeTheme({
   displayFooter: false,
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
   blog: {
-    description: "你对我的百般注解和识读，并不构成万分之一的我，却是一览无遗的你。",
+    description: "纵有思绪万千，奈何才疏学浅，欲诉只无言。",
     medias: {
       GitHub: github,
       QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
