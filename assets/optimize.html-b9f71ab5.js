@@ -1,0 +1,1 @@
+import{_ as t,W as a,X as o,Y as e}from"./framework-d3200c61.js";const c={},r=e("h2",{id:"",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#","aria-hidden":"true"},"#")],-1),s=[r];function n(_,i){return a(),o("div",null,s)}const h=t(c,[["render",n],["__file","optimize.html.vue"]]);export{h as default};
