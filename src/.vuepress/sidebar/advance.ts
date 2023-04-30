@@ -14,6 +14,7 @@ export const advanceSidebar = arraySidebar([
       "string",
       "stack-queue",
       "tree",
+      "binary-search-tree",
       "graph",
     ]
   },

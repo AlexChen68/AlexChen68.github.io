@@ -1,12 +1,10 @@
 ---
-title: 逻辑结构 - 树
+title: 树 - 二叉树
 date: 2022-09-27
 category: 数据结构
 ---
 
 ## 树简介
-
-**定义**
 
 > 树：n(n>=0) 个节点构成的有限集合。
 > 当 n=0 时，称为空树；
@@ -20,17 +18,43 @@ category: 数据结构
 
 **树的一些术语**
 
-1. 结点的度 (Degree):结点的子树个数
-2. 树的度：树的所有结点中最大的度数
-3. 叶结点 (Leaf):度为 0 的结点
-4. 父结点 (Parent):有子树的结点是其子树的根结点的父结点
-5. 子结点 (Child):若 A 结点是 B 结点的父结 L 点，则称 B 结点是 A 结点的子结点;子结点也称孩子结点。
-6. 兄弟结点 (Sibling):具有同一父结点的各结点彼此是兄弟结点。
-7. 路径和路径的长度：从结点 n1 到 nk 的路径为一 个结点序列 n1 , n2 ,... , nk , ni 是 ni+1 的父结 点，路径所包含边的个数为路径的长度；
-8. 祖先结点 (Ancestor)：沿树根到某一结点路 径上的所有结点都是这个结点的祖先结点；
-9. 子孙结点 (Descendant):某一结点的子树 中的所有结点是这个结点的子孙；
-10. 结点的层次 (Level):规定根结点在 1 层，其它任一结点的层数是其父结点的层数加 1；
-11. 树的深度 (Depth):树中所有结点中的最 大层次是这棵树的深度。
+## 树的关键概念
+
+- 结点的度
+
+度很好理解，直观来说，数一下结点有几个分叉就说这个结点的度是多少。
+
+- 树的度
+
+树的所有结点中最大的度数。
+
+- 根节点
+
+在一颗树形结构中，最顶层的那个节点就是根节点了，所有的子节点都源自它发散开来。
+
+- 叶子结点
+
+一棵树当中没有子结点（即度为 0）的结点称为叶子结点。
+
+- 结点的高度
+
+指从该节点到叶子节点的最长简单路径边的条数后者节点数（取决于高度从 0 开始还是从 1 开始）。
+
+- 结点的深度
+
+指从根节点到该节点的最长简单路径边的条数或者节点数（取决于深度从 0 开始还是从 1 开始）。
+
+- 结点的层次
+
+规定根结点在 1 层，其它任一结点的层数是其父结点的层数加 1。
+
+- 路径和路径的长度
+
+从结点 n~1~ 到 n~k~ 的路径为一 个结点序列 n~1~ , n~2~ ,... , n~k~ , n~i~ 是 n~i+1~ 的父结点，路径所包含边的个数为路径的长度。
+
+:::tip
+高度和深度，一个从下往上数，一个从上往下数。（不同的书上，高度和深度的起始值不一样，有的从 0 开始，有的从 1 开始；主要区别是看以结点计数，还是以边计数）。
+:::
 
 ## 二叉树
 
@@ -70,7 +94,7 @@ category: 数据结构
 
 3. 一般的二叉树也可以通过补足为完全二叉树后，使用顺序存储结构存储，但是会浪费空间。
 
-### 二叉树的遍历
+## 二叉树的遍历
 
 二叉树主要有两种遍历方式：
 
@@ -100,7 +124,7 @@ category: 数据结构
 
    注意：仅有前序遍历和后序遍历无法确定一颗二叉树，前序遍历和后序遍历只可以确定跟结点，中序遍历才可以确定左右子树的顺序；
 
-### 代码实现方式
+**代码实现方式**
 
 使用**递归**可以方便地实现前三种遍历；使用**堆栈**可以实现**非递归**遍历算法。
 
@@ -108,7 +132,7 @@ category: 数据结构
 
 > *遍历从根结点开始，首先将根结点入队，然后开始执行循环：结点出队、访问该结点、其左右儿子入队*
 
-- 前序遍历
+### 前序遍历
 
 ::: code-tabs
 @tab 递归法
@@ -153,7 +177,7 @@ public List<Integer> preorderTraversal(TreeNode root) {
 ```
 :::
 
-- 中序遍历
+### 中序遍历
 
 ::: code-tabs
 @tab 递归法
@@ -200,7 +224,7 @@ public List<Integer> inorderTraversal(TreeNode root) {
 ```
 :::
 
-- 后序遍历
+### 后序遍历
 
 ::: code-tabs
 @tab 递归法
@@ -247,7 +271,7 @@ public List<Integer> postorderTraversal(TreeNode root) {
 ```
 :::
 
-- 层序遍历
+### 层序遍历
 
 ::: code-tabs
 @tab 递归法
@@ -279,7 +303,30 @@ private void levelOrder(List<List<Integer>> result, TreeNode node, int level) {
 ```
 @tab 迭代法
 ```java
-
+public List<List<Integer>> levelOrder(TreeNode root) {
+   List<List<Integer>> res = new ArrayList<>();
+   if (root == null) {
+      return res;
+   }
+   Deque<TreeNode> queue = new ArrayDeque<>();
+   queue.offer(root);
+   while (!queue.isEmpty()) {
+      List<Integer> levelResult = new ArrayList<>();
+      int size = queue.size();
+      while (size-- > 0) {
+            TreeNode node = queue.poll();
+            levelResult.add(node.val);
+            if (node.left != null) {
+               queue.offer(node.left);
+            }
+            if (node.right != null) {
+               queue.offer(node.right);
+            }
+      }
+      res.add(levelResult);
+   }
+   return res;
+}
 ```
 :::
 
@@ -292,11 +339,6 @@ private void levelOrder(List<List<Integer>> result, TreeNode node, int level) {
 > 1. 非空左子树的所有键值小于其根结点的键值；
 > 2. 非空右子树的所有键值大于其根结点的键值；
 > 3. 左、右子树都是二叉搜索树。
-
-![二叉搜索树示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/二叉搜索树示例.png)
-
-二叉查找树相比于其他数据结构的优势在于查找、插入的时间复杂度较低为 *O(logn)* 。
-二叉查找树是基础性数据结构，用于构建更为抽象的数据结构，如集合、多重集、关联数组等。
 
 ## 平衡二叉树-AVL
 
@@ -332,5 +374,30 @@ private void levelOrder(List<List<Integer>> result, TreeNode node, int level) {
 
 当每个字符出现的频率不同时，使用哈夫曼树进行编码，出现频率越高的字母 (也即权值越大)，其编码越短，可以保证在频率加权后的平均编码长度最短，称之为最佳编码，一般就叫做 Huffman 编码。
 
-## 堆
+## 相关算法题
 
+- 四种遍历
+   - [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
+   - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)
+   - [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
+   - [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+- 二叉树特性
+   - [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
+   - [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
+   - [104. 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
+   - [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
+   - [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
+   - [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
+
+- 路径
+   - [112. 路径总和](https://leetcode.cn/problems/path-sum/)
+   - [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
+   - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
+   - [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path/)
+   - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
+- 构造二叉树
+   - [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+   - [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+   - [654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
+   - [998. 最大二叉树 II](https://leetcode.cn/problems/maximum-binary-tree-ii/)
+   - [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/)

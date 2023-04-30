@@ -1,5 +1,5 @@
 ---
-title: 逻辑结构 - 图
+title: 图 - 概览
 category: 数据结构
 date: 2022-09-27
 ---
@@ -68,12 +68,24 @@ date: 2022-09-27
 
 ![邻接表](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接表.png)
 
-## **图的遍历**
+**邻接矩阵与邻接表比较**
 
-### 深度优先搜索 (DFS)
+对于邻接表，好处是占用的空间少。邻接矩阵里面空着那么多位置，肯定需要更多的存储空间。
 
-> 深度优先搜索 (Depth First Search)
+但是，邻接表无法快速判断两个节点是否相邻。
 
-### 广度优先搜索（BFS）
+## 图的遍历
 
-> 广度优先搜索（Breadth First Search）
+- 深度优先搜索 (DFS)
+
+> 深度优先搜索 (Depth First Search)：其过程简要来说是对每一个可能的分支路径深入到不能再深入为止，而且每个节点只能访问一次。
+
+
+- 广度优先搜索（BFS）
+
+> 广度优先搜索（Breadth First Search）：广度优先搜索的搜索过程有点像一层一层地进行遍历，每层遍历都以上一层遍历的结果作为起点，遍历一个距离能访问到的所有节点。需要注意的是，遍历过的节点不能再次被遍历。
+
+
+## 相关算法题
+
+- [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target)
