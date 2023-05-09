@@ -89,21 +89,20 @@ public class ListNode {
 
 ## 相关算法题
 
+解链表相关算法题常用的技巧：
+
+1. 虚拟头结点
+2. 双指针/快慢指针
+3. 递归
+
+
 - [019. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
 - [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
 - [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
 - [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists)
-
-**常用解法：**
-
-1. 虚拟头结点
-2. 双指针
-3. 递归
-
-链表中的技巧：
-
-1. 获取链表中点：快慢指针
+- [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
 
 ## 参考资料
 
 - [链表理论基础](https://programmercarl.com/%E9%93%BE%E8%A1%A8%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html)
+

@@ -4,7 +4,7 @@ category: 数据结构
 date: 2022-09-27
 ---
 
-## 图的概述
+## 1. 图的概述
 
 **图的定义**
 
@@ -48,7 +48,7 @@ date: 2022-09-27
 
 - 连通图：图中任意两顶点均连通
 
-## 图的表示
+## 2. 图的表示
 
 **邻接矩阵（数组存储）**
 
@@ -74,18 +74,79 @@ date: 2022-09-27
 
 但是，邻接表无法快速判断两个节点是否相邻。
 
-## 图的遍历
+## 3. 图的遍历
 
-- 深度优先搜索 (DFS)
+### 3.1 深度优先遍历〔Depth First Search, DFS〕
 
-> 深度优先搜索 (Depth First Search)：其过程简要来说是对每一个可能的分支路径深入到不能再深入为止，而且每个节点只能访问一次。
+> DFS：其过程简要来说是对每一个可能的分支路径深入到不能再深入为止，而且每个节点只能访问一次。
 
+DFS 算法框架：
 
-- 广度优先搜索（BFS）
+```java
 
-> 广度优先搜索（Breadth First Search）：广度优先搜索的搜索过程有点像一层一层地进行遍历，每层遍历都以上一层遍历的结果作为起点，遍历一个距离能访问到的所有节点。需要注意的是，遍历过的节点不能再次被遍历。
+```
 
+### 3.2 广度优先搜索〔Breadth First Search, BFS〕
+
+> BFS：广度优先搜索的搜索过程有点像一层一层地进行遍历，每层遍历都以上一层遍历的结果作为起点，遍历一个距离能访问到的所有节点。需要注意的是，遍历过的节点不能再次被遍历。
+
+BFS 常常用来求解**无权图的最短路径问题**。
+
+在程序实现 BFS 时需要考虑以下问题：
+
+- 队列：用来存储每一轮遍历得到的节点；
+- 标记：对于遍历过的节点，应该将它标记，防止重复遍历。
+
+BFS 算法框架：
+
+```java
+// 计算从起点 start 到终点 target 的最近距离
+int BFS(Node start, Node target) {
+    Queue<Node> q; // 核心数据结构
+    Set<Node> visited; // 避免走回头路
+    
+    q.offer(start); // 将起点加入队列
+    visited.add(start);
+    int step = 0; // 记录扩散的步数
+
+    while (!q.isEmpty()) {
+        int sz = q.size();
+        /* 将当前队列中的所有节点向四周扩散 */
+        for (int i = 0; i < sz; i++) {
+            Node cur = q.poll();
+            /* 划重点：这里判断是否到达终点 */
+            if (cur is target)
+                return step;
+            /* 将 cur 的相邻节点加入队列 */
+            for (Node x : cur.adj()) {
+                if (x not in visited) {
+                    q.offer(x);
+                    visited.add(x);
+                }
+            }
+        }
+        /* 划重点：更新步数在这里 */
+        step++;
+    }
+}
+```
+
+队列 `q` 就不说了，BFS 的核心数据结构；`cur.adj()` 泛指 cur 相邻的节点，比如说二维数组中，`cur` 上下左右四面的位置就是相邻节点；`visited` 的主要作用是防止走回头路，大部分时候都是必须的，但是像一般的二叉树结构，没有子节点到父节点的指针，不会走回头路就不需要 `visited`。
 
 ## 相关算法题
 
-- [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target)
+- 图的基本遍历
+    - [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target)
+- 检测图是否有环
+    - [207. 课程表](https://leetcode.cn/problems/course-schedule/)
+    - [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
+- 二分图
+    - [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/)
+    - [886. 可能的二分法](https://leetcode.cn/problems/possible-bipartition/)
+- 并查集（Union-Find）算法
+    - [990. 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/)
+
+## 参考资料
+
+- [labuladong 的算法小抄](https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-03a72/bing-cha-j-323f3/)
+- [算法学习笔记 : 并查集](https://zhuanlan.zhihu.com/p/93647900)
