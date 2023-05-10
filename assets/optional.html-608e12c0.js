@@ -1,1 +1,0 @@
-import{_ as o,W as t,X as n,Y as e}from"./framework-d3200c61.js";const c={},l=e("blockquote",null,[e("p",null,"TODO")],-1),_=[l];function s(a,r){return t(),n("div",null,_)}const u=o(c,[["render",s],["__file","optional.html.vue"]]);export{u as default};
