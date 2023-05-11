@@ -50,9 +50,14 @@ date: 2022-09-27
 
 ## 2. 图的表示
 
-**邻接矩阵（数组存储）**
+### 2.1 邻接矩阵（数组存储）
 
 邻接矩阵 G\[N\]\[N\]——N 个顶点从 0 到 N-1 编号，若结点 V~i~ 和 结点 V~j~ 是 G 中的边，这 G\[i\]\[j\] = 1，否则等于 0，由此得出的 N * N 的矩阵为邻接矩阵。
+
+```java
+// matrix[x][y] 记录 x 是否有一条指向 y 的边
+boolean[][] matrix;
+```
 
 ![邻接矩阵](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接矩阵.png)
 
@@ -64,7 +69,12 @@ date: 2022-09-27
 
 > 不足：由于存在 n 个顶点的图需要 n*n 个数组元素进行存储，当图为稀疏图时，使用邻接矩阵存储方法将会出现大量 0 元素，这会造成极大的空间浪费。这时，可以考虑使用邻接表表示法来存储图中的数据。
 
-**邻接表（链表存储）**
+### 2.2 邻接表（链表存储）
+
+```java
+// graph[x] 存储 x 的所有邻居节点
+List<Integer>[] graph = new LinkedList[n];
+```
 
 ![邻接表](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/邻接表.png)
 
@@ -78,12 +88,35 @@ date: 2022-09-27
 
 ### 3.1 深度优先遍历〔Depth First Search, DFS〕
 
-> DFS：其过程简要来说是对每一个可能的分支路径深入到不能再深入为止，而且每个节点只能访问一次。
+> DFS：核心思想就是一条路找到底，然后回退一步换一个方向继续。有一个细节是，有时需要在出递归时把回退到的当前节点标为可访问。
+
+深度优先遍历图的方法是，从图中某顶点 v 出发：
+（1）访问顶点 v；
+（2）依次从 v 的未被访问的邻接点出发，对图进行深度优先遍历；直至图中和 v 有路径相通的顶点都被访问；
+（3）若此时图中尚有顶点未被访问，则从一个未被访问的顶点出发，重新进行深度优先遍历，直到图中所有顶点均被访问过为止。
 
 DFS 算法框架：
 
 ```java
+public static void DFS(int[][] graph, int s) {
+    boolean visited[] = new boolean[graph.length];
+    traverse(graph, s, visited);
+}
 
+
+static void traverse(int[][] graph, int s, boolean visited[]) {
+    visited[s] = true;
+
+    // 访问该结点
+    // doSomething();
+
+    // 遍历 s 的相邻结点
+    for (int i = 0; i < graph.length; i++) {
+        if (graph[s][i] == 1 && !visited[i]) {
+            traverse(graph, i, visited);
+        }
+    }
+}
 ```
 
 ### 3.2 广度优先搜索〔Breadth First Search, BFS〕
@@ -100,40 +133,36 @@ BFS 常常用来求解**无权图的最短路径问题**。
 BFS 算法框架：
 
 ```java
-// 计算从起点 start 到终点 target 的最近距离
-int BFS(Node start, Node target) {
-    Queue<Node> q; // 核心数据结构
-    Set<Node> visited; // 避免走回头路
-    
-    q.offer(start); // 将起点加入队列
-    visited.add(start);
-    int step = 0; // 记录扩散的步数
+static void BFS(int[][] graph, int s) {
+    // 标记所有节点为未访问状态
+    boolean visited[] = new boolean[graph.length];
 
-    while (!q.isEmpty()) {
-        int sz = q.size();
-        /* 将当前队列中的所有节点向四周扩散 */
-        for (int i = 0; i < sz; i++) {
-            Node cur = q.poll();
-            /* 划重点：这里判断是否到达终点 */
-            if (cur is target)
-                return step;
-            /* 将 cur 的相邻节点加入队列 */
-            for (Node x : cur.adj()) {
-                if (x not in visited) {
-                    q.offer(x);
-                    visited.add(x);
-                }
+    // 创建一个队列来存储需要遍历的节点
+    LinkedList<Integer> queue = new LinkedList<Integer>();
+
+    // 将起始节点加入队列，并标记已访问过
+    visited[s] = true;
+    queue.add(s);
+
+    while (queue.size() != 0) {
+        // 从队列中取出要访问的节点
+        s = queue.poll();
+
+        // 访问该结点
+        // doSomething();
+
+        // 遍历与该节点相邻且未被访问的节点
+        for (int i = 0; i < graph.length; i++) {
+            if (graph[s][i] == 1 && !visited[i]) {
+                visited[i] = true;
+                queue.add(i);
             }
         }
-        /* 划重点：更新步数在这里 */
-        step++;
     }
 }
 ```
 
-队列 `q` 就不说了，BFS 的核心数据结构；`cur.adj()` 泛指 cur 相邻的节点，比如说二维数组中，`cur` 上下左右四面的位置就是相邻节点；`visited` 的主要作用是防止走回头路，大部分时候都是必须的，但是像一般的二叉树结构，没有子节点到父节点的指针，不会走回头路就不需要 `visited`。
-
-## 相关算法题
+## 4. 相关算法题
 
 - 图的基本遍历
     - [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target)
@@ -146,7 +175,7 @@ int BFS(Node start, Node target) {
 - 并查集（Union-Find）算法
     - [990. 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/)
 
-## 参考资料
+## 5. 参考资料
 
 - [labuladong 的算法小抄](https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-03a72/bing-cha-j-323f3/)
 - [算法学习笔记 : 并查集](https://zhuanlan.zhihu.com/p/93647900)

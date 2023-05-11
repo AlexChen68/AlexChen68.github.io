@@ -16,6 +16,7 @@ export const advanceSidebar = arraySidebar([
       "tree",
       "binary-search-tree",
       "graph",
+      "unionfind",
     ]
   },
   {
