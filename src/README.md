@@ -8,7 +8,7 @@ heroImage: /logo.svg
 bgImage: https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/background.jpeg
 heroText: AlexChen's Blog
 heroFullScreen: true
-tagline: 纵有思绪万千，奈何才疏学浅，欲诉只无言。
+tagline: 此刻忽而想起，错过了夕阳，便只能盼着明天的日出。
 projects:
   - name: Mr.Hope
     desc: Vuepress-theme-hope 作者

@@ -108,20 +108,30 @@ export default navbar([
     prefix: "/database/",
     children: [
       {
-        text: "Mysql 数据库",
+        text: "Mysql 关系数据库",
         icon: "mysql",
         link: "mysql/"
       },
       {
-        text: "ORM 框架",
-        icon: "mapping",
-        link: "orm/"
-      },
-      {
-        text: "Redis 数据库",
+        text: "Redis 缓存数据库",
         icon: "redis",
         link: "redis/"
-      }
+      },
+      {
+        text: "ElasticSearch 搜索引擎",
+        icon: "elasticsearch",
+        link: "es/"
+      },
+      {
+        text: "MongoDB 文档数据库",
+        icon: "mongodb",
+        link: "mongodb/"
+      },
+      {
+        text: "Neo4j 图数据库",
+        icon: "neo4j",
+        link: "neo4j/"
+      },
     ]
   },
   // {
