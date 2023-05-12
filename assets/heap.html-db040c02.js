@@ -1,1 +1,0 @@
-import{_ as a,W as t,X as c,Y as e,a0 as r}from"./framework-d3200c61.js";const s={},_=e("h2",{id:"_1-什么是堆",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#_1-什么是堆","aria-hidden":"true"},"#"),r(" 1. 什么是堆？")],-1),o=[_];function n(d,h){return t(),c("div",null,o)}const l=a(s,[["render",n],["__file","heap.html.vue"]]);export{l as default};
