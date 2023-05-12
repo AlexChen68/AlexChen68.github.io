@@ -1055,6 +1055,24 @@ cz-cli@4.3.0, cz-conventional-changelog@3.3.0
 另一款 Commitizen 适配器： [cz-git](https://cz-git.qbb.sh/zh/)
 :::
 
+## Git 常见问题解决方案
+
+- 原来 git 正常，网页可以访问，但是突然无法 pull 和 push 代码，提示没有权限，并且确认 ssh 密钥没有问题
+
+有可能是因为网络代理导致的，可以尝试清除 git 的网络代理，具体命令如下：
+
+```bash
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
+查看网络代理的命令：
+
+```bash
+git config --global http.proxy
+git config --global https.proxy
+```
+
 ---
 
 ## 参考资料
