@@ -18,6 +18,8 @@ date: 2022-12-29
   - [bugstack 虫洞栈](https://bugstack.cn/)
   - [狂神说](https://www.kuangstudy.com/)
 - 算法
+  - [LABULADONG 的算法网站](https://labuladong.github.io/algo/)
   - [代码随想录](https://www.programmercarl.com/)
 - 前端
   - [Mrhope](https://mrhope.site/)
+  

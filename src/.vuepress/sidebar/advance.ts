@@ -7,17 +7,18 @@ export const advanceSidebar = arraySidebar([
     link: "ds/",
     prefix: "ds/",
     collapsible: true,
-    children: [
-      "array",
-      "linkedlist",
-      "hashtable",
-      "string",
-      "stack-queue",
-      "tree",
-      "binary-search-tree",
-      "graph",
-      "unionfind",
-    ]
+    children: "structure"
+    // children: [
+    //   "array",
+    //   "linkedlist",
+    //   "hashtable",
+    //   "string",
+    //   "stack-queue",
+    //   "tree",
+    //   "binary-search-tree",
+    //   "graph",
+    //   "unionfind",
+    // ]
   },
   {
     text: "算法基础",
