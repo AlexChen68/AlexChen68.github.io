@@ -1,7 +1,6 @@
 ---
-title: Java 基础知识
+title: Java 简介
 date: 2022-09-16
-index: false
 article: false
 ---
 
@@ -19,10 +18,10 @@ Java 分为三个体系：
 
 2005 年 6 月，JavaOne 大会召开，SUN 公司公开 Java SE 6。此时，Java 的各种版本已经更名，以取消其中的数字 "2"：J2EE 更名为 Java EE，J2SE 更名为 Java SE，J2ME 更名为 Java ME。
 
-## Java 基础导航
+<!-- ## Java 基础导航
 
 - [Java 基础语法](grammar.md)
 - [Java String](string.md)
 - [Java 注解机制](annotation.md)
-- [Java 流程控制](flow-control.md)
+- [Java 流程控制](flow-control.md) -->
 

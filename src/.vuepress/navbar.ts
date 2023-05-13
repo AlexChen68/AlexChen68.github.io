@@ -160,17 +160,22 @@ export default navbar([
         link: "linux/"
       },
       {
+        text: "Network",
+        icon: "network",
+        link: "network/"
+      },
+      {
         text: "Docker",
         icon: "docker",
         link: "docker/"
       }
     ]
   },
-  // {
-  //   text: "前端技术",
-  //   icon: "frontend",
-  //   link: "/frontend/",
-  // },
+  {
+    text: "前端技术",
+    icon: "frontend",
+    link: "/frontend/",
+  },
   {
     text: "编程资源",
     icon: "resource",

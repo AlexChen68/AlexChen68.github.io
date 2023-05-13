@@ -1,0 +1,7 @@
+---
+title: https 技术鉴赏
+category: 计算机网络
+date: 2023-05-13
+---
+
+bilibili 上面有一个非常不错讲解 Https 的视频： [https 技术鉴赏](https://www.bilibili.com/video/BV1uY4y1D7Ng)

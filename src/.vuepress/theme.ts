@@ -24,7 +24,7 @@ export default hopeTheme({
   sidebar: sidebarConig,
   sidebarSorter: ["readme", "order", "filename", "title"],
   displayFooter: false,
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+  pageInfo: ["Author", "Category", "Tag", "Date", "Word", "ReadingTime"],
   blog: {
     description: "纵有思绪万千，奈何才疏学浅，欲诉只无言。",
     medias: {
@@ -35,6 +35,8 @@ export default hopeTheme({
     },
   },
   hotReload: true,
+  breadcrumb: false,
+  pure: true,
   plugins: {
     //开启 git 支持，可以展示上次编辑时间和贡献者
     git: true,

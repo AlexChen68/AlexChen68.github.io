@@ -1,6 +1,5 @@
 ---
 title: ECMAScript 6 简介
-index: false
 article: false
 date: 2023-01-03
 ---

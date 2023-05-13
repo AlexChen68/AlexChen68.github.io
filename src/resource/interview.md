@@ -92,7 +92,7 @@ date: 2023-02-20
 
 示例：
 
-![image.png](https://pics1.baidu.com/feed/810a19d8bc3eb135f178222807b703d9fc1f441e.jpeg)
+![面试自我介绍示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/resource/面试自我介绍示例.webp)
 
 ## 6. 常见问题准备
 

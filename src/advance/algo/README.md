@@ -1,6 +1,5 @@
 ---
 title: 算法概述
-index: false
 date: 2022-09-27
 article: false
 description: 算法概述

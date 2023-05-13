@@ -14,7 +14,7 @@ order: 8
 
 ## 类图
 
-![TreeMap类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/treemap_class.png)
+![TreeMap 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/treemap_class.png)
 
 - `TreeMap`  继承了 `java.util.AbstracMap` 类，这个类提供了 Map 的基本实现；
 - 实现了 `java.util.NavigableMap` 接口，这个接口又继承自 `java.util.SortedMap` 接口，表明 `TreeMap` 是一个可排序的 Map 接口；
@@ -246,7 +246,7 @@ public V put(K key, V value) {
                 return t.setValue(value);
         } while (t != null);
     }
-    // 如果没有自定义 comparator ，则使用 key 自身比较器来比较
+    // 如果没有自定义 comparator，则使用 key 自身比较器来比较
     else {
         // 如果 key 为空，则抛出异常
         if (key == null)
@@ -386,7 +386,7 @@ final Entry<K,V> getFirstEntry() {
 
 // 获取 t 的后继结点（即右子树的最小值）
 static <K,V> TreeMap.Entry<K,V> successor(Entry<K,V> t) {
-    // t 为null，返回 null
+    // t 为 null，返回 null
     if (t == null)
         return null;
     else if (t.right != null) {
@@ -417,7 +417,7 @@ static <K,V> TreeMap.Entry<K,V> successor(Entry<K,V> t) {
 `TreeMap` 的删除涉及红黑树的结点删除，相对而言更加复杂，先查询该结点，如果不存在，则返回 null；存在则从红黑树删除结点并返回旧值，其中从红黑树删除结点 `deleteEntry(Entry<K,V> p)`  的可能有的情况如下：
 
 1. 既有左结点又有右结点：找到待删除结点的后继结点（右子树的最小值，符合比该结点左边的都大，替换该结点后，比该结点的右边都小），用后继结点替换待删除结点；
-2. 只有左结点或者右结点：使用待删除结点的不为空的那一个结点为替换结点， 去替换待删除结点，即待删除结点的父结点指向替换结点（类似链表的删除）；
+2. 只有左结点或者右结点：使用待删除结点的不为空的那一个结点为替换结点，去替换待删除结点，即待删除结点的父结点指向替换结点（类似链表的删除）；
 3. 待删除结点无子结点：直接将父结点对其的指向置为 null 即可；
 
 ```java
@@ -499,9 +499,9 @@ private void deleteEntry(Entry<K,V> p) {
 
 ## NavigableMap 方法
 
-`NavigableMap` 是 `SortedMap` 的扩展，增加了通过指定 key 导航与其相近结点的方法，方法lowerEntry 、 floorEntry 、 ceilingEntry 和 higherEntry 分别返回与键关联的 `Map.Entry` 对象小于、小于或等于、大于或等于和大于给定键，如果没有这样的键则返回null；类似地，方法lowerKey 、 floorKey 、 ceilingKey 和 higherKey 仅返回关联的键。所有这些方法都是为定位而不是遍历条目而设计的。
+`NavigableMap` 是 `SortedMap` 的扩展，增加了通过指定 key 导航与其相近结点的方法，方法 lowerEntry、floorEntry、ceilingEntry 和 higherEntry 分别返回与键关联的 `Map.Entry` 对象小于、小于或等于、大于或等于和大于给定键，如果没有这样的键则返回 null；类似地，方法 lowerKey、floorKey、ceilingKey 和 higherKey 仅返回关联的键。所有这些方法都是为定位而不是遍历条目而设计的。
 
-另外，此接口还定义了方法 firstEntry 、 pollFirstEntry 、 lastEntry 和 pollLastEntry ，它们返回或者删除最小和最大的结点（如果存在），否则返回null 。
+另外，此接口还定义了方法 firstEntry、pollFirstEntry、lastEntry 和 pollLastEntry，它们返回或者删除最小和最大的结点（如果存在），否则返回 null。
 
 ### 获取接近的键值对
 
@@ -763,7 +763,7 @@ public Map.Entry<K,V> pollLastEntry() {
 
 - TreeMap 按照 key 的**顺序**的 Map 实现类，底层采用**红黑树**来实现存储。
 - TreeMap 因为采用树结构，所以无需初始考虑像 HashMap 考虑**容量**问题，也不存在扩容问题。
-- TreeMap 的 **key** 不允许为空( `null` )，可能是因为红黑树是一颗二叉查找树，需要对 key 进行排序。
+- TreeMap 的 **key** 不允许为空 ( `null` )，可能是因为红黑树是一颗二叉查找树，需要对 key 进行排序。
 - TreeMap 的查找、添加、删除 key-value 键值对的**平均**时间复杂度为 `O(logN)` 。原因是，TreeMap 采用红黑树，操作都需要经过二分查找，而二分查找的时间复杂度是 `O(logN)` 。
 - 相比 HashMap 来说，TreeMap 不仅仅支持指定 key 的查找，也支持 key **范围**的查找。当然，这也得益于 TreeMap 数据结构能够提供的有序特性。
 

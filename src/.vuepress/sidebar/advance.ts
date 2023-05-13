@@ -8,17 +8,6 @@ export const advanceSidebar = arraySidebar([
     prefix: "ds/",
     collapsible: true,
     children: "structure"
-    // children: [
-    //   "array",
-    //   "linkedlist",
-    //   "hashtable",
-    //   "string",
-    //   "stack-queue",
-    //   "tree",
-    //   "binary-search-tree",
-    //   "graph",
-    //   "unionfind",
-    // ]
   },
   {
     text: "算法基础",
@@ -28,23 +17,33 @@ export const advanceSidebar = arraySidebar([
     collapsible: true,
     children: [
       {
-        text: "排序算法",
+        text: "1. 排序算法",
+        icon: "algorithm",
         prefix: "sort/",
         link: "sort/",
         children: "structure"
       },
       {
-        text: "查找算法",
+        text: "2. 查找算法",
+        icon: "algorithm",
         prefix: "search/",
         link: "search/",
         children: "structure"
       },
       {
-        text: "领域算法",
+        text: "3. 领域算法",
+        icon: "algorithm",
         prefix: "domain/",
         link: "domain/",
         children: "structure"
       },
+      {
+        text: "4. 算法应用",
+        icon: "algorithm",
+        prefix: "scenario/",
+        link: "scenario/",
+        children: "structure"
+      }
     ]
   },
   {

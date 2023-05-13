@@ -8,13 +8,13 @@ order: 3
 
 ## 概述
 
-`HashSet` 是不可重复集合 `Set` 接口的子类， 它存取无序，不可以存放重复的元素，不可以用下标对元素进行操作。
+`HashSet` 是不可重复集合 `Set` 接口的子类，它存取无序，不可以存放重复的元素，不可以用下标对元素进行操作。
 
 `HashSet` 是基于 `HashMap` 实现的，底层采用 `HashMap` 来保存元素，利用了 `HashMap` **key** 不可重复的特性，而值使用一个固定的 Object 对象填充。
 
 ## 类图
 
-![HashSet类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/hashset_class.png)
+![HashSet 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/hashset_class.png)
 
 `HashSet` 实现了三个接口：
 
@@ -146,7 +146,7 @@ private void writeObject(java.io.ObjectOutputStream s)
     s.writeInt(map.size());
 
     // Write out all elements in the proper order.
-    // 遍历 map ，逐个 key 序列化
+    // 遍历 map，逐个 key 序列化
     for (E e : map.keySet())
         s.writeObject(e);
 }
