@@ -17,7 +17,6 @@ description: 分布式理论
 
 - P（Partition Tolerance)：分区容忍性。当系统出现网络分区等情况时，依然能对外提供服务。想到达到这一点，一般来说会把数据复制到多个分区里，来提高分区容忍性。这个一般是不会被抛弃的。
 
-
 ## 参考资料
 
 - [Hviger - 微服务的注册中心](https://www.cnblogs.com/zhaojinhui/p/16668436.html)

@@ -25,6 +25,8 @@ export default hopeTheme({
   sidebarSorter: ["readme", "order", "filename", "title"],
   displayFooter: false,
   pageInfo: ["Author", "Category", "Tag", "Date", "Word", "ReadingTime"],
+  breadcrumb: false,
+  pure: true,
   blog: {
     description: "纵有思绪万千，奈何才疏学浅，欲诉只无言。",
     medias: {
@@ -34,53 +36,21 @@ export default hopeTheme({
       Gmail: "mailto:alexchen.tech@gmail.com"
     },
   },
-  hotReload: true,
-  breadcrumb: false,
-  pure: true,
   plugins: {
-    //开启 git 支持，可以展示上次编辑时间和贡献者
-    git: true,
     blog: true,
     mdEnhance: {
       align: true,
       attrs: true,
-      chart: true,
+      tabs: true,
       codetabs: true,
       container: true,
       demo: true,
-      echarts: true,
-      flowchart: true,
-      gfm: true,
       imgSize: true,
-      include: true,
       imgLazyload: true,
       mark: true,
-      mermaid: true,
       footnote: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
-      stylize: [
-        {
-          matcher: "Recommanded",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommanded",
-              };
-          },
-        },
-      ],
       sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
-      vuePlayground: true,
+      sup: true
     },
   },
 });
