@@ -4,7 +4,6 @@ article: true
 date: 2022-09-30
 tag: JVM
 category: Concurrency
-isOriginal: true
 description: Java 虚拟机概述
 ---
 

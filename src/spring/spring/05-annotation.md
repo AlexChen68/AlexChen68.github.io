@@ -3,8 +3,6 @@ title: Spring 核心注解
 article: true
 date: 2022-10-12
 category: Spring
-isOriginal: true
-description: Spring 核心注解
 ---
 
 ## Bean 配置注解
@@ -42,9 +40,9 @@ description: Spring 核心注解
 
 7. @Resource
 
-> Spring 还通过在字段或 bean 属性 setter 方法上使用 JSR-250 @Resource(javax.annotation.Resource)注解来支持注入。
+> Spring 还通过在字段或 bean 属性 setter 方法上使用 JSR-250 @Resource(javax.annotation.Resource) 注解来支持注入。
 >
-> @Resource 在没有明确指定 name 时,其行为类似于 @Autowired。
+> @Resource 在没有明确指定 name 时，其行为类似于 @Autowired。
 
 8. @value
 

@@ -3,8 +3,6 @@ title: SpringBoot Starter 启动器
 date: 2022-09-15
 tag: Springboot Starter
 category: Springboot
-isOriginal: true
-description: SpringBoot Starter 启动器
 ---
 
 SpringBoot Starter 启动器
@@ -12,9 +10,9 @@ SpringBoot Starter 启动器
 
 ## SpringBoot Starter 简介
 
-### 什么是SpringBoot Starter？
+### 什么是 SpringBoot Starter？
 
-Starter 是 Spring Boot 中的一个非常重要的概念，Starter 相当于模块，它能将模块所需的依赖整合起来并对模块内的 Bean 根据环境（ 条件）进行自动配置。
+Starter 是 Spring Boot 中的一个非常重要的概念，Starter 相当于模块，它能将模块所需的依赖整合起来并对模块内的 Bean 根据环境（条件）进行自动配置。
 
 **使用者只需要依赖相应功能的 Starter，无需做过多的配置和依赖，Spring Boot 就能自动扫描并加载相应的模块并设置默认值，做到开箱即用。**
 
@@ -22,7 +20,7 @@ Starter 是 Spring Boot 中的一个非常重要的概念，Starter 相当于模
 
 SpringBoot 中的 starter 是一种非常重要的机制，能够抛弃以前繁杂的配置，将其统一集成进 starter，应用者只需要在 maven 中引入 starter 依赖，Spring Boot 就能自动扫描各个 jar 包下 classpath 路径的 `spring.factories` 文件，加载自动配置类信息，加载相应的 bean 信息并启动相应的`默认配置`。
 
-Spring Boot 提供了针对日常企业应用研发各种场景的 spring-boot-starter 依赖模块。所有这些依赖模块都遵循着约定成俗的默认配置，并允许我们调整这些配置，即遵循 “`约定大于配置`” 的理念。
+Spring Boot 提供了针对日常企业应用研发各种场景的 spring-boot-starter 依赖模块。所有这些依赖模块都遵循着约定成俗的默认配置，并允许我们调整这些配置，即遵循“`约定大于配置`”的理念。
 
 ## 自定义 SpringBoot Starter
 

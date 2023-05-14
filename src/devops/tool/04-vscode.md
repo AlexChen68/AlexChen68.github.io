@@ -3,7 +3,6 @@ title: 玩转 VS Code
 icon: vscode
 tag: Visual Studio Code
 category: 开发工具
-isOriginal: true
 date: 2022-09-30
 ---
 
@@ -13,7 +12,7 @@ VsCode 可以通过 Snippets 配置代码模版，官方文档：[Snippets in Vi
 
 创建模板步骤：
 
-1. 打开VSCode,按下快捷键组合 `shift+command+p` 呼出控制台
+1. 打开 VSCode，按下快捷键组合 `shift+command+p` 呼出控制台
 2. 输入 `Snippets: Configure User Snippets`,配置用户代码片段
 3. 输入 `new`, 有两个选项，可以选择创建一个全局配置或者专为本项目使用的配置；
 4. 然后会要求输入配置文件名称，按实际情况命名；
@@ -45,7 +44,7 @@ VsCode 可以通过 Snippets 配置代码模版，官方文档：[Snippets in Vi
 更多的配置，见官方文档：[Snippets in Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
 :::info
-如果使用 markdown 文件的模板发现没有提示，可能是 vscode 没有开启Markdown文件中的补全与匹配;
+如果使用 markdown 文件的模板发现没有提示，可能是 vscode 没有开启 Markdown 文件中的补全与匹配;
 
 打开 `settings.json` 文件，在原来的基础上，增加如下 `markdown` 配置：
 

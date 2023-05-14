@@ -1,7 +1,6 @@
 ---
 title: JDK 安装
 icon: java
-isOriginal: true
 tag: JDK
 category: 开发工具
 date: 2022-12-29
@@ -13,7 +12,7 @@ date: 2022-12-29
 
 ### 下载 JDK8
 
-JDK下载地址: [https://www.oracle.com/java/technologies/downloads/#java8-windows](https://www.oracle.com/java/technologies/downloads/#java8-windows)
+JDK 下载地址：[https://www.oracle.com/java/technologies/downloads/#java8-windows](https://www.oracle.com/java/technologies/downloads/#java8-windows)
 
 ### 安装
 

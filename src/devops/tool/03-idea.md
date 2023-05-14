@@ -4,7 +4,6 @@ icon: idea
 date: 2022-09-30
 tag: Intellij IDEA
 category: 开发工具
-isOriginal: true
 ---
 
 介绍 IDEA 的常用插件与使用技巧

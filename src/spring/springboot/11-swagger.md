@@ -5,8 +5,6 @@ tag: SpringBoot
   - Swagger
   - Knife4j
 category: SpringBoot
-isOriginal: true
-description: SpringBoot 使用 Swagger
 ---
 
 Swagger 是一个用于生成、描述和调用 RESTful 接口的 Web 服务。通俗的来讲，Swagger 就是将项目中所有（想要暴露的）接口展现在页面上，并且可以进行接口调用和测试的服务。
@@ -18,7 +16,7 @@ Swagger 是一个用于生成、描述和调用 RESTful 接口的 Web 服务。�
 
 OpenAPI 始于 Swagger 规范，Swagger 规范已于 [2015 年捐赠给 Linux 基金会后改名为 OpenAPI](https://smartbear.com/blog/develop/what-is-the-difference-between-swagger-and-openapi/)，并定义最新的规范为 OpenAPI 3.0。
 
-官方GitHub地址： [OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification)
+官方 GitHub 地址： [OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification)
 
 ## 什么是 Swagger
 
@@ -30,7 +28,7 @@ Swagger 有以下 3 个重要的作用：
 - 当接口更新之后，只需要修改代码中的 Swagger 描述就可以实时生成新的接口文档了，从而规避了接口文档老旧不能使用的问题；
 - 通过 Swagger 页面，我们可以直接进行接口调用，降低了项目开发阶段的调试成本。
 
-Swagger3完全遵循了 OpenAPI 规范。Swagger 官网地址：[https://swagger.io/  (opens new window)](https://swagger.io/)
+Swagger3 完全遵循了 OpenAPI 规范。Swagger 官网地址：[https://swagger.io/  (opens new window)](https://swagger.io/)
 
 在 Spring 中，`SpringFox` 是 Swagger 规范的实现，其 [Github 地址](https://github.com/springfox/springfox)。
 
@@ -170,7 +168,7 @@ public ResponseEntity<String> add(@RequestBody UserParam userParam) {
 </dependency>
 ```
 
-如果开发者使用的是Knife4j 2.x版本，并且Spring Boot版本高于2.4,那么需要在Spring Boot的yml文件中做如下配置：
+如果开发者使用的是 Knife4j 2.x 版本，并且 Spring Boot 版本高于 2.4，那么需要在 Spring Boot 的 yml 文件中做如下配置：
 
 ```yaml
 spring:
@@ -187,7 +185,7 @@ knife4j:
   enable: true
   documents:
     - 
-      group: 2.X版本
+      group: 2.X 版本
       name: 接口签名
       locations: classpath:sign/*
   setting:
@@ -225,7 +223,7 @@ knife4j:
 
 在 Swagger 配置的基础上，需要多注入 `OpenApiExtensionResolver`，并通过 `docket.extensions()` 方法注入扩展，扩展由 knife4j 自动配置类提供。
 
-如果提示无法注入 `OpenApiExtensionResolver`，可以通过增加 `@EnableKnife4j` 引入，在 2.0.6 版本后,只需要在配置文件中配置`knife4j.enable=true`即可不在使用注解。
+如果提示无法注入 `OpenApiExtensionResolver`，可以通过增加 `@EnableKnife4j` 引入，在 2.0.6 版本后，只需要在配置文件中配置`knife4j.enable=true`即可不在使用注解。
 
 ```java
 @EnableKnife4j
