@@ -12,7 +12,7 @@ export default hopeTheme({
     url: github,
   },
   darkmode: "toggle",
-  iconAssets: "//at.alicdn.com/t/c/font_3648538_se6xu3a1gyq.css",
+  iconAssets: "//at.alicdn.com/t/c/font_3648538_ll6qpsn6vza.css",
   logo: "/logo.svg",
   repo: repoUrl,
   docsRepo: repoUrl,

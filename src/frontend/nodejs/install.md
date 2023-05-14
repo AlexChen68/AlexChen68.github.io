@@ -1,6 +1,6 @@
 ---
 title: Node.js 的安装
-category: Node
+category: Node.js
 date: 2023-02-22
 ---
 
