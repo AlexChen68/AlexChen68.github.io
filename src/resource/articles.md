@@ -23,6 +23,7 @@ date: 2022-12-29
 ## 微服务
 
 - [SpringCloud GateWay 万字详解](https://www.cnblogs.com/mingyueyy/p/16366360.html)
+- [Spring Cloud Gateway 原理介绍和应用](https://blog.fintopia.tech/60e27b0e2078082a378ec5ed/)
 
 ## 低代码
 
