@@ -1,1 +1,0 @@
-import{_ as t,W as n,X as o,Y as e}from"./framework-d3200c61.js";const l={},a=e("ul",null,[e("li",null,[e("a",{href:"./optional"},"Java 8 新特性之 Optional")])],-1),_=[a];function c(s,r){return n(),o("div",null,_)}const d=t(l,[["render",c],["__file","index.html.vue"]]);export{d as default};
