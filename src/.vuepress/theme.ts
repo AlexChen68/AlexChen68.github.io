@@ -28,7 +28,7 @@ export default hopeTheme({
   breadcrumb: false,
   pure: true,
   blog: {
-    description: "纵有思绪万千，奈何才疏学浅，欲诉只无言。",
+    description: "编程时长两年半的 Java 练习生",
     medias: {
       GitHub: github,
       QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
