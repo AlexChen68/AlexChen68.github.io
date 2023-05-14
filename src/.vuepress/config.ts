@@ -15,6 +15,5 @@ export default defineUserConfig({
       highlightLines: true,
       lineNumbers: 4
     }
-  },
-  plugins: [],
+  }
 });

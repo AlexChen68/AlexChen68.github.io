@@ -155,17 +155,17 @@ export default navbar([
         link: "test/"
       },
       {
-        text: "Linux",
+        text: "Linux 系统",
         icon: "linux",
         link: "linux/"
       },
       {
-        text: "Network",
+        text: "计算机网络",
         icon: "network",
         link: "network/"
       },
       {
-        text: "Docker",
+        text: "Docker 容器",
         icon: "docker",
         link: "docker/"
       }

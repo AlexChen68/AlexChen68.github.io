@@ -16,14 +16,21 @@ export const devopsSidebar = arraySidebar([
     children: "structure"
   },
   {
-    text: "Linux",
+    text: "Linux 系统",
     icon: "linux",
     prefix: "linux/",
     collapsible: true,
     children: "structure"
   },
   {
-    text: "Docker",
+    text: "计算机网络",
+    icon: "network",
+    prefix: "network/",
+    collapsible: true,
+    children: "structure"
+  },
+  {
+    text: "Docker 容器",
     icon: "docker",
     prefix: "docker/",
     collapsible: true,
