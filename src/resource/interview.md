@@ -51,7 +51,9 @@ date: 2023-02-20
   4. 个人收获：通过该项目得到的成长。
   5. 技术栈（可选）：项目中主要用到的技术，建议最好写自己能 hold 住的技术；如果不写「技术栈」的话，就在「个人收获」写一写自己使用某一技术的心得，这样把面试问题缩小到自己可以把控的点上。 
 
-示例：![面试项目经验示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/resource/面试项目经验示例.png)
+示例：
+
+![面试项目经验示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/resource/面试项目经验示例.png)
 
 **原则：通过主动列出自己熟悉的技术点，缩小技术范围，引导面试官往自己熟悉的领域问。**
 
