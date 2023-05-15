@@ -31,7 +31,7 @@ export default hopeTheme({
     description: "编程时长两年半的 Java 练习生",
     medias: {
       GitHub: github,
-      QQ: "//at.alicdn.com/t/c/font_3648538_qfi9o49aafk.css",
+      QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
       Zhihu: "https://www.zhihu.com/people/alexchen68",
       Gmail: "mailto:alexchen.tech@gmail.com"
     },

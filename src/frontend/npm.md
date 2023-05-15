@@ -93,7 +93,7 @@ npm install <name>@<version>
 
 常用的使用情况有三种：
 
-1. 直接使用 `npm install <name>@<version>` 命令安装依赖会自动在项目目录下添加 `package-lock.json` 文件，这个文件帮助锁定安装包的版本。同时 `package.json` 文件中，依赖包会被添加到 `dependencies` 节点下，类似 maven 中的 <dependencies>
+1. 直接使用 `npm install <name>@<version>` 命令安装依赖会自动在项目目录下添加 `package-lock.json` 文件，这个文件帮助锁定安装包的版本。同时 `package.json` 文件中，依赖包会被添加到 `dependencies` 节点下，类似 maven 中的 `<dependencies>`。
 
 ```bash
 npm install mysql@1.0.0
