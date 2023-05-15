@@ -4,6 +4,7 @@ import { sidebarConig } from "./sidebar";
 
 const github = "https://github.com/AlexChen68"
 const repoUrl = "https://github.com/AlexChen68/AlexChen68.github.io"
+const iconAssets = "//at.alicdn.com/t/c/font_3648538_deg0rzxmelg.css"
 
 export default hopeTheme({
   hostname: "https://github.com/AlexChen68/AlexChen68.github.io",
@@ -12,7 +13,7 @@ export default hopeTheme({
     url: github,
   },
   darkmode: "toggle",
-  iconAssets: "//at.alicdn.com/t/c/font_3648538_ll6qpsn6vza.css",
+  iconAssets: iconAssets,
   logo: "/logo.svg",
   repo: repoUrl,
   docsRepo: repoUrl,
