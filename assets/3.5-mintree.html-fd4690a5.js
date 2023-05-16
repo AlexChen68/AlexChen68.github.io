@@ -1,1 +1,0 @@
-import{_ as t,W as _,X as n,Y as e}from"./framework-35f74cfc.js";const o={},c=e("blockquote",null,[e("p",null,"TODO")],-1),s=[c];function l(r,a){return _(),n("div",null,s)}const u=t(o,[["render",l],["__file","3.5-mintree.html.vue"]]);export{u as default};
