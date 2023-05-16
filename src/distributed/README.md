@@ -1,8 +1,8 @@
 ---
-title: 分布式理论
-category: 分布式
+title: 分布式
+index: false
+article: false
 date: 2023-02-13
-description: 分布式理论
 ---
 
 ## CAP 理论

@@ -8,6 +8,7 @@ import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
 import { frontendSidebar } from "./sidebar/frontend";
 import { resourceSidebar } from "./sidebar/resource";
+import { distributedSidebar } from "./sidebar/distributed";
 
 export const sidebarConig = sidebar({
   "/java/": javaSidebar,
@@ -17,6 +18,7 @@ export const sidebarConig = sidebar({
   // "/java/jvm/": "structure",
   "/spring/": springSidebar,
   "/database/": databaseSidebar,
+  "/distributed/": distributedSidebar,
   "/middleware/": middlewareSidebar,
   "/advance/": advanceSidebar,
   "/advance/design/": desginSidebar,

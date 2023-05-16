@@ -24,7 +24,7 @@ export default navbar([
       {
         text: "Java 并发框架",
         icon: "java",
-        link: "concurrency/"
+        link: "concurrency/basic/concept/"
       },
       {
         text: "Java 虚拟机",
@@ -34,12 +34,12 @@ export default navbar([
       {
         text: "Java 新特性",
         icon: "java",
-        link: "java8/"
+        link: "java8/optional"
       },
       {
         text: "Java 工具库",
         icon: "java",
-        link: "tool/"
+        link: "tool/01-log"
       }
     ]
   },
@@ -94,11 +94,6 @@ export default navbar([
         text: "Spring Security",
         icon: "spring",
         link: "springsecurity/"
-      },
-      {
-        text: "分布式系统",
-        icon: "spring",
-        link: "distributed/"
       }
     ]
   },
@@ -134,11 +129,6 @@ export default navbar([
       },
     ]
   },
-  // {
-  //   text: "中间件",
-  //   icon: "middleware",
-  //   link: "/middleware/",
-  // },
   {
     text: "开发运维",
     icon: "devops",
@@ -170,6 +160,16 @@ export default navbar([
         link: "docker/"
       }
     ]
+  },
+  // {
+  //   text: "中间件",
+  //   icon: "middleware",
+  //   link: "/middleware/",
+  // },
+  {
+    text: "分布式",
+    icon: "distributed",
+    link: "/distributed/",
   },
   {
     text: "前端技术",

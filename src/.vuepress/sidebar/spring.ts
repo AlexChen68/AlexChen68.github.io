@@ -28,12 +28,5 @@ export const springSidebar = arraySidebar([
     prefix: "springsecurity/",
     collapsible: true,
     children: "structure"
-  },
-  {
-    text: "分布式系统",
-    icon: "spring",
-    prefix: "distributed/",
-    collapsible: true,
-    children: "structure"
   }
 ]);

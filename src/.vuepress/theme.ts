@@ -1,10 +1,10 @@
-import { hopeTheme } from "vuepress-theme-hope/perf";
+import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import { sidebarConig } from "./sidebar";
 
 const github = "https://github.com/AlexChen68"
 const repoUrl = "https://github.com/AlexChen68/AlexChen68.github.io"
-const iconAssets = "//at.alicdn.com/t/c/font_3648538_deg0rzxmelg.css"
+const iconAssets = "//at.alicdn.com/t/c/font_3648538_2s0w4ql4gx5.css"
 
 export default hopeTheme({
   hostname: "https://github.com/AlexChen68/AlexChen68.github.io",
@@ -29,7 +29,7 @@ export default hopeTheme({
   breadcrumb: false,
   pure: true,
   blog: {
-    description: "编程时长两年半的 Java 练习生",
+    // description: "编程时长两年半的 Java 练习生",
     medias: {
       GitHub: github,
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",

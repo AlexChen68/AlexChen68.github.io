@@ -1,10 +1,11 @@
 ---
 title: Java 集合框架 - 概览
-date: 2022-09-30
 category: Java Collection
-star: true
-sticky: true
+date: 2022-09-30
 ---
+
+本文介绍 Java 集合框架的各类接口和常用子类。
+<!-- more -->
 
 ## Java 集合框架
 

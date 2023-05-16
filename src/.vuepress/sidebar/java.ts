@@ -25,7 +25,7 @@ export const javaSidebar = arraySidebar([
         text: "基础篇",
         icon: "java",
         prefix: "basic/",
-        link: "basic/",
+        // link: "basic/",
         collapsible: false,
         children: [
           "concept",
@@ -38,7 +38,7 @@ export const javaSidebar = arraySidebar([
         text: "原理篇",
         icon: "java",
         prefix: "principle/",
-        link: "principle/",
+        // link: "principle/",
         collapsible: false,
         children: [
           "memory-model",
@@ -52,7 +52,7 @@ export const javaSidebar = arraySidebar([
         text: "JDK 工具篇",
         icon: "java",
         prefix: "juc/",
-        link: "juc/",
+        // link: "juc/",
         collapsible: false,
         children: [
           "executor",
@@ -75,12 +75,14 @@ export const javaSidebar = arraySidebar([
     text: "Java 新特性",
     icon: "java",
     prefix: "java8/",
+    collapsible: true,
     children: "structure"
   },
   {
     text: "Java 工具库",
     icon: "java",
     prefix: "tool/",
+    collapsible: true,
     children: "structure"
   },
 ]);

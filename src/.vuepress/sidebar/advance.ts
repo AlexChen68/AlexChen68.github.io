@@ -17,29 +17,29 @@ export const advanceSidebar = arraySidebar([
     collapsible: true,
     children: [
       {
-        text: "1. 排序算法",
-        icon: "algorithm",
+        text: "排序算法",
+        icon: "algo-sort",
         prefix: "sort/",
         link: "sort/",
         children: "structure"
       },
       {
-        text: "2. 查找算法",
-        icon: "algorithm",
+        text: "查找算法",
+        icon: "search",
         prefix: "search/",
         link: "search/",
         children: "structure"
       },
       {
-        text: "3. 领域算法",
-        icon: "algorithm",
+        text: "领域算法",
+        icon: "domain",
         prefix: "domain/",
         link: "domain/",
         children: "structure"
       },
       {
-        text: "4. 算法应用",
-        icon: "algorithm",
+        text: "算法应用",
+        icon: "scenario",
         prefix: "scenario/",
         link: "scenario/",
         children: "structure"
