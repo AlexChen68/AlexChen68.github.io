@@ -7,15 +7,16 @@ date: 2023-01-03
 
 ## 前端开发学习内容
 
-- 基础
+- 网页入门
   - Html
   - CSS
   - JavaScript
 - 进阶
   - ES6
+  - Sass/Less
   - TypeScript
   - Node.js
-  - npm
+  - Npm
 - 工程化
   - WebPack
   - Vite

@@ -2,7 +2,13 @@ import { arraySidebar } from "vuepress-theme-hope";
 
 export const frontendSidebar = arraySidebar([
   {
-    text: "ES6 入门知识",
+    text: "网页入门",
+    icon: "basic",
+    prefix: "basic/",
+    children: "structure"
+  },
+  {
+    text: "ES6 入门",
     icon: "es6",
     prefix: "es6/",
     children: "structure"
@@ -14,9 +20,9 @@ export const frontendSidebar = arraySidebar([
     children: "structure"
   },
   {
-    text: "前端工具",
-    icon: "tool",
-    prefix: "tool/",
+    text: "前端工程化",
+    icon: "module",
+    prefix: "module/",
     children: "structure"
   },
 ])

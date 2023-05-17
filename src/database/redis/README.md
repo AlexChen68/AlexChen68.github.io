@@ -10,18 +10,6 @@ Redis 是一个使用 ANSI C 编写的开源、支持网络、基于内存、可
 
 从 2015 年 6 月开始，Redis 的开发由 Redis Labs 赞助，而 2013 年 5 月至 2015 年 6 月期间，其开发由 Pivotal 赞助。在 2013 年 5 月之前，其开发由 VMware 赞助。根据月度排行网站 DB-Engines.com 的数据，Redis 是最流行的键值对存储数据库。
 
-## 支持语言
-
-许多语言都包含 Redis 支持，包括：
-
-| - ActionScript | - Common Lisp | - Haxe    | - Objective-C | - R         |
-| -------------- | ------------- | --------- | ------------- | ----------- |
-| - C            | - Dart        | - Io      | - Perl        | - Ruby      |
-| - C++          | - Erlang      | - Java    | - PHP         | - Scala     |
-| - C#           | - Go          | - Fibjs   | - Pure Data   | - Smalltalk |
-| - Clojure      | - Haskell     | - Node.js | - Python      | - Tcl       |
-| - Lua          |               |           |               |             |
-
 ## 数据模型
 
 Redis 的外围由一个键、值映射的字典构成。与其他非关系型数据库主要不同在于：Redis 中值的类型不仅限于字符串，还支持如下抽象数据类型：
