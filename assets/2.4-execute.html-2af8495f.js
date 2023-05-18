@@ -1,0 +1,1 @@
+import{_ as e,W as t,X as c,Y as o,Z as _}from"./framework-ea95e8eb.js";const n={},r=_("p",null,"本文介绍一条 SQL 语句的执行过程。",-1);function s(a,l){return t(),c("div",null,[r,o(" more ")])}const u=e(n,[["render",s],["__file","2.4-execute.html.vue"]]);export{u as default};
