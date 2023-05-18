@@ -1,5 +1,5 @@
 ---
-title: Mysql 简介
+title: Mysql 数据库简介
 tag: Mysql
 category: Mysql
 date: 2022-09-29
@@ -81,6 +81,7 @@ MySQL 的历史最早可以追溯到 1979 年，有一个人叫 MontyWidenius, �
 ## 8. 外部链接
 
 - [官方网站](http://www.mysql.com/)
+- [Mysql8 官方文档](https://dev.mysql.com/doc/refman/8.0/en/)
 - [MySQL 开发者主页](http://dev.mysql.com/)
 - [MySQL Weblogs](http://www.planetmysql.org/)
 - [MySQL 社区](https://web.archive.org/web/20080206224929/http://www.mysqlpub.com/)
