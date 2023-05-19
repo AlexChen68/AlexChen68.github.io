@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const frontendSidebar = arraySidebar([
   {
     text: "网页入门",
-    icon: "basic",
+    icon: "frontend",
     prefix: "basic/",
     children: "structure"
   },
