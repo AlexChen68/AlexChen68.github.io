@@ -179,6 +179,6 @@ export default navbar([
   {
     text: "编程资源",
     icon: "resource",
-    link: "/resource/sites"
+    link: "/resource/collection"
   },
 ]);
