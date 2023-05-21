@@ -1,5 +1,5 @@
 ---
-title: JVM 类加载机制
+title: 类加载器和双亲委派机制
 category: JVM
 date: 2023-04-13
 ---
