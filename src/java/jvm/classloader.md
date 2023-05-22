@@ -10,7 +10,7 @@ date: 2023-04-13
 
 ![类加载过程](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/类加载过程.jpeg)
 
-《Java 虚拟机规范》严格规定了有且只有六种情况必须立即对类进行“初始化”：
+《虚拟机规范》严格规定了有且只有六种情况必须立即对类进行“初始化”：Java 
 
 - 1）遇到 new、getstatic、putstatic 或 invokestatic 这四条字节码指令时，如果类型没有进行过初始化，则需要先触发其初始化阶段。
 - 2）使用 java.lang.reflect 包的方法对类型进行反射调用的时候，如果类型没有进行过初始化，则需要先触发其初始化。
