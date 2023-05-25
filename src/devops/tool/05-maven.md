@@ -148,7 +148,7 @@ Maven 解决了依赖管理问题。例如，我们的项目依赖 `abc` 这个 
 
 我们来看一个复杂依赖示例：
 
-```
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -201,7 +201,7 @@ Maven 定义了几种依赖关系，分别是 `compile`、`test`、`runtime` 和
 
 `test` 依赖表示仅在测试时使用，正常运行时并不需要。最常用的 `test` 依赖就是 JUnit：
 
-```
+```xml
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
@@ -212,7 +212,7 @@ Maven 定义了几种依赖关系，分别是 `compile`、`test`、`runtime` 和
 
 `runtime` 依赖表示编译时不需要，但运行时需要。最典型的 `runtime` 依赖是 JDBC 驱动，例如 MySQL 驱动：
 
-```
+```xml
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -223,7 +223,7 @@ Maven 定义了几种依赖关系，分别是 `compile`、`test`、`runtime` 和
 
 `provided` 依赖表示编译时需要，但运行时不需要。最典型的 `provided` 依赖是 Servlet API，编译的时候需要，但是运行时，Servlet 服务器内置了相关的 jar，所以运行期不需要：
 
-```
+```xml
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
@@ -287,8 +287,6 @@ Maven 并不会每次都从中央仓库下载 jar 包。一个 jar 包一旦被�
 
 最后一个问题：如果我们要引用一个第三方组件，比如 `okhttp`，如何确切地获得它的 `groupId`、`artifactId` 和 `version`？方法是通过 [search.maven.org](https://search.maven.org/) 搜索关键字，找到对应的组件后，直接复制。
 
-
-
 ## 构建流程
 
 Maven 不但有标准化的项目结构，而且还有一套标准化的构建流程，可以自动化实现编译，打包，发布，等等。
@@ -339,7 +337,7 @@ deploy：将打包产物安装到远程仓库
 Maven 另一个常用的生命周期是 `clean`，它会执行 3 个 phase：
 
 - pre-clean
-- clean （注意这个 clean 不是 lifecycle 而是 phase）
+- clean（注意这个 clean 不是 lifecycle 而是 phase）
 - post-clean
 
 所以，我们使用 `mvn` 这个命令时，后面的参数是 phase，Maven 自动根据生命周期运行到指定的 phase。
@@ -347,7 +345,7 @@ Maven 另一个常用的生命周期是 `clean`，它会执行 3 个 phase：
 更复杂的例子是指定多个 phase，例如，运行 `mvn clean package`，Maven 先执行 `clean` 生命周期并运行到 `clean` 这个 phase，然后执行 `default` 生命周期并运行到 `package` 这个 phase，实际执行的 phase 如下：
 
 - pre-clean
-- clean （注意这个 clean 是 phase）
+- clean（注意这个 clean 是 phase）
 - validate
 - ...
 - package
@@ -394,8 +392,6 @@ goal 的命名总是 `abc:xyz` 这种形式。
 mvn tomcat:run
 ```
 
-
-
 ## 使用插件
 
 我们在前面介绍了 Maven 的 lifecycle，phase 和 goal：使用 Maven 构建项目就是执行 lifecycle，执行到指定的 phase 为止。每个 phase 会执行自己默认的一个或多个 goal。goal 是最小任务单元。
@@ -423,35 +419,32 @@ Maven 已经内置了一些常用的标准插件：
 
 如果标准插件无法满足需求，我们还可以使用自定义插件。使用自定义插件的时候，需要声明。例如，使用 `maven-shade-plugin` 可以创建一个可执行的 jar，要使用这个插件，需要在 `pom.xml` 中声明它：
 
-```
-<project>
-    ...
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-                            ...
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-</project>
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.2.1</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        ...
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
 ```
 
 自定义插件往往需要一些配置，例如，`maven-shade-plugin` 需要指定 Java 程序的入口，它的配置是：
 
-```
+```xml
 <configuration>
     <transformers>
         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
@@ -473,13 +466,13 @@ Maven 已经内置了一些常用的标准插件：
 
 ## 聚合与继承
 
-Maven 的聚合特性(aggregation)能够使项目的多个模块聚合在一起构建，而继承特性(inheritance)能够帮助抽取各模块相同的依赖、插件等配置，在简化模块配置的同时，保持各模块一致。
+Maven 的聚合特性 (aggregation) 能够使项目的多个模块聚合在一起构建，而继承特性 (inheritance) 能够帮助抽取各模块相同的依赖、插件等配置，在简化模块配置的同时，保持各模块一致。
 
 ### **模块聚合**
 
 随着项目越来越复杂，需要解决的问题越来越多、功能越来越重，我们更倾向于将一个项目划分几个模块并行开发，如：将 feedcenter-push 项目划分为 client、core 和 web 三个模块，而我们又想一次构建所有模块，而不是针对各模块分别执行 $ mvn 命令。于是就有了 Maven 的模块聚合，将 feedcenter-push 作为聚合模块将其他模块聚集到一起构建。
 
-**聚合POM**
+**聚合 POM**
 
 聚合模块 POM 仅仅是帮助聚合其他模块构建的工具，本身并无实质内容。
 
@@ -508,9 +501,9 @@ Maven 的聚合特性(aggregation)能够使项目的多个模块聚合在一起�
 通过在一个打包方式为 pom 的 Maven 项目中声明任意数量的 module 以实现模块聚合。
 
 - packaging: 打包为 pom，否则无法聚合构建。
-- modules: 实现聚合的核心，module 值为被聚合模块相对于聚合 POM 的相对路径，每个被聚合模块下还各自包含有 pom.xml、src/main/java、src/test/java等内容， 离开聚合 POM 也能够独立构建。
+- modules: 实现聚合的核心，module 值为被聚合模块相对于聚合 POM 的相对路径，每个被聚合模块下还各自包含有 pom.xml、src/main/java、src/test/java 等内容，离开聚合 POM 也能够独立构建。
 
-若 `<packaging>` 元素的内容是 jar，那么我们很好理解，也就是说这个项目最终会被打包成一个 jar 包，那 `<packaging>` 元素为 pom 又是什么意思呢？从字面上的意思来看，这个项目将打包成一个 pom 。我们不妨去 Maven 仓库里去瞧瞧（前提是已经在项目下运行了 mvn install 命令）。可以发现这个文件其实和项目中的 `pom.xml` 是同一个文件，这样做的目的是什么呢？上面我们说过 PO 对象也是有继承关系的，`<packaging>pom</packaging>` 的作用就在这里，这就是 Maven 中 project inheritance 的概念。当实际执行 Maven 命令的时候，会根据 project inheritance 关系对项目的 pom.xml 进行转化，得到真正执行时所用到的 `pom.xml`，即所谓的 effective pom，因此可以得到一个结论：所有 `<packaging>` 元素为 pom 的项目其实并不会输出一个可供外部使用，类似于 jar 包的东西。这类项目的作用有两个：管理子项目和管理继承属性。
+若 `<packaging>` 元素的内容是 jar，那么我们很好理解，也就是说这个项目最终会被打包成一个 jar 包，那 `<packaging>` 元素为 pom 又是什么意思呢？从字面上的意思来看，这个项目将打包成一个 pom。我们不妨去 Maven 仓库里去瞧瞧（前提是已经在项目下运行了 mvn install 命令）。可以发现这个文件其实和项目中的 `pom.xml` 是同一个文件，这样做的目的是什么呢？上面我们说过 PO 对象也是有继承关系的，`<packaging>pom</packaging>` 的作用就在这里，这就是 Maven 中 project inheritance 的概念。当实际执行 Maven 命令的时候，会根据 project inheritance 关系对项目的 pom.xml 进行转化，得到真正执行时所用到的 `pom.xml`，即所谓的 effective pom，因此可以得到一个结论：所有 `<packaging>` 元素为 pom 的项目其实并不会输出一个可供外部使用，类似于 jar 包的东西。这类项目的作用有两个：管理子项目和管理继承属性。
 
 **管理子项目**
 
@@ -518,7 +511,7 @@ Maven 的聚合特性(aggregation)能够使项目的多个模块聚合在一起�
 
 **管理继承属性**
 
-比如A和B都需要某个依赖，那么在父类项目的 pom.xml 中声明即可，因为根据 PO 对象的继承关系，A和B项目会继承父类项目的依赖，这样就可以减少一些重复的输入。
+比如 A 和 B 都需要某个依赖，那么在父类项目的 pom.xml 中声明即可，因为根据 PO 对象的继承关系，A 和 B 项目会继承父类项目的依赖，这样就可以减少一些重复的输入。
 
 effective pom 包含了当前项目的 PO 对象，直到 Super POM 对应的 PO 对象中的信息。要看一个项目的 effective pom，只需在项目中执行命令即可查看：
 
@@ -547,7 +540,7 @@ mvn org.apache.maven.plugins:maven-help-plugin:2.2:effective-pom
 
 都是执行了 maven-help-plugin 这个 plugin 中的 effective-pom 这个 goal。
 
-我们知道一个 plugin 中可以包含多 个goal，goal 可以绑定到 lifecycle 中的某一个 phase，这样在执行这个 phase 的时候就会调用该 goal。那些没有绑定到 phase 上的 goal 应该如何执行呢？这就是 mvn [goal(s)]
+我们知道一个 plugin 中可以包含多 个 goal，goal 可以绑定到 lifecycle 中的某一个 phase，这样在执行这个 phase 的时候就会调用该 goal。那些没有绑定到 phase 上的 goal 应该如何执行呢？这就是 mvn [goal(s)]
 
 这里的 goal 也就是官方文档中所说的 standalone goal，也就是说若一个 plugin 中的某个 goal 没有和一个 phase 进行绑定，可以通过这种方式来执行。可能有的人使用过：
 
@@ -571,11 +564,11 @@ mvn <groupId>:<artifactId>:<version>:<goal>
 
 ### **模块继承**
 
-在面向对象中, 可以通过类继承实现复用，在 Maven 中同样也可以创建 POM 的父子结构, 通过在父 POM 中声明一些配置供子 POM 继承来实现复用与消除重复。
+在面向对象中，可以通过类继承实现复用，在 Maven 中同样也可以创建 POM 的父子结构，通过在父 POM 中声明一些配置供子 POM 继承来实现复用与消除重复。
 
 **父 POM**
 
-与聚合类似，父 POM 的打包方式也是 pom，因此可以继续复用聚合模块的 POM ，这也是在开发中常用的方式：
+与聚合类似，父 POM 的打包方式也是 pom，因此可以继续复用聚合模块的 POM，这也是在开发中常用的方式：
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -661,7 +654,7 @@ dependencies，即使在子项目中不写该依赖项，那么子项目仍然�
 
 **dependencyManagement**，只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。如果不在子项目中声明依赖，是不会从父项目中继承下来的；只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且 version 和 scope 都读取自父 pom。另外，如果子项目中指定了版本号，那么会使用子项目中指定的 jar 版本。
 
-使用 **dependencyManagement** ，能让子 POM 继承父 POM 的配置的同时, 又能够保证子模块的灵活性。在父 POM 中 **dependencyManagement** 元素配置的依赖声明不会实际引入子模块中， 但能够约束子模块 dependencies 下的依赖的使用，子模块只需配置 groupId 与 artifactId。
+使用 **dependencyManagement** ，能让子 POM 继承父 POM 的配置的同时，又能够保证子模块的灵活性。在父 POM 中 **dependencyManagement** 元素配置的依赖声明不会实际引入子模块中，但能够约束子模块 dependencies 下的依赖的使用，子模块只需配置 groupId 与 artifactId。
 
 **pluginManagement** 与 **dependencyManagement** 类似，配置的插件不会造成实际插件的调用行为，只有当子 POM 中配置了相关 plugin 元素，才会影响实际的插件行为。
 
@@ -733,9 +726,9 @@ plugin configuration
 resources 
 ```
 
-因此，所有的 springframework 都省去了 version、junit还省去了scope, 而且插件还省去了 executions 与 configuration 配置，因为完整的声明已经包含在父POM中。
+因此，所有的 springframework 都省去了 version、junit 还省去了 scope, 而且插件还省去了 executions 与 configuration 配置，因为完整的声明已经包含在父 POM 中。
 
-当依赖、插件的版本、配置等信息在父 POM 中声明之后，子模块在使用时就无须声明这些信息，也就不会出现多个子模块使用的依赖版本不一致的情况，这就降低了依赖冲突的几率。 另外，如果子模块不显式声明依赖与插件的使用，即使已经在父 POM 的 dependencyManagement、pluginManagement 中配置了，也不会产生实际的效果。
+当依赖、插件的版本、配置等信息在父 POM 中声明之后，子模块在使用时就无须声明这些信息，也就不会出现多个子模块使用的依赖版本不一致的情况，这就降低了依赖冲突的几率。另外，如果子模块不显式声明依赖与插件的使用，即使已经在父 POM 的 dependencyManagement、pluginManagement 中配置了，也不会产生实际的效果。
 
 建议：模块继承与模块聚合同时进行，这意味着，你可以为自己的所有模块指定一个父工程，同时父工程中可以指定其余的 Maven 模块作为它的聚合模块。但需要遵循以下三条规则：
 
@@ -743,4 +736,4 @@ resources
 - 将父 POM 的 packaging 值设为 pom；
 - 在父 POM 中指定子模块/子POM的目录；
 
-parent元素内还包含一个 relativePath 元素, 用于指定父 POM 的相对路径，默认../pom.xml
+parent 元素内还包含一个 relativePath 元素，用于指定父 POM 的相对路径，默认../pom.xml
