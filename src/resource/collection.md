@@ -82,3 +82,4 @@ date: 2022-12-29
 - [MySQL 同步 ElasticSearch 大宽表实践](https://zhuanlan.zhihu.com/p/626136604)
 - [开源 influxdb 操作手册](https://tanjiti.github.io/2018/11/15/%E5%BC%80%E6%BA%90influxdb%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/)
 - [InfluxDb 数据表设计](http://www.heartthinkdo.com/?p=2325)
+- [Kubernetes 基础入门（完整版)](https://www.cnblogs.com/starsray/p/16434558.html)
