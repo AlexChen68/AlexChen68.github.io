@@ -34,7 +34,7 @@ export default hopeTheme({
       GitHub: github,
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
       Zhihu: "https://www.zhihu.com/people/alexchen68",
-      Gmail: "mailto:alexchen.tech@gmail.com"
+      Gmail: "mailto:1274812218@qq.com"
     },
   },
   plugins: {

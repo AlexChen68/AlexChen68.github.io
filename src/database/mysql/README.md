@@ -1,5 +1,6 @@
 ---
 title: 概览
+index: false
 article: false
 date: 2023-05-18
 ---
@@ -25,5 +26,3 @@ Mysql 是最流行的关系型数据库之一，本部分将从以下分类记�
 - [Mysql 函数与运算符](2.3-function)
 
 > 介绍 Mysql 常用的函数与运算符。
-
-- [Mysql 优化](2.1-optimize)
