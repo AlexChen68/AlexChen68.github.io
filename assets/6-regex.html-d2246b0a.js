@@ -1,2 +1,2 @@
 import{_ as e,W as a,X as t,a1 as r}from"./framework-ea95e8eb.js";const c={},d=r(`<h2 id="常用的正则表达式" tabindex="-1"><a class="header-anchor" href="#常用的正则表达式" aria-hidden="true">#</a> 常用的正则表达式</h2><h3 id="手机号码" tabindex="-1"><a class="header-anchor" href="#手机号码" aria-hidden="true">#</a> 手机号码</h3><ul><li>宽松正则</li></ul><div class="language-text" data-ext="text"><pre class="language-text"><code>^1\\d {10}$
-</code></pre></div><ul><li>严格正则</li></ul>`,5),l=[d];function i(n,s){return a(),t("div",null,l)}const h=e(c,[["render",i],["__file","08-regex.html.vue"]]);export{h as default};
+</code></pre></div><ul><li>严格正则</li></ul>`,5),l=[d];function i(n,s){return a(),t("div",null,l)}const h=e(c,[["render",i],["__file","6-regex.html.vue"]]);export{h as default};
