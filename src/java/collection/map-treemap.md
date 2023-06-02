@@ -14,7 +14,7 @@ order: 8
 
 ## 类图
 
-![TreeMap 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/treemap_class.png)
+![TreeMap 类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/treemap_class.png)
 
 - `TreeMap`  继承了 `java.util.AbstracMap` 类，这个类提供了 Map 的基本实现；
 - 实现了 `java.util.NavigableMap` 接口，这个接口又继承自 `java.util.SortedMap` 接口，表明 `TreeMap` 是一个可排序的 Map 接口；

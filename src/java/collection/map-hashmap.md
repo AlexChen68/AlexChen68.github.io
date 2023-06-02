@@ -10,7 +10,7 @@ order: 6
 
 `HashMap` 是 java 中 Map 接口基于哈希表的实现，用于存储 key-value 键值对的数据结构，提供平均时间复杂度为 O(1) 的、基于 key 级别的 get/put 等操作。
 
-**哈希表**（又成散列表）是一种根据关键码值(Key-value)而直接进行访问的数据结构，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做**散列函数**，存放记录的数组叫做散列表。
+**哈希表**（又成散列表）是一种根据关键码值 (Key-value) 而直接进行访问的数据结构，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做**散列函数**，存放记录的数组叫做散列表。
 
 不同的 key，经过哈希函数转换后，可能得到同一个地址，这种情况称为**哈希冲突**。在 Java 的 HashMap 中，解决冲突的方式是使用**链表法**：通过将数组的每个元素对应一个链表，我们将相同的 `hash(key) % size` 放到对应下标的链表中即可。
 
@@ -23,7 +23,7 @@ order: 6
 
 ## 类图
 
-![HashMap 类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/hashmap_class.png ':size=60%')
+![HashMap 类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/hashmap_class.png ':size=60%')
 
 `HashMap` 实现了三个接口：
 * `java.io.Serializable` 序列化接口
@@ -85,7 +85,7 @@ final float loadFactor;
 
 ### Node<K, V>
 
-实现了 Map.Entry 接口，该接口定义在 `java.util.Map` 接口中，Map 中有个 `Set<Map.Entry<K, V>> entrySet()` 方法，可以返回映射的 Set 集合，Entry 表示 Map 中的一个实体(key-value)。
+实现了 Map.Entry 接口，该接口定义在 `java.util.Map` 接口中，Map 中有个 `Set<Map.Entry<K, V>> entrySet()` 方法，可以返回映射的 Set 集合，Entry 表示 Map 中的一个实体 (key-value)。
 
 ```java
 static class Node<K,V> implements Map.Entry<K,V> {
@@ -179,7 +179,7 @@ public HashMap(int initialCapacity, float loadFactor) {
     this.threshold = tableSizeFor(initialCapacity);
 }
 
-// 返回大于 cap 的最小 2 的 N 次方，该算法让最高位的1后面的位全变为1，最后再加1
+// 返回大于 cap 的最小 2 的 N 次方，该算法让最高位的 1 后面的位全变为 1，最后再加 1
 // >>> 表示无符号右移
 // a |= b 等效于 a = a | b
 static final int tableSizeFor(int cap) {
@@ -255,7 +255,7 @@ final void putMapEntries(Map<? extends K, ? extends V> m, boolean evict) {
 
 * 为什么要求容量是 2 的幂次？
 
-  HashMap容量取2的n次方，主要与hash寻址有关。在put(key,value)时，putVal()方法中通过i = (n - 1) & hash来计算key的散列地址。其实，i = (n - 1) & hash是一个%操作。也就是说，HashMap是通过%运算来获得key的散列地址的。但是，%运算的速度并没有&的操作速度快。而&操作能代替%运算，必须满足一定的条件，也就是a%b=a&(b-1)仅当b是2的n次方的时候方能成立。这也就是为什么HashMap的容量需要保持在2的n次方了。
+  HashMap 容量取 2 的 n 次方，主要与 hash 寻址有关。在 put(key,value) 时，putVal() 方法中通过 i = (n - 1) & hash 来计算 key 的散列地址。其实，i = (n - 1) & hash 是一个%操作。也就是说，HashMap 是通过%运算来获得 key 的散列地址的。但是，%运算的速度并没有&的操作速度快。而&操作能代替%运算，必须满足一定的条件，也就是 a%b=a&(b-1) 仅当 b 是 2 的 n 次方的时候方能成立。这也就是为什么 HashMap 的容量需要保持在 2 的 n 次方了。
 
 ## 哈希函数
 
@@ -273,11 +273,11 @@ static final int hash(Object key) {
 
 具体步骤为：
 
-1. 定义 int 变量 h，当 key 为 null 时， 返回的哈希值就为 0；
+1. 定义 int 变量 h，当 key 为 null 时，返回的哈希值就为 0；
 2. key 不为 null 时，调用 key 的 hashCode 函数，并赋值给 h；
-3. h 和 h 的无符号右移16位的值进行异或运算，得到最终的哈希值。
+3. h 和 h 的无符号右移 16 位的值进行异或运算，得到最终的哈希值。
 
-![HashMap 的 hash 函数](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/hashmap_hash.png)
+![HashMap 的 hash 函数](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/hashmap_hash.png)
 
 ## 数组扩容
 
@@ -292,23 +292,23 @@ final Node<K,V>[] resize() {
     // 1. 计算新的容量和扩容阀值，并创建新的 table 数组
     // 1.1 如果数组不为空
     if (oldCap > 0) {
-        // 超过最大容量，则直接设置 threshold 阀值为 Integer.MAX_VALUE ，不再允许扩容
+        // 超过最大容量，则直接设置 threshold 阀值为 Integer.MAX_VALUE，不再允许扩容
         if (oldCap >= MAXIMUM_CAPACITY) {
             threshold = Integer.MAX_VALUE;
             return oldTab;
         }
-        // newCap = oldCap << 1 ，目的是两倍扩容；当前容量大于默认容量
+        // newCap = oldCap << 1，目的是两倍扩容；当前容量大于默认容量
         else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
                  oldCap >= DEFAULT_INITIAL_CAPACITY)
             // newThr 设置为 oldThr 的 2 倍
             newThr = oldThr << 1; // double threshold
     }
-    // 1.2 数组为空，需要初始化；【非默认构造方法】oldThr 大于 0 ，则使用 oldThr 作为新的容量
+    // 1.2 数组为空，需要初始化；【非默认构造方法】oldThr 大于 0，则使用 oldThr 作为新的容量
     else if (oldThr > 0) // initial capacity was placed in threshold
         // 新的容量设置为旧的阈值（初始化时为大于容量的最小 2 的 N 次方）
         newCap = oldThr;
     else {
-        //1.3【默认构造方法】oldThr 等于 0 ，则使用 DEFAULT_INITIAL_CAPACITY 作为新的容量，
+        //1.3【默认构造方法】oldThr 等于 0，则使用 DEFAULT_INITIAL_CAPACITY 作为新的容量，
         // 使用 DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY 作为新的容量
         newCap = DEFAULT_INITIAL_CAPACITY;// 16
         newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);// 0.75 * 16 = 12
@@ -388,9 +388,9 @@ final Node<K,V>[] resize() {
 }
 ```
 
-在 2.2.4 中，如何确定链表扩容后的位置，可以参考这篇文章 [HashMap扩容机制](https://www.cnblogs.com/liaozhiwei/p/15644325.html)
+在 2.2.4 中，如何确定链表扩容后的位置，可以参考这篇文章 [HashMap 扩容机制](https://www.cnblogs.com/liaozhiwei/p/15644325.html)
 
-## Map操作
+## Map 操作
 
 ### 添加键值对
 
@@ -415,7 +415,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
     // n 为数组长度，i 为键值对在数组中的索引
     int n, i;
     if ((tab = table) == null || (n = tab.length) == 0)
-        // 如果 table 未初始化，或者容量为 0 ，则进行扩容
+        // 如果 table 未初始化，或者容量为 0，则进行扩容
         n = (tab = resize()).length;
     // 索引 i = (n - 1) & hash，赋值 p 为 i 位置的结点
     if ((p = tab[i = (n - 1) & hash]) == null)
@@ -581,7 +581,7 @@ public boolean containsValue(Object value) {
 }
 ```
 
-4. **获得 key 对应的 value ，如果不存在，则返回 `defaultValue` 默认值**
+4. **获得 key 对应的 value，如果不存在，则返回 `defaultValue` 默认值**
 
 ```java
 public V getOrDefault(Object key, V defaultValue) {
@@ -762,8 +762,8 @@ void reinitialize() {
 
 `HashMap` 每个槽位在满足如下两个条件时，可以进行树化成红黑树，避免槽位是链表数据结构时，链表过长，导致查找性能过慢：
 
-- 条件一，HashMap 的 `table` 数组大于等于 64 。
-- 条件二，槽位链表长度大于等于 8 时。选择 8 作为阀值的原因是，参考 [泊松概率函数(Poisson distribution)](http://en.wikipedia.org/wiki/Poisson_distribution) ，概率不足千万分之一。
+- 条件一，HashMap 的 `table` 数组大于等于 64。
+- 条件二，槽位链表长度大于等于 8 时。选择 8 作为阀值的原因是，参考 [泊松概率函数 (Poisson distribution)](http://en.wikipedia.org/wiki/Poisson_distribution) ，概率不足千万分之一。
 - 在槽位的红黑树的节点数量小于等于 6 时，会退化回链表。
 
 ---
@@ -771,5 +771,5 @@ void reinitialize() {
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)
-* [Java8—HashMap之tableSizeFor()](https://www.jianshu.com/p/cbe3f22793be?u_atoken=389c0186-45bc-4ba6-97f1-8bbb7a3e4341&u_asession=015cDlaaOXLfbDL5uptAIcb3E81XckrpHezfGiGtqOUvuVi96ixk9Q4F0fhWtg7-mSX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K-yznd_ThP1xiul9bL2S04InHmbkqVcEgdObpAroqY1_GBkFo3NEHBv0PZUm6pbxQU&u_asig=05Lp3qL_cCDfZcsRdAuiHlpEiDTnR6JoXH6mpQhKQT9rEhLlu7YRt05038ORm4miM2Pmxw4NvfxEd3eh7Nhq8OIbKP3iiCG_RJoEFESGSjFZ_KXXoNMnGnGmEIOIsGgBnOvGdZS_04ClqxMbGyxdBEegM9iatjONN7hXA86TwyPBX9JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzbOZ5aj1FYacQjaymGdaRP1_XmSZ1WpEB5T6z6oX2yCY6xbSxAaWh9ph0bRUFW-6vO3h9VXwMyh6PgyDIVSG1W_kkdfGvHZi4IzMzfbBrJC2nWtBrWI9OIMXDMZFVpvEDkhKEvUTiPAwMFaRQHosGdHlI13pYgjOazBqUFWsMvbYmWspDxyAEEo4kbsryBKb9Q&u_aref=%2BtDWq%2FOl84O3riXs%2BFgR3Q2khd4%3D)
-* [胖君-hash方法原理](https://www.zhihu.com/question/20733617/answer/111577937)
+* [Java8—HashMap 之 tableSizeFor()](https://www.jianshu.com/p/cbe3f22793be?u_atoken=389c0186-45bc-4ba6-97f1-8bbb7a3e4341&u_asession=015cDlaaOXLfbDL5uptAIcb3E81XckrpHezfGiGtqOUvuVi96ixk9Q4F0fhWtg7-mSX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K-yznd_ThP1xiul9bL2S04InHmbkqVcEgdObpAroqY1_GBkFo3NEHBv0PZUm6pbxQU&u_asig=05Lp3qL_cCDfZcsRdAuiHlpEiDTnR6JoXH6mpQhKQT9rEhLlu7YRt05038ORm4miM2Pmxw4NvfxEd3eh7Nhq8OIbKP3iiCG_RJoEFESGSjFZ_KXXoNMnGnGmEIOIsGgBnOvGdZS_04ClqxMbGyxdBEegM9iatjONN7hXA86TwyPBX9JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzbOZ5aj1FYacQjaymGdaRP1_XmSZ1WpEB5T6z6oX2yCY6xbSxAaWh9ph0bRUFW-6vO3h9VXwMyh6PgyDIVSG1W_kkdfGvHZi4IzMzfbBrJC2nWtBrWI9OIMXDMZFVpvEDkhKEvUTiPAwMFaRQHosGdHlI13pYgjOazBqUFWsMvbYmWspDxyAEEo4kbsryBKb9Q&u_aref=%2BtDWq%2FOl84O3riXs%2BFgR3Q2khd4%3D)
+* [胖君-hash 方法原理](https://www.zhihu.com/question/20733617/answer/111577937)

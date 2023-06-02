@@ -12,7 +12,7 @@ order: 5
 
 ## 类图
 
-![TreeSet类图](https://cdn.staticaly.com/gh/alexchen68/image-hosting@master/blog/java/treeset_class.png ':size=60%')
+![TreeSet类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/treeset_class.png ':size=60%')
 
 `TreeSet` 实现了三个接口：
 

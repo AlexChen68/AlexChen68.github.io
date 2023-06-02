@@ -142,7 +142,7 @@ Hotspot 的作者经过以往的研究发现大多数情况下**锁不仅不存�
 
 线程竞争偏向锁的过程如下：
 
-![偏向锁 2](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/偏向锁2.jpg)
+![偏向锁 2](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/偏向锁2.jpg)
 
 图中涉及到了 lock record 指针指向当前堆栈中的最近一个 lock record，是轻量级锁按照先来先服务的模式进行了轻量级锁的加锁。
 
@@ -164,7 +164,7 @@ Hotspot 的作者经过以往的研究发现大多数情况下**锁不仅不存�
 
 下面这个经典的图总结了偏向锁的获得和撤销：
 
-![偏向锁](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/偏向锁.png)
+![偏向锁](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/偏向锁.png)
 
 ### 轻量级锁
 
@@ -190,7 +190,7 @@ JVM 会为每个线程在当前线程的栈帧中创建用于存储锁记录的�
 
 一张图说明加锁和释放锁的过程：
 
-![轻量级锁流程图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/轻量级锁流程图.png)
+![轻量级锁流程图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/轻量级锁流程图.png)
 
 ### 重量级锁
 

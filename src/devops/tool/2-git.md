@@ -285,13 +285,13 @@ build/
 
 就是你在电脑里能看到的目录，比如上文中的 `gafish.github.com` 文件夹就是一个工作区
 
-![git_working_directory](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_working_directory.jpeg)
+![git_working_directory](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_working_directory.jpeg)
 
 #### 本地版本库（*Local Repository*）
 
 工作区有一个隐藏目录 `.git`，这个不算工作区，而是 `Git` 的版本库。
 
-![git_local_repository](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_local_repository.jpeg)
+![git_local_repository](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_local_repository.jpeg)
 
 #### 暂存区（*stage*）
 
@@ -301,25 +301,25 @@ build/
 
 一般指的是 `Git` 服务器上所对应的仓库，本文的示例所在的`github`仓库就是一个远程版本库
 
-![git_remote_repository](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_remote_repository.jpeg)
+![git_remote_repository](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_remote_repository.jpeg)
 
 #### 以上概念之间的关系
 
 `工作区`、`暂存区`、`本地版本库`、`远程版本库`之间几个常用的 `Git` 操作流程如下图所示：
 
-![git_flow.jpg](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_flow.jpeg)
+![git_flow.jpg](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_flow.jpeg)
 
 #### 分支（*Branch*）
 
 分支是为了将修改记录的整个流程分开存储，让分开的分支不受其它分支的影响，所以在同一个数据库里可以同时进行多个不同的修改
 
-![git_branch](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_branch.png)
+![git_branch](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_branch.png)
 
 #### 主分支（*Master*）
 
 前面提到过 `master` 是 `Git` 为我们自动创建的第一个分支，也叫主分支，其它分支开发完成后都要合并到 `master`
 
-![git_master](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_master.png)
+![git_master](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_master.png)
 
 
 #### 标签（*Tag*）
@@ -330,7 +330,7 @@ build/
 
 `HEAD` 指向的就是当前分支的最新提交
 
-![git_head](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_head.png)
+![git_head](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_head.png)
 
 > 以上概念了解的差不多，那就可以继续往下看，下面将以具体的操作类型来讲解 `Git` 的高阶用法
 >
@@ -977,7 +977,7 @@ git commit -m '第一次提交'
 
 提交类型（type）用于说明此次提交的类型，需要指定为下面其中一个：
 
-![Git Commit Type](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/devops/git_commit_type.png)
+![Git Commit Type](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/devops/git_commit_type.png)
 
 **Scope**
 

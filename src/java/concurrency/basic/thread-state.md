@@ -11,7 +11,7 @@ date: 2023-03-13
 
 > 在现在的操作系统中，线程是被视为轻量级进程的，所以操作系统线程的状态其实和操作系统进程的状态是一致的。
 
-![操作系统线程状态](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/system_thread_state.png)
+![操作系统线程状态](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/system_thread_state.png)
 
 
 操作系统线程主要有以下三个状态：
@@ -37,7 +37,7 @@ public enum State {
 
 Java 线程状态定义：
 
-![线程状态](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/juc_thread_state.png)
+![线程状态](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/juc_thread_state.png)
 
 ### 新建（NEW）
 
@@ -82,7 +82,7 @@ Java 线程状态定义：
 
 线程主要的状态转换如下：
 
-![线程间转换方法](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/juc_thread_state_change.png)
+![线程间转换方法](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/juc_thread_state_change.png)
 
 ### BLOCKED <-> RUNNABLE
 

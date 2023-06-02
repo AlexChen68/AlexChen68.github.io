@@ -16,7 +16,7 @@ description: 建造者模式
 
 建造者模式类图如下所示：
 
-![建造者模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/builder_pattern.png)
+![建造者模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/builder_pattern.png)
 
 建造者模式类图中包含如下几个角色：
 

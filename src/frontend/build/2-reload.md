@@ -29,7 +29,7 @@ date: 2023-04-12
 
 - 模块热替换 (Hot Module Replacement)
 
-![webpack 中的热更新原理](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/frontend/webpack热更新原理.png)
+![webpack 中的热更新原理](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/frontend/webpack热更新原理.png)
 
 ## webpack 中的打包流程
 
@@ -39,4 +39,4 @@ date: 2023-04-12
 - `bundling`: webpack 打包的过程
 - `asset/bundle`: 打包产物
 
-![webpack 中的打包流程](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/frontend/webpack打包流程)
+![webpack 中的打包流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/frontend/webpack打包流程)

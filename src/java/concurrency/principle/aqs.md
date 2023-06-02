@@ -30,7 +30,7 @@ compareAndSetState()
 
 而 AQS 类本身实现的是一些排队和阻塞的机制，比如具体线程等待队列的维护（如获取资源失败入队/唤醒出队等）。它内部使用了一个先进先出（FIFO）的双端队列，并使用了两个指针 head 和 tail 用于标识队列的头部和尾部。其数据结构如图：
 
-![img](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/AQS数据结构.png)
+![img](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/AQS数据结构.png)
 
 但它并不是直接储存线程，而是储存拥有线程的 Node 节点。
 
@@ -221,7 +221,7 @@ final boolean acquireQueued(final Node node, int arg) {
 
 总结起来的一个流程图：
 
-![acquire 流程](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/acquire流程.jpg)
+![acquire 流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/acquire流程.jpg)
 
 ## 释放资源
 

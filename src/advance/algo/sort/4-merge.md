@@ -41,7 +41,7 @@ date: 2023-04-03
 
 ## 演示动画
 
-![归并排序动画](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/归并排序.gif)
+![归并排序动画](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/归并排序.gif)
 
 ## 代码实现
 

@@ -16,7 +16,7 @@ description: 桥接模式
 
 ## 类图
 
-![桥接模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/bridge_pattern.png)
+![桥接模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/bridge_pattern.png)
 
 - Abstraction: 定义抽象类的接口
 - Implementor: 定义实现类接口
@@ -160,7 +160,7 @@ JdbcConnection
 
 jdbc 连接中的桥接模式
 
-![jdbc 连接中的桥接模式](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/bridge_pattern_jdbc.png)
+![jdbc 连接中的桥接模式](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/bridge_pattern_jdbc.png)
 
 ## 总结
 

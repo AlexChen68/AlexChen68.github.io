@@ -37,7 +37,7 @@ Spring security 各模块说明可以参考[官方文档](https://docs.spring.io
 
 ### 核心配置类
 
-**SpringSecurity核心配置-WebSecurityConfigurerAdapter**
+**SpringSecurity 核心配置-WebSecurityConfigurerAdapter**
 
 ```java
 @Configuration

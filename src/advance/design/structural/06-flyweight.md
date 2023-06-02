@@ -25,7 +25,7 @@ description: 享元模式
 
 ## 类图
 
-![享元模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/flyweight_pattern.png)
+![享元模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/flyweight_pattern.png)
 
 在享元模式类图中包含如下几个角色：
 

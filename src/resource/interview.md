@@ -54,7 +54,7 @@ date: 2023-02-20
 
 示例：
 
-![面试项目经验示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/resource/面试项目经验示例.png)
+![面试项目经验示例](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/resource/面试项目经验示例.png)
 
 **原则：通过主动列出自己熟悉的技术点，缩小技术范围，引导面试官往自己熟悉的领域问。**
 
@@ -95,7 +95,7 @@ date: 2023-02-20
 
 示例：
 
-![面试自我介绍示例](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/resource/面试自我介绍示例.webp)
+![面试自我介绍示例](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/resource/面试自我介绍示例.webp)
 
 ## 6. 常见问题准备
 

@@ -16,7 +16,7 @@ description: 代理模式
 
 ## 类图
 
-![代理模式类图](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/advance/proxy_pattern.png)
+![代理模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/proxy_pattern.png)
 
 代理模式包含如下三个角色：
 

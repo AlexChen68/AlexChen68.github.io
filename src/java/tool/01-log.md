@@ -42,7 +42,7 @@ common-logging 的功能是提供日志功能的 API 接口，本身并不提供
 
 类似于 Common-Logging，slf4j 是对不同日志框架提供的一个 API 封装，可以在部署的时候不修改任何配置即可接入一种日志实现方案。但是，slf4j 在编译时静态绑定真正的 Log 库。使用 SLF4J 时，如果你需要使用某一种日志实现，那么你必须选择正确的 SLF4J 的 jar 包的集合（各种桥接包）。
 
-![slf4j](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/slf4j_dependcies.png)
+![slf4j](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/slf4j_dependcies.png)
 
 ### 比较
 
@@ -323,7 +323,7 @@ appender 通过 `<appender>` 元素进行配置，需要两个强制的属性 *n
 
 `<appender>` 元素可以包含 0 或一个 `<layout>` 元素，0 或多个 `<encoder>` 元素，0 或多个 `<filter>` 元素。除了这些公共的元素之外，`<appender>` 元素可以包含任意与 appender 类的 JavaBean 属性相一致的元素。
 
-![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/image-hosting@master/blog/java/logback_appender_syntax.png)
+![appenderSyntax](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/logback_appender_syntax.png)
 
 `<layout>` 元素强制一个 class 属性去指定一个类的全限定名，用于实例化。与 `<appender>` 元素一样，`<layout>` 元素也可以包含与 layout 实例相关的属性。如果 layout 的 class 是 `PatternLayout`，那么 class 属性可以被隐藏掉（参考：[默认类映射](https://github.com/YLongo/logback-chinese-manual/blob/master/03第三章：logback 的配置.md#默认类映射)），因为这个很常见。.
 
