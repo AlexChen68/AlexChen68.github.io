@@ -1,5 +1,5 @@
 ---
-title: 阻塞队列
+title: JDK 工具篇 - 阻塞队列
 category: Concurrency
 date: 2023-03-22
 ---

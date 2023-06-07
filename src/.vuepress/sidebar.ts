@@ -1,8 +1,8 @@
 
 import { sidebar } from "vuepress-theme-hope";
 import { javaSidebar, concurrencySidebar } from "./sidebar/java";
-import { springSidebar} from "./sidebar/spring";
-import { advanceSidebar, desginSidebar, leetcodeSidebar } from "./sidebar/advance";
+import { springSidebar } from "./sidebar/spring";
+import { advanceSidebar, desginSidebar, algoSidebar } from "./sidebar/advance";
 import { databaseSidebar } from "./sidebar/database";
 import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
@@ -11,19 +11,21 @@ import { resourceSidebar } from "./sidebar/resource";
 import { distributedSidebar } from "./sidebar/distributed";
 
 export const sidebarConig = sidebar({
-  "/java/": javaSidebar,
-  // "/java/basic/": "structure",
-  // "/java/collection/": "structure",
-  // "/java/concurrency/": concurrencySidebar,
-  // "/java/jvm/": "structure",
-  "/spring/": springSidebar,
-  "/database/": databaseSidebar,
-  "/distributed/": distributedSidebar,
-  "/middleware/": middlewareSidebar,
-  "/advance/": advanceSidebar,
-  "/advance/design/": desginSidebar,
-  "/advance/leetcode/": "structure",
-  "/devops/": devopsSidebar,
-  "/frontend/": frontendSidebar,
-  "/resource/": resourceSidebar
+   "/java/": javaSidebar,
+   // "/java/basic/": "structure",
+   // "/java/collection/": "structure",
+   // "/java/concurrency/": concurrencySidebar,
+   // "/java/jvm/": "structure",
+   "/spring/": springSidebar,
+   "/database/": databaseSidebar,
+   "/distributed/": distributedSidebar,
+   "/middleware/": middlewareSidebar,
+   "/advance/": advanceSidebar,
+   "/advance/ds/": "structure",
+   "/advance/algo/": algoSidebar,
+   "/advance/design/": desginSidebar,
+   "/advance/leetcode/": "structure",
+   "/devops/": devopsSidebar,
+   "/frontend/": frontendSidebar,
+   "/resource/": resourceSidebar
 })

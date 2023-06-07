@@ -1,5 +1,5 @@
 ---
-title: Java 线程间的通信
+title: 基础篇 - Java 线程间的通信
 category: Concurrency
 date: 2023-03-15
 ---

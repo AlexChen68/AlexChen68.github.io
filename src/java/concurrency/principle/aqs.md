@@ -1,5 +1,5 @@
 ---
-title: AQS 抽象队列同步器
+title: 原理篇 - AQS 抽象队列同步器
 category: Concurrency
 date: 2023-03-21
 ---

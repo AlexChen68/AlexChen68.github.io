@@ -1,5 +1,6 @@
 ---
-title: 设计模式概述
+title: 设计模式原则
+icon: design
 date: 2022-09-27
 article: false
 ---

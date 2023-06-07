@@ -1,5 +1,5 @@
 ---
-title: Java 线程类和接口
+title: 基础篇 - Java 线程类和接口
 date: 2022-09-30
 tag: JUC
 category: Concurrency

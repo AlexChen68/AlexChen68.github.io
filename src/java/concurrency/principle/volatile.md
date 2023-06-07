@@ -1,5 +1,5 @@
 ---
-title: volatile 关键字
+title: 原理篇 - volatile 关键字
 category: Concurrency
 date: 2023-03-17
 ---

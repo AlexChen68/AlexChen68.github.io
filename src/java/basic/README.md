@@ -2,6 +2,7 @@
 title: Java 简介
 date: 2022-09-16
 article: false
+index: false
 ---
 
 ## Java 简介

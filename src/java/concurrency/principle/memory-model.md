@@ -1,5 +1,5 @@
 ---
-title: Java 内存模型
+title: 原理篇 - Java 内存模型
 category: Concurrency
 date: 2023-03-16
 ---
