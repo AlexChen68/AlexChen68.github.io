@@ -1,0 +1,1 @@
+import{_ as t,W as _,X as o,Z as e}from"./framework-ea95e8eb.js";const c={},s=e("blockquote",null,[e("p",null,"TODO")],-1),a=[s];function n(l,r){return _(),o("div",null,a)}const d=t(c,[["render",n],["__file","1.6-seata.html.vue"]]);export{d as default};

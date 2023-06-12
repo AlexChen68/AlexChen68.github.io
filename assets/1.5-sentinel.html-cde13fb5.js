@@ -1,0 +1,1 @@
+import{_ as t,W as n,X as _,Z as e}from"./framework-ea95e8eb.js";const o={},c=e("blockquote",null,[e("p",null,"TODO")],-1),l=[c];function s(r,a){return n(),_("div",null,l)}const u=t(o,[["render",s],["__file","1.5-sentinel.html.vue"]]);export{u as default};
