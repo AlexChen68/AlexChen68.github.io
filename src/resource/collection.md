@@ -72,6 +72,7 @@ date: 2022-12-29
 - [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html?tdsourcetag=s_pctim_aiomsg)
 - [领域模型转换那些事儿](https://www.imooc.com/article/293314)
 - [程序员“起名”头痛根治指南](https://mp.weixin.qq.com/s/loaaKlE44P4VxMgLY3f2hw)
+- [Java 后端微服务研发规范](https://www.jianshu.com/p/994797a84c5c)
 - [业务复杂=if else？刚来的大神竟然用策略 + 工厂彻底干掉了他们！](https://juejin.cn/post/6844903974525468680)
 - [如何画好架构图？](https://www.cnblogs.com/xiang--liu/p/10504808.html)
 - [图搜索：BFS 和 DFS 算法应用（万字长文）](https://zhuanlan.zhihu.com/p/554518834)
