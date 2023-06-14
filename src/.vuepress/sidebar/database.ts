@@ -18,7 +18,7 @@ export const databaseSidebar = arraySidebar([
   {
     text: "ElasticSearch",
     icon: "elasticsearch",
-    prefix: "es/",
+     prefix: "elasticsearch/",
     collapsible: false,
     children: "structure"
   },

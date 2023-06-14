@@ -118,7 +118,7 @@ export default navbar([
       //    {
       //       text: "ElasticSearch 搜索引擎",
       //       icon: "elasticsearch",
-      //       link: "es/"
+      //       link: "elasticsearch/"
       //    },
       //    {
       //       text: "MongoDB 文档数据库",
