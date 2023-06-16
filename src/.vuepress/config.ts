@@ -8,7 +8,7 @@ export default defineUserConfig({
   description: '才疏学浅的 Java 练习生',
   theme,
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }]
+     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   markdown: {
     code: {
