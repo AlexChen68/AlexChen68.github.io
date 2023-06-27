@@ -1,16 +1,16 @@
 ---
-title: SpringMVC
+title: Spring MVC
 article: true
 tag: Spring
 category: Spring
 date: 2022-12-29
 ---
 
-## SpringMVC 简介
+## Spring MVC 简介
 
 Spring Web MVC 是一种基于 Java 的实现了 Web MVC 设计模式的请求驱动类型的轻量级 Web 框架，即使用了 MVC 架 构模式的思想，将 web 层进行职责解耦，基于请求驱动指的就是使用请求 - 响应模型，框架的目的就是帮助我们简化开发，Spring Web MVC 也是要简化我们日常 Web 开发的。
 
-SpringMVC 将应用程序分为 Controller Model View 三层，Controller 接收客户端请求，调用 Model 生成业务数据，传递给 View,Spring MVC 就是对这套流程的封装，屏蔽了很多底层代码，开放出接口，让开发者可以更加轻松、便捷地完成基于 MVC 模式的 Web 开发。
+Spring MVC 将应用程序分为 Controller Model View 三层，Controller 接收客户端请求，调用 Model 生成业务数据，传递给 View,Spring MVC 就是对这套流程的封装，屏蔽了很多底层代码，开放出接口，让开发者可以更加轻松、便捷地完成基于 MVC 模式的 Web 开发。
 
 ![1687805175823.png](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/images/1687805175823.png)
 
