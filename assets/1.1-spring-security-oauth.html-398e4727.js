@@ -1,1 +1,0 @@
-import{_ as e,W as t,X as r}from"./framework-ea95e8eb.js";const c={};function _(n,o){return t(),r("div")}const a=e(c,[["render",_],["__file","1.1-spring-security-oauth.html.vue"]]);export{a as default};
