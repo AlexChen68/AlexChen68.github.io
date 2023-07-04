@@ -16,20 +16,6 @@ export const distributedSidebar = arraySidebar([
       children: "structure"
    },
    {
-      text: "分布式发号器",
-      icon: "distributed",
-      link: "sequence/",
-      prefix: "sequence/",
-      children: "structure"
-   },
-   {
-      text: "分布式事务",
-      icon: "distributed",
-      link: "transaction/",
-      prefix: "transaction/",
-      children: "structure"
-   },
-   {
       text: "消息队列",
       icon: "mq",
       link: "mq/",
