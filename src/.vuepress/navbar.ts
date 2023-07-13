@@ -178,6 +178,6 @@ export default navbar([
    {
       text: "编程资源",
       icon: "resource",
-      link: "/resource/collection"
+      link: "/resource/1.1-blogs"
    },
 ]);

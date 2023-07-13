@@ -7,15 +7,10 @@ import { databaseSidebar } from "./sidebar/database";
 import { devopsSidebar } from "./sidebar/devops";
 import { middlewareSidebar } from "./sidebar/middleware";
 import { frontendSidebar } from "./sidebar/frontend";
-import { resourceSidebar } from "./sidebar/resource";
 import { distributedSidebar } from "./sidebar/distributed";
 
 export const sidebarConig = sidebar({
    "/java/": javaSidebar,
-   // "/java/basic/": "structure",
-   // "/java/collection/": "structure",
-   // "/java/concurrency/": concurrencySidebar,
-   // "/java/jvm/": "structure",
    "/spring/": springSidebar,
    "/database/": databaseSidebar,
    "/distributed/": distributedSidebar,
@@ -27,5 +22,5 @@ export const sidebarConig = sidebar({
    "/advance/leetcode/": "structure",
    "/devops/": devopsSidebar,
    "/frontend/": frontendSidebar,
-   "/resource/": resourceSidebar
-})
+   "/resource/": "structure",
+});
