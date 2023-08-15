@@ -1,5 +1,7 @@
 ---
 title: 6. 桶排序
+index: false
+article: false
 category: 算法
 tag:
   - 排序算法
