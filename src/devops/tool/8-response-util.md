@@ -1,5 +1,5 @@
 ---
-title: 接口通过返回对象封装
+title: 接口通用 Response
 category: 开发工具
 date: 2023-07-28
 ---
