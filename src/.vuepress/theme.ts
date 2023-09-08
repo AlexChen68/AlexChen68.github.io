@@ -29,7 +29,7 @@ export default hopeTheme({
   breadcrumb: false,
   pure: true,
   blog: {
-    description: "一点也不沉先生",
+    description: "一点也不陈先生",
     medias: {
       GitHub: github,
       QQ: "http://wpa.qq.com/msgrd?v=3&uin=1274812218&site=qq&menu=yes",
