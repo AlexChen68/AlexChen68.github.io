@@ -1,19 +1,15 @@
 {
-   "name": "alexchen68.github.io",
-   "version": "2.0.0",
-   "description": "基于 vue-press 的博客系统",
-   "license": "MIT",
+   "name": "blog",
    "type": "module",
    "scripts": {
-      "docs:clean-dev": "vuepress dev src --clean-cache",
-      "docs:dev": "vuepress dev src",
-      "docs:build": "vuepress build src",
-      "docs:update-package": "npx vp-update"
+      "init": "npm install",
+      "docs:dev": "vitepress dev docs --port 4000",
+      "docs:build": "vitepress build docs",
+      "docs:preview": "vitepress preview docs"
    },
    "devDependencies": {
-      "@vuepress/client": "2.0.0-beta.61",
-      "vue": "^3.2.47",
-      "vuepress": "2.0.0-beta.61",
-      "vuepress-theme-hope": "2.0.0-beta.202"
+      "@types/node": "^20.5.7",
+      "vitepress": "^1.0.0-beta.6",
+      "vitepress-sidebar": "^1.11.0"
    }
 }
