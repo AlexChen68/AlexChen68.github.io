@@ -1,1 +1,0 @@
-import{_ as t,W as _,X as n,Z as e}from"./framework-ea95e8eb.js";const o={},c=e("blockquote",null,[e("p",null,"TODO")],-1),s=[c];function l(r,a){return _(),n("div",null,s)}const f=t(o,[["render",l],["__file","1.4-feign.html.vue"]]);export{f as default};

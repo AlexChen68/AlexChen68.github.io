@@ -1,1 +1,0 @@
-import{_ as o,W as t,X as _,Z as e}from"./framework-ea95e8eb.js";const c={},s=e("blockquote",null,[e("p",null,"TODO")],-1),n=[s];function l(r,a){return t(),_("div",null,n)}const u=o(c,[["render",l],["__file","1.8-compose.html.vue"]]);export{u as default};

@@ -1,1 +1,0 @@
-import{_ as o,W as t,X as c,Z as e}from"./framework-ea95e8eb.js";const _={},l=e("blockquote",null,[e("p",null,"TODO")],-1),n=[l];function s(r,a){return t(),c("div",null,n)}const i=o(_,[["render",s],["__file","1.7-dockerfile.html.vue"]]);export{i as default};

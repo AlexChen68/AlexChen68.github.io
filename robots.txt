@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://github.com/AlexChen68/AlexChen68.github.io/sitemap.xml

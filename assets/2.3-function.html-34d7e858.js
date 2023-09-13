@@ -1,1 +1,0 @@
-import{_ as e,W as t,X as n,Y as o,Z as c}from"./framework-ea95e8eb.js";const _={},s=c("p",null,"本文介绍 Mysql 常用的函数与运算符。",-1);function r(a,l){return t(),n("div",null,[s,o(" more ")])}const f=e(_,[["render",r],["__file","2.3-function.html.vue"]]);export{f as default};

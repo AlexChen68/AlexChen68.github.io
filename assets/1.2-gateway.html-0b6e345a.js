@@ -1,1 +1,0 @@
-import{_ as t,W as _,X as o,Z as e}from"./framework-ea95e8eb.js";const c={},a=e("blockquote",null,[e("p",null,"TODO")],-1),n=[a];function s(l,r){return _(),o("div",null,n)}const d=t(c,[["render",s],["__file","1.2-gateway.html.vue"]]);export{d as default};
