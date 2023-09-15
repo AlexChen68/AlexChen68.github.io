@@ -5,10 +5,7 @@ export const nav: DefaultTheme.NavItem[] = [
       text: "首页",
       link: "/"
    },
-   {
-      text: "编程内功",
-      link: "/advance/algo/"
-   },
+
    {
       text: "Java",
       link: "/java/basic/grammar"
@@ -22,16 +19,20 @@ export const nav: DefaultTheme.NavItem[] = [
       link: "/database/",
    },
    {
-      text: "开发运维",
-      link: "/devops/",
-   },
-   {
       text: "分布式",
       link: "/distributed/",
    },
    {
+      text: "开发运维",
+      link: "/devops/",
+   },
+   {
       text: "前端技术",
       link: "/frontend/",
+   },
+   {
+      text: "编程内功",
+      link: "/advance/algo/"
    },
    {
       text: "编程资源",
