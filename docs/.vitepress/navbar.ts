@@ -7,7 +7,7 @@ export const nav: DefaultTheme.NavItem[] = [
    },
    {
       text: "编程内功",
-      link: "/advance/"
+      link: "/advance/algo/"
    },
    {
       text: "Java",

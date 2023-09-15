@@ -15,10 +15,12 @@ export default defineConfig({
       ['link', { rel: 'icon', href: '/favicon.ico' }]
    ],
    ignoreDeadLinks: true,
+   lastUpdated: true,
    themeConfig: {
       logo: '/logo.svg',
       nav,
       sidebar,
+      outline: 'deep',
       footer: {
          copyright: 'Copyright © 2023-present <a href="https://github.com/alexchen68">AlexChen</a>'
       },

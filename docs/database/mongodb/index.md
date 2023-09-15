@@ -1,6 +1,5 @@
 ---
-title: MongoDB 简介
-article: false
+title: MongoDB
 date: 2023-05-12
 ---
 
