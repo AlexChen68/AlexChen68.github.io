@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /advance/
+      link: /java/basic/grammar
     - theme: alt
       text: View On Github
       link: https://github.com/AlexChen68/wiki
