@@ -1,7 +1,5 @@
 ---
 title: 开发工具
-index: false
-article: false
 date:  2022-09-15
 ---
 

@@ -20,7 +20,6 @@ export const sidebar = generateSidebar([
       ...withDefaultOption('/advance/', '编程内功'),
       excludeFolders: ['LeetCode']
    },
-   // Object.assign(withDefaultOption('/advance/', '编程内功'), { excludeFolders: ['LeetCode'] }),
    withDefaultOption('/java/', 'Java 核心'),
    withDefaultOption('/spring/', 'Spring 核心'),
    withDefaultOption('/database/', '数据库'),
