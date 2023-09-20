@@ -11,7 +11,7 @@ const withDefaultOption = (path: string, text: string) => {
       rootGroupText: text,
       useTitleFromFrontmatter: true,
       sortMenusByFrontmatterOrder: true,
-      useIndexFileForFolderMenuInfo: false
+      useIndexFileForFolderMenuInfo: true
    }
 }
 

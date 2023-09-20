@@ -14,9 +14,6 @@ hero:
       link: https://github.com/AlexChen68/AlexChen68.github.io
 
 features:
-  - title: 编程内功
-    details: 常见的数据结构与算法、设计模式...
-    link: /advance/
   - title: Java Core
     details: Java 基础语法、集合框架、并发框架...
     link: /java/
@@ -35,6 +32,9 @@ features:
   - title: 前端技术
     details: Html、CSS3、ES6、TypeScript、Nodejs、Vite...
     link: /frontend/
+  - title: 编程内功
+    details: 常见的数据结构与算法、设计模式...
+    link: /advance/
   - title: 编程资源
     details: 优质博客、开源项目、书籍...
     link: /resource/
