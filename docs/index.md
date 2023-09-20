@@ -11,7 +11,7 @@ hero:
       link: /java/basic/grammar
     - theme: alt
       text: View On Github
-      link: https://github.com/AlexChen68/wiki
+      link: https://github.com/AlexChen68/AlexChen68.github.io
 
 features:
   - title: 编程内功
