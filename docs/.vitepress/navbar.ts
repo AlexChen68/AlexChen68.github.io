@@ -1,11 +1,10 @@
 import { DefaultTheme } from 'vitepress';
 
 export const nav: DefaultTheme.NavItem[] = [
-   {
-      text: "首页",
-      link: "/"
-   },
-
+  //  {
+  //     text: "首页",
+  //     link: "/"
+  //  },
    {
       text: "Java",
       link: "/java/basic/grammar"

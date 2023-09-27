@@ -157,8 +157,6 @@ public class Client {
 
 在行为受状态约束的时候使用状态模式，而且状态不超过 5 个。
 
----
-
 ## 参考资料
 
 - [处理对象的多种状态及其相互转换](https://blog.csdn.net/lovelion/article/details/8523062)

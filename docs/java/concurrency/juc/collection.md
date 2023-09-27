@@ -147,8 +147,6 @@ JDK 提供了 ConcurrentSkipListSet，是线程安全的有序的集合。底层
 Set<String> s = Sets.newConcurrentHashSet();
 ```
 
----
-
 ## 参考资料
 
 * [并发容器集合](http://concurrent.redspider.group/article/03/15.html)<Badge text="原文" type="tip"/>

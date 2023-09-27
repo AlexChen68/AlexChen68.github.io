@@ -200,8 +200,6 @@ pause 指令能让自旋失败时 cpu 睡眠一小段时间再继续自旋，从
 1. 使用 JDK 1.5 开始就提供的`AtomicReference`类保证对象之间的原子性，把多个变量放到一个对象里面进行 CAS 操作；
 2. 使用锁。锁内的临界区代码可以保证只有当前线程能操作。
 
----
-
 ## 参考资料
 
 - [CAS 与原子操作](http://concurrent.redspider.group/article/02/10.html) <Badge text="原文" type="tip"/>

@@ -259,8 +259,6 @@ private void unparkSuccessor(Node node) {
 }
 ```
 
----
-
 ## 参考资料
 
 - [Java 技术之 AQS 详解](https://www.jianshu.com/p/da9d051dcc3d)

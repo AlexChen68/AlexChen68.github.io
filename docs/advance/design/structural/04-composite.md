@@ -179,8 +179,6 @@ public abstract class Component {
 - 在一个使用面向对象语言开发的系统中需要处理一个树形结构。
 - 在一个系统中能够分离出叶子对象和容器对象，而且它们的类型不固定，需要增加一些新的类型。
 
----
-
 ## 参考资料
 
 - [字节飞扬](https://bytesfly.github.io/blog/#/DesignPattern/composite-pattern)

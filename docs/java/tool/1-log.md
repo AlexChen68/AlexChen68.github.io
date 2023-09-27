@@ -417,8 +417,6 @@ Appender 的具体配置见[官方文档中文版](https://github.com/YLongo/log
 </logger>
 ```
 
----
-
 ## 参考资料
 
 - [Java 全栈知识体系](https://pdai.tech/md/develop/package/dev-package-x-log.html)

@@ -274,8 +274,6 @@ StampedLock 用这个 long 类型的变量的前 7 位（LG_READERS）来表示�
 
 总的来说，StampedLock 的性能是非常优异的，基本上可以取代 ReentrantReadWriteLock 的作用。
 
----
-
 ## 参考资料
 
 - [锁接口和类](http://concurrent.redspider.group/article/03/14.html) <Badge text="原文" type="tip"/>

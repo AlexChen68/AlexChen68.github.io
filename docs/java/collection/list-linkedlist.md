@@ -903,8 +903,6 @@ private void readObject(java.io.ObjectInputStream s)
 }
 ```
 
----
-
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)

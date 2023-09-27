@@ -159,8 +159,6 @@ javax.lang.model.element.Element and javax.lang.model.element.ElementVisitorjava
 - 需要对一个对象结构中的对象进行很多不同的并且不相关的操作，而需要避免让这些操作“污染”这些对象的类，也不希望在增加新操作时修改这些类。访问者模式使得我们可以将相关的访问操作集中起来定义在访问者类中，对象结构可以被多个不同的访问者类所使用，将对象本身与对象的访问操作分离。
 - 对象结构中对象对应的类很少改变，但经常需要在此对象结构上定义新的操作。
 
----
-
 ## 参考资料
 
 - [操作复杂对象结构——访问者模式](https://blog.csdn.net/lovelion/article/details/7433567)

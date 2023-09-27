@@ -326,8 +326,6 @@ void daemonTest() throws InterruptedException {
 ```
 如果其他线程都执行完毕，main 方法（主线程）也执行完毕，JVM 就会退出，也就是停止运行。如果 JVM 都停止运行了，守护线程自然也就停止了。
 
----
-
 ## 参考资料
 
 - [第二章 Java 多线程入门类和接口](http://concurrent.redspider.group/article/01/2.html)

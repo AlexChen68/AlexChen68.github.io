@@ -1075,8 +1075,6 @@ git config --global http.proxy
 git config --global https.proxy
 ```
 
----
-
 ## 参考资料
 
 - [保姆级 Git 教程，10000 字详解](https://github.com/CoderLeixiaoshuai/java-eight-part/blob/master/docs/tools/git/%E4%BF%9D%E5%A7%86%E7%BA%A7Git%E6%95%99%E7%A8%8B%EF%BC%8C10000%E5%AD%97%E8%AF%A6%E8%A7%A3.md)<Badge text="推荐" type="tip"/>

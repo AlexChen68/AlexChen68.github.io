@@ -351,8 +351,6 @@ in JunitTest2
 使用了 @Suite.SuiteClasses 注解的测试类，其本身被 @Test 标注的方法会失效，无法成为一个测试方法。
 :::
 
----
-
 ## 参考资料
 
 - [JUnit4 官方文档](https://junit.org/junit4/)

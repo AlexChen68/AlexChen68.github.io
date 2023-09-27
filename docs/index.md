@@ -4,7 +4,8 @@ layout: home
 
 hero:
   name: AlexChen's Blog
-  tagline: 互联网是有记忆的，我也想留下一些足迹。
+  # tagline: <b>如果你没有想法，那就阅读；</b><br><b>如果你有想法但无法表达，那就写作；</b><br><b>如果你有想法并有清晰的执行力，那就去创造。</b>
+  tagline: 如果你没有想法，那就阅读；<br>如果你有想法但无法表达，那就写作；<br>如果你有想法并有清晰的执行力，那就去创造。
   actions:
     - theme: brand
       text: Get Started

@@ -245,8 +245,6 @@ TIMED_WAITING 与 WAITING 状态类似，只是 TIMED_WAITING 状态等待的时
 
 > 在线程中断机制里，当其他线程通知需要被中断的线程后，线程中断的状态被设置为 true，但是具体被要求中断的线程要怎么处理，完全由被中断线程自己而定，可以在合适的实际处理中断请求，也可以完全不处理继续执行下去。
 
----
-
 ## 参考资料
 
 - [Java 线程的状态及主要转化方法](http://concurrent.redspider.group/article/01/4.html)

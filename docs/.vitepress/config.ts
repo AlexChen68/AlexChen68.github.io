@@ -21,6 +21,7 @@ export default defineConfig({
       nav,
       sidebar,
       outline: 'deep',
+      outlineTitle: '大纲',
       footer: {
          copyright: 'Copyright © 2023-present <a href="https://github.com/alexchen68">AlexChen</a>'
       },

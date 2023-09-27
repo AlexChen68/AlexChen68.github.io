@@ -145,8 +145,6 @@ HashMap 是无序的，所以遍历的时候元素的顺序也是不可测的。
 为了保证顺序，TreeMap 的键必须要实现 Comparable 接口或者 Comparator 接口。
 
 
----
-
 ## 参考资料
 
 * [Java 程序员进阶之路](https://tobebetterjavaer.com/collection/gailan.html)

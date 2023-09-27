@@ -63,8 +63,6 @@ Spring Boot 不需要 Spring Cloud，就能直接创建可独立运行的工程�
 
 Spring Cloud 是基于 Spring Boot 实现的，它不能独立创建工程或模块，更不能脱离 Spring Boot 独立运行。
 
----
-
 ## 参考资料
 
 - [站长严长生 - Spring Cloud 是什么](http://c.biancheng.net/springcloud/what-is-cloud.html)

@@ -65,8 +65,6 @@ JMM 本质上可以理解为，Java 内存模型规范了 JVM 如何提供**按�
 * start 规则：如果线程 A 执行操作 ThreadB.start() 启动线程 B，那么 A 线程的 ThreadB.start（）操作 happens-before 于线程 B 中的任意操作、
 * join 规则：如果线程 A 执行操作 ThreadB.join（）并成功返回，那么线程 B 中的任意操作 happens-before 于线程 A 从 ThreadB.join() 操作成功返回。
 
----
-
 ## 参考资料
 
 - [Java 并发理论基础](https://pdai.tech/md/java/thread/java-thread-x-theorty.html) <Badge text="推荐" type="tip" />

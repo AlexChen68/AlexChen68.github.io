@@ -38,4 +38,4 @@ date: 2023-04-12
 - `bundling`: webpack 打包的过程
 - `asset/bundle`: 打包产物
 
-![webpack 中的打包流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/frontend/webpack打包流程)
+![webpack 中的打包流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/frontend/webpack打包流程.png)

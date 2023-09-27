@@ -205,8 +205,6 @@ class ComputerFactory2 extends AbstractComputerFactory {
 1. 抽象工厂添加新的产品，所有具体工厂都需要添加，违反开闭原则（一种方法是仅实现一个方法，根据参数再判断具体实现，这种方法不安全，因为返回的参数必须是所有产品的父类）；
 2. 容易造成类层次复杂。
 
----
-
 ## 参考资料
 
 - [Java 全栈知识体系](https://pdai.tech/md/dev-spec/pattern/1_overview.html)

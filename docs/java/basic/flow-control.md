@@ -118,8 +118,6 @@ break 关键字通常用于中断循环或 switch 语句，它在指定条件下
 
 当我们需要在 for 循环或者（do）while 循环中立即跳转到下一个循环时，就可以使用 continue 关键字，通常用于跳过指定条件下的循环体，如果循环是嵌套的，仅跳过当前循环。
 
----
-
 ## 参考资料
 
 - [Java 程序员进阶之路](https://tobebetterjavaer.com/basic-grammar/flow-control.html)

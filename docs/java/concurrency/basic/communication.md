@@ -476,8 +476,6 @@ ThreadB输出：B
 
 InheritableThreadLocal 类与 ThreadLocal 类稍有不同，Inheritable 是继承的意思。它不仅仅是当前线程可以存取副本值，而且它的子线程也可以存取这个副本值。
 
----
-
 ## 参考资料
 
 - [Java 线程间的通信](http://concurrent.redspider.group/article/01/5.html)

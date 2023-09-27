@@ -182,8 +182,6 @@ instance = new Singleton(); // 第 10 行
 
 所以 JSR-133 对 volatile 做了增强后，volatile 的禁止重排序功能还是非常有用的。
 
----
-
 ## 参考资料
 
 - [第八章 volatile](http://concurrent.redspider.group/article/02/8.html) <Badge text="原文" type="tip"/>

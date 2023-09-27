@@ -69,8 +69,6 @@ System.out.println(s4 == s5);  // true
 
 不同的虚拟机对虚拟机的规范（比如方法区）是不一样的，只有 HotSpot 才有永久代的概念，随着 HotSpot 的发展，在 JDK 8 中，取消了永久代，*类型信息、字段、方法、常量*保存在**本地内存的元空间**，但*字符串常量池、静态变量*仍在**堆**中。
 
----
-
 ## 参考资料
 
 - [Java 基础 - 知识点](https://pdai.tech/md/java/basic/java-basic-lan-basic.html)

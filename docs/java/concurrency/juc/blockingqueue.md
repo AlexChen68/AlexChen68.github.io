@@ -308,8 +308,6 @@ Java 中的线程池就是使用阻塞队列实现的，我们在了解阻塞队
 
 >  注：上面提到了生产者 - 消费者模式，大家可以参考[生产者 - 消费者模型](http://note.youdao.com/noteshare?id=b4babef5d090f87cea8a97632f380c00)，可以更好的理解阻塞队列。
 
----
-
 ## 参考资料
 
 - [阻塞队列](http://concurrent.redspider.group/article/03/13.html) <Badge text="原文" type="tip"/>

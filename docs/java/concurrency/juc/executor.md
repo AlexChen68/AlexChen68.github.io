@@ -404,8 +404,6 @@ public ScheduledThreadPoolExecutor(int corePoolSize) {
 
 但如果你及团队本身对线程池非常熟悉，又确定业务规模不会大到资源耗尽的程度（比如线程数量或任务队列长度可能达到 Integer.MAX_VALUE）时，其实是可以使用 JDK 提供的这几个接口的，它能让我们的代码具有更强的可读性。
 :::
----
-
 ## 参考资料
 
 - [线程池原理](http://concurrent.redspider.group/article/03/12.html#1234-newscheduledthreadpool)
