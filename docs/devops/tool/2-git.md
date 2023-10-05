@@ -498,8 +498,6 @@ git branch -vv
 
 查看带有最后提交 id、最近提交原因等信息的本地版本库分支列表
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/kChlCQZAfH5eBrzeP4kHVbwcqAicZkgowU49NhDrc0SXtGWqNUoNQ71NRCnmicZgtFQzgnunugP4pML52jChNFoA/640?wx_fmt=png)
-
 #### git merge
 
 > 将其它分支合并到当前分支
@@ -509,15 +507,13 @@ git branch -vv
 git merge --squash
 ```
 
-将待合并分支上的 `commit` 合并成一个新的 `commit` 放入当前分支，适用于待合并分支的提交记录不需要保留的情况![img](https://mmbiz.qpic.cn/mmbiz_gif/JdLkEI9sZfd5v84p7lS2Mr1pThtnyVebF8X289ibrNSus6ibMHfT8BviaUJuVibFvdZ8zokaCQlsrqZOKs1W7QZl5Q/640?wx_fmt=gif)
+将待合并分支上的 `commit` 合并成一个新的 `commit` 放入当前分支，适用于待合并分支的提交记录不需要保留的情况
 
 ```
 git merge --no-ff
 ```
 
 默认情况下，`Git` 执行"`快进式合并`"（fast-farward merge），会直接将 `Master`分支指向 `Develop` 分支，使用 `--no-ff` 参数后，会执行正常合并，在 `Master`分支上生成一个新节点，保证版本演进更清晰。
-
-![img](https://mmbiz.qpic.cn/mmbiz_png/kChlCQZAfH5eBrzeP4kHVbwcqAicZkgowMRTMOI4wPj7ZZSURhODgT5QGEicfXIS3icW6LJRTwf4YdJUWOnugxQoA/640?wx_fmt=png)
 
 ```
 git merge --no-edit
