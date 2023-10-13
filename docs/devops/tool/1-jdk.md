@@ -5,8 +5,6 @@ tag: JDK
 date: 2022-12-29
 ---
 
-介绍各种 JDK 的安装和配置。
-<!-- more -->
 ## windows 安装 JDK8
 
 ### 下载 JDK8
@@ -50,4 +48,72 @@ java -version
 java version "1.8.0_351"
 Java(TM) SE Runtime Environment (build 1.8.0_351-b10)
 Java HotSpot(TM) 64-Bit Server VM (build 25.351-b10, mixed mode)
+```
+
+## Linux 安装 JDK8
+
+1. 检查系统中的 jdk 版本
+
+```bash
+java -version
+
+# rpm 检查是否已安装
+rpm -qa | grep -i java
+rpm -qa | grep jdk
+
+# 卸载命令
+rpm -qa | grep java | xargs rpm -e --nodeps
+```
+
+2. 从[官网](https://www.oracle.com/java/technologies/downloads/#java8)下载对应系统的 JDK 安装包，然后使用 SFTP 工具上传到服务器的合适目录。
+
+这里有两种类型的包，一种 rpm 包，可以使用 rpm 命令直接安装；一种压缩包，解压后配置环境变量即可。
+
+
+3. rpm 包安装方式
+
+使用 rpm 命令直接安装
+
+```bash
+rpm -ivh jdk-8u381-linux-x64.rpm
+```
+
+检查 Java 版本
+
+```bash
+java -version
+```
+
+4. tar.gz 压缩包安装方式
+
+压缩包解压缩
+
+```bash
+tar -zxvf jdk-8u381-linux-x64.tar.gz
+```
+
+设置环境变量
+
+```bash
+vi /etc/profile
+```
+
+添加如下内容，修改为实际 jdk 名称，然后保存并推出
+
+```bash
+export JAVA_HOME=/usr/local/src/jdk1.8.0_XX
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+```
+
+执行以下命令，使环境变量生效
+
+```bash
+source /etc/profile
+```
+
+检查 Java 版本
+
+```bash
+java -version
 ```
