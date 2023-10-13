@@ -22,6 +22,10 @@ export const nav: DefaultTheme.NavItem[] = [
       link: "/distributed/",
    },
    {
+      text: "大数据",
+      link: "/bigdata/",
+   },
+   {
       text: "开发运维",
       link: "/devops/",
    },

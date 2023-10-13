@@ -28,6 +28,7 @@ export const sidebar = generateSidebar([
   withDefaultOption('/database/', '数据库'),
   withDefaultOption('/devops/', 'Devops'),
   withDefaultOption('/distributed/', '分布式'),
+  withDefaultOption('/bigdata/', '大数据'),
   withDefaultOption('/frontend/', '前端技术'),
   withDefaultOption('/resource/', '编程资源'),
 ])
