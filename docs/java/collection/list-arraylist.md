@@ -13,7 +13,7 @@ ArrayList，基于 `[]` 数组实现的，支持**自动扩容**的动态数组�
 
 ## 类图
 
-![ArrayList 类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/arraylist_class.png)
+![ArrayList 类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/arraylist_class.png)
 
 `ArrayList` **实现**了 4 个接口，分别是：
 

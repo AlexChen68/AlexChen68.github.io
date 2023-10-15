@@ -74,7 +74,7 @@ Linux 的 X86 下主要是通过`cmpxchgl`这个指令在 CPU 级完成 CAS 操�
 
 JDK 提供了一些用于原子操作的类，在`java.util.concurrent.atomic`包下面。在 JDK 11 中，有如下 17 个类：
 
-![原子类](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/原子类.jpg)
+![原子类](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/原子类.jpg)
 
 从名字就可以看得出来这些类大概的用途：
 

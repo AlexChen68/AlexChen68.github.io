@@ -15,7 +15,7 @@ date: 2023-03-16
 
 这两种模型之间的区别如下表所示：
 
-![两种并发模型的比较](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/concurrency_model_compare.png)
+![两种并发模型的比较](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/concurrency_model_compare.png)
 
 **在 Java 中，使用的是共享内存并发模型**。
 
@@ -25,7 +25,7 @@ date: 2023-03-16
 
 先谈一下运行时数据区，下面这张图相信大家一点都不陌生：
 
-![Java 运行时数据区域](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/java_runtime_data_area.png)
+![Java 运行时数据区域](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/java_runtime_data_area.png)
 
 对于每一个线程来说，栈都是私有的，而堆是共有的。
 
@@ -42,7 +42,7 @@ date: 2023-03-16
 
 Java 线程之间的通信由 Java 内存模型（简称 JMM）控制，从抽象的角度来说，JMM 定义了线程和主内存之间的抽象关系。JMM 的抽象示意图如图所示：
 
-![JMM 抽象示意图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/jmm.png)
+![JMM 抽象示意图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/jmm.png)
 
 从图中可以看出：
 
@@ -153,13 +153,13 @@ Java 内存模型（JMM）对于正确同步多线程程序的内存一致性做
 
 假设**正确使用了同步**，A 线程的 3 个操作执行后释放锁，B 线程获取同一个锁。那么在**顺序一致性模型**中的执行效果如下所示：
 
-![正确同步图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/concurrency_sync.png)
+![正确同步图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/concurrency_sync.png)
 
 操作的执行整体上有序，并且两个线程都只能看到这个执行顺序。
 
 假设**没有使用同步**，那么在**顺序一致性模型**中的执行效果如下所示：
 
-![没有正确同步图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/concurrency_incorrect_sync.png)
+![没有正确同步图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/concurrency_incorrect_sync.png)
 
 操作的执行整体上无序，但是两个线程都只能看到这个执行顺序。之所以可以得到这个保证，是因为顺序一致性模型中的**每个操作必须立即对任意线程可见**。
 

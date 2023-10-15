@@ -34,11 +34,11 @@ Spring 的形成，最初来自 Rod Jahnson 所著的一本很有影响力的书
 
 Spring 总共大约 20 个模块，这些模块被整合在核心容器、AOP 和设备支持、数据访问与集成、Web 组件、通信报文和集成测试、集成兼容等模块中。
 
-![Spring 模块](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/spring/spring_framework_modules.png)
+![Spring 模块](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/spring/spring_framework_modules.png)
 
 各个模块之间存在一些依赖关系如下：
 
-![Spring 模块依赖关系](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/spring/spring_framework_modules_relation.png)
+![Spring 模块依赖关系](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/spring/spring_framework_modules_relation.png)
 
 ### Core Container（核心容器）
 

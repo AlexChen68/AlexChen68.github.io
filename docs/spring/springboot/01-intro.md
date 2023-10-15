@@ -22,7 +22,7 @@ Spring Boot 官方提供了很多当前流行的基础功能组件的封装，�
 
 Spring Boot 的核心组件如下图所示：
 
-![1687839990722.png](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/images/1687839990722.png)
+![1687839990722.png](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/images/2023/1687839990722.png)
 
 ## Spring Boot 的优点
 

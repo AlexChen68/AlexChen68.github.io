@@ -32,7 +32,7 @@ Java 容器主要包括 Collection 和 Map 两种，Collection 存储着对象�
     - Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列 PriorityQue。
 2. Map：代表键值对的集合，典型代表就是 HashMap。
 
-![Java 集合框架](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/collection_framework.png ':size=80%')
+![Java 集合框架](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/collection_framework.png ':size=80%')
 
 ## `Collection` 接口
 

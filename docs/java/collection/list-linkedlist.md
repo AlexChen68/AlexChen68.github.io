@@ -11,7 +11,7 @@ order: 2
 
 ## 类图
 
-![LinkedList类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/linkedlist_class.png ':size=60%')
+![LinkedList类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/linkedlist_class.png ':size=60%')
 
 `LinkedList` 实现了四个接口：
 

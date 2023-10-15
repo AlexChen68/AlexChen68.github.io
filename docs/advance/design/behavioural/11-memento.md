@@ -15,7 +15,7 @@ description: 备忘录模式
 
 ## 类图
 
-![备忘录模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/memento_pattern.png)
+![备忘录模式类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/advance/memento_pattern.png)
 
 在备忘录模式类图中包含如下几个角色：
 

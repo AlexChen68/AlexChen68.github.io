@@ -17,7 +17,7 @@ description: 装饰模式
 
 ## 类图
 
-![装饰模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/decorator_pattern.png)
+![装饰模式类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/advance/decorator_pattern.png)
 
 在装饰模式类图中包含如下几个角色：
 

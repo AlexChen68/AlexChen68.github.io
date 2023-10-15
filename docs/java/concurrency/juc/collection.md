@@ -53,7 +53,7 @@ public class TestVector {
 
 整体架构 (列举常用的容器类)
 
-![列举常用的容器类](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/并发容器.png)
+![列举常用的容器类](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/并发容器.png)
 
 其中，阻塞队列（BlockingQueue）在[第十三章](13.html)有介绍，CopyOnWrite 容器（CopyOnWritexxx）在[第十六章](16.html)有介绍，这里不做过多介绍。
 
@@ -107,7 +107,7 @@ ConcurrentHashMap 在 JDK 1.7 中，提供了一种粒度更细的加锁机制�
 
 有些方法需要跨段，比如 size()、isEmpty()、containsValue()，它们可能需要锁定整个表而不仅仅是某个段，这需要按顺序锁定所有段，操作完毕后，又按顺序释放所有段的锁。如下图：
 
-![分段锁机制](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/分段锁机制.png)
+![分段锁机制](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/分段锁机制.png)
 
 ConcurrentHashMap 是由 Segment 数组结构和 HashEntry 数组结构组成。Segment 是一种可重入锁 ReentrantLock，HashEntry 则用于存储键值对数据。
 

@@ -20,7 +20,7 @@ date: 2023-04-03
 
 ## 演示动画
 
-![基数排序动画](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/images/1686125901253.png)
+![基数排序动画](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/images/2023/1686125901253.png)
 
 ## 代码实现
 

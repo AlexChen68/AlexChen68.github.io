@@ -13,7 +13,7 @@ date: 2023-04-13
 
 一个类从被加载到虚拟机内存中开始，到从内存中卸载，整个生命周期需要经过七个阶段：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading），其中验证、准备、解析三个部分统称为连接（Linking）。
 
-![类加载过程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/类加载过程.jpeg)
+![类加载过程](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/类加载过程.jpeg)
 
 更具体的，可以参考 [JVM 类加载过程](../jvm/load)
 
@@ -163,7 +163,7 @@ Method 提供关于类或接口上单独某个方法（以及如何访问该方�
 
 ### 反射机制执行流程
 
-![反射机制执行流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/反射机制执行流程.png)
+![反射机制执行流程](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/反射机制执行流程.png)
 
 ## 总结
 

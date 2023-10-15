@@ -15,7 +15,7 @@ description: 命令模式
 
 ## 类图
 
-![命令模式类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/command_pattern.png)
+![命令模式类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/advance/command_pattern.png)
 
 命令模式类图中包含如下几个角色：
 

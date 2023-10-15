@@ -35,5 +35,5 @@ date: 2023-02-21
 
 ## 排序算法性能对比
 
-![排序算法对比](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/排序算法对比.png)
+![排序算法对比](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/advance/排序算法对比.png)
 

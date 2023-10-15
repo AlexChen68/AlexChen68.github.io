@@ -58,7 +58,7 @@ public class VolatileExample {
 
 假设在时间线上，线程 A 先执行方法`writer`方法，线程 B 后执行`reader`方法。那必然会有下图：
 
-![volatile 内存示意图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/concurrency_volatile_memory.png)
+![volatile 内存示意图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/concurrency_volatile_memory.png)
 
 而如果`flag`变量**没有**用`volatile`修饰，在 step 2，线程 A 的本地内存里面的变量就不会立即更新到主内存，那随后线程 B 也同样不会去主内存拿最新的值，仍然使用线程 B 本地内存缓存的变量的值`a = 0，flag = false`。
 
@@ -93,7 +93,7 @@ public class VolatileExample {
 
 大概示意图是这个样子：
 
-![内存屏障](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/concurrency_memory_barrier.png)
+![内存屏障](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/concurrency_memory_barrier.png)
 
 > 再逐个解释一下这几个屏障。注：下述 Load 代表读操作，Store 代表写操作
 >

@@ -25,7 +25,7 @@ Executor 框架主要包含三个部分：
 
 Executor 框架的类图如下：
 
-![Executor 框架类图](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/juc_executor_framework.png)
+![Executor 框架类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/juc_executor_framework.png)
 
 ### Executor 和 ExecutorService
 
@@ -278,7 +278,7 @@ private final HashSet<Worker> workers = new HashSet<Worker>();
 
 整个过程如图所示：
 
-![线程池主要的处理流程](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/线程池主要的处理流程.png)
+![线程池主要的处理流程](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/线程池主要的处理流程.png)
 
 ### 线程池状态
 
@@ -311,7 +311,7 @@ private static final int TERMINATED =  3 << COUNT_BITS;
 
 - 线程池处在 TIDYING 状态时，**执行完 terminated() 方法之后**，就会由 **TIDYING -> TERMINATED**，线程池被设置为 TERMINATED 状态。
 
-![线程池的状态](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/java/线程池的状态.png)
+![线程池的状态](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/线程池的状态.png)
 
 ### 关闭线程池
 

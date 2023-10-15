@@ -21,7 +21,7 @@ date: 2023-04-03
 
 ## 演示动画
 
-![桶排序动画](https://cdn.staticaly.com/gh/AlexChen68/OSS@master/blog/advance/桶排序.gif)
+![桶排序动画](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/advance/桶排序.gif)
 
 ## 代码实现
 
