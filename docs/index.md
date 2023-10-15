@@ -4,8 +4,7 @@ layout: home
 
 hero:
   name: AlexChen's Blog
-  # tagline: <b>如果你没有想法，那就阅读；</b><br><b>如果你有想法但无法表达，那就写作；</b><br><b>如果你有想法并有清晰的执行力，那就去创造。</b>
-  tagline: 如果你没有想法，那就阅读；<br>如果你有想法但无法表达，那就写作；<br>如果你有想法并有清晰的执行力，那就去创造。
+  tagline: 行到水穷处，坐看云起时。
   actions:
     - theme: brand
       text: Get Started
@@ -17,7 +16,7 @@ hero:
 features:
   - title: Java Core
     details: Java 基础语法、集合框架、并发框架...
-    link: /java/
+    link: /java/basic/grammar
   - title: Spring Core
     details: spring 基础模块、SpringBoot 和 SpringCloud...
     link: /spring/

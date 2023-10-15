@@ -49,10 +49,6 @@ docker run --name dolphinscheduler-standalone-server\
    
 默认的用户名为 `admin`, 密码 `dolphinscheduler123`。
 
-## 基本概念
-
-- 
-
 ## 参考资料
 
 - [官方文档](https://dolphinscheduler.apache.org/zh-cn/docs/3.1.8)
