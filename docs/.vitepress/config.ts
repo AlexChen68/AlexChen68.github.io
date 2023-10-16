@@ -9,7 +9,6 @@ import { nav } from './navbar'
 export default defineConfig({
    title: "AlexChen's Blog",
    description: "AlexChen's Blog",
-   // cleanUrls: true,
    base: '/',
    head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }]
