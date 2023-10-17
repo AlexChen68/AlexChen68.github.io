@@ -4,6 +4,8 @@ order: 4
 date: 2023-02-25
 ---
 
+# Java 流程控制
+
 ## if-else 语句
 
 `if-else` 语句语法：
@@ -48,7 +50,7 @@ default: // 该关键字是可选项
 switch 语句变量支持的类型：
 1. byte、short、int、char 以及对应的包装器类型 Byte、Short、Integer、Character；
 2. String 字符串（JDK 7+ 开始支持）
-3. Enum 枚举类（JDK 5+开始支持）
+3. Enum 枚举类（JDK 5+ 开始支持）
    
 :::warning 特别注意
 注意：switch 变量不支持 long、float、double 及其包装类。
