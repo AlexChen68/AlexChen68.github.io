@@ -51,7 +51,7 @@ const sidebar = {
       ...groupSidebar('/devops/network', "网络")
    ],
    '/deploy/': [
-      ...groupSidebar('/deploy/standalone', "单体部署"),
+      ...groupSidebar('/deploy/standalone', "独立部署"),
       ...groupSidebar('/deploy/cluster', "集群部署"),
       ...groupSidebar('/deploy/docker', "Docker")
    ],
