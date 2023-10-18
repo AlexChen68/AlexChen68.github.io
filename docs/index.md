@@ -16,7 +16,7 @@ hero:
 features:
   - title: Java Core
     details: Java 基础语法、集合框架、并发框架...
-    link: /java/basic/grammar
+    link: /java/
   - title: Spring Core
     details: spring 基础模块、SpringBoot 和 SpringCloud...
     link: /spring/

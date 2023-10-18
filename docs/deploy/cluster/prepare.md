@@ -10,13 +10,13 @@ order: 1
 
 配置集群部署需要的环境，这里以最少节点的 3 台虚拟机为例，采用 `VMware Workstation Pro` 创建虚拟机，三台机器打通网络，互相配置 ssh 免密登录。
 
-### 创建虚拟机
+## 创建虚拟机
 
 1. 安装 `VMware Workstation Pro`，windows 激活码 `MC60H-DWHD5-H80U9-6V85M-8280D`;
 2. 下载 Centos7 ISO 镜像，下载地址：[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/)（DVD 标准版或 Minimal 最小版）。
 3. 使用 `VMware Workstation Pro` 版本在本地创建一台机器（可以先配置一台，配置好后再克隆），并选择 Centos7 操作系统，配置好网络、时区、主机名等等。
 
-### 网络配置
+## 网络配置
 
 1. 查看网络是否连通
 
@@ -82,7 +82,7 @@ ifconfig
 ping www.baidu.com
 ```
 
-### 克隆虚拟机
+## 克隆虚拟机
 
 使用完整克隆，克隆出两台虚拟机，然后修改主机名。
 
@@ -108,7 +108,7 @@ hostnamectl 主机名
 
 3. 重复上面的 [网络配置](#网络配置) 第三步，配置静态 ip。
 
-### 配置 ssh 免密登录
+## 配置 ssh 免密登录
 
 1. 在三台机器上面的 hosts 文件中，添加 ip 和主机名的映射。
 
@@ -148,7 +148,6 @@ ssh node2
 ssh node3
 ```
 
+## 配置时间同步
 
-## 安装 Java 环境
-
-参考 [Jdk 部署](../standalone/jdk)
+> todo
