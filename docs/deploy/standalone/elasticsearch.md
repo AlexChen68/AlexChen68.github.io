@@ -1,7 +1,7 @@
 ---
 title: ElasticSearch 安装部署
 date: 2023-06-09
-order: 4
+order: 23
 ---
 
 ## Docker 安装
