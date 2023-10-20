@@ -1,25 +1,12 @@
 ---
-title: 开始使用 Redis
+title: Redis 安装部署
 date: 2022-09-29
-description: 开始使用 Redis
+order: 3
 ---
 
-Redis 的介绍和初步安装、卸载教程。
-<!-- more -->
+# Redis 安装部署
 
-## Redis 简介
-
-Redis 是完全开源的，遵守 BSD 协议，是一个高性能的 key-value 数据库。
-
-Redis 与其他 key - value 缓存产品有以下三个特点：
-
-Redis 支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
-Redis 不仅仅支持简单的 key-value 类型的数据，同时还提供 list，set，zset，hash 等数据结构的存储。
-Redis 支持数据的备份，即 master-slave 模式的数据备份。
-
-## 安装和卸载
-
-### Docker 安装 Redis
+## Docker 安装 Redis
 
 拉取 Redis 最新镜像
 
@@ -55,9 +42,9 @@ redis-cli
 auth yourpassword
 ```
 
-### Redis 配置
+## Redis 配置
 
-#### redis.conf 配置文件
+### redis.conf 配置文件
 
 Redis 可以通过在启动时，指定配置文件 `redis.conf` 来加载自定义配置。
 
@@ -110,7 +97,7 @@ Redis 可以通过在启动时，指定配置文件 `redis.conf` 来加载自定
 
 更多具体设置，见 [Redis 官方文档](https://redis.io/docs/manual/config/)。
 
-#### Redis-cli 命令行配置
+### Redis-cli 命令行配置
 
 在通过 Redis-cli 工具连接上 Redis 并通过 `auth [password]` 认证后，可以使用 `config set/get [param]` 命令设置或查询 Redis 配置。
 
@@ -132,7 +119,7 @@ config get requirepass
 config set requirepass [password]
 ```
 
-### Docker 卸载 Redis
+## Docker 卸载 Redis
 
 查看正在运行的 redis 容器
 
