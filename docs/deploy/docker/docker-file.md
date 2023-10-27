@@ -14,22 +14,22 @@ Dockerfile 是一个文本文件，其内包含了一条条的 指令 (Instructi
 
 ## Dockerfile 文件格式
 
-| 指令 | 参数 | 描述 |
-| --- | --- | --- |
-| FROM | image | 指定基础镜像 |
-| MAINTAINER | name | 镜像维护者信息 |
-| RUN | command | 在容器内部执行命令 |
-| CMD | command | 容器启动时执行命令 |
-| EXPOSE | port | 声明容器需要监听的端口 |
-| ENV | key=value | 设置环境变量 |
-| ADD | src dest | 复制文件或目录到容器内部 |
-| COPY | src dest | 复制文件或目录到容器内部 |
-| ENTRYPOINT | command | 容器启动时执行的命令 |
-| VOLUME | path | 声明数据卷 |
-| USER | username | 指定容器运行的用户名 |
-| WORKDIR | path | 指定容器的工作目录 |
-| ARG | name | 设置构建时的参数 |
-| ONBUILD | command | 当镜像被用作其他镜像的基础镜像时执行的命令 |
+| 指令       | 参数      | 描述                                       |
+|------------|-----------|------------------------------------------|
+| FROM       | image     | 指定基础镜像                               |
+| MAINTAINER | name      | 镜像维护者信息                             |
+| RUN        | command   | 在容器内部执行命令                         |
+| CMD        | command   | 容器启动时执行命令                         |
+| EXPOSE     | port      | 声明容器需要监听的端口                     |
+| ENV        | key=value | 设置环境变量                               |
+| ADD        | src dest  | 复制文件或目录到容器内部                   |
+| COPY       | src dest  | 复制文件或目录到容器内部                   |
+| ENTRYPOINT | command   | 容器启动时执行的命令                       |
+| VOLUME     | path      | 声明数据卷                                 |
+| USER       | username  | 指定容器运行的用户名                       |
+| WORKDIR    | path      | 指定容器的工作目录                         |
+| ARG        | name      | 设置构建时的参数                           |
+| ONBUILD    | command   | 当镜像被用作其他镜像的基础镜像时执行的命令 |
 
 ## 构建镜像
 
