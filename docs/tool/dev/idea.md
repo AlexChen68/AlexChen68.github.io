@@ -1,12 +1,10 @@
 ---
 title: 玩转 Intellij IDEA
-icon: idea
 date: 2022-09-30
-tag: Intellij IDEA
+order: 2
 ---
 
-介绍 IDEA 的常用插件与使用技巧
-<!-- more -->
+# 玩转 Intellij IDEA
 
 ## 获取正版 IDEA
 
@@ -16,5 +14,7 @@ tag: Intellij IDEA
 
 - 大于 `2021.2.3` 版本，IDEA 下线了离线功能，必须登录才能使用，可以试下[ja-netfilter](https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html)。
 
+## 淘宝购买
 
+淘宝可以购买教育版认证的正版 idea，每个账号限一次，一次一年。
 

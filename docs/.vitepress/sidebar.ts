@@ -13,9 +13,8 @@ function groupSidebar(path: string, text: string, options?: any) {
       scanStartPath: path,         
       resolvePath: path,
       rootGroupText: text,
-      rootGroupLink: path + '/',
+      // rootGroupLink: path + '/',
       useTitleFromFrontmatter: true,
-      useIndexFileForFolderMenuInfo: true,
       sortMenusByFrontmatterOrder: true,
       ...options
     })[path]
@@ -45,13 +44,15 @@ const sidebar = {
       ...groupSidebar('/architecture/distributed', "分布式"),
       ...groupSidebar('/architecture/bigdata', "大数据")
    ],
-   '/devops/': [
-      ...groupSidebar('/devops/tool', "开发工具"),
-      ...groupSidebar('/devops/test', "测试工具"),
-      ...groupSidebar('/devops/network', "网络")
+   '/tool/': [
+      ...groupSidebar('/tool/dev', "开发工具"),
+      ...groupSidebar('/tool/test', "测试工具"),
+      ...groupSidebar('/tool/doc', "文档工具"),
+      ...groupSidebar('/tool/network', "网络")
    ],
    '/deploy/': [
-      ...groupSidebar('/deploy/standalone', "独立部署"),
+      ...groupSidebar('/deploy/linux', "Linux"),
+      ...groupSidebar('/deploy/standalone', "单体部署"),
       ...groupSidebar('/deploy/cluster', "集群部署"),
       ...groupSidebar('/deploy/docker', "Docker")
    ],

@@ -1,5 +1,5 @@
 ---
-title: Mysql 安装部署
+title: Mysql 部署
 date: 2023-10-17
 order: 21
 ---

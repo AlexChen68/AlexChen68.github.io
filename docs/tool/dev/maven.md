@@ -1,8 +1,7 @@
 ---
 title: Maven 教程
-icon: maven
 date: 2022-09-30
-tag: Maven
+order: 4
 ---
 
 转载自廖雪峰老师的教程：https://www.liaoxuefeng.com/wiki/1252599548343744/1309301146648610
@@ -733,6 +732,6 @@ resources
 
 - 在所有子 POM 中指定它们的父 POM；
 - 将父 POM 的 packaging 值设为 pom；
-- 在父 POM 中指定子模块/子POM的目录；
+- 在父 POM 中指定子模块/子 POM 的目录；
 
 parent 元素内还包含一个 relativePath 元素，用于指定父 POM 的相对路径，默认../pom.xml

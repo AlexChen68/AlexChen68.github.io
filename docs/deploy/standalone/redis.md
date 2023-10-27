@@ -1,5 +1,5 @@
 ---
-title: Redis 安装部署
+title: Redis 部署
 date: 2022-09-29
 order: 22
 ---

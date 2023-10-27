@@ -1,9 +1,10 @@
 ---
 title: Markdown
-icon: markdown
-tag: Markdown
 date: 2022-12-29
+order: 1
 ---
+
+# Markdown
 
 > 本文章转载自 [docsify-themeable](https://jhildenbiddle.github.io/docsify-themeable/#/markdown)。
 
@@ -31,7 +32,7 @@ Markdown 编写的文档后缀为 .md, .markdown。
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 <!-- markdownlint-disable-next-line single-title -->
 # Heading 1 {docsify-ignore}
@@ -58,7 +59,7 @@ text...
 
 text...
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 # Heading 1
@@ -92,7 +93,7 @@ text...
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 Body text
 
@@ -112,7 +113,7 @@ This is <sub>subscript</sub>
 
 This is <sup>superscript</sup>
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 Body text
@@ -140,7 +141,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 <https://www.baidu.com>
 
 [Inline link](https://baidu.com)
@@ -157,7 +158,7 @@ This is <sup>superscript</sup>
 [1]: https://baidu2.com
 [Reference link by self]: https://baidu3.com
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 <https://www.baidu.com>
@@ -183,7 +184,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 **有序列表**
 
@@ -211,7 +212,7 @@ This is <sup>superscript</sup>
     - [ ] Subtask B
 - [ ] Task 3
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 **有序列表**
@@ -247,12 +248,12 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 > This is a quote
 >
 > *- Quote Source*
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 > This is a quote
@@ -265,7 +266,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 This is `inline code`
 ```javascript
@@ -279,7 +280,7 @@ console.log(total); // 3
 </body>
 ```
 
-#### **Markdown**
+- **Markdown**
 
 ````markdown
 This is `inline code`
@@ -301,70 +302,33 @@ console.log(total); // 3
 
 ### 通知
 
-<!-- tabs:start -->
+- **Rendered**
 
-#### **Rendered**
+:::warning
+这是一段警告通知
+:::
 
-!> 这是一段警告通知
+:::tip
+这是一段提示通知
+:::
 
-?> 这是一段提示通知
-
-#### **Markdown**
-
-```markdown
-
-!> 这是一段警告通知
-
-?> 这是一段提示通知
-```
-<!-- tabs:end -->
-
-### 选项卡
-
-选项卡由插件[docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs)提供
-
-
-<!-- tabs:start -->
-
-#### **English**
-
-Hello!
-
-#### **French**
-
-Bonjour!
-
-#### **Italian**
-
-Ciao!
-
-#### **Markdown**
+- **Markdown**
 
 ```markdown
-<!-- tabs:start -->
+:::warning
+这是一段警告通知
+:::
 
-#### **English**
-
-Hello!
-
-#### **French**
-
-Bonjour!
-
-#### **Italian**
-
-Ciao!
-
-<!-- tabs:end -->
+:::tip
+这是一段提示通知
+:::
 ```
-
-<!-- tabs:end -->
 
 ### 表格
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
 | ---------- |:------------:| -----------:| ------------------------------ |
@@ -372,7 +336,7 @@ Ciao!
 | B1         | B2           | B3          | B4                             |
 | C1         | C2           | C3          | C4                             |
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
@@ -388,7 +352,7 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 <kbd>&uarr;</kbd> Arrow Up
 
@@ -432,7 +396,7 @@ Ciao!
 
 <kbd>&#8676;</kbd> Tab + Shift
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 <kbd>&uarr;</kbd> Arrow Up
@@ -484,11 +448,11 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 ---
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 ---
@@ -500,7 +464,7 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### **Rendered**
+- **Rendered**
 
 Inline-style
 
@@ -512,7 +476,7 @@ Reference-style
 
 [logo]: //source.unsplash.com/collection/881815 "Provided by unsplash.com"
 
-#### **Markdown**
+- **Markdown**
 
 ```markdown
 **Inline**

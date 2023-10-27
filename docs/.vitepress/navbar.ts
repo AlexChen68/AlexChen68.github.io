@@ -5,7 +5,7 @@ const nav: DefaultTheme.NavItem[] = [
    { text: "Spring 系列", link: "/spring/"},
    { text: "数据库", link: "/database/"},
    { text: '系统架构', link: '/architecture/'},
-   { text: "DevOps", link: "/devops/"},
+   { text: "开发通用", link: "/tool/"},
    { text: "运维部署", link: "/deploy/"},
    { text: "前端技术", link: "/frontend/"},
    { text: "编程内功", link: "/advance/algo/"},

@@ -1,8 +1,7 @@
 ---
 title: 玩转 VS Code
-icon: vscode
-tag: Visual Studio Code
 date: 2022-09-30
+order: 3
 ---
 
 ## 配置代码模版

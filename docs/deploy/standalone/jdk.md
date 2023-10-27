@@ -1,5 +1,5 @@
 ---
-title: JDK 安装部署
+title: JDK 安装
 date: 2022-12-29
 order: 1
 ---

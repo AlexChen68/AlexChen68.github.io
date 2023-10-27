@@ -1,8 +1,7 @@
 ---
 title: Git 教程
-icon: git
-tag: Git
 date: 2022-12-29
+order: 1
 ---
 
 ## Git 简介
