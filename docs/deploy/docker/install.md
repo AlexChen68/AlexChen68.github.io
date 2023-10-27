@@ -1,7 +1,10 @@
 ---
-title: Docker 安装
+title: Docker 安装配置
 date: 2023-01-28
+order: 2
 ---
+
+# Docker 安装配置
 
 ## 安装 docker
 
@@ -55,34 +58,6 @@ sudo systemctl enable docker
 
 ```bash
 systemctl status docker
-```
-
-## 安装 docker-compose
-
-### 什么是 docker-compose
-
-​docker-compose 是一个工具，这个工具主要是用来定义和运行多个应用的。比如说，我要启动 一个 kafka 容器，使用 docker 的话，需要先启动一个 zk 容器，然后再启动一个 kafka 容器，然而使用 docker-compose 的话，直接通过 docker-compose.yml 去定义 zk 和 kafka 这两个引用，然后使用 `docker-compose up -d` 直接启动这个 docker-compoes.yml 所定义的两个容器。所以，使用 docker-compose 比 docker 更加方便地定义和管理多个 docker 容器。
-
-### docker-compose 的安装
-
-1. 官网查看 release 版本：https://github.com/docker/compose/releases/
-
-2. 下载 docker-compose 到 /usr/local/bin 目录下（也可以手动下载，手动上传）
-
-```bash
-curl -L https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)  -o /usr/local/bin/docker-compose
-```
-
-3. 给 docker-compose 指定权限
-
-```bash
-chmod +x /usr/local/bin/docker-compose
-```
-
-4. 查看版本
-
-```bash
-docker-compose --version
 ```
 
 ## Docker 仓库配置

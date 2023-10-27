@@ -1,7 +1,7 @@
 ---
-title: Redis 部署
+title: Redis 单机部署
 date: 2022-09-29
-order: 22
+order: 31
 ---
 
 # Redis 安装部署

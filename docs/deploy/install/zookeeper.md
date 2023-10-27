@@ -1,7 +1,7 @@
 ---
 title: Zookeeper 安装部署
 date: 2023-10-18
-order: 2
+order: 102
 ---
 
 ## 独立模式部署

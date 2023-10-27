@@ -52,9 +52,8 @@ const sidebar = {
    ],
    '/deploy/': [
       ...groupSidebar('/deploy/linux', "Linux"),
-      ...groupSidebar('/deploy/standalone', "单体部署"),
-      ...groupSidebar('/deploy/cluster', "集群部署"),
-      ...groupSidebar('/deploy/docker', "Docker")
+      ...groupSidebar('/deploy/docker', "Docker"),
+      ...groupSidebar('/deploy/install', "软件部署")
    ],
    '/frontend/': [
       ...groupSidebar('/frontend/basic', "Html Js Css"),

@@ -1,7 +1,7 @@
 ---
 title: ElasticSearch 部署
 date: 2023-06-09
-order: 23
+order: 41
 ---
 
 # ElasticSearch 安装部署
