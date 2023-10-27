@@ -48,15 +48,15 @@ const sidebar = {
       ...groupSidebar('/tool/dev', "开发工具"),
       ...groupSidebar('/tool/test', "测试工具"),
       ...groupSidebar('/tool/doc', "文档工具"),
-      ...groupSidebar('/tool/network', "网络")
    ],
    '/deploy/': [
       ...groupSidebar('/deploy/linux', "Linux"),
+      ...groupSidebar('/deploy/network', "网络"),
       ...groupSidebar('/deploy/docker', "Docker"),
       ...groupSidebar('/deploy/install', "软件部署")
    ],
    '/frontend/': [
-      ...groupSidebar('/frontend/basic', "Html Js Css"),
+      ...groupSidebar('/frontend/basic', "基础"),
       ...groupSidebar('/frontend/es6', "ECMAScript 6"),
       ...groupSidebar('/frontend/node', "Node.js")
    ],
