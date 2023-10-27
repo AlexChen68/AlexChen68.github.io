@@ -26,7 +26,7 @@ features:
   - title: 系统架构
     details: 分布式理论、微服务、中间件...
     link: /architecture/
-  - title: 开发通用
+  - title: 研发工具
     details: 开发工具、测试工具、文档工具...
     link: /tool/
   - title: 运维部署
