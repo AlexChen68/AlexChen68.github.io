@@ -1,8 +1,10 @@
 ---
 title: 前端资源
-icon: frontend
 date: 2023-07-13
+order: 2
 ---
+
+# 前端资源
 
 ## JavaScript
 

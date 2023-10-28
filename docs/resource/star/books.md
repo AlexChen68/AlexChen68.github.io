@@ -1,7 +1,7 @@
 ---
 title: 编程书籍
-icon: book-fill
 date: 2022-09-30
+order: 5
 ---
 
 :::info
@@ -57,7 +57,7 @@ date: 2022-09-30
 ## C++
 
 - [《C++ Primer Plus（第 5 版）》](https://awesome-programming-books.github.io/c++/C++%20Primer%20Plus（第5版）.pdf)
-- [《C++编程思想（第 1 卷）》](https://awesome-programming-books.github.io/c++/C++编程思想%EF%BC%88第1卷）.pdf)
+- [《C++ 编程思想（第 1 卷）》](https://awesome-programming-books.github.io/c++/C++编程思想%EF%BC%88第1卷）.pdf)
 
 ## Golang
 

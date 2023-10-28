@@ -9,7 +9,7 @@ const nav: DefaultTheme.NavItem[] = [
    { text: "运维部署", link: "/deploy/"},
    { text: "前端技术", link: "/frontend/"},
    { text: "编程内功", link: "/advance/algo/"},
-   { text: "编程资源", link: "/resource/1.1-blogs"}
+   { text: "编程资源", link: "/resource/"}
 ]
 
 export default nav

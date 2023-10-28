@@ -1,8 +1,7 @@
 ---
-title: 博客和文章
-icon: blog
-article: false
+title: 博客文章
 date: 2022-12-29
+order: 1
 ---
 
 ## 技术博客
@@ -34,21 +33,18 @@ date: 2022-12-29
 
 ## 收藏文章
 
-### 编程规范
+- 编程规范
+  - [程序员“起名”头痛根治指南](https://mp.weixin.qq.com/s/loaaKlE44P4VxMgLY3f2hw)
+  - [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html?tdsourcetag=s_pctim_aiomsg)
+  - [Java 后端微服务研发规范](https://www.jianshu.com/p/994797a84c5c)
+  - [领域模型转换那些事儿](https://www.imooc.com/article/293314)
 
-- [程序员“起名”头痛根治指南](https://mp.weixin.qq.com/s/loaaKlE44P4VxMgLY3f2hw)
-- [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html?tdsourcetag=s_pctim_aiomsg)
-- [Java 后端微服务研发规范](https://www.jianshu.com/p/994797a84c5c)
-- [领域模型转换那些事儿](https://www.imooc.com/article/293314)
+- 设计
+  - [如何画好架构图？](https://www.cnblogs.com/xiang--liu/p/10504808.html)
+  - [JSONQL 低代码数据模型引擎的设计与实现](https://www.infoq.cn/article/QQYdqK3yjzxrb8TbvgVC)
+  - [GraphQL-BFF：微服务背景下的前后端数据交互方案](https://cloud.tencent.com/developer/article/1477870)
 
-###  
-
-- [如何画好架构图？](https://www.cnblogs.com/xiang--liu/p/10504808.html)
-
-- [SpringCloud GateWay 万字详解](https://www.cnblogs.com/mingyueyy/p/16366360.html)
-- [Spring Cloud Gateway 原理介绍和应用](https://blog.fintopia.tech/60e27b0e2078082a378ec5ed/)
-- [JSONQL 低代码数据模型引擎的设计与实现](https://www.infoq.cn/article/QQYdqK3yjzxrb8TbvgVC)
-- [GraphQL-BFF：微服务背景下的前后端数据交互方案](https://cloud.tencent.com/developer/article/1477870)
-
-
-- [Kubernetes 基础入门（完整版)](https://www.cnblogs.com/starsray/p/16434558.html)
+- 微服务
+  - [SpringCloud GateWay 万字详解](https://www.cnblogs.com/mingyueyy/p/16366360.html)
+  - [Spring Cloud Gateway 原理介绍和应用](https://blog.fintopia.tech/60e27b0e2078082a378ec5ed/)
+  - [Kubernetes 基础入门（完整版)](https://www.cnblogs.com/starsray/p/16434558.html)

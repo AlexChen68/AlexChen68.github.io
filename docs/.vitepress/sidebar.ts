@@ -66,8 +66,9 @@ const sidebar = {
       ...groupSidebar('/advance/design', "设计模式")
    ],
    '/resource/': [
-      ...groupSidebar('/resource', "")
-   ],
+      ...groupSidebar('/resource/star', "收藏资源"),
+      ...groupSidebar('/resource/interview', "面试知识点")
+   ]
 }
 
 export default sidebar
