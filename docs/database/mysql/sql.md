@@ -1,8 +1,10 @@
 ---
 title: Mysql SQL 语法
 date: 2022-12-26
-tag: SQL
+order: 2
 ---
+
+# Mysql SQL 语法
 
 ## 1. 数据库操作
 

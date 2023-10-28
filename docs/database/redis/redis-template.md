@@ -1,7 +1,10 @@
 ---
 title: SpringBoot 使用 Redis
 date: 2023-06-07
+order: 201
 ---
+
+# SpringBoot 使用 Redis
 
 ## spring-boot-starter-data-redis
 

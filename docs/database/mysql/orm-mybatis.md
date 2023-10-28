@@ -1,10 +1,10 @@
 ---
-title: ORM 框架 - Mybatis 
-tag: Mybatis
+title: Mybatis 框架
 date: 2022-10-21
+order: 201
 ---
 
-> 本章节基于 [Mybatis3 官方文档](https://mybatis.org/mybatis-3/zh/index.html) 编写，介绍 Java 项目使用 原生 Mybatis 的方式，以及 Mybatis 的基本配置和功能。
+# Mybatis 框架
 
 ## Mybatis 概述
 

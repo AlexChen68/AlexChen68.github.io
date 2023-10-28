@@ -1,10 +1,12 @@
 ---
-title: Mysql 批量插入大量数据
+title: Mysql 批量插入
 date: 2023-05-26
+order: 101
 ---
 
-本文探讨如何在 mysql 中批量插入大量数据，以及各种方式的性能比较。
-<!-- more -->
+# Mysql 批量插入
+
+> 本文探讨如何在 mysql 中批量插入大量数据，以及各种方式的性能比较。
 
 ## 在 Mysql 中批量插入数据的几种方式
 
@@ -319,5 +321,3 @@ insertBatchCustom: 500000, cost time 15672 ms
 
 - 数据库连接次数过多会极大地影响插入性能，使用事务批量提交可以有效提升性能；
 - 数据库对于单次连接的通信包大小有限额，应当选择合适的数据量批次提交。
-
-- [MySQL 同步 ElasticSearch 大宽表实践](https://zhuanlan.zhihu.com/p/626136604)

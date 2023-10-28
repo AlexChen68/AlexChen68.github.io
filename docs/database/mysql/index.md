@@ -3,8 +3,7 @@ title: Mysql 简介
 date: 2022-09-29
 ---
 
-介绍 Mysql 的特点和主要存储引擎。
-<!-- more -->
+# Mysql 简介
 
 ## 什么是 MySQL 数据库？
 

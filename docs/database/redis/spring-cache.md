@@ -1,12 +1,12 @@
 ---
 title: Spring Cache 缓存框架
-author: 芋道源码
 date: 2023-02-12
+order: 202
 ---
 
-本文介绍了 Spring Cache 框架的缓存注解以及使用中会遇到的问题
+# Spring Cache 缓存框架
 
-<!-- more -->
+本文介绍了 Spring Cache 框架的缓存注解以及使用中会遇到的问题
 
 ## 什么是 Spring Cache？
 
