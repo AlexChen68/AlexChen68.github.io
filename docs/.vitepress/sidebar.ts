@@ -67,7 +67,7 @@ const sidebar = {
    ],
    '/resource/': [
       ...groupSidebar('/resource/star', "收藏资源"),
-      ...groupSidebar('/resource/interview', "面试知识点")
+      // ...groupSidebar('/resource/interview', "面试知识点")
    ]
 }
 
