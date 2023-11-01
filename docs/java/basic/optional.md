@@ -4,6 +4,8 @@ date: 2023-01-02
 order: 20
 ---
 
+# Java Optional
+
 ## 1. 什么是 Optional？
 
 Optional 类 Java 8 引入的一个很有趣的特性。Optional 类主要解决的问题是臭名昭著的空指针异常（NullPointerException）。

@@ -1,9 +1,10 @@
 ---
 title: Map - LinkedHashMap 源码分析
 date: 2022-09-30
-tag: Collection
 order: 7
 ---
+
+# LinkedHashMap
 
 ## 概述
 
@@ -30,8 +31,8 @@ transient LinkedHashMap.Entry<K,V> tail;
 
 /**
  * 是否按访问顺序排序，默认为 false
- * true ：按照 key-value 的访问顺序进行访问
- * false ：按照 key-value 的插入顺序进行访问
+ * true：按照 key-value 的访问顺序进行访问
+ * false：按照 key-value 的插入顺序进行访问
  */
 final boolean accessOrder;
 ```
@@ -106,12 +107,12 @@ Node<K,V> newNode(int hash, K key, V value, Node<K,V> e) {
 private void linkNodeLast(LinkedHashMap.Entry<K,V> p) {
     // 记录原尾节点到 last 中
     LinkedHashMap.Entry<K,V> last = tail;
-    // 设置 tail 指向 p ，变更新的尾节点
+    // 设置 tail 指向 p，变更新的尾节点
     tail = p;
     // 如果原尾节点 last 为空，说明 head 也为空，所以 head 也指向 p
     if (last == null)
         head = p;
-    // last <=> p ，相互指向
+    // last <=> p，相互指向
     else {
         p.before = last;
         last.after = p;
@@ -243,4 +244,4 @@ void afterNodeRemoval(Node<K,V> e) {
 ## 参考资料
 
 * [芋道源码](https://www.iocoder.cn/)
-* [LinkedHashMap源码解析](https://blog.csdn.net/hequnwang10/article/details/124732318)
+* [LinkedHashMap 源码解析](https://blog.csdn.net/hequnwang10/article/details/124732318)

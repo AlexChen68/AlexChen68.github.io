@@ -1,9 +1,10 @@
 ---
 title: Set - TreeSet 源码分析
 date: 2022-09-30
-tag: Collection
 order: 5
 ---
+
+# TreeSet
 
 ##  概述
 
@@ -11,7 +12,7 @@ order: 5
 
 ## 类图
 
-![TreeSet类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/treeset_class.png ':size=60%')
+![TreeSet 类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/treeset_class.png ':size=60%')
 
 `TreeSet` 实现了三个接口：
 

@@ -1,12 +1,12 @@
 ---
 title: List - ArrayList 源码分析
 date: 2022-09-30
-tag: Collection
 order: 1
 ---
 
+# ArrayList
+
 > 本文主要对 Collection - ArrayList 进行源码解析
-<!-- more -->
 
 ## 简介
 ArrayList，基于 `[]` 数组实现的，支持**自动扩容**的动态数组。

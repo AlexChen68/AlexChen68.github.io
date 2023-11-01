@@ -1,9 +1,10 @@
 ---
 title: List - LinkedList 源码分析
 date: 2022-09-30
-tag: Collection
 order: 2
 ---
+
+# LinkedList
 
 ## 概述
 
@@ -11,7 +12,7 @@ order: 2
 
 ## 类图
 
-![LinkedList类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/linkedlist_class.png ':size=60%')
+![LinkedList 类图](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/linkedlist_class.png ':size=60%')
 
 `LinkedList` 实现了四个接口：
 
@@ -20,7 +21,7 @@ order: 2
 * `java.lang.Cloneable` 可克隆接口
 * `java.util.Deque` 双端队列接口
 
-另外，`LinkedList` 继承了 `java.util.AbstractSequentialList` 抽象类，它是 `AbstracList` 的子类，实现了只能**连续**访问“数据存储” 等随机操作的方法，官方推荐对于支持随机访问数据的继承 `AbstractList` 抽象类，不支持的继承 `AbstractSequentialList` 抽象类。
+另外，`LinkedList` 继承了 `java.util.AbstractSequentialList` 抽象类，它是 `AbstracList` 的子类，实现了只能**连续**访问“数据存储”等随机操作的方法，官方推荐对于支持随机访问数据的继承 `AbstractList` 抽象类，不支持的继承 `AbstractSequentialList` 抽象类。
 
 ## 属性
 
@@ -291,7 +292,7 @@ public boolean addAll(int index, Collection<? extends E> c) {
     if (numNew == 0)
         return false;
 
-    // 获得第 index 位置的节点 succ ，和其前一个节点 pred
+    // 获得第 index 位置的节点 succ，和其前一个节点 pred
     Node<E> pred, succ;
     if (index == size) {
         succ = null;
@@ -305,7 +306,7 @@ public boolean addAll(int index, Collection<? extends E> c) {
     for (Object o : a) {
         @SuppressWarnings("unchecked") E e = (E) o;
         Node<E> newNode = new Node<>(pred, e, null);
-        // 如果 pred 为 null ，说明 first 也为 null ，则直接将 first 指向新节点
+        // 如果 pred 为 null，说明 first 也为 null，则直接将 first 指向新节点
         if (pred == null)
             first = newNode;
         else
@@ -437,7 +438,7 @@ public int lastIndexOf(Object o) {
 }
 ```
 
-4. 如果此列表包含指定元素，则返回true 
+4. 如果此列表包含指定元素，则返回 true 
 
 ```java
 public boolean contains(Object o) {
@@ -680,7 +681,7 @@ private class ListItr implements ListIterator<E> {
 
 `LinkedList` 实现了 `Deque` 接口（支持两端元素插入和移除的线性集合），该接口定义了访问双端队列两端元素的方法。
 
-该接口定义了访问双端队列两端元素的方法。提供了插入、删除和检查元素的方法。这些方法中的每一个都以两种形式存在：一种在操作失败时抛出异常，另一种返回特殊值（ null 或 false ，具体取决于操作）。后一种形式的插入操作是专门为容量受限的 `Deque` 实现而设计的；在大多数实现中，插入操作不会失败。
+该接口定义了访问双端队列两端元素的方法。提供了插入、删除和检查元素的方法。这些方法中的每一个都以两种形式存在：一种在操作失败时抛出异常，另一种返回特殊值（null 或 false，具体取决于操作）。后一种形式的插入操作是专门为容量受限的 `Deque` 实现而设计的；在大多数实现中，插入操作不会失败。
 
 Deque 方法总结：
 
@@ -709,7 +710,7 @@ Deque 方法总结：
 | pop()      | removeFirst() |
 | peek()     | peekFirst()   |
 
-请注意，当双端队列用作队列或堆栈时， peek方法同样有效；在任何一种情况下，元素都是从双端队列的**开头**开始插入的。
+请注意，当双端队列用作队列或堆栈时，peek 方法同样有效；在任何一种情况下，元素都是从双端队列的**开头**开始插入的。
 
 ### 添加元素
 
@@ -763,7 +764,7 @@ public boolean offer(E e) {
 
 ```java
 //--- Deque Interface ---
-// 检索并删除此双端队列的第一个元素。此方法与pollFirst的不同之处仅在于如果此双端队列为空，它将引发异常
+// 检索并删除此双端队列的第一个元素。此方法与 pollFirst 的不同之处仅在于如果此双端队列为空，它将引发异常
 public E removeFirst() {
     final Node<E> f = first;
     if (f == null)
@@ -771,20 +772,20 @@ public E removeFirst() {
     return unlinkFirst(f);
 }
 
-// 检索并删除此列表的第一个元素，如果此列表为空，则返回null 
+// 检索并删除此列表的第一个元素，如果此列表为空，则返回 null 
 public E pollFirst() {
     final Node<E> f = first;
     return (f == null) ? null : unlinkFirst(f);
 }
 
 //--- Queue Interface ---
-// 检索并删除此队列的头部，如果此队列为空，则返回null 
+// 检索并删除此队列的头部，如果此队列为空，则返回 null 
 public E poll() {
     final Node<E> f = first;
     return (f == null) ? null : unlinkFirst(f);
 }
 
-// 检索并删除此队列的头部。此方法与poll的不同之处仅在于如果此队列为空，它将引发异常
+// 检索并删除此队列的头部。此方法与 poll 的不同之处仅在于如果此队列为空，它将引发异常
 public E remove() {
     return removeFirst();
 }
@@ -808,7 +809,7 @@ public E removeLast() {
     return unlinkLast(l);
 }
 
-// 检索并删除此列表的最后一个元素，如果此列表为空，则返回null 
+// 检索并删除此列表的最后一个元素，如果此列表为空，则返回 null 
 public E pollLast() {
     final Node<E> l = last;
     return (l == null) ? null : unlinkLast(l);
@@ -829,7 +830,7 @@ public E getFirst() {
     return f.item;
 }
 
-// 检索但不删除此列表的第一个元素，如果此列表为空，则返回null 
+// 检索但不删除此列表的第一个元素，如果此列表为空，则返回 null 
 public E peekFirst() {
     final Node<E> f = first;
     return (f == null) ? null : f.item;
@@ -858,7 +859,7 @@ public E getLast() {
     return l.item;
 }
 
-// 检索但不删除此列表的最后一个元素，如果此列表为空，则返回null
+// 检索但不删除此列表的最后一个元素，如果此列表为空，则返回 null
 public E peekLast() {
     final Node<E> l = last;
     return (l == null) ? null : l.item;
@@ -907,4 +908,4 @@ private void readObject(java.io.ObjectInputStream s)
 
 * [芋道源码](https://www.iocoder.cn/)
 * [Java 程序员进阶之路](https://tobebetterjavaer.com/collection/gailan.html)
-* [Java全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)
+* [Java 全栈知识体系](https://pdai.tech/md/java/collection/java-collection-all.html)
