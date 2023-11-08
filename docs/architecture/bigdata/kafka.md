@@ -139,9 +139,9 @@ Kafka 同时支持**基于队列**和**基于发布/订阅**的两种消息引�
 
 参考 [Kafka 部署](/deploy/install/kafka.md)
 
-## 入门实战
+## SpringBoot 使用 Kakfa
 
-### SpringBoot 使用 Kakfa
+### 依赖配置
 
 1. 引入依赖（版本自定）
 
@@ -154,6 +154,8 @@ Kafka 同时支持**基于队列**和**基于发布/订阅**的两种消息引�
 
 2. application 配置（示例）
 
+配置文件类：`org.springframework.boot.autoconfigure.kafka.KafkaProperties`
+
 **生产者配置：**
 
 ```yaml
@@ -161,11 +163,10 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_HOST:zeus-kafka}:${KAFKA_PORT:9092}
     producer:
-      batch-size: 16384 #批量大小
-      acks: 1 #应答级别：多少个分区副本备份完成时向生产者发送 ack 确认 (可选 0、1、all/-1)
+      batch-size: 16384 # 默认 single request 批处理大小（以字节为单位），默认 16KB = 16384
+      acks: -1 # 应答级别：多少个分区副本备份完成时向生产者发送 ack 确认 (可选 0、1、all/-1)
       retries: 10 # 消息发送重试次数
-      #transaction-id-prefix: transaction
-      buffer-memory: 33554432
+      buffer-memory: 33554432 # 缓存容量。默认值 32MB = 33554432
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       properties:
@@ -178,17 +179,19 @@ spring:
 ```yaml
 spring:
   kafka:
+    # kafka 服务地址，可以有多个用，隔开
     bootstrap-servers: ${KAFKA_HOST:zeus-kafka}:${KAFKA_PORT:9092}
     consumer:
-      group-id: zeus-test-consumer #默认的消费组 ID
-      enable-auto-commit: true #是否自动提交 offset
-      auto-commit-interval: 2000 #提交 offset 延时
+      group-id: zeus-test-consumer # 默认的消费组 ID
+      enable-auto-commit: true # 是否自动提交 offset
+      auto-commit-interval: 2000 # 提交 offset 延时，单位 ms
+      heartbeat-interval: 10000 # ⼼跳与消费者协调员之间的预期时间（以毫秒为单位）
       # 当 kafka 中没有初始 offset 或 offset 超出范围时将自动重置 offset
       # - earliest:重置为分区中最小的 offset;
       # - latest:重置为分区中最新的 offset(消费分区中新产生的数据);
       # - none:只要有一个分区不存在已提交的 offset，就抛出异常;
       auto-offset-reset: latest
-      max-poll-records: 10 #单次拉取消息的最大条数
+      max-poll-records: 500 # 单次拉取消息的最大条数
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
@@ -199,17 +202,126 @@ spring:
           timeout:
             ms: 18000 # 消费请求的超时时间
     listener:
+      ack-mode: manual_immediate # manual_immediate-手动 ack 后立即提交；batch-批量自动确认；RECORD-单条自动确认；
       type: batch # 批量消费
 ```
 
-## 常见问题
+:::tip
+- batch-size 和 linger.ms 这两个条件都设置时，只要满足其中一个条件，就会发送消息。
+:::
 
-### 如何保证消息百分百不丢失？
+**主题配置：**
 
-### 如何保证不重复消费？
+> 可通过注入 NewTopic 示例，在启动时创建不存在的 topic
+
+```java
+@Configuration
+public class KafkaConfiguration {
+
+    @Bean
+    public NewTopic topicSingle() {
+        return new NewTopic("topic-single",3, (short) 1);
+    }
+
+    @Bean
+    public NewTopic topicBatch() {
+        return new NewTopic("topic-batch",3, (short) 1);
+    }
+}
+```
+
+### 生产者
+
+```java
+@RestController
+@RequestMapping("/kafka")
+public class KafkaProducerTest {
+
+    @Resource
+    private KafkaTemplate<String, String> kafkaTemplate;
+
+    private final ListenableFutureCallback<SendResult<String, String>> futureCallback = new ListenableFutureCallback<SendResult<String, String>>() {
+        @Override
+        public void onSuccess(SendResult<String, String> result) {
+            assert result != null;
+            ProducerRecord<String, String> record = result.getProducerRecord();
+            System.out.println(StrUtil.format("Send message-> topic: {}, partition: {}, key: {}, value: {}", record.topic(), record.partition(), record.key(), record.value()));
+        }
+
+        @Override
+        public void onFailure(Throwable e) {
+            System.out.println(StrUtil.format("kafka Send message failed: {}", e.getMessage()));
+        }
+    };
+
+    /**
+     * 推送单条
+     */
+    @PostMapping("/send")
+    public R<Boolean> sendMessage(@RequestBody KafkaMessage record) {
+        kafkaTemplate.send(record.getTopic(), record.getPartition(), record.getKey(), record.getValue()).addCallback(futureCallback);
+        return R.ok(true);
+    }
+
+    /**
+     * 推送多条
+     */
+    @PostMapping("/send/batch")
+    public R<Boolean> sendMessageBatch(@RequestBody List<KafkaMessage> records) {
+        records.forEach(record -> kafkaTemplate.send(record.getTopic(), record.getPartition(), record.getKey(), record.getValue()).addCallback(futureCallback));
+        return R.ok(true);
+    }
+
+}
+```
+
+:::warning
+如果发送消息时，partition 不存在，会报错。
+:::
+
+### 消费者
+
+```java
+/**
+ * kafka 单条消费
+ */
+@KafkaListener(groupId = "single-test",topics = {"topic-single"})
+public void onSingleMessage(ConsumerRecord<String, Object> record) {
+   System.out.println(StrUtil.format(">>> kafka single message, topic: {}, partition: {}, key: {}, value: {}",
+            record.topic(), record.partition(), record.key(), record.value()));
+}
+
+/**
+ * kafka 批量消费
+ */
+@KafkaListener(groupId = "batch-test",topics = {"topic-batch"})
+public void onBatchMessage(List<ConsumerRecord<String, Object>> records) {
+   System.out.println(">>> Kafka batch message, size: " + records.size());
+   for (ConsumerRecord<String, Object> record : records) {
+      System.out.println(StrUtil.format("topic: {}, partition: {}, key: {}, value: {}",
+               record.topic(), record.partition(), record.key(), record.value()));
+   }
+}
+
+/**
+ * ack 手动提交
+ */
+@KafkaListener(groupId = "ack-mode-test", topics = {"topic-ack"})
+public void manualImmediate(List<ConsumerRecord<String, Object>> records, Acknowledgment ack) {
+   System.out.println(">>> Kafka batch message, size: " + records.size());
+   for (ConsumerRecord<String, Object> record : records) {
+      System.out.println(StrUtil.format("topic: {}, partition: {}, key: {}, value: {}",
+               record.topic(), record.partition(), record.key(), record.value()));
+   }
+   // 手动确认：确认单当前消息（及之前的消息）offset 均已被消费完成
+   ack.acknowledge();
+}
+```
 
 ## 参考资料
 
+- [spring-kafka 官方文档](https://projects.spring.io/spring-kafka)
 - [Mq 消息队列的两种模型及常见概念](https://zhuanlan.zhihu.com/p/643196407)
 - [kafka 的使用原理及通过 spring-kafka 自定义封装包的原理](https://blog.csdn.net/qq_22256259/article/details/128373310)
+- [Spring-kafka 配置参数详解](https://blog.csdn.net/u010882234/article/details/125548598)
 
