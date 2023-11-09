@@ -1,7 +1,7 @@
 ---
 title: JDK 安装
 date: 2022-12-29
-order: 1
+order: 0
 ---
 
 # JDK 安装部署
@@ -122,4 +122,79 @@ source /etc/profile
 
 ```bash
 java -version
+```
+
+## MacOS 安装 JDK
+
+### 下载 JDK
+
+从 [Orcale 官方](https://www.oracle.com/cn/java/technologies/downloads/) 下载需要版本的 `.dmg` 安装包（mac m 系列芯片选择 aarch64 版本的）
+
+### 安装 JDK
+
+直接双击安装包安装，会自动安装到 `/Library/Java/JavaVirtualMachines` 目录下面。
+
+```bash
+cd /Library/Java/JavaVirtualMachines
+```
+
+### 配置环境变量
+
+- 编辑环境变量文件
+
+```bash
+vim ~/.bash_profile
+```
+
+- 单版本 jdk 配置示例
+
+```bash
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-8.jdk/Contents/Home
+```
+
+- 多版本 jdk 配置示例
+
+```bash
+# jdk home config
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk-8.jdk/Contents/Home
+export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+
+# default jdk home
+export JAVA_HOME=$JAVA_8_HOME
+
+# switch jdk version
+alias jdk8='export JAVA_HOME=$JAVA_8_HOME'
+alias jdk11='export JAVA_HOME=$JAVA_11_HOME'
+alias jdk17='export JAVA_HOME=$JAVA_17_HOME'
+```
+
+> 上面配置了三个 jdk，并通过 alias 命令重命名了三个指令，执行 `jdk{version}` 命令可以切换 jdk 版本。
+
+- 使配置文件生效
+
+```bash
+source ~/.bash_profile
+```
+
+### 查看 JDK 版本信息
+ 
+打开系统终端，输入：
+
+```bash
+java -version
+```
+
+出现 JDK 的版本信息表示安装成功
+
+```bash
+java version "1.8.0_351"
+Java(TM) SE Runtime Environment (build 1.8.0_351-b10)
+Java HotSpot(TM) 64-Bit Server VM (build 25.351-b10, mixed mode)
+```
+
+### 查看安装的所有 JDK 版本
+
+```bash
+/usr/libexec/java_home -V
 ```

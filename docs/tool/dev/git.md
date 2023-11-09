@@ -1,6 +1,7 @@
 ---
 title: Git 教程
 date: 2022-12-29
+outline: [2,3]
 order: 1
 ---
 
@@ -10,9 +11,7 @@ order: 1
 
 推荐 Git 学习网站：[https://learngitbranching.js.org/?locale=zh_CN](https://learngitbranching.js.org/?locale=zh_CN)
 
-## 基础操作
-
-### 安装 Git
+## 安装 Git
 
 1. 下载 Git 安装包
 
@@ -39,7 +38,67 @@ git config --global user.email "youremail"
 git config --global --unset user.name
 ```
 
-### 常用操作
+## Github 配置  ssh 密钥
+
+> 在 github 上配置了 ssh 密钥后，可以使用 ssh 协议拉取和推送代码，不需要重复的输入 github 帐号和密码。
+
+1. 本地生成密钥
+
+打开终端，输入生成密钥到命令：
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+或者
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+连续点击确定，生成的密钥会存在当前系统用户的 `.ssh` 文件夹下面，`id_rsa` 是私钥，`id_rsa.pub` 是公钥。
+
+2. 复制公钥内容
+
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+或者
+
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+取决于你之前使用的密钥生成算法和之后的重命名。
+
+3. 将公钥添加到 github
+
+浏览器访问 [https://github.com/settings/keys](https://github.com/settings/keys) 打开 ssh 配置界面，点击 [new ssh key]，在 `key` 输入框中粘贴上一步拷贝的公钥内容，并自己命名一个 `title`，然后保存。
+
+4. 测试 ssh 访问
+
+```bash
+ssh -T git@github.com
+```
+
+首次使用会提示是否继续连接，输入 `yes`：
+
+```bash
+The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+然后会看到：
+
+```bash
+Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+更多操作参考 [Github 文档](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+## 基础操作
 
 所谓实用主义，就是掌握了以下知识就可以玩转 `Git`，轻松应对 90% 以上的需求。以下是实用主义型的 Git 命令列表，先大致看一下
 
@@ -57,7 +116,7 @@ git config --global --unset user.name
 
 接下来，将通过对 我的博客 仓库进行实例操作，讲解如何使用 `Git` 拉取代码到提交代码的整个流程。
 
-#### git clone
+### git clone
 
 > 从 git 服务器拉取代码
 >
@@ -68,7 +127,7 @@ git clone https://github.com/gafish/gafish.github.com.git
 
 代码下载完成后在当前文件夹中会有一个 `gafish.github.com` 的目录，通过 `cd gafish.github.com` 命令进入目录。
 
-#### git config
+### git config
 
 > 配置开发者用户名和邮箱
 >
@@ -80,7 +139,7 @@ git config user.email gafish@qqqq.com
 
 每次代码提交的时候都会生成一条提交记录，其中会包含当前配置的用户名和邮箱。
 
-#### git branch
+### git branch
 
 > 创建、重命名、查看、删除项目分支，通过 `Git` 做项目开发时，一般都是在开发分支中进行，开发完成后合并分支到主干。
 >
@@ -109,7 +168,7 @@ git branch -d daily/0.0.1
 
 如果分支已经完成使命则可以通过 `-d` 参数将分支删除，这里为了继续下一步操作，暂不执行删除操作
 
-#### git checkout
+### git checkout
 
 > 切换分支
 >
@@ -120,7 +179,7 @@ git checkout daily/0.0.1
 
 切换到 `daily/0.0.1` 分支，后续的操作将在这个分支上进行
 
-#### git status
+### git status
 
 > 查看文件变动状态
 >
@@ -142,7 +201,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-#### git add
+### git add
 
 > 添加文件变动到暂存区
 >
@@ -160,7 +219,7 @@ Changes to be committed:
     modified:   README.md
 ```
 
-#### git commit
+### git commit
 
 > 提交文件变动到版本库
 >
@@ -171,7 +230,7 @@ git commit -m '这里写提交原因'
 
 通过 `-m` 参数可直接在命令行里输入提交描述文本
 
-#### git push
+### git push
 
 > 将本地的代码改动推送到服务器
 >
@@ -195,7 +254,7 @@ To https://github.com/gafish/gafish.github.com.git
 
 现在我们回到 Github 网站的项目首页，点击 `Branch:master` 下拉按钮，就会看到刚才推送的 `daily/00.1` 分支了
 
-#### git pull
+### git pull
 
 > 将服务器上的最新代码拉取到本地
 >
@@ -210,7 +269,7 @@ git pull origin daily/0.0.1
 
 *如果线上代码做了变动，而你本地的代码也有变动，拉取的代码就有可能会跟你本地的改动冲突，一般情况下 `Git` 会自动处理这种冲突合并，但如果改动的是同一行，那就需要手动来合并代码，编辑文件，保存最新的改动，再通过 `git add .`和 `git commit -m 'xxx'` 来提交合并。*
 
-#### git log
+### git log
 
 > 查看版本提交记录
 >
@@ -235,7 +294,7 @@ Date:   Wed Jan 11 09:31:33 2017 +0800
 
 提交记录可能会非常多，按 `J` 键往下翻，按 `K` 键往上翻，按 `Q` 键退出查看
 
-#### git tag
+### git tag
 
 > 为项目标记里程碑
 >
@@ -253,7 +312,7 @@ To https://github.com/gafish/gafish.github.com.git
  * [new tag]         publish/0.0.1 -> publish/0.0.1
 ```
 
-#### .gitignore
+### .gitignore
 
 > 设置哪些内容不需要推送到服务器，这是一个配置文件
 >
@@ -271,7 +330,7 @@ build/
 
 以上内容的意思是 `Git` 将忽略 `demo.html` 文件 和 `build/` 目录，这些内容不会被推送到服务器上
 
-#### 小结
+### 小结
 
 通过掌握以上这些基本命令就可以在项目中开始用起来了，如果追求实用，那关于 `Git` 的学习就可以到此结束了，偶尔遇到的问题也基本上通过 `Google` 也能找到答案，如果想深入探索 `Git` 的高阶功能，那就继续往下看 `进阶篇` 部分。
 
@@ -1054,9 +1113,7 @@ cz-cli@4.3.0, cz-conventional-changelog@3.3.0
 
 ## Git 常见问题解决方案
 
-- 原来 git 正常，网页可以访问，但是突然无法 pull 和 push 代码，提示没有权限，并且确认 ssh 密钥没有问题
-
-有可能是因为网络代理导致的，可以尝试清除 git 的网络代理，具体命令如下：
+1. 因为使用 vpn 导致的 git 无法 pull 和 push 代码，可以尝试清除 git 的网络代理，命令如下：
 
 ```bash
 git config --global --unset http.proxy
