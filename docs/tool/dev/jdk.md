@@ -171,6 +171,10 @@ alias jdk17='export JAVA_HOME=$JAVA_17_HOME'
 
 > 上面配置了三个 jdk，并通过 alias 命令重命名了三个指令，执行 `jdk{version}` 命令可以切换 jdk 版本。
 
+:::warning 注意：
+配置 JDK 安装目录要到 `/Contents/Home` 子目录下
+:::
+
 - 使配置文件生效
 
 ```bash
