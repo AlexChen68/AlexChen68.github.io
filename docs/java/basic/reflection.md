@@ -15,7 +15,7 @@ date: 2023-04-13
 
 ![类加载过程](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/类加载过程.jpeg)
 
-更具体的，可以参考 [JVM 类加载过程](../jvm/load)
+更具体的，可以参考 [JVM 类加载过程](../jvm/classloader)
 
 ## 反射相关的类
 

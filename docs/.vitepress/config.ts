@@ -14,6 +14,7 @@ export default defineConfig({
       ['link', { rel: 'icon', href: '/favicon.ico' }]
    ],
    lastUpdated: true,
+   ignoreDeadLinks: true,
    themeConfig: {
       logo: '/logo.svg',
       nav,

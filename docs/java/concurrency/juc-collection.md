@@ -55,8 +55,6 @@ public class TestVector {
 
 ![列举常用的容器类](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/blog/java/并发容器.png)
 
-其中，阻塞队列（BlockingQueue）在[第十三章](13.html)有介绍，CopyOnWrite 容器（CopyOnWritexxx）在[第十六章](16.html)有介绍，这里不做过多介绍。
-
 下面分别介绍一些常用的并发容器类和接口，因篇幅原因，这里只介绍这些类的用途和基本的原理，不做过多的源码解析。
 
 ### 并发 Map

@@ -108,7 +108,7 @@ systemctl disable firewalld
 setenforce 0
 ```
 
-可以参考 [集群环境配置](./prepare.md)
+可以参考 [集群环境配置](./vm-cluster)
 
 ### 配置文件
 

@@ -218,7 +218,7 @@ sudo yum install mysql-community-server
 这个命令会安装一系列 Mysql 服务器所需要的包，需要耐心等待。
 
 :::tip
-如果你觉得下载速度太慢，可以考虑使用阿里云的 yum 源替换，具体做法参考：[配置阿里云 yum 源](/devops/linux/yum.html#yum-aliyun)
+如果你觉得下载速度太慢，可以考虑使用阿里云的 yum 源替换，具体做法参考：[配置阿里云 yum 源](/devops/os/linux-yum.html#yum-aliyun)
 :::
 
 ### 启动 MySQL 服务器

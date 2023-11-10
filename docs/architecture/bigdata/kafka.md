@@ -137,7 +137,7 @@ Kafka 同时支持**基于队列**和**基于发布/订阅**的两种消息引�
 
 ## Kafka 部署
 
-参考 [Kafka 部署](/deploy/install/kafka.md)
+参考 [Kafka 部署](/devops/deploy/kafka.md)
 
 ## SpringBoot 使用 Kakfa
 

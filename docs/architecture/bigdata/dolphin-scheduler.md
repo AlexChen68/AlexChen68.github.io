@@ -46,7 +46,7 @@ docker run --name dolphinscheduler-standalone-server\
 注意：请不要将 `apache/dolphinscheduler-standalone-server` 镜像作为生产镜像，应该仅仅作为快速体验 DolphinScheduler 的功能的途径。 
 :::
 
-访问 [`http://localhost:12345/dolphinscheduler/ui`](http://localhost:12345/dolphinscheduler/ui) 打开控制台页面。
+访问 `http://localhost:12345/dolphinscheduler/ui` 打开控制台页面。
    
 默认的用户名为 `admin`, 密码 `dolphinscheduler123`。
 

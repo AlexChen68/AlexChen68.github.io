@@ -32,7 +32,7 @@ order: 52
 
 ### Mysql 主从配置
 
-参考 [Mysql 主从部署](/deploy/install/mysql-master-slave)
+参考 [Mysql 主从部署](/devops/deploy/mysql-master-slave)
 
 ## 读写分离
 
