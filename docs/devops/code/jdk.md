@@ -6,7 +6,7 @@ order: 0
 
 # JDK 安装部署
 
-## windows 安装 JDK8
+## Windows 安装 JDK8
 
 ### 下载 JDK8
 

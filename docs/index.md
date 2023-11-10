@@ -26,12 +26,9 @@ features:
   - title: 系统架构
     details: 分布式理论、微服务、中间件...
     link: /architecture/
-  - title: 研发工具
-    details: 开发工具、测试工具、文档工具...
-    link: /tool/
-  - title: 运维部署
-    details: Linux、Docker、单体部署、集群部署
-    link: /deploy/
+  - title: DevOps
+    details: 开发工具、测试工具、文档工具、Linux、Docker、单体部署、集群部署
+    link: /devops/
   - title: 前端技术
     details: Html、CSS3、ES6、TypeScript、Nodejs、Vite...
     link: /frontend/

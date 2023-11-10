@@ -5,10 +5,9 @@ index: false
 article: false
 ---
 
-Spring 全家桶，从 Spring 容器、AOP 到 SpringCloud 微服务。
-<!-- more -->
+# Spring 全家桶
 
-## Spring 简介
+## 一、Spring 简介
 
 Spring 框架是 Java 平台的一个开源的全栈（full-stack）应用程序框架和控制反转容器实现，一般被直接称为 Spring。该框架的一些核心功能理论上可用于任何 Java 应用，但 Spring 还为基于 Java 企业版平台构建的 Web 应用提供了大量的拓展支持。Spring 没有直接实现任何的编程模型，但它已经在 Java 社区中广为流行，基本上完全代替了企业级 JavaBeans（EJB）模型。
 
@@ -27,7 +26,7 @@ Spring 框架以 Apache License 2.0 开源许可协议的形式发布，该框�
 
 在设计应用程序 Model 时，MVC 模式（例如 Struts）通常难于给出一个简洁明了的框架结构。Spring 却具有能够让这部分工作变得简单的能力。程序开发员们可以使用 Spring 的 JDBC 抽象层重新设计那些复杂的框架结构。
 
-## SpringBoot
+## 二、SpringBoot
 
 SpringBoot 对上述 Spring 配置复杂等缺点进行的改善和优化，基于约定优于配置的思想，可以让开发人员不必在配置与逻辑业务之间进行思维的切换，全身心的投入到逻辑业务的代码编写中。
 
@@ -47,7 +46,7 @@ SpringBoot 不是对 Spring 功能上的增强，而是提供了一种快速使�
 - 自动配置
 Spring Boot 的自动配置是一个运行时（更准确地说，是应用程序启动时）的过程，考虑了众多因素，才决定 Spring 配置应该用哪个，不该用哪个。该过程是 Spring 自动完成的。
 
-## SpringCloud
+## 三、SpringCloud
 
 Spring Cloud 是一系列框架的有序集合。它利用 Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用 Spring Boot 的开发风格做到一键启动和部署。
 

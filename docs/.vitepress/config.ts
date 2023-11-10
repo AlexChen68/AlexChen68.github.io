@@ -13,7 +13,6 @@ export default defineConfig({
    head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }]
    ],
-   ignoreDeadLinks: true,
    lastUpdated: true,
    themeConfig: {
       logo: '/logo.svg',
@@ -27,6 +26,9 @@ export default defineConfig({
       socialLinks: [
          { icon: 'github', link: 'https://github.com/alexchen68' }
       ],
+      search: {
+         provider: 'local'
+      }
    },
    markdown: {
       lineNumbers: true,

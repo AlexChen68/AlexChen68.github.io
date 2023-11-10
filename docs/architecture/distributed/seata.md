@@ -70,7 +70,7 @@ Seata 服务端的 `conf` 目录可以看到配置文件：
 
 `registry.conf` 示例配置：
 
-```conf
+```ini
 registry {
   type = "nacos"
 
@@ -217,12 +217,15 @@ store.db.password=${MYSQL_PWD:123456}
 
 各启动参数含义：
 
-```text
--h: 注册到注册中心的 ip
--p: Server rpc 监听端口
--m: 全局事务会话信息存储模式，file、db、redis，**优先读取启动参数** (Seata-Server 1.3 及以上版本支持 redis)
--n: Server node，当有多个 Server 时，需区分各自节点，用于生成不同区间的 transactionId，以免冲突
--e: 多环境配置参考 http://seata.io/en-us/docs/ops/multi-configuration-isolation.html
-```
+
+> -h: 注册到注册中心的 ip
+> 
+> -p: Server rpc 监听端口
+> 
+> -m: 全局事务会话信息存储模式，file、db、redis，**优先读取启动参数** (Seata-Server 1.3 及以上版本支持 redis)
+> 
+> -n: Server node，当有多个 Server 时，需区分各自节点，用于生成不同区间的 transactionId，以免冲突
+> 
+> -e: 多环境配置参考 http://seata.io/en-us/docs/ops/multi-configuration-isolation.html
 
 ### 集成 seata client

@@ -1,7 +1,7 @@
 ---
-title: Maven 教程
+title: Maven 入门教程
 date: 2022-09-30
-order: 4
+order: 1
 ---
 
 转载自廖雪峰老师的教程：https://www.liaoxuefeng.com/wiki/1252599548343744/1309301146648610

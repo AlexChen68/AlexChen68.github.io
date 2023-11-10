@@ -1,7 +1,7 @@
 ---
 title: Vim 常用命令
 date: 2023-10-26
-order: 11
+order: 2
 ---
 
 # Vim 常用命令

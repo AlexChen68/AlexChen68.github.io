@@ -1,6 +1,7 @@
 ---
 title: Yum 简介与使用
 date: 2023-05-18
+order: 3
 ---
 
 ## 什么是 yum？
