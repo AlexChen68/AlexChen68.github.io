@@ -14,6 +14,7 @@ function groupSidebar(path: string, text: string, options?: any) {
       resolvePath: path,
       rootGroupText: text,
       useTitleFromFrontmatter: true,
+      useIndexFileForFolderMenuInfo: true,
       sortMenusByFrontmatterOrder: true,
       ...options
     })[path]
@@ -61,10 +62,6 @@ const sidebar = {
       ...groupSidebar('/advance/ds', "数据结构"),
       ...groupSidebar('/advance/algo', "基础算法"),
       ...groupSidebar('/advance/design', "设计模式")
-   ],
-   '/resource/': [
-      ...groupSidebar('/resource/star', "收藏资源"),
-      // ...groupSidebar('/resource/interview', "面试知识点")
    ]
 }
 
