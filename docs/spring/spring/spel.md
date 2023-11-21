@@ -1,8 +1,7 @@
 ---
 title: Spring SpEl 表达式语言
-article: true
 date: 2022-10-21
-tag: SpEl
+order: 11
 ---
 
 ## Spring 的表达式语言 (SpEL)

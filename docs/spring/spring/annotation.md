@@ -1,8 +1,7 @@
 ---
 title: Spring 常用注解
-index: false
-article: true
 date: 2022-10-12
+order: 100
 ---
 
 # Spring 常用核心注解

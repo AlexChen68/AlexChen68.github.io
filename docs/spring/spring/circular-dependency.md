@@ -1,7 +1,10 @@
 ---
 title: Spring 三级缓存解决循环依赖
 date: 2023-05-18
+order: 2
 ---
+
+# Spring 三级缓存解决循环依赖
 
 ## Spring 循环依赖问题
 

@@ -1,14 +1,12 @@
 ---
-title: Spring AOP 面向切面编程
+title: Spring AOP 切面编程
 date: 2022-09-15
-tag: AOP
-description: Spring AOP 切面
+order: 3
 ---
 
-Spring AOP 面向切面编程，是 Spring 框架的核心功能之一。
-<!-- more -->
+# Spring AOP 切面编程
 
-## Spring 面向切面编程
+## 简介
 
 面向切面编程 (Aspect-oriented Programming 简称 AOP) ，是相对面向对象编程 (Object-oriented Programming 简称 OOP ) 的框架，作为 OOP 的一种功能补充。OOP 主要的模块单元是类 (class)。而 AOP 则是切面 (aspect)。切面会将诸如事务管理这样跨越多个类型和对象的关注点模块化 (在 AOP 的语义中，这类关注点被称为横切关注点 (crosscutting) )。
 

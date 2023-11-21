@@ -1,13 +1,10 @@
 ---
 title: Spring IOC 容器
 date: 2022-09-15
-tag: 
-  - IOC
-description: SpringIOC 容器
+order: 1
 ---
 
-SpringIOC 容器是 Spring 的核心功能之一。
-<!-- more -->
+# Spring IOC 容器
 
 ## Spring 容器概述
 
