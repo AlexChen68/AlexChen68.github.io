@@ -2,6 +2,7 @@
 title: 理解 OAuth 2.0
 date: 2023-02-18
 author: 阮一峰
+order: 2
 ---
 
 :::info 转载
