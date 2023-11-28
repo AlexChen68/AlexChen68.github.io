@@ -2,6 +2,8 @@
  * Component: Sidebar
  * -------------------------------------------------------------------------- */
  :root {
-   /* --vp-layout-max-width: 1440px; */
+   --vp-layout-max-width: 1440px;
    --vp-sidebar-width: 280px;
+
+   --vp-code-line-height: 1.5;
  }
