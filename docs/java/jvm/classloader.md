@@ -3,6 +3,8 @@ title: 类加载器和双亲委派机制
 date: 2023-04-13
 ---
 
+# 类加载器和双亲委派机制
+
 ## 类加载过程
 
 一个类从被加载到虚拟机内存中开始，到从内存中卸载，整个生命周期需要经过七个阶段：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading），其中验证、准备、解析三个部分统称为连接（Linking）。

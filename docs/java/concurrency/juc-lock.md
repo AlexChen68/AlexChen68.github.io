@@ -1,7 +1,10 @@
 ---
 title: JDK 工具篇 - 锁接口和类
 date: 2023-03-22
+order: 24
 ---
+
+# JDK 工具篇 - 锁接口和类
 
 前面我们介绍了 Java 原生的锁——基于对象的锁，它一般是配合 synchronized 关键字来使用的。实际上，Java 在`java.util.concurrent.locks`包下，还为我们提供了几个关于锁的类和接口。它们有更强大的功能或更高的性能。
 
@@ -51,7 +54,7 @@ ReentrantLock 支持非公平锁和公平锁两种。
 
 众所周知，JDK 中关于并发的类大多都在`java.util.concurrent`（以下简称 juc）包下。而 juc.locks 包看名字就知道，是提供了一些并发锁的工具类的。前面我们介绍的 AQS（AbstractQueuedSynchronizer）就是在这个包下。下面分别介绍一下这个包下的类和接口以及它们之间的关系。
 
-### 抽象类AQS/AQLS/AOS
+### 抽象类 AQS/AQLS/AOS
 
 这三个抽象类有一定的关系，所以这里放到一起讲。
 
@@ -74,7 +77,7 @@ protected final Thread getExclusiveOwnerThread() {
 }  
 ```
 
-### 接口Condition/Lock/ReadWriteLock
+### 接口 Condition/Lock/ReadWriteLock
 
 juc.locks 包下共有三个接口：`Condition`、`Lock`、`ReadWriteLock`。其中，Lock 和 ReadWriteLock 从名字就可以看得出来，分别是锁和读写锁的意思。Lock 接口里面有一些获取锁和释放锁的方法声明，而 ReadWriteLock 里面只有两个方法，分别返回“读锁”和“写锁”：
 
@@ -107,7 +110,7 @@ Condition newCondition();
 | 唤醒等待队列中的一个线程                       | 支持                          | 支持                                                        |
 | 唤醒等待队列中的全部线程                       | 支持                          | 支持                                                        |
 
-Condition和Object的wait/notify基本相似。其中，Condition的await方法对应的是Object的wait方法，而Condition的**signal/signalAll**方法则对应Object的notify/notifyAll()。但Condition类似于Object的等待/通知机制的加强版。我们来看看主要的方法：
+Condition 和 Object 的 wait/notify 基本相似。其中，Condition 的 await 方法对应的是 Object 的 wait 方法，而 Condition 的**signal/signalAll**方法则对应 Object 的 notify/notifyAll()。但 Condition 类似于 Object 的等待/通知机制的加强版。我们来看看主要的方法：
 
 | 方法名称               | 描述                                                         |
 | ---------------------- | ------------------------------------------------------------ |

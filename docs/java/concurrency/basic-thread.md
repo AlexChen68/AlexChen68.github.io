@@ -1,8 +1,10 @@
 ---
 title: 基础篇 - Java 线程类和接口
 date: 2022-09-30
-tag: JUC
+order: 3
 ---
+
+# 基础篇 - Java 线程类
 
 ## Thread 类和 Runnable 接口
 

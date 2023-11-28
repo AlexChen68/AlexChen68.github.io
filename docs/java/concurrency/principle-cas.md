@@ -1,7 +1,10 @@
 ---
 title: 原理篇 - CAS 与原子操作
 date: 2023-03-17
+order: 12
 ---
+
+# 原理篇 - CAS 与原子操作
 
 ## 乐观锁与悲观锁的概念
 
@@ -50,7 +53,7 @@ CAS 的全称是：比较并交换（Compare And Swap）。在 CAS 中，有这�
 
 ## Java 实现 CAS 的原理 - Unsafe 类
 
-前面提到，CAS 是一种原子操作。那么 Java 是怎样来使用 CAS 的呢？我们知道，在 Java 中，如果一个方法是 native 的，那 Java 就不负责具体实现它，而是交给底层的 JVM 使用 c 或者 c++去实现。
+前面提到，CAS 是一种原子操作。那么 Java 是怎样来使用 CAS 的呢？我们知道，在 Java 中，如果一个方法是 native 的，那 Java 就不负责具体实现它，而是交给底层的 JVM 使用 c 或者 c++ 去实现。
 
 在 Java 中，有一个`Unsafe`类，它在`sun.misc`包中。它里面是一些`native`方法，其中就有几个关于 CAS 的：
 
@@ -62,7 +65,7 @@ boolean compareAndSwapLong(Object o, long offset,long expected,long x);
 
 当然，他们都是`public native`的。
 
-Unsafe 中对 CAS 的实现是 C++写的，它的具体实现和操作系统、CPU 都有关系。
+Unsafe 中对 CAS 的实现是 C++ 写的，它的具体实现和操作系统、CPU 都有关系。
 
 Linux 的 X86 下主要是通过`cmpxchgl`这个指令在 CPU 级完成 CAS 操作的，但在多处理器情况下必须使用`lock`指令加锁来完成。当然不同的操作系统和处理器的实现会有所不同，大家可以自行了解。
 

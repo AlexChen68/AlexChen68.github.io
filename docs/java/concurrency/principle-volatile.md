@@ -1,7 +1,10 @@
 ---
 title: 原理篇 - volatile 关键字
 date: 2023-03-17
+order: 15
 ---
+
+# 原理篇 - volatile 关键字
 
 ## 几个基本概念
 

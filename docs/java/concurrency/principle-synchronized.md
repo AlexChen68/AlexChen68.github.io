@@ -1,8 +1,10 @@
 ---
 title: 原理篇 - synchronized 关键字
 date: 2023-03-17
+order: 14
 ---
 
+# 原理篇 - synchronized 关键字
 
 > 这篇文章我们来聊一聊 Java 多线程里面的“锁”。
 > 

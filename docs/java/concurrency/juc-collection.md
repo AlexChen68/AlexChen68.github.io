@@ -1,7 +1,10 @@
 ---
 title: JDK 工具篇 - 并发集合容器
 date: 2023-03-09
+order: 21
 ---
+
+# JDK 工具篇 - 并发集合容器
 
 ## 同步容器与并发容器
 
@@ -81,13 +84,13 @@ public interface ConcurrentMap<K, V> extends Map<K, V> {
 }
 ```
 
-**putIfAbsent：**与原有 put 方法不同的是，putIfAbsent 方法中如果插入的 key 相同，则不替换原有的 value 值；
+`putIfAbsent`: 与原有 put 方法不同的是，putIfAbsent 方法中如果插入的 key 相同，则不替换原有的 value 值；
 
-**remove：**与原有 remove 方法不同的是，新 remove 方法中增加了对 value 的判断，如果要删除的 key-value 不能与 Map 中原有的 key-value 对应上，则不会删除该元素;
+`remove`: 与原有 remove 方法不同的是，新 remove 方法中增加了对 value 的判断，如果要删除的 key-value 不能与 Map 中原有的 key-value 对应上，则不会删除该元素;
 
-**replace(K,V,V)：**增加了对 value 值的判断，如果 key-oldValue 能与 Map 中原有的 key-value 对应上，才进行替换操作；
+`replace(K,V,V)`: 增加了对 value 值的判断，如果 key-oldValue 能与 Map 中原有的 key-value 对应上，才进行替换操作；
 
-**replace(K,V)：**与上面的 replace 不同的是，此 replace 不会对 Map 中原有的 key-value 进行比较，如果 key 存在则直接替换；
+`replace(K,V)`: 与上面的 replace 不同的是，此 replace 不会对 Map 中原有的 key-value 进行比较，如果 key 存在则直接替换；
 
 #### ConcurrentHashMap 类
 
@@ -97,9 +100,9 @@ ConcurrentHashMap 在 JDK 1.7 和 JDK 1.8 中有一些区别。这里我们分�
 
 **JDK 1.7**
 
-ConcurrentHashMap 在 JDK 1.7 中，提供了一种粒度更细的加锁机制来实现在多线程下更高的性能，这种机制叫分段锁 (Lock Striping)。
+ConcurrentHashMap 在 JDK 1.7 中，提供了一种粒度更细的加锁机制来实现在多线程下更高的性能，这种机制叫**分段锁 (Lock Striping)**。
 
-提供的优点是：在并发环境下将实现更高的吞吐量，而在单线程环境下只损失非常小的性能。
+> 提供的优点是：在并发环境下将实现更高的吞吐量，而在单线程环境下只损失非常小的性能。
 
 可以这样理解分段锁，就是**将数据分段，对每一段数据分配一把锁**。当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。
 
