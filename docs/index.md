@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: AlexChen's Blog
-  tagline: 行到水穷处，坐看云起时。
+  tagline: 当时只道是寻常
   actions:
     - theme: brand
       text: Get Started
