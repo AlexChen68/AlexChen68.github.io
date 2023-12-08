@@ -10,9 +10,9 @@ const nav: DefaultTheme.NavItem[] = [
    { text: "编程内功", link: "/advance/algo/"},
    { text: "编程资源", link: "/resource/stars"},
    { text: "Link", items: [
-      { text: "VitePress 文档", link: "https://vitepress.dev/"},
-      { text: "ChatGPT(密码: 1qaz@wsx)", link: "https://chat.alexchen.tech/"},
-      { text: "百度-文心一言", link: "https://yiyan.baidu.com/"}
+      { text: "VitePress", link: "https://vitepress.dev/"},
+      { text: "ChatGPT", link: "https://chat.alexchen.tech/"},
+      { text: "文心一言", link: "https://yiyan.baidu.com/"}
    ]}
 ]
 
