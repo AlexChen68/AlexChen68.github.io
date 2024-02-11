@@ -53,6 +53,9 @@ const sidebar = {
       ...groupSidebar('/devops/test', "测试工具"),
       ...groupSidebar('/devops/doc', "文档工具"),
    ],
+   'business': [
+      ...groupSidebar('/business', "业务", {rootGroupText: false}),
+   ],
    '/frontend/': [
       ...groupSidebar('/frontend/basic', "基础"),
       ...groupSidebar('/frontend/es6', "ECMAScript 6"),
