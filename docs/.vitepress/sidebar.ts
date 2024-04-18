@@ -37,7 +37,8 @@ const sidebar = {
    '/database/': [
       ...groupSidebar('/database/mysql', "Mysql"),
       ...groupSidebar('/database/redis', "Redis"),
-      ...groupSidebar('/database/elasticsearch', "Elasticsearch")
+      ...groupSidebar('/database/elasticsearch', "Elasticsearch"),
+      ...groupSidebar('/database/dm', "达梦数据库"),
    ],
    '/architecture/': [
       ...groupSidebar('/architecture/micro-service', "微服务"),
