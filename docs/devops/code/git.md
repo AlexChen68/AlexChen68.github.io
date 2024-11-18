@@ -21,7 +21,9 @@ order: 1
 
 Git 安装时有许多可选配置，无特殊需求，使用默认选择即可。
 
-3. 配置 Git 全局用户和邮箱
+## Git 常用配置
+
+1. 配置 Git 全局用户和邮箱
 
 使用如下命令配置：
 
@@ -44,12 +46,21 @@ git config user.name
 git config user.email
 ```
 
-
 如果你需要删除配置，可以使用：
 
 ```bash
 git config --global --unset user.name
 ```
+
+2. Git 配置换行符自动转换
+
+autocrlf 配置选项：Git 提供了一个叫做`autocrlf`的配置选项，用于在不同的操作系统之间自动转换换行符。你可以通过以下命令设置此选项：
+
+```bash
+git config --global core.autocrlf true
+```
+
+该命令会设置 Git 核心配置中的`autocrlf`为`true`，即自动将换行符转换为适合当前操作系统的格式。这在 Windows 系统上很有用，因为 Windows 使用 CRLF 格式。
 
 ## Github 配置  ssh 密钥
 
