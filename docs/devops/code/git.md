@@ -26,11 +26,24 @@ Git 安装时有许多可选配置，无特殊需求，使用默认选择即可�
 使用如下命令配置：
 
 ```bash
-git config --global user.name "yourname"
-git config --global user.email "youremail"
+git config --global user.name "alexchen"
+git config --global user.email "alexchen.tech@gmail.com"
 ```
 
 如果你只想改变当前 Git 仓库的配置，去掉 `global` 参数即可。
+
+```bash
+git config user.name "alexchen"
+git config user.email "alexchen.tech@gmail.com"
+```
+
+查看配置：
+
+```bash
+git config user.name
+git config user.email
+```
+
 
 如果你需要删除配置，可以使用：
 
@@ -803,7 +816,7 @@ git rebase branch_name
 
 合并分支，这跟 `merge` 很像，但还是有本质区别，看下图：
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/kChlCQZAfH5eBrzeP4kHVbwcqAicZkgowJVnNZciaQfnn8vbqXet2mRj9aoR4HKQ230T4hggwJwgh5CbfVAwGQsw/640?wx_fmt=jpeg)
+![git-2024-11-18-09-30-34](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/images/2023/git-2024-11-18-09-30-34.png)
 
 合并过程中可能需要先解决冲突，然后执行 `git rebase --continue`
 
@@ -858,7 +871,7 @@ git revert -n HEAD
 > 查看工作区、暂存区、本地版本库之间的文件差异，用一张图来解释
 >
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/kChlCQZAfH5eBrzeP4kHVbwcqAicZkgowbTtpHas5ZBpKFGFU8FxcaR8cCeANrcGmBwtpiaHkib8SQxJBLhOxEbOA/640?wx_fmt=png)
+![git-2024-11-18-09-31-40](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/images/2023/git-2024-11-18-09-31-40.png)
 
 ```
 git diff --stat
@@ -873,7 +886,8 @@ git diff --stat
 
 #### git reflog
 
-`reflog` 可以查看所有分支的所有操作记录（包括 commit 和 reset 的操作、已经被删除的 commit 记录，跟 `git log` 的区别在于它不能查看已经删除了的 commit 记录![img](https://mmbiz.qpic.cn/mmbiz_jpg/kChlCQZAfH5eBrzeP4kHVbwcqAicZkgow9g0GgTQppOgauVPMguPXWE8qOQqsic0j3IL9NxNns5D16qa9HvOn9rA/640?wx_fmt=jpeg)
+`reflog` 可以查看所有分支的所有操作记录（包括 commit 和 reset 的操作、已经被删除的 commit 记录，跟 `git log` 的区别在于它不能查看已经删除了的 commit 记录
+![git-2024-11-18-09-31-59](https://cdn.jsdelivr.net/gh/AlexChen68/OSS@master/images/2023/git-2024-11-18-09-31-59.png)
 
 ### 远程版本库连接
 
