@@ -10,10 +10,12 @@ const nav: DefaultTheme.NavItem[] = [
    { text: "前端技术", link: "/frontend/"},
    { text: "编程内功", link: "/advance/algo/"},
    { text: "编程资源", link: "/resource/stars"},
-   { text: "Link", items: [
+   { text: "Links", items: [
       { text: "VitePress", link: "https://vitepress.dev/"},
-      { text: "ChatGPT", link: "https://chat.alexchen.tech/"},
-      { text: "文心一言", link: "https://yiyan.baidu.com/"}
+      { text: "DeepSeek", link: "https://chat.deepseek.com/"},
+      { text: "ChatGPT", link: "https://chatgpt.com/"},
+      { text: "文心一言", link: "https://yiyan.baidu.com/"},
+      { text: "NextChat", link: "https://chat.alexchen.tech/"}
    ]}
 ]
 
