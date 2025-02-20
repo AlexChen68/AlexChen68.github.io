@@ -26,10 +26,4 @@ order: 11
 
 ## 配置授权服务器
 
-### 配置 SecurityFilterChain
-
-### 配置客户端
-
-### 配置用户
-
-### 配置 JWK
+> TODO 待完善

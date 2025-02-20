@@ -21,6 +21,8 @@ OAuth（Open Authorization）是一个关于授权（authorization）的开放�
 
 SpringSecurity 提供了一系列对 OAuth2 协议的实现，可以分为授权服务器、资源服务器和授权客户端三个角色，并提供了 SpringBoot starter 的自动配置支持。
 
+### Spring Authorization Server
+
 在 Spring Security 6.0 时，Spring 团队将授权服务器单独抽离出来开发，名为 `Spring Authorization Server`，其余两个仍然在 Spring Security 中。值得一提的是，Spring Authorization Server 支持授权码、客户端、刷新、注销等 OAuth 协议，但是**不支持密码模式**，需要自己实现。
 
 相关参考资料：
